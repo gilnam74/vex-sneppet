@@ -1,7 +1,9 @@
-### Hotkeys: Scene view
+# Houdini UI
+
+## Hotkeys: Scene view
 - Reset rotate pivot to a viewport center: `Shift` + `Z`
 
-### Hotkeys: Network view
+## Hotkeys: Network view
 - **Align** nodes: press `A`, press LMB, move left(or up)  
 - **Move** node with **upstream** connections: `Shift` + `LMB` + move  
 - **Move** node with **downstream** connections: `Ctrl` + `LMB` + move
@@ -19,8 +21,4 @@
 - **Set** quickmark 1: `Ctr` + `1`  
 - **Go to** quickmark 1: `1`  
 - **Togle** quickmarks: tilda
-### SOP changes
-- `Point` SOP and `Vertex` SOP becomes an `Attribute Expression` 
-- `Copy` SOP becomes a `Copy Stamp` 
-- `Group` SOP replaced with new ones
-- `Extrude` becomes `Extrude OLD`
+
