@@ -1,5 +1,7 @@
 * [Introduction](https://github.com/kiryha/Houdini/wiki)
 * [Tutorials](Tutorials)
   - [Interface](interface)
+  - [Programming basics](Programming-basics)
   - [VEX quickstart](VEX-Quick-start)
   - [Misc](misc)
+* [Glossary](Glossary)
