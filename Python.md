@@ -22,5 +22,6 @@ To create any node wiyh Python you have to set parent node for that.
 ```python
 # Create transform node inside geo1
 node = hou.node('/obj/geo1')
-node.createNode('xform') 
+xform = node.createNode('xform') 
+xform.moveToGoodPosition()
 ```
