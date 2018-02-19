@@ -14,5 +14,5 @@ To use Python Script in all scenes you need to save Python script to the Shell.
 
 Get node from the scene
 ```python
-node = hou.node('/<nodePath>/<nodeName>') # '/obj/geo1'
+node = hou.node('/<nodePath>/<nodeName>')
 ```
