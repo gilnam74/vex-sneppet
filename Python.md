@@ -26,9 +26,15 @@ xform.moveToGoodPosition()
 ```
 
 
-##### Get and set parameter for selected node
+##### Get and set parameters
 ```python
 node = hou.selectedNodes()[0]
-node.parm('tx').eval() # get translate X
-node.parmTuple('t').set([0,1,0]) # set translate XYZ
+
+# get translate X
+node.parm('tx').eval() 
+hou.parm('/obj/geo1/tx').eval()
+hou.ch('/obj/geo1/tx')
+
+# set translate XYZ
+node.parmTuple('t').set([0,1,0])
 ```
