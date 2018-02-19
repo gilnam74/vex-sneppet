@@ -1,5 +1,6 @@
 # Python in Houdini
-Houdini Python API exists as **HOM** - Houdini Object Model (the module name is hou).
+Houdini Python API exists as **HOM** - Houdini Object Model (the module name is `hou`).  
+`hou.node('/obj/geo1')`
 
 Python integration in Houdini:
 - Windows > Python Shell - Python shell for small scripts/commands  
