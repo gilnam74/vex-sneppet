@@ -12,7 +12,7 @@ Python integration in Houdini:
 
 To use Python Script in all scenes you need to save Python script to the Shell.
 
-Get node from the scene
+##### Get node from the scene
 ```python
 node = hou.node('/<nodePath>/<nodeName>')
 ```
