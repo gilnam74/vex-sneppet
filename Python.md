@@ -24,3 +24,11 @@ node = hou.node('/obj/geo1')
 xform = node.createNode('xform') 
 xform.moveToGoodPosition()
 ```
+
+
+##### Get and set parameter for selected node
+```python
+node = hou.selectedNodes()[0]
+node.parm('tx').eval() # get translate X
+node.parm('tx').set(2) # set translate X
+```
