@@ -30,5 +30,5 @@ xform.moveToGoodPosition()
 ```python
 node = hou.selectedNodes()[0]
 node.parm('tx').eval() # get translate X
-node.parm('tx').set(2) # set translate X
+node.parmTuple('t').set([0,1,0]) # set translate XYZ
 ```
