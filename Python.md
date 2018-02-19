@@ -16,3 +16,11 @@ To use Python Script in all scenes you need to save Python script to the Shell.
 ```python
 node = hou.node('/<nodePath>/<nodeName>')
 ```
+
+##### Create node in the scene
+To create any node wiyh Python you have to set parent node for that.
+```python
+# Create transform node inside geo1
+node = hou.node('/obj/geo1')
+node.createNode('xform') 
+```
