@@ -37,4 +37,5 @@ hou.ch('/obj/geo1/tx')
 
 # set translate XYZ
 node.parmTuple('t').set([0,1,0])
+hou.parm('/obj/geo1/tx').set(2)
 ```
