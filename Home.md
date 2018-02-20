@@ -1,1 +1,1 @@
-Here is you will find a structured record of my Houdini learning in form of tutorials.
+Here you will find a structured record of my Houdini learning. 
