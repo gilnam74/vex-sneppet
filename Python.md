@@ -27,7 +27,9 @@ import hou
 # Create transform node inside geo1
 node = hou.node('/obj/geo1')
 xform = node.createNode('xform') 
-xform.moveToGoodPosition()
+xform.moveToGoodPosition() 
+# Create new transform node linked to existing transform
+xformNew= xform.createOutputNode('xform')
 ```
 
 
