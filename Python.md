@@ -72,4 +72,7 @@ import hou
 shader = hou.node('/shop/vopmaterial1/lambert1')
 out = hou.node('/shop/vopmaterial1/surface_output')
 out.setNamedInput('Cf', shader, 'clr')
+
+# List all inputs for node 'surface_output'
+print out.inputNames()
 ```
