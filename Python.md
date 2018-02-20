@@ -21,7 +21,7 @@ node.children()
 ```
 
 ##### Create node in the scene
-To create any node wiyh Python you have to set parent node for that. Create Geometry node in OBJ context.
+To create any node wiyh Python you have to set parent node for that. You need to create Geometry node in OBJ context.
 ```python
 import hou
 # Create transform node inside geo1
