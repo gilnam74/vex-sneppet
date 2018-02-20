@@ -125,6 +125,3 @@ for (int i=0; i<segments; i++){
 }
 ```
 Download [houdini file](https://drive.google.com/open?id=1c0ZNDunZ6XQF-k1uTYNqnC34SQFCYbgG) with phyllotaxis, spirals and circle.
-
-## Glossary
-Advection — movement of fields (e.g density or temperature) along velocity vectors
