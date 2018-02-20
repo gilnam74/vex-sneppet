@@ -63,6 +63,11 @@ merge = node.createNode('merge')
 # Connect xforms to a merge
 merge.setNextInput(xform_A)
 merge.setNextInput(xform_B)
+
+# Get node inputs
+merge.inputs()
+# Get node outputs
+merge.outputs()
 ```
 
 ##### Builder workflow (shop context)
