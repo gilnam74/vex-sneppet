@@ -13,7 +13,10 @@ To use Python Script in all scenes you need to save Python script to the Shell.
 
 ##### Get node from the scene
 ```python
-node = hou.node('/<nodePath>/<nodeName>')
+node = hou.node('/<nodePath>/<nodeName>') # By name
+node = hou.selectedNodes() # By selection
+# get node content
+node.children()
 ```
 
 ##### Create node in the scene
