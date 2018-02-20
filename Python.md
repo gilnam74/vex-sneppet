@@ -13,6 +13,7 @@ To use Python Script in all scenes you need to save Python script to the Shell.
 
 ##### Get node from the scene
 ```python
+import hou
 node = hou.node('/<nodePath>/<nodeName>') # By name
 node = hou.selectedNodes() # By selection
 # Get node content
@@ -22,6 +23,7 @@ node.children()
 ##### Create node in the scene
 To create any node wiyh Python you have to set parent node for that.
 ```python
+import hou
 # Create transform node inside geo1
 node = hou.node('/obj/geo1')
 xform = node.createNode('xform') 
@@ -31,6 +33,7 @@ xform.moveToGoodPosition()
 
 ##### Get and set parameters
 ```python
+import hou
 node = hou.selectedNodes()[0]
 
 # get translate X
@@ -41,4 +44,12 @@ hou.ch('/obj/geo1/tx')
 # set translate XYZ
 node.parmTuple('t').set([0,1,0])
 hou.parm('/obj/geo1/tx').set(2)
+```
+
+##### Connect nodes
+```python
+import hou
+xform_A = hou.node('/obj/geo1/transform1')
+xform_B = hou.node('/obj/geo1/transform2')
+xform_B.setInput(0, xform_A)
 ```
