@@ -1,1 +1,1 @@
-Advection — movement of fields (e.g density or temperature) along velocity vectors.
+Advection — a movement of fields (e.g density or temperature) along velocity vectors.
