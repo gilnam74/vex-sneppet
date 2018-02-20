@@ -21,7 +21,7 @@ node.children()
 ```
 
 ##### Create node in the scene
-To create any node wiyh Python you have to set parent node for that.
+To create any node wiyh Python you have to set parent node for that. Create Geometry node in OBJ context.
 ```python
 import hou
 # Create transform node inside geo1
@@ -63,6 +63,13 @@ merge = node.createNode('merge')
 # Connect xforms to a merge
 merge.setNextInput(xform_A)
 merge.setNextInput(xform_B)
+```
 
-
+##### Builder workflow (shop context)
+Create "Material Surface Builder" in SHOP context, dive inside.
+```python
+import hou
+shader = hou.node('/shop/vopmaterial1/lambert1')
+out = hou.node('/shop/vopmaterial1/surface_output')
+out.setNamedInput('Cf', shader, 'clr')
 ```
