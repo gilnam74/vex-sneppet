@@ -16,5 +16,5 @@ As you can speak different languages, computers understand different programming
 
 _A particular example: you should end every sentence in VEX with a semicolon._
 
-Going further: algorithms 
+# Going further: algorithms 
 
