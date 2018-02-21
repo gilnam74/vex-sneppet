@@ -10,6 +10,6 @@ At the end of the lesson, you should be comfortable with [syntax](#syntax), data
 Let's define programming first. **Programming** — is communication with a computer, how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific actions. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing computers understand is a program.
 
 ## Syntax
-As you can speak different languages, computers understand different programming languages also. The rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another.
+As you can speak different languages, computers understand different programming languages also. The written rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another.
 
 
