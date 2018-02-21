@@ -6,4 +6,10 @@ The goal of this section is to give artist **fast understanding** of core progra
 At the end of the lesson, you should be comfortable with syntax, data types, variables, commands, functions, loops.  
 
 # Programming theory
-Programming - speaking with PC. Instructions.
+## Programming definition
+Let's define programming first. **Programming** — is communication with a computer, how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific actions. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing computers understand is a program.
+
+# Syntax
+As you can speak different languages, computers understand different programming languages also.
+
+
