@@ -3,11 +3,11 @@ The goal of this section is to give artist **fast understanding** of core progra
 
 **Simplification** is a focus on the main topic ignoring all surrounding exceptions and details. **Analogies** — explaining unknown with the notions which are intuitive (familiar without any extra knowledge to a majority of humans in the world). Both simplification and analogies yields to a faster understanding but less precision. Keep in mind that you may not pass an exam on computer science with such kind of knowledge but from the other side it would be possible to start applied developing without finishing computer science class.
 
-At the end of the lesson, you should be comfortable with [syntax](#syntax), data types, variables, commands, functions, loops.  
+At the end of the lesson, you should be comfortable with [syntax](#syntax), [data types](#data-types), [variables](#variables), [commands](#commands), [functions](#functions), [loops](#loops).  
 
 # Programming theory
 ## Programming 
-Let's define programming first. **Programming** — is communication with a computer, how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific actions. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing computers understand is a program.
+Let's define what is programming. **Programming** — is communication with a computer, how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific actions. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing computers understand is a program.
 
 _A particular example: when you copy a file from one folder to another your OS execute specific program._
 
@@ -15,6 +15,14 @@ _A particular example: when you copy a file from one folder to another your OS e
 As you can speak different languages, computers understand different programming languages also. The written rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another. 
 
 _A particular example: you should end every sentence in VEX with a semicolon._
+
+## Data types
+Let's define what is data first.
+
+## Variables
+## Commands
+## functions
+## loops
 
 # Going further: algorithms 
 
