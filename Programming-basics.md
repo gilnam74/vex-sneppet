@@ -31,7 +31,10 @@ Obviously, if data could be any piece of information that comes into a program w
 
 **Data type** — is exact form in which any piece of information in a computer program can be represented.
 
-We will examine most used in VEX data types: integer, float, string, list.   
+We will examine most used in VEX data types: integer, float, vector, string, list.  
+Integer — a whole numbers: `256, -15, 0` etc.  
+Float — a fractional number: `3,14159` etc.  
+vector — a set of 3 floats:  `{1.0, 0, -12.56}`
 
 ## Variables
 ## Commands
