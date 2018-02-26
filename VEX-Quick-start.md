@@ -7,4 +7,4 @@ To create a wrangle in a fresh Houdini scene:
 ## Create a point
 
 # VEX snippets
-Here you will find chunks of VEX code which performs a certain small task.  
+Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
