@@ -19,7 +19,9 @@ As you can speak different languages, computers understand different programming
 _A particular example: you should end every sentence in VEX with a semicolon._
 
 ## Data types
-Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). More precisely its any piece of information which comes inside your program from the outer environment. Data is not a part of the program code itself. For example, if we have a program which copies files from `folder A` to a `folder B` (when user selects a file in explorer and press Ctrl + C in folder A and Ctrl + V in folder B) the data here is a name with a path of the copied file (C:/temp/myFile.py)
+Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). Its important to understand that data is not a part of the program the code (program) itself.  It is something that "comes inside" your program from the outer environment.  
+
+For example, if we have a program which copies files from `folder A` to a `folder B` (when user selects a file in explorer and press Ctrl + C in folder A and Ctrl + V in folder B) the data here is a name with a path of the copied file (C:/temp/myFile.py)
 
 ## Variables
 ## Commands
