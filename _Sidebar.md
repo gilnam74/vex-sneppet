@@ -1,5 +1,5 @@
 * [Introduction](https://github.com/kiryha/Houdini/wiki)
-* [Tutorials](Tutorials)
+* Tutorials
   - [Interface](interface)
   - [Programming basics](Programming-basics)
   - [Python in Houdini](Python)
