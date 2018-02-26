@@ -25,7 +25,7 @@ You can imagine data pieces as blocks as well, but this blocks, unlike programs,
 
 Now we can clarify links between different programs we speak above in [Programming](#programming-and-programs) section. In addition to program input (when something come inside the program), the program can produce something (data) and give it away (output data). And usually, programs modify input data and output (return) the results of the modifications. This data flow between blocks of programs can be imagined as lines between blocks and this is how we link blocks (programs) together. 
 
-For example, if we have a program which copies files from `folder A` to a `folder B` (when user selects a file in explorer and press Ctrl + C in folder A and Ctrl + V in folder B) the data here is a name with a path of the copied file (C:/temp/myFile.py)
+For example, if we have a program which copies files from `folder A` to a `folder B` (when user selects a file in explorer and press Ctrl + C in folder A and Ctrl + V in folder B) the **input data** here is a **name with a path of the copied file** (C:/temp/myFile.py).
 
 ## Variables
 ## Commands
