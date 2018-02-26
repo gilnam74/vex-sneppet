@@ -19,7 +19,7 @@ As you can speak different languages, computers understand different programming
 _A particular example: you should end every sentence in VEX with a semicolon._
 
 ## Data types
-Concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the program the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
+The concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
 
 You can imagine data pieces as blocks as well, but this blocks, unlike programs, do not do anything, just holds information.
 
