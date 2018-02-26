@@ -19,7 +19,7 @@ As you can speak different languages, computers understand different programming
 _A particular example: you should end every sentence in VEX with a semicolon._
 
 ## Data types
-Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the program the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
+Concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the program the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
 
 You can imagine data pieces as blocks as well, but this blocks, unlike programs, do not do anything, just holds information.
 
@@ -29,7 +29,9 @@ For example, if we have a program which copies files from `folder A` to a `folde
 
 Obviously, if data could be any piece of information that comes into a program we need to **sort out** (structure) somehow all varieties of this information, otherwise, we would not be able to deal with it efficiently. The number of options in which form the information could be presented is limited. A number of wheels in a car is a digit. List of students is a stack of characters (students names). Time is also a digit. And a path to a file is also a stack of characters.
 
-**Data type** — is exact form in which any piece of information can be represented.
+**Data type** — is exact form in which any piece of information in a computer program can be represented.
+
+We will examine most used in VEX data types: integer, float, string, list.   
 
 ## Variables
 ## Commands
