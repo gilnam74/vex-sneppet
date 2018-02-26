@@ -7,9 +7,9 @@ At the end of the lesson, you should be comfortable with [syntax](#syntax), [dat
 
 # Programming theory
 ## Programming and programs
-Let's define what is programming. Sure we can say that programming is a process of creating computer programs, it would be correct, but not very useful. Lets say, **programming** — is communication with a computer, how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific actions. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing **computers understand** is a **program** written in particular programming language. 
+Let's define what is programming. Sure we can say that programming is a process of creating computer programs, it would be correct, but not very useful. Let's say, **programming** — is communication with a computer, it`s how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific actions. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing **computers understand** is a **program** written in particular programming language. 
 
-You can imagine programs as blocks. The program could be simple (like a lonely small block of code), or it could be more sophisticated and combined with numerous small blocks linked together. How we link blocks we will describe in [data types](#data-types) section. 
+You can imagine programs as blocks. The program could be simple (like a lonely small block of code), or it could be more sophisticated and combined with numerous small blocks linked together. How we link blocks we will describe later in [data types](#data-types) section. 
 
 _A particular example: when you copy a file from one folder to another your OS execute specific program._
 
@@ -19,7 +19,7 @@ As you can speak different languages, computers understand different programming
 _A particular example: you should end every sentence in VEX with a semicolon._
 
 ## Data types
-Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). Its important to understand that data is not a part of the program the code (program) itself.  It is something that "comes inside" your program from the outer environment.  
+Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the program the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). Now we can clarify links between different programs we speak above in (Programming)[#programming-and-programs] section.  
 
 For example, if we have a program which copies files from `folder A` to a `folder B` (when user selects a file in explorer and press Ctrl + C in folder A and Ctrl + V in folder B) the data here is a name with a path of the copied file (C:/temp/myFile.py)
 
