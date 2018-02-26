@@ -37,9 +37,11 @@ We will examine most used in VEX data types:
 **Float** — a fractional number: `3.14159`  
 **Vector** — a set of 3 floats:  `{1.0, 0.0, -12.56}`  
 **String** — a text, set of characters: `'Hello, World!'`  
-**List** — a set of values for with the same data type: `['John Daw', 'Paul Anderson', 'Sarah Connor']`
+**List** — a set of values with the same data type: `['John Daw', 'Paul Anderson', 'Sarah Connor']`
 
 ## Variables
+Variable — is a container served to hold some data. Imagine a variable like a box(or any other volume) with coins (or any other items of the same type).
+ 
 ## Commands
 ## functions
 ## loops
