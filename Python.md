@@ -82,3 +82,26 @@ out.setNamedInput(0, shader, 0) # Set connection by parameter index
 # List all inputs for node 'surface_output'
 print out.inputNames()
 ```
+
+##### Filter node.children() output
+```python
+import hou
+selectedNode = hou.selectedNodes()
+
+def extractVop(listOfChildrens):
+    for node in listOfChildrens:
+        if node.type().name() == 'vopsurface':
+            return node
+
+# return vopsurface nodes
+vops = extractVop(selectedNode.children())
+```
+
+Same task with list comprehensions:
+```python
+import hou
+selectedNode = hou.selectedNodes()
+
+# return vopsurface nodes
+vops = [node for node in selectedNode.children() if node.type().name() == 'vopsurface']
+```
