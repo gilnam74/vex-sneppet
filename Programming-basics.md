@@ -27,7 +27,9 @@ Now we can clarify links between different programs we speak above in [Programmi
 
 For example, if we have a program which copies files from `folder A` to a `folder B` (when user selects a file in explorer and press Ctrl + C in folder A and Ctrl + V in folder B) the **input data** here is a **name with a path of the copied file** (C:/temp/myFile.py). Giving a program file path as input we let it know what file it needs to copy, so the program can do the job. Another data examples: list of students in a class, the current time in Michigan, number of wheels in a car, etc.
 
-Obviously, if data could be any piece of information that comes into a program we need to **sort out** (structure) somehow all varieties of this information, otherwise, we would not be able to deal with it efficiently.
+Obviously, if data could be any piece of information that comes into a program we need to **sort out** (structure) somehow all varieties of this information, otherwise, we would not be able to deal with it efficiently. The number of options in which form the information could be presented is limited. A number of wheels in a car is a digit. List of students is a stack of characters (students names). Time is also a digit. And a path to a file is also a stack of characters.
+
+**Data type** — is exact form in which any piece of information can be represented.
 
 ## Variables
 ## Commands
