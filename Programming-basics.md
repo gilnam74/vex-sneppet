@@ -40,7 +40,9 @@ We will examine most used in VEX data types:
 **List** — a set of values with the same data type: `['John Daw', 'Paul Anderson', 'Sarah Connor']`
 
 ## Variables
-Variable — is a container served to hold some data. Imagine a variable like a box(or any other volume) with coins (or any other items of the same type).
+Variable — is a container served to store data. Imagine a variable like a box (or any other volume) with coins (or any other items of the same type).
+
+The current variable can hold only one data type. You cant store integer and string for example in one variable. Each data type requires its own variable.
  
 ## Commands
 ## functions
