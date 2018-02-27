@@ -67,6 +67,7 @@ So basically coding process happens like this: you break your global program tas
 Commands also can have **inputs** and **outputs** of data as we discover with programs. The input for the command is called an **argument**:
 
 ```c
+// Command with argument example
 thisIsCommand(thisIsArgument);
 ```
 
