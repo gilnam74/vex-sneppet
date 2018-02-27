@@ -100,7 +100,14 @@ Where:
 
 For example, if you need to delete a bottom face of several cubes in your scene, you will write a function which would be able to delete bottom face of one cube (and this cube would be passed as input data (argument) into your function) and then repeat this function for every cube with a help of **loop**.
 
-Check one more example — [double intensity of all lights in the scene](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#introduction-to-artistic-developing) for Maya and Python.
+Check one more example — [double intensity of all lights in the scene](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#introduction-to-artistic-developing) for Maya and Python. 
 
-# Going further: algorithms, abstraction, dictionary 
+Let's see how deleting cube face looks in [pseudocode](#Pseudocode):
+```c
+// 
+```
+
+# Going further: algorithms, abstraction, dictionaries, pseudocode
+## Pseudocode
+Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
 
