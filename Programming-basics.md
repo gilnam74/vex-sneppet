@@ -128,6 +128,8 @@ Where `for (int n=0; n<9; n++)` is a loop definition: start from 0 (`n=0`), unti
 
 Going deeper, `n++` is a "syntaxis sugar" (more readble or short form) for `n = n + 1` and a step of 1 means we will run code inside the curly brackets every step from 0 to 9 (what will give us 10 times repetition). We can run a code with a different step value, `n = n + 2` will skip every second iteration, but never mind, most of the time `n++` will work for you.
 
+Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you are interssting in more fancy coding stuff, read the next sections!
+
 # Going further: algorithms, abstraction, dictionaries, pseudocode
 This is not a necessary section for starting VEX experiments but it could be useful for curious minds.
 
