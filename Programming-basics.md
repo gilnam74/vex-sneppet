@@ -85,11 +85,12 @@ We define functions in VEX with **data type** that function will output (return)
 ```C
 // Define Hello World message function
 string printHello(){
-    printf ('Hello, World!');
+    printf('Hello, World!');
     }
 // Run Hello World functiion
 printHello();
 ```
+Where "string" is data type that function returns, "printHello" is function name and `printf('Hello, World!')` is a code of our function which consist of one command `printf()` recieving "Hello, World!" string as an argument.
 
 ## Loops
 
