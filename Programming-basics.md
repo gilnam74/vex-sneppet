@@ -60,7 +60,11 @@ Commands exist within the given programming language, it predefined by the langu
 
 So basically coding process happens like this: you break your global program task into small command pieces and search for commands which could solve this pieces within a given programming language.
 
-Commands also can have **inputs** and **outputs** of data as we discover with programs.
+Commands also can have **inputs** and **outputs** of data as we discover with programs. The input for the command is called an **argument**:
+
+```c
+thisIsCommand(thisIsArgument);
+```
 
  
 ## functions
