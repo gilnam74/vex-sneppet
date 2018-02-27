@@ -46,6 +46,8 @@ The current variable can hold only one data type. For example, you can`t store i
  
 ## Commands
 A **command** is the **smallest fraction of a program** which performs a specific task. The definition of command may look almost the same as a program definition, but the program is a more general concept. In other words, a program consists of the commands. You can imagine commands as bricks which form the block of the program.
+
+Commands also can have **inputs** and **outputs** of data as we discover with programs.
  
 ## functions
 ## loops
