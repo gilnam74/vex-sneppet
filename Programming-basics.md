@@ -100,5 +100,7 @@ Where:
 
 For example, if you need to delete a bottom face of several cubes in your scene, you will write a function which would be able to delete bottom face of one cube (and this cube would be passed as input data (argument) into your function) and then repeat this function for every cube with a help of **loop**.
 
+Check one more example — [double intensity of all lights in the scene](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#introduction-to-artistic-developing) for Maya and Python.
+
 # Going further: algorithms, abstraction, dictionary 
 
