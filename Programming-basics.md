@@ -90,7 +90,10 @@ string printHello(){
 // Run Hello World functiion
 printHello();
 ```
-Where "string" is data type that function returns, "printHello" is function name and `printf('Hello, World!')` is a code of our function which consist of one command `printf()` recieving "Hello, World!" string as an argument.
+Where:
+- "string" is data type that function returns,  
+- "printHello" is function name,  
+- `printf('Hello, World!')` is a code of our function which consist of one command `printf()` recieving "Hello, World!" string as an argument.
 
 ## Loops
 
