@@ -102,9 +102,12 @@ For example, if you need to delete a bottom face of several cubes in your scene,
 
 Check one more example — [double intensity of all lights in the scene](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#introduction-to-artistic-developing) for Maya and Python. 
 
+Loop syntax.
+
 Let's see how deleting cube face looks in [pseudocode](#pseudocode):
 ```c
-// 
+// Create a container for all cubes in scene
+listOfCubes = ['Cube_01', 'Cube_02', ... 'Cube_N']
 ```
 
 # Going further: algorithms, abstraction, dictionaries, pseudocode
