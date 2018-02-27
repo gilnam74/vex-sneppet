@@ -75,7 +75,18 @@ thisIsCommand(thisIsArgument);
 What if there is no appropriate command to solve your task in a given programming language? Write and use your own!
 Let`s define a **function** as a **custom command to perform a specific task** inside your programm.
 
-Now we can assume that **command** is a **built-in function** in certain language. 
+Now we can assume that **command** is a **built-in function** in a certain language. 
+
+We define functions in VEX with data type that function will output (return) and function name:
+
+```C
+// Define Hello World message function
+string printHello(){
+    printf ('Hello, World!');
+    }
+// Run Hello World functiion
+printHello();
+```
 
 ## Loops
 
