@@ -98,7 +98,7 @@ Where:
 ## Loops
 **Loop** is a concept which allows performing a specific task **several times**. It's **repeating** one or more command, function, program. It is used when you need to solve the same task with a numerous amount of objects. 
 
-For example, if you need to delete a bottom face of several cubes in your scene, you will write a function which would be able to delete bottom face of one cube (and this cube would be passed as input data into your function) and then repeat this function for every cube with a hel of loop.
+For example, if you need to delete a bottom face of several cubes in your scene, you will write a function which would be able to delete bottom face of one cube (and this cube would be passed as input data (argument) into your function) and then repeat this function for every cube with a help of **loop**.
 
 # Going further: algorithms, abstraction, dictionary 
 
