@@ -102,12 +102,14 @@ For example, if you need to delete a bottom face of several cubes in your scene,
 
 Check one more example — [double intensity of all lights in the scene](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#introduction-to-artistic-developing) for Maya and Python. 
 
-Let's see how deleting cube face looks in [pseudocode](#Pseudocode):
+Let's see how deleting cube face looks in [pseudocode](#pseudocode):
 ```c
 // 
 ```
 
 # Going further: algorithms, abstraction, dictionaries, pseudocode
+This is not a necessary section for starting VEX experiments but it could be useful for curious minds.
+
 ## Pseudocode
 Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
 
