@@ -102,8 +102,6 @@ For example, if you need to delete a bottom face of several cubes in your scene,
 
 Check one more example — [double intensity of all lights in the scene](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#introduction-to-artistic-developing) for Maya and Python. 
 
-Loop syntax.
-
 Let's see how deleting cube face looks in [pseudocode](#pseudocode):
 ```c
 // Create a container for all cubes in scene (list variable)
@@ -111,10 +109,13 @@ listOfCubes = ['Cube_01', 'Cube_02', ... 'Cube_N']
 
 // Create a procedure which will delete the bottom face of input cube
 deleteFace(inputCube)
+    find the bottom face of inputCube
+    delete the bottom face of inputCube
 
 // Apply deletion procedure for all cubes
-for each object in **listOfCubes** run **deleteFace()**
+for each object in listOfCubes run deleteFace()
 ```
+Loop syntax.
 
 # Going further: algorithms, abstraction, dictionaries, pseudocode
 This is not a necessary section for starting VEX experiments but it could be useful for curious minds.
