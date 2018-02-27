@@ -42,7 +42,7 @@ We will examine most used in VEX data types:
 ## Variables
 Variable — is a container served to store data. Imagine a variable like a box with coins (or any other volume with any other items of the same type inside).
 
-The current variable can hold only one data type. You cant store integer and string for example in one variable. Each data type requires its own variable.
+The current variable can hold only one data type. For example, you can`t store integer and string in one variable. In other words, each data type requires its own variable.
  
 ## Commands
 ## functions
