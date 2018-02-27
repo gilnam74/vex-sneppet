@@ -11,12 +11,14 @@ Let's define what is programming. Sure we can say that programming is a process 
 
 You can imagine programs as blocks. The program could be simple (like a lonely small block of code), or it could be more sophisticated and combined with numerous small blocks linked together. How we link blocks we will describe later in [data types](#data-types) section. 
 
+One important aspect of programming which worth to learn at the early stages is **comments**. Comment is a note in program code for humans, for those people who could read the code later, including a program author. One of the basement law of programming speaks: **Code is read much more often than it is written**. So you can expect that you write a comment for yourself and its a **must follow practice**. Always comment your code precisely!
+
 _A particular example: when you copy a file from one folder to another your OS execute specific program._
 
 ## Syntax
 As you can speak different languages, computers understand different programming languages also. The written rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another. 
 
-_A particular example: you should end every sentence in VEX with a semicolon._
+_A particular examples: you should end every sentence in VEX with a semicolon. Comments line should start from `//`_
 
 ## Data types
 The concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
@@ -43,6 +45,10 @@ We will examine most used in VEX data types:
 Variable — is a container served to store data. Imagine a variable like a box with coins (or any other volume with any other items of the same type inside).
 
 The current variable can hold only one data type. For example, you can`t store integer and string in one variable. In other words, each data type requires its own variable.
+
+In VEX when you create (declare) a variable you should define data type and variable name:
+
+//
  
 ## Commands
 A **command** is the **smallest fraction of a program** which performs a specific task. The definition of command may look almost the same as a program definition, but the program is a more general concept. In other words, a program consists of the commands. You can imagine commands as bricks which form the block of the program.
