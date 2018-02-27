@@ -18,7 +18,7 @@ _A particular example: when you copy a file from one folder to another your OS e
 ## Syntax
 As you can speak different languages, computers understand different programming languages also. The written rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another. 
 
-_A particular examples: you should end every sentence in VEX with a semicolon. Comments line should start from `//`_
+_A particular examples: you should end every sentence in VEX with a semicolon. Comments line should start with `//`_
 
 ## Data types
 The concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
@@ -46,10 +46,13 @@ Variable — is a container served to store data. Imagine a variable like a box 
 
 The current variable can hold only one data type. For example, you can`t store integer and string in one variable. In other words, each data type requires its own variable.
 
-In VEX when you create (declare) a variable you should define data type and variable name:
+In VEX when you create (declare) a variable you should define the **data type** and **variable name**:
+```c
+// Set path to the source file
+string pathToFile = 'C:/temp/myFile.py';
+```
+Where "string" is definition of string data type for variable which has name "pathToFile" and `C:/temp/myFile.py` is a value for the variable.
 
-//
- 
 ## Commands
 A **command** is the **smallest fraction of a program** which performs a specific task. The definition of command may look almost the same as a program definition, but the program is a more general concept. In other words, a program consists of the commands. You can imagine commands as bricks which form the block of the program.
 
