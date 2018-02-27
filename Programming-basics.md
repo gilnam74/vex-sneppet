@@ -11,7 +11,11 @@ Let's define what is programming. Sure we can say that programming is a process 
 
 You can imagine programs as blocks. The program could be simple (like a lonely small block of code), or it could be more sophisticated and combined with numerous small blocks linked together. How we link blocks we will describe later in [data types](#data-types) section. 
 
-One important aspect of programming which worth to learn at the early stages is **comments**. Comment is a note in program code for humans, for those people who could read the code later, including a program author. One of the basement law of programming speaks: **Code is read much more often than it is written**. So you can expect that you write a comment for yourself and its a **must follow practice**. Always comment your code precisely!
+One important aspect of programming which worth to learn at the early stages is **comments**. Comment is a note in program code for humans, for those people who could read the code later, including a program author. One of the basement law of programming speaks: 
+
+**Code is read much more often than it is written**.
+
+So you can expect that you write a comment for yourself and its a **must follow practice**. Always comment your code precisely!
 
 _A particular example: when you copy a file from one folder to another your OS execute specific program._
 
