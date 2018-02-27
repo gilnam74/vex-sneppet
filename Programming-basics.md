@@ -58,7 +58,7 @@ A **command** is the **smallest fraction of a program** which performs a specifi
 
 Commands also can have **inputs** and **outputs** of data as we discover with programs.
 
-Commands exist within the given programming language, it predefined by the language itself. You write your programs using existing commands. For example, you will use `copy` Python command to copy a file from one location to another if you will write your own copying Python program.
+Commands exist within the given programming language, it predefined by the language itself. You write your programs using existing commands. For example, you will use `copyfile(src, dst)` Python command to copy a file from one location to another if you will write your own copying Python program.
  
 ## functions
 ## loops
