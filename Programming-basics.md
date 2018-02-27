@@ -106,8 +106,14 @@ Loop syntax.
 
 Let's see how deleting cube face looks in [pseudocode](#pseudocode):
 ```c
-// Create a container for all cubes in scene
+// Create a container for all cubes in scene (list variable)
 listOfCubes = ['Cube_01', 'Cube_02', ... 'Cube_N']
+
+// Create a procedure which will delete the bottom face of input cube
+deleteFace(inputCube)
+
+// Apply deletion procedure for all cubes
+for each object in **listOfCubes** run **deleteFace()**
 ```
 
 # Going further: algorithms, abstraction, dictionaries, pseudocode
