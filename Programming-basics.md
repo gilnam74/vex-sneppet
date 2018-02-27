@@ -22,9 +22,9 @@ _A particular example: when you copy a file from one folder to another your OS e
 ## Syntax
 As you can speak different languages, computers understand different programming languages also. The written rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another. 
 
-_A particular examples: 
+_A particular examples: _
 - You should end every sentence in VEX with a semicolon. 
-- Comments line should start with `//`_
+- Comments line should start with `//`
 
 ## Data types
 The concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
