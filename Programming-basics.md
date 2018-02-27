@@ -56,7 +56,9 @@ Where "string" is definition of string data type for variable which has name "pa
 ## Commands
 A **command** is the **smallest fraction of a program** which performs a specific task. The definition of command may look almost the same as a program definition, but the program is a more general concept. In other words, a program consists of the commands. You can imagine commands as bricks which form the block of the program.
 
-Commands exist within the given programming language, it predefined by the language itself. You write your programs using existing commands. For example, you will use `copyfile()` Python command to copy a file from one location to another if you will write your own copying Python program. So basically coding process happens like this: you break your global program task into small command pieces and search for commands which could solve this pieces within a given programming language.
+Commands exist within the given programming language, it predefined by the language itself. You write your programs using existing commands. For example, you will use `copyfile()` Python command to copy a file from one location to another if you will write your own **copying program** with a Python language.
+
+So basically coding process happens like this: you break your global program task into small command pieces and search for commands which could solve this pieces within a given programming language.
 
 Commands also can have **inputs** and **outputs** of data as we discover with programs.
 
