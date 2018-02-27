@@ -124,7 +124,9 @@ for (int n=0; n<10; n++){
     
     }
 ```
-Where `for (int n=0; n<9; n++)` is a loop definition: start from 0 (n=0), until we reach 9 (n<9), with a step of 1 (n++) execute everything located in `{}` — print "Hello, World!". `n++` is a syntaxis sugar for `n = n + 1` and a step of 1 means we will run code inside the curly brackets every step from 0 to 9 (what will give us 10 times repetition). We can run a code with a different step value, `n = n + 2` will skip every second iteration, but never mind, most of the time `n++` will work for you.
+Where `for (int n=0; n<9; n++)` is a loop definition: start from 0 (`n=0`), until we reach 9 (`n<9`), with a step of 1 (`n++`) execute everything located in `{}` — print "Hello, World!".
+
+Going deeper, `n++` is a "syntaxis sugar" (more readble or short form) for `n = n + 1` and a step of 1 means we will run code inside the curly brackets every step from 0 to 9 (what will give us 10 times repetition). We can run a code with a different step value, `n = n + 2` will skip every second iteration, but never mind, most of the time `n++` will work for you.
 
 # Going further: algorithms, abstraction, dictionaries, pseudocode
 This is not a necessary section for starting VEX experiments but it could be useful for curious minds.
