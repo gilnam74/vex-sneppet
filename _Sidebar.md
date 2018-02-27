@@ -3,6 +3,7 @@
   - [Interface](interface)
   - [Programming basics](Programming-basics)
   - [Python in Houdini](Python)
-  - [VEX quickstart](VEX-Quick-start)
+  - [VEX quickstart](vex-quick-start)
+  - [VEX snippets](vex-snippets)
   - [Misc](misc)
 * [Glossary](Glossary)
