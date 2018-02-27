@@ -115,7 +115,16 @@ deleteFace(inputCube)
 // Apply deletion procedure for all cubes
 for each object in listOfCubes run deleteFace()
 ```
-Loop syntax.
+Loop syntax in VEX:
+```c
+// Print "Hello, World!" 10 tims
+for (int n=0; n<10; n++){
+
+    printf('Hello, World!');
+    
+    }
+```
+Where: `for (int n=0; n<9; n++)` is a loop definition. Start from 0 (n=0), untill we reach 9 (n<9), with a step of 1 (n++) execute everything located in `{}`
 
 # Going further: algorithms, abstraction, dictionaries, pseudocode
 This is not a necessary section for starting VEX experiments but it could be useful for curious minds.
