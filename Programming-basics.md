@@ -7,7 +7,7 @@ At the end of the lesson, you should be comfortable with [syntax](#syntax), [dat
 
 # Programming theory
 ## Programming and programs
-Let's define what is programming. Sure we can say that programming is a process of creating computer programs, it would be correct, but not very useful. Let's say, **programming** — is communication with a computer, it`s how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific actions. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing **computers understand** is a **program** written in particular programming language. 
+Let's define what is programming. Sure we can say that programming is a process of creating computer programs, it would be correct, but not very useful. Let's say, **programming** — is communication with a computer, it`s how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific tasks. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing **computers understand** is a **program** written in particular programming language. 
 
 You can imagine programs as blocks. The program could be simple (like a lonely small block of code), or it could be more sophisticated and combined with numerous small blocks linked together. How we link blocks we will describe later in [data types](#data-types) section. 
 
@@ -45,6 +45,8 @@ Variable — is a container served to store data. Imagine a variable like a box 
 The current variable can hold only one data type. For example, you can`t store integer and string in one variable. In other words, each data type requires its own variable.
  
 ## Commands
+A **command** is the **smallest fraction of a program** which performs a specific task. The definition of command may look almost the same as a program definition, but the program is a more general concept. In other words, a program consists of the commands. You can imagine commands as bricks which form the block of the program.
+ 
 ## functions
 ## loops
 
