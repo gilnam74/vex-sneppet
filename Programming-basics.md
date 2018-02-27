@@ -73,7 +73,7 @@ thisIsCommand(thisIsArgument);
  
 ## functions
 What if there is no appropriate command to solve your task in a given programming language? Write and use your own!
-Let`s define a **function** as a **custom command to per the orm specific task**.
+Let`s define a **function** as a **custom command to perform a specific task** inside your programm.
 
 Now we can assume that **command** is a **built-in function** in certain language. 
 
