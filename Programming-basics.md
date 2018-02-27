@@ -47,7 +47,7 @@ Variable — is a container served to store data. Imagine a variable like a box 
 The current variable can hold only one data type. For example, you can`t store integer and string in one variable. In other words, each data type requires its own variable.
 
 In VEX when you create (declare) a variable you should define the **data type** and **variable name**:
-```c++
+```Python
 // Set path to the source file
 string pathToFile = 'C:/temp/myFile.py';
 ```
