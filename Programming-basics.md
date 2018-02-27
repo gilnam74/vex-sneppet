@@ -80,7 +80,7 @@ Let`s define a **function** as a **custom command to perform a specific task** i
 
 Now we can assume that **command** is a **built-in function** in a certain language. 
 
-We define functions in VEX with data type that function will output (return) and function name:
+We define functions in VEX with **data type** that function will output (return) and **function name**, we place code for function in curly brackets `{ ... }`:
 
 ```C
 // Define Hello World message function
