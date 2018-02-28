@@ -118,14 +118,29 @@ for each object in listOfCubes run deleteFace()
 **Loop syntax** in VEX:
 ```c
 // Create array with a list of students 
-string students[] = {'John','Dan','Sarah'};
+string listStudents[] = {'John','Dan','Sarah'};
 
 // Print each student name
-foreach ( string n;  students){
-    printf('%s', n);
+foreach ( string student;  listStudents){
+    printf(student);
+    } 
+```
+Where `string listStudents[] = {'John','Dan','Sarah'}` is a definition of string array holding students names,  
+`foreach(string student;  listStudents)` is a loop definition: for each member `student` of array `listStudents` execute code in `{}`. And `printf()` is a VEX command which prints an argument `student` (student name), so each iteration we print a new name from the given array.
+
+The `printf()` command expects arguments of string data type (you should "place" inside this command only string data: `prinrtf(stringInput)`). So if we would process integer array we would need to convert integer data type to a string data type and it could be done with a construction `printf('%d', integerItem)`, where`'%d', integerItem` means: substitute `'%d'` with current processed integer element of array `integerItem`.
+
+```c
+// Create array with a students grades 
+int listGrades[] = {10, 2, 9, 0};
+
+// Print each grade from array
+foreach(int grade;  listGrades){
+    printf('%d', grade);
     } 
 ```
 
+Another option for loops in VEX:
 ```c
 // Print "Hello, World!" 10 tims
 for (int n=0; n<10; n++){
