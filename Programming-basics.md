@@ -41,11 +41,11 @@ Obviously, if data could be any piece of information that comes into a program w
 
 We will examine most used in VEX data types:  
 
-**Integer** — a whole numbers: `256`  
-**Float** — a fractional number: `3.14159`  
-**Vector** — a set of 3 floats:  `{1.0, 0.0, -12.56}`  
-**String** — a text, set of characters: `'Hello, World!'`  
-**Array** — a set of values with the same data type: `string students[] = ['John', 'Paul', 'Sarah']`
+**Integer** — a whole numbers: `int numberOfIterations = 256;`  
+**Float** — a fractional number: `flat PI = 3.14159;`  
+**Vector** — a set of 3 floats:  `vector color = {1.0, 0.0, 0.256};`  
+**String** — a text, set of characters: `string phrase = 'Hello, World!';`  
+**Array** — a set(list) of values with the same data type: `string students[] = {'John', 'Paul', 'Sarah'}`
 
 ## Variables
 Variable — is a container served to store data. Imagine a variable like a box with coins (or any other volume with any other items of the same type inside).
@@ -117,11 +117,19 @@ for each object in listOfCubes run deleteFace()
 ```
 **Loop syntax** in VEX:
 ```c
+// Create array with a list of students 
+string students[] = {'John','Dan','Sarah'};
+
+// Print each student name
+foreach ( string n;  students){
+    printf('%s', n);
+    } 
+```
+
+```c
 // Print "Hello, World!" 10 tims
 for (int n=0; n<10; n++){
-
-    printf('Hello, World!');
-    
+    printf('Hello, World!');  
     }
 ```
 Where `for (int n=0; n<9; n++)` is a loop definition: start from 0 (`n=0`), until we reach 9 (`n<9`), with a step of 1 (`n++`) execute everything located in `{}` — print "Hello, World!".
