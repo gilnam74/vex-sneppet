@@ -47,6 +47,8 @@ We will examine most used in VEX data types:
 **String** — a text, set of characters: `string phrase = 'Hello, World!';`  
 **Array** — a set of values with the same data type: `string letters[] = {'A', 'B', 'C'};`
 
+To **process array** data type we use [**loop**](#loops) construction, loop allows to apply some actions to each element of array.
+
 ## Variables
 Variable — is a container served to store data. Imagine a variable like a box with coins (or any other volume with any other items of the same type inside).
 
@@ -96,7 +98,7 @@ Where:
 - `printf('Hello, World!')` is a code of our function which consist of one command `printf()` recieving "Hello, World!" string as an argument.
 
 ## Loops
-**Loop** is a concept which allows performing a specific task **several times**. It's **repeating** one or more command, function, program. It is used when you need to solve the same task with a numerous amount of objects. 
+**Loop** is a concept which allows performing a specific task **several times**. It's **repeating** one or more command, function, program. It is used when you need to solve the same task with a numerous amount of objects. Loops are used widely to process **arrays** (see data types), so you can do something with each element of the array one by one.
 
 For example, if you need to delete a bottom face of several cubes in your scene, you will write a function which would be able to delete bottom face of one cube (and this cube would be passed as input data (argument) into your function) and then repeat this function for every cube with a help of **loop**.
 
