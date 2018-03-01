@@ -37,5 +37,6 @@ So with `addpoint()` we will create a point in a given position in space.
 Lets do it, write in your Attribute Wrangle node:
 
 ```C
+// Create one point at the origin
 addpoind(0,0);
 ```
