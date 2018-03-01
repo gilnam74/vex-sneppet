@@ -3,7 +3,7 @@ The goal of this section is to give artist **fast understanding** of core progra
 
 **Simplification** is a focus on the main topic ignoring all surrounding exceptions and details. **Analogies** — explaining unknown with the notions which are intuitive (familiar without any extra knowledge to a majority of humans in the world). Both simplification and analogies yields to a faster understanding but less precision. Keep in mind that you may not pass an exam on computer science with such kind of knowledge but from the other side it would be possible to start applied developing without finishing computer science class.
 
-At the end of the lesson, you should be comfortable with [syntax](#syntax), [data types](#data-types), [variables](#variables), [commands](#commands), [functions](#functions), [loops](#loops).  
+At the end of the lesson, you should be comfortable with [syntax](#syntax), [data types](#data-types), [variables](#variables), [commands](#commands), [functions](#functions), [loops](#loops), [Conditions](#conditions).  
 
 # Programming theory
 ## Programming and programs
@@ -151,6 +151,9 @@ for (int n=0; n<10; n++){
 Where `for (int n=0; n<9; n++)` is a loop definition: start from 0 (`n=0`), until we reach 9 (`n<9`), with a step of 1 (`n++`) execute everything located in `{}` — print "Hello, World!".
 
 Going deeper, `n++` is a "syntaxis sugar" (more readble or short form) for `n = n + 1` and a step of 1 means we will run code inside the curly brackets every step from 0 to 9 (what will give us 10 times repetition). We can run a code with a different step value, `n = n + 2` will skip every second iteration, but never mind, most of the time `n++` will work for you.
+
+## Conditions
+If else.
 
 Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you are interssting in more fancy coding stuff, read the next sections!
 
