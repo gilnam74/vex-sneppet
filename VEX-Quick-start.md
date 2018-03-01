@@ -22,6 +22,6 @@ You can examine point attributes in **Geometry Spreadsheet** window.
 
 ##### Create a point
 Create an [Attribute Wrangle](#create-a-wrangle-in-a-fresh-houdini-scene), set Run Over parameter to Detail.  
-Now to create a point we need to know a [command](Programming-basics#commands) for that.  
+Now to create a point we need to know a [command](Programming-basics#commands) for that. Let`s use [Google Development Technique](06-Tutorials#developing-with-google)!  
 
-Search Google for "create point Houdini vex" and you will definitely find out that `addpoint()` will allow us to solve the task. Search for "addpoint vex" to read [Houdini documentation](http://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) on addpoint() command.
+Search for "create point Houdini vex" and you will definitely find out that `addpoint()` will allow us to solve the task. Search for "addpoint vex" to read [Houdini documentation](http://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) on addpoint() command.
