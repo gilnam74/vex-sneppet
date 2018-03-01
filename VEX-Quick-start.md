@@ -72,10 +72,12 @@ addpoint(0, position);
 Ok, we create a point with a default position attribute.  
 Let's learn how we can **create, set and get custom or built-in point attributes**. 
 
-Create a new Attribute wrangler, plug output of point creation wrangler to the first input, add a code: `@N;`  
-Check Geometry Spreadsheet to ensure that new built-in vector attribute `N` (normal) was added and has value `{0, 0, 0}`.
+Create a new Attribute Wrangler, plug output of point creation wrangler to the first input, add a code: `@N;`. Check Geometry Spreadsheet to ensure that new built-in vector attribute `N` (normal) was added and has value `{0, 0, 0}`.
 
-
+You can:
+- initialize new attribute with value: `@N = {0, 1, 0};`
+- set attribute value: `@N = set(0,0,0);`
+- get attribute value: `v@getPosition = @P;`,` f@getPosition_Y = @P.y;`
 
 Difference between attributes and variables from VEX point of view.
 
