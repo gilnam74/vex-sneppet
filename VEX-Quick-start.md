@@ -47,10 +47,17 @@ Turn on **Display points** and **Display pint numbers**. If you did everything r
 
 Check Geometry Spreadsheet to see point attributes: point number `0` has one vector attribute `P` which is "point position" and value of this attribute is P.x = 0.0, P.z = 0.0, P.z = 0.0.
 
-Curious minds might notice one issue: point position is a vector attribute, but we feed an integer as a second argument of addpoint() command. Despite our code works it is actually wrong, we never should mess up our data types! Its a good practice always to declare the data type explicitly. Let's also use a variable to organize our code better. Organizing one line of code may seem ridiculous but proper structuring and organisation should be done to any amount of data we work with.
+Curious minds might notice one issue: point position is a vector attribute, but we feed an integer as a second argument of addpoint() command. Despite our code works it is actually wrong, we never should mess up our data types! It's a good practice always to declare the data type explicitly. Let's also use a variable to organize our code better. Organizing one line of code may seem ridiculous but proper structuring and organization should be done to any amount of data we work with.
 
 ```C
 // Create one point at the origin
 vector position = {0,0,0};
 addpoint(0, position);
 ```
+
+Ok, we create a point with a default position attribute. Let's learn how we can **manage point attributes**.
+
+Difference between attributes and variables from VEX point of view.
+
+##### Create a line
+Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! 
