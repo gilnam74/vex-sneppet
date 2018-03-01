@@ -33,6 +33,9 @@ What can we learn from this?
 - First, this command returns **point number** (integer data type). Its simple, if you have 10 points, each of them will have its own index starting from `0`, ending with `9`. You can get access to a particular point (and point attributes) using this index. In the case with one point, we will have one point number equal zero.
 - addpoint command required 2 arguments (inputs): integer "geohandle" and vector "pos". We would not go deep into geohandle concept, imagine it as a port for plugging some data and use `0` for its value, it will suit for the majority of cases. Second argument "Pos" is a vector position in 3D space, X, Y and Z coordinates of the created point.
 
-So with `addpoint()` we will create a point in a given position in space. Lets do it, write in your Attribute Wrangle node:
+So with `addpoint()` we will create a point in a given position in space.  
+Lets do it, write in your Attribute Wrangle node:
 
-`addpoind(0,0);`
+```C
+addpoind(0,0);
+```
