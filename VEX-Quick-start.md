@@ -28,7 +28,7 @@ Search for "create point Houdini vex" and you will definitely find out that `add
 
 Always start from reading the documentation for the command you wish to use, even if explanation there would not have any sense for you. This could happen at the beginning, but you will get more and more benefits from docs later, just do it to build an experience.
 
-One of possible usage of this command is: `int  addpoint(int geohandle, vector pos)`
+One of possible usage of this command is: `int  addpoint(int geohandle, vector pos)`  
 What can we learn from this? 
 - First, this command returns **point number** (integer data type). Its simple, if you have 10 points, each of them will have its own index starting from `0`, ending with `9`. You can get access to a particular point (and point attributes) using this index. In the case with one point, we will have one point number equal zero.
 - addpoint command required 2 arguments (inputs): integer "geohandle" and vector "pos". We would not go deep into geohandle concept, imagine it as a port for plugging some data and use `0` for its value, it will suit for the majority of cases. Second argument "Pos" is a vector position in 3D space, X, Y and Z coordinates of the created point.
