@@ -40,3 +40,7 @@ Lets do it, write in your Attribute Wrangle node:
 // Create one point at the origin
 addpoind(0,0);
 ```
+
+Turn on **Display points** and **Display pint numbers**. If you did everything right you should get one point at the origin of Houdini scene:
+
+[![](https://www.google.com/search?rlz=1C1CHBD_enUS763US764&ei=vjqYWrqXIOLL5gK_0KiQBg&q=create+point+houdini+vex&oq=create+point+houdini+vex&gs_l=psy-ab.3..0i22i30k1.5568.6671.0.7100.4.4.0.0.0.0.118.410.1j3.4.0....0...1c.1.64.psy-ab..0.3.292...33i22i29i30k1.0._mNfbRoQqxs)](https://www.google.com/search?rlz=1C1CHBD_enUS763US764&ei=vjqYWrqXIOLL5gK_0KiQBg&q=create+point+houdini+vex&oq=create+point+houdini+vex&gs_l=psy-ab.3..0i22i30k1.5568.6671.0.7100.4.4.0.0.0.0.118.410.1j3.4.0....0...1c.1.64.psy-ab..0.3.292...33i22i29i30k1.0._mNfbRoQqxs)
