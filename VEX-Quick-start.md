@@ -59,7 +59,7 @@ addpoint(0, position);
 
 ##### Manage attributes
 Ok, we create a point with a default position attribute.  
-Let's learn how we can **create new and use existing (built-in) point attributes**.
+Let's learn how we can **create, set and get custom or built-in point attributes**.
 
 Difference between attributes and variables from VEX point of view.
 
