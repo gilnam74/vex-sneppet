@@ -21,4 +21,4 @@ The minimal amount of attributes is one: point position in the scene (`P`). Poin
 You can examine point attributes in **Geometry Spreadsheet** window.
 
 ##### Create a point
-Create an [Attribute Wrangle](#create-a-wrangle-in-a-fresh-Houdini-scene) 
+Create an [Attribute Wrangle](#create-a-wrangle-in-a-fresh-houdini-scene), set Run Over parameter to Detail.
