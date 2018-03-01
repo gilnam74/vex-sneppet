@@ -44,3 +44,13 @@ addpoind(0,0);
 Turn on **Display points** and **Display pint numbers**. If you did everything right you should get one point at the origin of Houdini scene:
 
 [![](https://lh3.googleusercontent.com/a5G6FyNkn9hBzSFp_PGe-2hU3ZUi41s2S9-Lce_MyS7K8krNhhdUBrqyaWHYwkjKF0SaI7X3kh_G1IYBM-T32mw4unS5uaZuyRoawaFf5vvCGvlx4JCiY1TuGsl1h-ggKb05vd5zgtRUXC30XSH8ZCM3g1lNHODhzpImw0M4HlXmWvORtHxXPEyyZx28ekDFw3ezPgkJJ8IZMllOLnmoaI9_z1v2HkTVK5ltOP_GcKwdPB-1T0Tf-0a0Gk_mg59-vLB4g7P9qbHww-hOh1Yv9Vs9OJSVGwhXCot015gkUfq6yK2wBrSJL3DnWotqTRF5rGSdB5VTeT6SO8Lm1MOSt0lfTQWtlAiWEy_gmxbX_28shg0dEpbMiNo6oP-st5ZiSz_TW1pIdjaIF7KEDKOAoK7wWwmfozDwrntJh-JiGy6388XXIxqmm4GV-zCncirQfpm2JqNiHrNR_bUKfZrfWqhRPH9nPoTdRJcbBNfX0rsLfWr450MkpNXWvx44fES-C7i71OThURtN_0vsEd1wJ7F-NK5e5JBDIIc1EHpBqhMvkjMexHQHEct4ZkuOuB9VY9swK5WkebWb_0_VYlmY0foUM_WvykdK4psoDAk=w1915-h700-no)](https://lh3.googleusercontent.com/a5G6FyNkn9hBzSFp_PGe-2hU3ZUi41s2S9-Lce_MyS7K8krNhhdUBrqyaWHYwkjKF0SaI7X3kh_G1IYBM-T32mw4unS5uaZuyRoawaFf5vvCGvlx4JCiY1TuGsl1h-ggKb05vd5zgtRUXC30XSH8ZCM3g1lNHODhzpImw0M4HlXmWvORtHxXPEyyZx28ekDFw3ezPgkJJ8IZMllOLnmoaI9_z1v2HkTVK5ltOP_GcKwdPB-1T0Tf-0a0Gk_mg59-vLB4g7P9qbHww-hOh1Yv9Vs9OJSVGwhXCot015gkUfq6yK2wBrSJL3DnWotqTRF5rGSdB5VTeT6SO8Lm1MOSt0lfTQWtlAiWEy_gmxbX_28shg0dEpbMiNo6oP-st5ZiSz_TW1pIdjaIF7KEDKOAoK7wWwmfozDwrntJh-JiGy6388XXIxqmm4GV-zCncirQfpm2JqNiHrNR_bUKfZrfWqhRPH9nPoTdRJcbBNfX0rsLfWr450MkpNXWvx44fES-C7i71OThURtN_0vsEd1wJ7F-NK5e5JBDIIc1EHpBqhMvkjMexHQHEct4ZkuOuB9VY9swK5WkebWb_0_VYlmY0foUM_WvykdK4psoDAk=w1915-h700-no)
+
+Check Geometry Spreadsheet to see point attributes: point number `0` has one vector attribute `P` which is "point position" and value of this attribute is P.x = 0.0, P.z = 0.0, P.z = 0.0.
+
+Curious minds might notice one issue: point position is a vector attribute, but we feed an integer as a second argument of addpoint() command. Despite our code works it is actually wrong, we never should mess up our data types! Its a good practice always to declare the data type explicitly. Let's also use a variable to organize our code better. Organizing one line of code may seem ridiculous but proper structuring and organisation should be done to any amount of data we work with.
+
+```C
+// Create one point at the origin
+vector position = {0,0,0};
+addpoint(0, position);
+```
