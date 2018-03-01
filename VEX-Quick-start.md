@@ -18,12 +18,18 @@ Point is a basement of 3 Dimensional data representation and its a core entity i
 **Point** in Houdini is a basic container in 3D space with a number of **attributes** associated with it.  
 **Attributes** are just variables on points to store data. The minimal amount of point attributes is one: point position in the scene (`P`). Point position is a built-in [vector](Programming-basics#data-types) attribute, it holds 3 float number: point position in X, Y and Z in the global coordinate system (scene). 
 
-Attributes syntax.  
-You define an attribute in VEX with **data type**, `@` sign and **attribute name**.
-
 The attributes could be **built-in** (standard, already existing in Houdini) and **custom** (created and defined by the user). You can examine point attributes and their values in **Geometry Spreadsheet** window.
 
-Examples of built-in attributes:
+Attributes syntax.  
+You define an attribute in VEX with **data type**, `@` sign and **attribute name** :
+- `v@myVectorAttribute;`
+- `f@myFloatAttribute;`
+- `i@myIntegerAttribute;`
+
+You don't need to define the data type of built-in attributes:
+- Point position: `@P;`
+- Point number: `@ptnum;`
+- Total amount of points: `@numpt;`
 
 All modeling and bunch of other operations in Houdini are just around creating and managing points and their attributes.
 
