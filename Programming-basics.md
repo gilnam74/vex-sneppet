@@ -3,7 +3,7 @@ The goal of this section is to give artist **fast understanding** of core progra
 
 **Simplification** is a focus on the main topic ignoring all surrounding exceptions and details. **Analogies** — explaining unknown with the notions which are intuitive (familiar without any extra knowledge to a majority of humans in the world). Both simplification and analogies yields to a faster understanding but less precision. Keep in mind that you may not pass an exam on computer science with such kind of knowledge but from the other side it would be possible to start applied developing without finishing computer science class.
 
-At the end of the lesson, you should be comfortable with [syntax](#syntax), [data types](#data-types), [variables](#variables), [commands](#commands), [functions](#functions), [loops](#loops), [Conditions](#conditions).  
+At the end of the lesson, you should be comfortable with [syntax](#syntax), [data types](#data-types), [variables](#variables), [commands](#commands), [functions](#functions), [loops](#loops), [conditions](#conditions).  
 
 # Programming theory
 ## Programming and programs
