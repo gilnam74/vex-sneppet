@@ -185,4 +185,4 @@ This is not a necessary section for starting VEX experiments but it could be use
 Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
 
 ## Dictionaries
-Dictionary is an extended [data type](data-types).
+Dictionary is a special [data type](data-types) which can store information in form `KEY : VALUE`.
