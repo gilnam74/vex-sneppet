@@ -167,8 +167,14 @@ if (a/b == 1){
     }
 ```
 
-Where `(a/b == 1)` is a checked condition: if A divided by B is an equal of one. Why we use `==` instead of `=`?
+Where `(a/b == 1)` is a checked condition: if A divided by B is an equal of one. Why we use `==` instead of `=`? In a case with conditions, the sign you are checking condition with (sign between compared items, `a/b` and `1`) is called **condition operator**. The equal sign `=` means that you **assign a value** to a variable, to check equality in condition we have to use `==` operator. 
 
+Common condition operators:
+- Does A equal to B: `A == B`
+- Does A not equal to B: `A != B`
+- Does A grater or equel to B: `A >= B` 
+
+In conjunction with the conditional operators you may use **logical operator** like AND, OR and NOT. If the rain is heavy and I have an umbrella and i dont have a cold — go outside.
 
 Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you are interested in more fancy coding stuff, go ahead and read the next section.
 
