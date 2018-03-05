@@ -2,6 +2,7 @@
 * Tutorials
   - [Interface](interface)
   - [Programming basics](Programming-basics)
+  - [Math basics](Math-basics)
   - [Python in Houdini](Python)
   - [VEX quickstart](vex-quick-start)
   - [VEX snippets](vex-snippets)
