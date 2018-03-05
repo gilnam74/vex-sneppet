@@ -5,7 +5,7 @@ The goal of this section is to give artist **fast understanding** of core progra
 
 At the end of the lesson, you should be comfortable with [syntax](#syntax), [data types](#data-types), [variables](#variables), [commands](#commands), [functions](#functions), [loops](#loops), [conditions](#conditions).  
 
-# Programming theory
+# Programming theory basics
 ## Programming and programs
 Let's define what is programming. Sure we can say that programming is a process of creating computer programs, it would be correct, but not very useful. Let's say, **programming** — is communication with a computer, it`s how you can "speak" with this device. The more accurate definition would be: **giving precise instructions to a computer** to perform specific tasks. Moreover, anything you want your computer to execute should be expressed in a way that your computer will understand. And the only thing **computers understand** is a **program** written in particular programming language. 
 
@@ -178,9 +178,11 @@ In conjunction with the conditional operators you may use **logical operator** l
 
 Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you are interested in more fancy coding stuff, go ahead and read the next section.
 
-# Going further: algorithms, abstraction, dictionaries, pseudocode
-This is not a necessary section for starting VEX experiments but it could be useful for curious minds.
+# Programming theory next steps
+This is not a necessary section for starting VEX experiments but it could be useful for curious minds. Here we can go further from the basics and learn about [pseudocode](#pseudocode), [dictionaries](#dictionaries), algorithms and abstraction.
 
 ## Pseudocode
 Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
 
+## Dictionaries
+Dictionary is an extended [data type](data-types).
