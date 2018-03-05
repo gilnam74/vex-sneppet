@@ -39,7 +39,7 @@ Obviously, if data could be any piece of information that comes into a program w
 
 **Data type** — is exact form in which any piece of information in a computer program can be represented.
 
-_We will examine most used in VEX data types: _ 
+_We will examine most used in VEX data types:_ 
 
 **Integer** — a whole numbers: `int numberOfIterations = 256;`  
 **Float** — a fractional number: `flat PI = 3.14159;`  
