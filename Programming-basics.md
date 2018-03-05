@@ -153,7 +153,7 @@ Where `for (int n=0; n<9; n++)` is a loop definition: start from 0 (`n=0`), unti
 Going deeper, `n++` is a "syntaxis sugar" (more readble or short form) for `n = n + 1` and a step of 1 means we will run code inside the curly brackets every step from 0 to 9 (what will give us 10 times repetition). We can run a code with a different step value, `n = n + 2` will skip every second iteration, but never mind, most of the time `n++` will work for you.
 
 ## Conditions
-Conditions are used when you need to act differently depending on circumstances. You check if a particular condition true or false and run different code depending on the answer. Conditions represented as an `if-else` statements almost in any programming language. If there is rain outside I would take an umbrella, otherwise, I will leave umbrella at home. 
+Conditions are used when you need to act differently depending on circumstances. You check if a particular condition is true or false and run different code depending on the answer. Conditions represented as an `if-else` statements almost in any programming language. If there is rain outside I would take an umbrella, otherwise, I will leave the umbrella at home. 
 
 The `else` statement is optional: "if there is a rain outside I would take an umbrella" will work as well. Conditions could be nested and combined to describe more complex algorithm: if there is rain outside and the rain is heavy I would stay at home, but if the rain is not so bad I would take an umbrella and go out.
 
@@ -167,7 +167,7 @@ if (a/b == 1){
     }
 ```
 
-Where `(a/b == 1)` is a checked condition: if A divided by B is an equal of one. Why we use `==` instead of `=`? In a case with conditions, the sign you are checking condition with (sign between compared items, `a/b` and `1`) is called **condition operator**. The equal sign `=` means that you **assign a value** to a variable, to check equality in condition we have to use `==` operator. 
+Where `(a/b == 1)` is a checked condition: if A divided by B is an equal of one. Why we use `==` instead of `=`? In a case with conditions, the sign you are checking condition with (sign between compared items, `a/b` and `1`) is called **condition operator**. The equal sign `=` means that you **assign a value** to a variable, to check equality in a condition we have to use `==` operator. 
 
 Common condition operators:
 - Does A equal to B: `A == B`
