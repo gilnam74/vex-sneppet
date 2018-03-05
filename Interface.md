@@ -1,4 +1,5 @@
-# Houdini UI
+# Introduction
+Here you will find Houdini UI tips
 
 ## Hotkeys: Scene view
 - Reset rotate pivot to a viewport center: `Shift` + `Z`
