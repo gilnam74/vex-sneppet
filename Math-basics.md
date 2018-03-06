@@ -1,4 +1,5 @@
 # Introduction
+Here you will find some mathematical knowledge you may need in 3D graphics at some point. Same as with the [rogramming basics explanation](programming-basics) we will use simplification and analogies so the theory given here is not accurate but its meant to be easy for understanding basic concepts.
 
 # Theory
 ## Coordinate systems
