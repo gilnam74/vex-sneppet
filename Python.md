@@ -49,6 +49,13 @@ node.parmTuple('t').set([0,1,0])
 hou.parm('/obj/geo1/tx').set(2)
 ```
 
+##### Get all node parameters
+```Python
+def getAllNodeParameters(node):
+    allParameters = [param.name()for param in node.parms()]
+    return allParameters 
+```
+
 ##### Connect nodes
 ```python
 import hou
