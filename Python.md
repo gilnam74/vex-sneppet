@@ -49,9 +49,10 @@ node.parmTuple('t').set([0,1,0])
 hou.parm('/obj/geo1/tx').set(2)
 ```
 
-##### Get all node parameters
+##### Get all node parameters names
 ```Python
 def getAllNodeParameters(node):
+    # Return list of all parameters names for input node object 
     allParameters = [param.name()for param in node.parms()]
     return allParameters 
 ```
