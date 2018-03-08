@@ -6,3 +6,5 @@ Here you will find some mathematical knowledge you may need in 3D graphics at so
 The coordinate systems are used to define a **point position in space**. In other words, it gives you the ability to **get** numeric point **coordinates** within a particular environment. 
 
 By the space (or environment) in human experience, we mean our world. Since math is an abstraction space definition ...
+
+## Abstraction
