@@ -12,7 +12,7 @@ If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** par
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
 
 ## Points
-##### Point concept
+#### Point concept
 Point is a basement of 3 Dimensional data representation and its a core entity in Houdini. Understanding points allow understanding a huge part of SOP context in Houdini. To make things simple you can consider the single point as a complete geometry of any complexity.
 
 **Point** in Houdini is a basic container in 3D space with a number of **attributes** associated with it.  
@@ -33,7 +33,7 @@ You don't need to define the data type of built-in attributes:
 
 All modeling and bunch of other operations in Houdini are just around creating and managing points and their attributes.
 
-##### Create a point
+#### Create a point
 Create an [Attribute Wrangle](#create-a-wrangle-in-a-fresh-houdini-scene), set Run Over parameter to Detail.  
 Now to create a point we need to know a [command](Programming-basics#commands) for that. Let`s use [Google Development Technique](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#developing-with-google)!  
 
@@ -81,5 +81,5 @@ You can:
 
 Difference between attributes and variables from VEX point of view.
 
-##### Create a line
+#### Create a line
 Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! At this point, we will start using math to solve our tasks. Let's do the next step and **create several points** to build a line!
