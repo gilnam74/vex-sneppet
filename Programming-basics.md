@@ -137,7 +137,7 @@ int listGrades[] = {10, 2, 9, 0};
 
 // Print each grade from array
 foreach(int grade;  listGrades){
-    printf('%d', grade);
+    printf('The student grade is: %d', grade);
     } 
 ```
 
