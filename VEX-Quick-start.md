@@ -82,4 +82,7 @@ You can:
 Difference between attributes and variables from VEX point of view.
 
 #### Create a line
-Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! At this point, we will start using math to solve our tasks. Let's do the next step and **create several points** to build a line!
+Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! Let's do the next step and **create several points** to build a line!
+
+#### Create a circle
+Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
