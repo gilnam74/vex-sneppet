@@ -100,7 +100,9 @@ setpointattrib(0, "pscale", @ptnum, attributeName, "set");
 
 ```
 
-Difference between attributes and variables from VEX point of view.
+We used variables (`vector <variableName>`) instead of attributes (`@attrName`) in examples above. What the difference between them? You can consider variables as a local data storage within current wrangle, variable you create in one wrangle would not be visible anywhere else. Attributes a stored globally and can be accessed by downstream nodes. 
+
+If you don't need to access attribute outside the wrangle — use variables instead to keep graph clean. 
 
 #### Create a line
 Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! Let's do the next step and **create several points** to build a line!
