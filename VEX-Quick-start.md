@@ -79,8 +79,10 @@ You can:
 - set attribute value: `@N = set(0,0,0);`
 - get attribute values: vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`  
 
+And more:
+
 ```C
-// get attribute value from inputs:  
+// Get attribute value:  
 
 vector pointPos = v@opinput0_P;
 // where <0> - first input, <P> - quarried attribute  
@@ -88,8 +90,14 @@ vector pointPos = v@opinput0_P;
 vector pointPos = point(0, "P", @ptnum);
 // where <P> is quarried attr, <@ptnum> is a number of quarred point   
 
-//get attribute value from other (not connected) nodes
 vector pointPos = point("op:../geometryName", "P", @ptnum); 
+// get attribute value from non-connected nodes
+
+
+// Set point attributes:
+setpointattrib(0, "pscale", @ptnum, attributeName, "set");
+// Can be used to set point attributes in detail mode!
+
 ```
 
 Difference between attributes and variables from VEX point of view.
