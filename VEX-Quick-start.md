@@ -81,9 +81,15 @@ You can:
 
 ```C
 // get attribute value from inputs:  
-vector pointPos = v@opinput0_P; // <0> - first input, <P> - quarried attribute  
-vector pointPos = point(0, "P", @ptnum); // where `P` is quarried attr, `@ptnum` - number of quarred point   
-vector pointPos = point("op:../geometryName", "P", @ptnum); //get attribute value from other (not connected) nodes
+
+vector pointPos = v@opinput0_P;
+// where <0> - first input, <P> - quarried attribute  
+
+vector pointPos = point(0, "P", @ptnum);
+// where <P> is quarried attr, <@ptnum> is a number of quarred point   
+
+//get attribute value from other (not connected) nodes
+vector pointPos = point("op:../geometryName", "P", @ptnum); 
 ```
 
 Difference between attributes and variables from VEX point of view.
