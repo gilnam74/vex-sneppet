@@ -80,8 +80,8 @@ You can:
 - get attribute value from attributes:  
 vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`  
 - get attribute value from inputs:  
-`vector pointPos = v@opinput0_P;`, where `0` is first input, `P` - quarried attribute  
-`vector pointPos = point(0, "P", @ptnum);`, where `P` is quarried attribute, `@ptnum` - number of quarred point 
+`vector pointPos = v@opinput0_P;` where `0` is first input, `P` - quarried attribute  
+`vector pointPos = point(0, "P", @ptnum);` where `P` is quarried attr, `@ptnum` - number of quarred point 
 
 Difference between attributes and variables from VEX point of view.
 
