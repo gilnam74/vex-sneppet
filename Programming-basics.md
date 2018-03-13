@@ -129,7 +129,7 @@ foreach ( string student;  listStudents){
 ```
 Where `string listStudents[] = {'John','Dan','Sarah'}` is a definition of string array holding students names, `foreach(string student;  listStudents)` is a loop definition: for each member `student` of array `listStudents` execute code in `{}`. And `printf()` is a VEX command which prints an argument `student` (student name), so each iteration we print a new name from the given array.
 
-The `printf()` command expects arguments of string data type (you should "place" inside this command only string data: `printf(stringInput)`). So if we would process integer array we would need to convert integer data type to a string data type and it could be done with a construction `printf('%d', integerItem)`, where`'%d', integerItem` means: substitute `'%d'` with current processed integer element of array `integerItem`.
+The `printf()` command expects arguments of string data type (you should "place" inside this command only string data: `printf(stringInput)`). So if we would process integer array we would need to convert integer data type to a string data type and it could be done with a construction `printf('%d', integerVariable)`, where`'%d', integerVariable` means: substitute `'%d'` with currently processed integer element of array `integerVariable`.
 
 ```c
 // Create array with a students grades 
