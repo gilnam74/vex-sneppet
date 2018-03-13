@@ -94,7 +94,7 @@ vector pointPos = point("op:../geometryName", "P", @ptnum);
 // get attribute value from non-connected nodes
 
 
-// Set point attributes:
+// Create point attribute and set value:
 setpointattrib(0, "pscale", @ptnum, attributeName, "set");
 // Can be used to set point attributes in detail mode!
 
