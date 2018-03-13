@@ -77,13 +77,14 @@ Create a new Attribute Wrangler, plug output of point creation wrangler to the f
 You can:
 - initialize new attribute with value: `@N = {0, 1, 0};`
 - set attribute value: `@N = set(0,0,0);`
-- get attribute value from attributes:  
-vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`  
-- get attribute value from inputs:  
-`vector pointPos = v@opinput0_P;` where `0` is first input, `P` - quarried attribute  
-`vector pointPos = point(0, "P", @ptnum);` where `P` is quarried attr, `@ptnum` - number of quarred point  
-- get attribute value from other (not connected) nodes:  
-`vector pointPos = point("op:../geometryName", "P", @ptnum);`
+- get attribute values: vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`  
+
+```C
+// get attribute value from inputs:  
+vector pointPos = v@opinput0_P; // <0> - first input, <P> - quarried attribute  
+vector pointPos = point(0, "P", @ptnum); // where `P` is quarried attr, `@ptnum` - number of quarred point   
+vector pointPos = point("op:../geometryName", "P", @ptnum); //get attribute value from other (not connected) nodes
+```
 
 Difference between attributes and variables from VEX point of view.
 
