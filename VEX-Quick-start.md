@@ -81,7 +81,9 @@ You can:
 vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`  
 - get attribute value from inputs:  
 `vector pointPos = v@opinput0_P;` where `0` is first input, `P` - quarried attribute  
-`vector pointPos = point(0, "P", @ptnum);` where `P` is quarried attr, `@ptnum` - number of quarred point 
+`vector pointPos = point(0, "P", @ptnum);` where `P` is quarried attr, `@ptnum` - number of quarred point  
+- get attribute value from other (not connected) nodes: 
+`vector pointPos = point("op:../geometryName", "P", @ptnum);`
 
 Difference between attributes and variables from VEX point of view.
 
