@@ -77,7 +77,8 @@ Create a new Attribute Wrangler, plug output of point creation wrangler to the f
 You can:
 - initialize new attribute with value: `@N = {0, 1, 0};`
 - set attribute value: `@N = set(0,0,0);`
-- get attribute value: vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`
+- get attribute value from attributes: vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`  
+- get attribute value from inputs: `vector POS = v@opinput0_P`, where `0` is first input, `P` - quarried attribute 
 
 Difference between attributes and variables from VEX point of view.
 
