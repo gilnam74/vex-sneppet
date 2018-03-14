@@ -2,8 +2,6 @@
 Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
 
 #### Attributes
-Here is the basics of attributes manipulations
-
 ```C
 // Get attribute value:  
 vector pointPos = v@opinput0_P;
