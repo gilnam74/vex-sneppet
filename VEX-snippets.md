@@ -10,8 +10,12 @@ vector pointPos = v@opinput0_P;
 vector pointPos = point(0, "P", @ptnum);
 vector pointPos = point("op:../geometryName", "P", @ptnum); 
 
-// Create point attribute and set value:
-setpointattrib(0, "pscale", @ptnum, <anyValue>, "set");
+// Add color attribute and set it to red
+addpointattrib(0, "Cd", {1,0,0});
+
+// Create point attribute and set value
+// Could be used to create and set point attributes in detail mode!
+setpointattrib(0, "<attributeName>", <pointNumber>, <valutToSet>, "set");  
 
 // Set attribute value:
 v@vectorAttribute = {1, 2, 3};  
