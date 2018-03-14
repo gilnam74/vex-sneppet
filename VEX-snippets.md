@@ -1,7 +1,24 @@
 # VEX snippets
 Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
 
-##### Create geometry from points array:
+#### Attributes
+Here is the basics of attributes manipulations
+
+```C
+// Get attribute value:  
+vector pointPos = v@opinput0_P;
+vector pointPos = point(0, "P", @ptnum);
+vector pointPos = point("op:../geometryName", "P", @ptnum); 
+
+// Create point attribute and set value:
+setpointattrib(0, "pscale", @ptnum, <anyValue>, "set");
+
+// Set attribute value:
+v@vectorAttribute = {1, 2, 3};  
+v@vectorAttribute = set(1, 2, @P.z);  
+```
+
+#### Create geometry from points array:
 ```c
 float searchRadius = ch('searchRadius');
 int nearpnts[] = nearpoints(0, @P, searchRadius);
