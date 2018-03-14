@@ -1,6 +1,8 @@
 # VEX snippets
 Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
 
+## Basic manipulations
+
 #### Attributes
 ```C
 // Get attribute value:  
@@ -19,6 +21,7 @@ setpointattrib(0, "<attributeName>", <pointNumber>, <valutToSet>, "set");
 v@vectorAttribute = {1, 2, 3};  
 v@vectorAttribute = set(1, 2, @P.z);  
 ```
+## Basic procedures
 
 #### Create geometry from points array:
 ```c
