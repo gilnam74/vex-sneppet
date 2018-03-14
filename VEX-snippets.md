@@ -10,7 +10,7 @@ vector pointPos = v@opinput0_P;
 vector pointPos = point(0, "P", @ptnum);
 vector pointPos = point("op:../geometryName", "P", @ptnum); 
 
-// Add color attribute and set it to red
+// Create color attribute and set it`s value to red
 addpointattrib(0, "Cd", {1,0,0});
 
 // Create point attribute and set value
