@@ -189,8 +189,11 @@ Pseudocode — is a form of a computer program for human reading. It's a compute
 Dictionary is a special [data type](#data-types) which can store information in form `KEY : VALUE`.  
 The `KEY` should only be a **string** and the `VALUE` could hold any data type (even dictionary and such nested dictionary able to hold quite complex data structures).  
 
-Dictionary is a very powerful way to store complex data sets, you can imagine them as a shelf with containers (which could store any items — any data types). You can find a container (and get its content) by the name (KEY).  
+Dictionary is a very powerful way to store complex data sets, you can imagine them as a shelf with containers (which could store any items — any data types). You can find a container (and get its content) by the name (KEY). 
+ 
 _For example_: `colors = {'RED': [1,0,0], 'GREEN':[0,1,0], 'BLUE':[0,0,1]}`  
-This will give you a palette of necessary colors and you can use colors in your code: `pointColor = colors('RED')`
+
+This will give you a palette of necessary colors and you can use colors in your code:  
+`pointColor = colors('RED')`
 
 VEX do not support dictionaries directly.
