@@ -194,6 +194,6 @@ Dictionary is a very powerful way to store complex data sets, you can imagine th
 _For example_: `colors = {'RED': [1,0,0], 'GREEN':[0,1,0], 'BLUE':[0,0,1]}`  
 
 This will give you a palette of necessary colors and you can use colors in your code:  
-`pointColor = colors('RED')`
+`pointColor = colors('RED') // Returns [1, 0, 0]`
 
 VEX do not support dictionaries directly.
