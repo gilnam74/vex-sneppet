@@ -67,7 +67,7 @@ Curious minds might notice one issue: point position is a vector attribute, but 
 vector position = {0,0,0};
 addpoint(0, position);
 ```
-Read the next section "Manage attributes" if you keen to learn more about this topic or skip additional theory and go to the next step (create a line)[create-a-line]
+Read the next section "Manage attributes" if you keen to learn more about this topic or skip additional theory and go to the next step and [create a line](#create-a-line)
 
 ##### Manage attributes
 Ok, we create a point with a default position attribute.  
