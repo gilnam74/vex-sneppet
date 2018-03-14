@@ -96,7 +96,7 @@ vector pointPos = point("op:../geometryName", "P", @ptnum);
 
 
 // Create point attribute and set value:
-setpointattrib(0, "pscale", @ptnum, attributeName, "set");
+setpointattrib(0, "<attributeName>", <pointNumber>, <valueToSet>, "set");
 // Can be used to set point attributes in detail mode!
 
 ```
