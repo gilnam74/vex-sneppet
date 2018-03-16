@@ -2,7 +2,7 @@
 Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
 
 ## Basic manipulations
-
+Core one line stuff
 #### Attributes
 ```C
 // Get attribute value:  
@@ -21,7 +21,17 @@ setpointattrib(0, "<attributeName>", <pointNumber>, <valutToSet>, "set");
 v@vectorAttribute = {1, 2, 3};  
 v@vectorAttribute = set(1, 2, @P.z);  
 ```
+#### Modify input values
+```c
+f@attribute;
+// Modify with fit range
+@attribute = fit(@attribute, <currentMinValue>,<currentMaxValue>, <outMin>, <outMax>);
+// Modify with a ramp
+@attribute = chramp('Modify_Value',@attribute);
+```
+
 ## Basic procedures
+More complex solutions
 
 #### Create geometry from points array:
 ```c
