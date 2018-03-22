@@ -4,6 +4,7 @@
   - [Programming basics](Programming-basics)
   - [Math basics](Math-basics)
   - [Python in Houdini](Python)
+  - [Python snippets](python-snippets)
   - [VEX quickstart](vex-quick-start)
   - [VEX snippets](vex-snippets)
   - [Misc](misc)
