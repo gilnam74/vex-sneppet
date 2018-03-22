@@ -1,3 +1,6 @@
+# Introduction
+Here you can find small code chunks to perform miscellaneous tasks in Houdini
+
 ### Convert imported FBX to geometry 
 ```Python
 # 256 Pipeline tools
