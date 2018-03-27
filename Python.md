@@ -56,6 +56,12 @@ node.parmTuple('t').set([0,1,0])
 hou.parm('/obj/geo1/tx').set(2)
 ```
 
+##### Run hscript command form Python
+```Python
+# Run Redshift IPR
+hou.hscript('Redshift_openIPR')
+```
+
 ##### Get all node parameters names
 ```Python
 def getAllNodeParameters(node):
