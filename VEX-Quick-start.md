@@ -104,7 +104,17 @@ Check geometry spreadsheet, we get our 10 points. Now they all share the same po
 
 [![](https://lh3.googleusercontent.com/e-hdSaW4fUgX-A2VUhzP_utkCR7TWiY6P3kv6psPdNaj0KGvPu37kBQ8BikTjDYknB4hpiLmAc9TTv0sRPyvIsqY1uK4LGFjOALu_AnpeZJ-MYd6yU_oasiFM5ekMjIWvcVQqm_WHEgTlLBXPe8qy7aymrMvGyL0tzwCJyx0WTCgXCUoiNKqXOGXT5bpTx78b8fgoDoVDeqobWl1zBWGDzWccSUeUWzO9f2hwsCnhsAKcA1vTiftBD1JumEynS_FE-KUpJA_eG5TsorGblb6rJ5bRCof1gbAVhNWdphMTPGdlYIjaj8j3yDUv9E76ftrKBO97Jwx693B-ZykfWbOj_yD8AA9QrapFzxxgJizs0f3FS4lEoKBltWZZN4ENXQsi6QXjqj_HYBG52smTqfOtmmb5OsDx8ysOGGVMq7_K0_3S1jQbUSwq4GZ1OvOdjF-o6ku4CvLX9JwG9n9iTUOKLq7SvWfOWJfJhEc9f8qjrIb52aXRshuOyNEOztT4HFig-NX6iZT803iilqyoZZRrIZUXxLZWbLpg0oODrXwhqroQQNAC_mSOPL5Mgi5FfvzJLdcQsmvtckmOzlkZC_gwPaTqR479ELZYsugcUg=w1091-h349-no)](https://lh3.googleusercontent.com/e-hdSaW4fUgX-A2VUhzP_utkCR7TWiY6P3kv6psPdNaj0KGvPu37kBQ8BikTjDYknB4hpiLmAc9TTv0sRPyvIsqY1uK4LGFjOALu_AnpeZJ-MYd6yU_oasiFM5ekMjIWvcVQqm_WHEgTlLBXPe8qy7aymrMvGyL0tzwCJyx0WTCgXCUoiNKqXOGXT5bpTx78b8fgoDoVDeqobWl1zBWGDzWccSUeUWzO9f2hwsCnhsAKcA1vTiftBD1JumEynS_FE-KUpJA_eG5TsorGblb6rJ5bRCof1gbAVhNWdphMTPGdlYIjaj8j3yDUv9E76ftrKBO97Jwx693B-ZykfWbOj_yD8AA9QrapFzxxgJizs0f3FS4lEoKBltWZZN4ENXQsi6QXjqj_HYBG52smTqfOtmmb5OsDx8ysOGGVMq7_K0_3S1jQbUSwq4GZ1OvOdjF-o6ku4CvLX9JwG9n9iTUOKLq7SvWfOWJfJhEc9f8qjrIb52aXRshuOyNEOztT4HFig-NX6iZT803iilqyoZZRrIZUXxLZWbLpg0oODrXwhqroQQNAC_mSOPL5Mgi5FfvzJLdcQsmvtckmOzlkZC_gwPaTqR479ELZYsugcUg=w1091-h349-no)
 
-Next, we need to set a proper position for each point inside our loop to form a line. Our first point may stay at the origin `{0, 0, 0}` but each next point should have X coordinate increasing by certain value `{<increasingValue>, 0, 0}`.
+Next, we need to set a proper position for each point inside our loop to form a line. Our first point may stay at the origin `{0, 0, 0}` but each next point should have X coordinate increasing by certain value `{<increasingValue>, 0, 0}`. The most obvious and common way to define this increasing value is to use cycle step of the loop `n`:
+
+```C
+// Create 10 points with 1 unit distance between them along the X-axis
+for (int n=0; n<10; n++){
+    addpoint(0, set(n, 0, 0));   
+    }
+```
+[![](https://lh3.googleusercontent.com/adwIp_4vlhtTP0WxNw7g_YEwIM-JrcDS0AF9WVqznY7TnwYkTlo1Vgu9_uPf1ORMmhfhaHyl5tr_BXJZAV5uXcVwjLXw0OM5R7VWy2vk0tyOLY95vO1p_3IT0BV7QGbJjGNKV01a_3fLf-U1TpqzzYI2Akc0Zi4oCJBq6y_tBW_qfmISo3Aqcza4MK5GthGrh8IegA8OUhbqfN4I1FWF6EZP9h12MIyWWhfqFtOtxwGEje3k5hzKZpM127jfK6ZxlBBIi18qENBXRenL3NACkcW84mzXzMXUUWSj8zTEz6tTF6xetwjvnTjM_Ne1WVNfnSO61UmX2seqmfo1f6wVaMjD7VS2ibeK1CY4aM9izw1Oo4IREG9gkNEADQoBeWJVNqFouyR3Ts8Ij0mgTVmKVNpGvzvwZRCaw5jqkeEm4lB8-Anwffw0ItkJxCxTMJ1YhILkL42AGCYwRWmJrT3iE1MCb5ro8iLEFYhzVfstlcBF5dCvuvXvRj3YWkg0WEN_GuUxsw19OInuMknHQsB9YOuXFjUga7nsa0FNFSiI_D4TM93HMS315lfz_YOwiAPj8NJ8UeSZx4rKILP748jMY40g_A2I0eRslp-8VBg=w1909-h425-no)](https://lh3.googleusercontent.com/adwIp_4vlhtTP0WxNw7g_YEwIM-JrcDS0AF9WVqznY7TnwYkTlo1Vgu9_uPf1ORMmhfhaHyl5tr_BXJZAV5uXcVwjLXw0OM5R7VWy2vk0tyOLY95vO1p_3IT0BV7QGbJjGNKV01a_3fLf-U1TpqzzYI2Akc0Zi4oCJBq6y_tBW_qfmISo3Aqcza4MK5GthGrh8IegA8OUhbqfN4I1FWF6EZP9h12MIyWWhfqFtOtxwGEje3k5hzKZpM127jfK6ZxlBBIi18qENBXRenL3NACkcW84mzXzMXUUWSj8zTEz6tTF6xetwjvnTjM_Ne1WVNfnSO61UmX2seqmfo1f6wVaMjD7VS2ibeK1CY4aM9izw1Oo4IREG9gkNEADQoBeWJVNqFouyR3Ts8Ij0mgTVmKVNpGvzvwZRCaw5jqkeEm4lB8-Anwffw0ItkJxCxTMJ1YhILkL42AGCYwRWmJrT3iE1MCb5ro8iLEFYhzVfstlcBF5dCvuvXvRj3YWkg0WEN_GuUxsw19OInuMknHQsB9YOuXFjUga7nsa0FNFSiI_D4TM93HMS315lfz_YOwiAPj8NJ8UeSZx4rKILP748jMY40g_A2I0eRslp-8VBg=w1909-h425-no)
+
+We run through the loop 10 times and each next iteration give us increasing point position at X coordinate (see P[x] in geometry spreadsheet).
 
 #### Create a circle
 Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
