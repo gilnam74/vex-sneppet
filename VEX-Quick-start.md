@@ -120,7 +120,7 @@ Since we are using **cycle step** value to determine coordinates we should modif
 
 You should know that multiply a value by 0.5 it is the same as divide this value by 2, right? So we get increasing or decreasing of some value with the same multiplication operation. This is how we start using math to achieve our goals!
 
-In this case, distance coefficient would be a constant (same value for each step of the loop iterations). And we can define it in our code:
+In this case, distance coefficient would be a constant (same value for each step of the loop iterations). And we can define it as a variable in our code:
 ```C
 // Create 10 points with 0.5 unit distance between them along the X-axis
 float distCoef = 0.5;
