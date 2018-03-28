@@ -80,33 +80,14 @@ You can:
 - set attribute value: `@N = set(0,0,0);`
 - get attribute values: vector `v@getPosition = @P;` and float `f@getPosition_Y = @P.y;`  
 
-And more:
+You can use variables (`vector <variableName>`) instead of attributes (`@attrName`). What the difference between them? You can consider variables as a local data storage within current wrangle, variable you create in one wrangle would not be visible anywhere else. Attributes a stored globally and can be accessed by downstream nodes. 
 
-```C
-// Get attribute value:  
-
-vector pointPos = v@opinput0_P;
-// where <0> - first input, <P> - quarried attribute  
-
-vector pointPos = point(0, "P", @ptnum);
-// where <P> is quarried attr, <@ptnum> is a number of quarred point   
-
-vector pointPos = point("op:../geometryName", "P", @ptnum); 
-// get attribute value from non-connected nodes
-
-
-// Create point attribute and set value:
-setpointattrib(0, "<attributeName>", <pointNumber>, <valueToSet>, "set");
-// Can be used to set point attributes in detail mode!
-
-```
-
-We used variables (`vector <variableName>`) instead of attributes (`@attrName`) in examples above. What the difference between them? You can consider variables as a local data storage within current wrangle, variable you create in one wrangle would not be visible anywhere else. Attributes a stored globally and can be accessed by downstream nodes. 
-
-If you don't need to access attribute outside the wrangle — use variables instead to keep graph clean. 
+If you don't need to access attribute outside the wrangle — use variables instead to keep the scene clean. 
 
 #### Create a line
-Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! Let's do the next step and **create several points** to build a line!
+Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! Let's do the next step and **create 10 points** to build a line! 
+
+To create 10 points we need to repeat 10 times what we already learned — one point creation. Remember what programming concept we need to use in order to perform [repeating](Programming-basics#loops)?
 
 #### Create a circle
 Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
