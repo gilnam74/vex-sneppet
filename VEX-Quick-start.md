@@ -56,7 +56,7 @@ addpoind(0,0);
 
 Turn on **Display points** and **Display pint numbers**. If you did everything right you should get one point at the origin of Houdini scene:
 
-[![](https://lh3.googleusercontent.com/a5G6FyNkn9hBzSFp_PGe-2hU3ZUi41s2S9-Lce_MyS7K8krNhhdUBrqyaWHYwkjKF0SaI7X3kh_G1IYBM-T32mw4unS5uaZuyRoawaFf5vvCGvlx4JCiY1TuGsl1h-ggKb05vd5zgtRUXC30XSH8ZCM3g1lNHODhzpImw0M4HlXmWvORtHxXPEyyZx28ekDFw3ezPgkJJ8IZMllOLnmoaI9_z1v2HkTVK5ltOP_GcKwdPB-1T0Tf-0a0Gk_mg59-vLB4g7P9qbHww-hOh1Yv9Vs9OJSVGwhXCot015gkUfq6yK2wBrSJL3DnWotqTRF5rGSdB5VTeT6SO8Lm1MOSt0lfTQWtlAiWEy_gmxbX_28shg0dEpbMiNo6oP-st5ZiSz_TW1pIdjaIF7KEDKOAoK7wWwmfozDwrntJh-JiGy6388XXIxqmm4GV-zCncirQfpm2JqNiHrNR_bUKfZrfWqhRPH9nPoTdRJcbBNfX0rsLfWr450MkpNXWvx44fES-C7i71OThURtN_0vsEd1wJ7F-NK5e5JBDIIc1EHpBqhMvkjMexHQHEct4ZkuOuB9VY9swK5WkebWb_0_VYlmY0foUM_WvykdK4psoDAk=w1915-h700-no)](https://lh3.googleusercontent.com/a5G6FyNkn9hBzSFp_PGe-2hU3ZUi41s2S9-Lce_MyS7K8krNhhdUBrqyaWHYwkjKF0SaI7X3kh_G1IYBM-T32mw4unS5uaZuyRoawaFf5vvCGvlx4JCiY1TuGsl1h-ggKb05vd5zgtRUXC30XSH8ZCM3g1lNHODhzpImw0M4HlXmWvORtHxXPEyyZx28ekDFw3ezPgkJJ8IZMllOLnmoaI9_z1v2HkTVK5ltOP_GcKwdPB-1T0Tf-0a0Gk_mg59-vLB4g7P9qbHww-hOh1Yv9Vs9OJSVGwhXCot015gkUfq6yK2wBrSJL3DnWotqTRF5rGSdB5VTeT6SO8Lm1MOSt0lfTQWtlAiWEy_gmxbX_28shg0dEpbMiNo6oP-st5ZiSz_TW1pIdjaIF7KEDKOAoK7wWwmfozDwrntJh-JiGy6388XXIxqmm4GV-zCncirQfpm2JqNiHrNR_bUKfZrfWqhRPH9nPoTdRJcbBNfX0rsLfWr450MkpNXWvx44fES-C7i71OThURtN_0vsEd1wJ7F-NK5e5JBDIIc1EHpBqhMvkjMexHQHEct4ZkuOuB9VY9swK5WkebWb_0_VYlmY0foUM_WvykdK4psoDAk=w1915-h700-no)
+[![](https://lh3.googleusercontent.com/Mmq5AEdK5jPtsBNlmUXQQftsGj7iCd905dkEPAUZuFRSzyFYo9jjmToufE_dsrqAIrnHhb26I_1HAy-m18UtVM0hMIsi9adt9prawanTcQh4KqyOv5M6CMbqyOCNg-_MTkTcixW1liwJLve43xcYV7kwFAlJI9xfm5BFB2OxKilHjxaZxMJgbjtdB3i-PllI0b_Bbbe2V16DxYJFyuqQK3eGF9xfeCnFJ-NQvIN7IB23q6Pwo_q5lM8HClUchpE-SVQCDwlRWz1qTLKBnrnu5vKC4RHF9leeNgYEy963c4DabPUOi2uKYSNyD1HwP6I9uWH1HywaQplHMZBV8k8ne6no5HdPMSKIBLcU9aOM-onGHF8rP6uqlRcdNMZOjdDraxRQ20J1srOtpThisJBq0iOd_Wqx-5pFgrrEE5AyYLIuxY7tpOyMZn_iLFLu_KcF9xl3ht2gMu3XMGQ0b4DtQKfRD0UtX6bElFYASkBdaG0RU3jhgHWZeNdC3yy7xh7Z2W4pUy8U7Mk2F-J-TFI1umrweiDc-FNAMNxRAzTp0jn_CUwQmDAaVGts7i2rnw=s1915-w1915-h700-no)](https://lh3.googleusercontent.com/Mmq5AEdK5jPtsBNlmUXQQftsGj7iCd905dkEPAUZuFRSzyFYo9jjmToufE_dsrqAIrnHhb26I_1HAy-m18UtVM0hMIsi9adt9prawanTcQh4KqyOv5M6CMbqyOCNg-_MTkTcixW1liwJLve43xcYV7kwFAlJI9xfm5BFB2OxKilHjxaZxMJgbjtdB3i-PllI0b_Bbbe2V16DxYJFyuqQK3eGF9xfeCnFJ-NQvIN7IB23q6Pwo_q5lM8HClUchpE-SVQCDwlRWz1qTLKBnrnu5vKC4RHF9leeNgYEy963c4DabPUOi2uKYSNyD1HwP6I9uWH1HywaQplHMZBV8k8ne6no5HdPMSKIBLcU9aOM-onGHF8rP6uqlRcdNMZOjdDraxRQ20J1srOtpThisJBq0iOd_Wqx-5pFgrrEE5AyYLIuxY7tpOyMZn_iLFLu_KcF9xl3ht2gMu3XMGQ0b4DtQKfRD0UtX6bElFYASkBdaG0RU3jhgHWZeNdC3yy7xh7Z2W4pUy8U7Mk2F-J-TFI1umrweiDc-FNAMNxRAzTp0jn_CUwQmDAaVGts7i2rnw=s1915-w1915-h700-no)
 
 Check Geometry Spreadsheet to see point attributes: point number `0` has one vector attribute `P` which is "point position" and value of this attribute is `P.x = 0.0, P.y = 0.0, P.z = 0.0`
 
@@ -85,9 +85,22 @@ You can use variables (`vector <variableName>`) instead of attributes (`@attrNam
 If you don't need to access attribute outside the wrangle — use variables instead to keep the scene clean. 
 
 #### Create a line
-Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! Let's do the next step and **create 10 points** to build a line! 
+Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! Let's do the next step and **create 10 points along X-axis** to build a line! 
 
-To create 10 points we need to repeat 10 times what we already learned — one point creation. Remember what programming concept we need to use in order to perform [repeating](Programming-basics#loops)?
+To create 10 points we need to repeat 10 times what we already learned — one point creation. Remember what programming concept we need to use in order to perform [repeating](Programming-basics#loops)? Our loop will run 10 times. Inside the loop, we will place a command to create a point:
+
+```C
+// Create 10 points
+for (int n=0; n<10; n++){
+    addpoint(0, set(0, 0, 0));   
+    }
+```
+
+Where `int n=0; n<10; n++` is a description how many times we will run the code inside the loop: starting from 0, ending at 10, with a step of 1. Here `n` is a variable which define a cycle step: 1,2,3,4 ... 10.
+
+The code is working, we get our 10 points.
 
 #### Create a circle
 Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
+
+#### Sine 
