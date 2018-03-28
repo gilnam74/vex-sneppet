@@ -129,7 +129,7 @@ for (int n=0; n<10; n++){
     }
 ```
 
-Changing distance coefficient value in the wrangle is not very handy and interactive. So let`s create a slider on the wrangle node which will drive our distance:
+Changing distance coefficient value in the Wrangle code is not very handy and interactive. So let`s create a UI element on the Wrangle node which will drive our distance:
 
 ```C
 // Create 10 along the X-axis
@@ -138,8 +138,13 @@ for (int n=0; n<10; n++){
     addpoint(0, set(n*distCoef, 0, 0));   
     }
 ```
-Where `chf('Distance')` 
+Where `chf('Distance')` tells to take value from 'Distance' parameter on the Wrangle. To activate UI with this parameter you need to press a button with a slider icon right to the VEX Expression window. 
 
+There are several options for creating UI in Wrangle node:
+- Integer: `int integerValue = chi('Integer');`
+- Vector: `vector vectorValue = chv('Vector');`
+- Modify parameter throug ramp: `float remapPosition_X = chramp('remap_P.x',@P.x);`
+ 
 #### Create a circle
 Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
 
