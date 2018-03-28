@@ -33,6 +33,32 @@ f@attribute;
 ## Basic procedures
 More complex solutions
 
+#### Rotate with matrix
+```C
+// Create rotation matrix
+matrix3 matrx = ident();
+// Create angle control with UI
+float angle = radians( chf('angle') );
+// Define rotation axis
+vector axis = {0, 1, 0};
+
+//Rotate the matrix
+rotate ( matrx, angle, axis); 
+
+// Apply rotation: multiply position by matrix
+@P *= matrx; 
+```
+
+#### Rotate with quaternion
+```C
+// Define rotation angle and axis
+float angle = radians(chf('angle'));
+vector axis = {0, 1, 0};
+
+// Apply rotation
+@P = qrotate(quaternion(angle, axis), @P);
+```
+
 #### Create geometry from points array:
 ```c
 float searchRadius = ch('searchRadius');
