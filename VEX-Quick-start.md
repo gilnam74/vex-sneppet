@@ -175,6 +175,8 @@ for (int n=0; n<numberOfPoints; n++){
 ```
  
 #### Create a circle
-Here we come to a more fancy stuff! At this point, we will start using trigonometry to draw a circle. 
+Here we come to a more fancy stuff! At this point, we will start using trigonometry to draw a circle.
+
+In the [line example](create-a-line) we define the position of each point in 3D space using the Cartesian coordinate system by setting X, Y and Z values. This is the most intuitive and accustomed coordinate system, however not the only one. When it comes to a circle the Polar coordinate system may be useful.
 
 #### Sine 
