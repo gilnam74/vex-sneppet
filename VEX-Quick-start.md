@@ -98,7 +98,9 @@ for (int n=0; n<10; n++){
 
 Where `int n=0; n<10; n++` is a description how many times we will run the code inside the loop: starting from 0, ending at 10, with a step of 1. Here `n` is a variable which define a cycle step: 1,2,3,4 ... 10.
 
-The code is working, we get our 10 points.
+Check geometry spreadsheet, we get our 10 points. Now they all share the same position {0,0,0}.
+
+[![](https://lh3.googleusercontent.com/e-hdSaW4fUgX-A2VUhzP_utkCR7TWiY6P3kv6psPdNaj0KGvPu37kBQ8BikTjDYknB4hpiLmAc9TTv0sRPyvIsqY1uK4LGFjOALu_AnpeZJ-MYd6yU_oasiFM5ekMjIWvcVQqm_WHEgTlLBXPe8qy7aymrMvGyL0tzwCJyx0WTCgXCUoiNKqXOGXT5bpTx78b8fgoDoVDeqobWl1zBWGDzWccSUeUWzO9f2hwsCnhsAKcA1vTiftBD1JumEynS_FE-KUpJA_eG5TsorGblb6rJ5bRCof1gbAVhNWdphMTPGdlYIjaj8j3yDUv9E76ftrKBO97Jwx693B-ZykfWbOj_yD8AA9QrapFzxxgJizs0f3FS4lEoKBltWZZN4ENXQsi6QXjqj_HYBG52smTqfOtmmb5OsDx8ysOGGVMq7_K0_3S1jQbUSwq4GZ1OvOdjF-o6ku4CvLX9JwG9n9iTUOKLq7SvWfOWJfJhEc9f8qjrIb52aXRshuOyNEOztT4HFig-NX6iZT803iilqyoZZRrIZUXxLZWbLpg0oODrXwhqroQQNAC_mSOPL5Mgi5FfvzJLdcQsmvtckmOzlkZC_gwPaTqR479ELZYsugcUg=w1091-h349-no)](https://lh3.googleusercontent.com/e-hdSaW4fUgX-A2VUhzP_utkCR7TWiY6P3kv6psPdNaj0KGvPu37kBQ8BikTjDYknB4hpiLmAc9TTv0sRPyvIsqY1uK4LGFjOALu_AnpeZJ-MYd6yU_oasiFM5ekMjIWvcVQqm_WHEgTlLBXPe8qy7aymrMvGyL0tzwCJyx0WTCgXCUoiNKqXOGXT5bpTx78b8fgoDoVDeqobWl1zBWGDzWccSUeUWzO9f2hwsCnhsAKcA1vTiftBD1JumEynS_FE-KUpJA_eG5TsorGblb6rJ5bRCof1gbAVhNWdphMTPGdlYIjaj8j3yDUv9E76ftrKBO97Jwx693B-ZykfWbOj_yD8AA9QrapFzxxgJizs0f3FS4lEoKBltWZZN4ENXQsi6QXjqj_HYBG52smTqfOtmmb5OsDx8ysOGGVMq7_K0_3S1jQbUSwq4GZ1OvOdjF-o6ku4CvLX9JwG9n9iTUOKLq7SvWfOWJfJhEc9f8qjrIb52aXRshuOyNEOztT4HFig-NX6iZT803iilqyoZZRrIZUXxLZWbLpg0oODrXwhqroQQNAC_mSOPL5Mgi5FfvzJLdcQsmvtckmOzlkZC_gwPaTqR479ELZYsugcUg=w1091-h349-no)
 
 #### Create a circle
 Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
