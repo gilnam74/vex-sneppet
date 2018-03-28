@@ -114,13 +114,18 @@ for (int n=0; n<10; n++){
 ```
 [![](https://lh3.googleusercontent.com/adwIp_4vlhtTP0WxNw7g_YEwIM-JrcDS0AF9WVqznY7TnwYkTlo1Vgu9_uPf1ORMmhfhaHyl5tr_BXJZAV5uXcVwjLXw0OM5R7VWy2vk0tyOLY95vO1p_3IT0BV7QGbJjGNKV01a_3fLf-U1TpqzzYI2Akc0Zi4oCJBq6y_tBW_qfmISo3Aqcza4MK5GthGrh8IegA8OUhbqfN4I1FWF6EZP9h12MIyWWhfqFtOtxwGEje3k5hzKZpM127jfK6ZxlBBIi18qENBXRenL3NACkcW84mzXzMXUUWSj8zTEz6tTF6xetwjvnTjM_Ne1WVNfnSO61UmX2seqmfo1f6wVaMjD7VS2ibeK1CY4aM9izw1Oo4IREG9gkNEADQoBeWJVNqFouyR3Ts8Ij0mgTVmKVNpGvzvwZRCaw5jqkeEm4lB8-Anwffw0ItkJxCxTMJ1YhILkL42AGCYwRWmJrT3iE1MCb5ro8iLEFYhzVfstlcBF5dCvuvXvRj3YWkg0WEN_GuUxsw19OInuMknHQsB9YOuXFjUga7nsa0FNFSiI_D4TM93HMS315lfz_YOwiAPj8NJ8UeSZx4rKILP748jMY40g_A2I0eRslp-8VBg=w1909-h425-no)](https://lh3.googleusercontent.com/adwIp_4vlhtTP0WxNw7g_YEwIM-JrcDS0AF9WVqznY7TnwYkTlo1Vgu9_uPf1ORMmhfhaHyl5tr_BXJZAV5uXcVwjLXw0OM5R7VWy2vk0tyOLY95vO1p_3IT0BV7QGbJjGNKV01a_3fLf-U1TpqzzYI2Akc0Zi4oCJBq6y_tBW_qfmISo3Aqcza4MK5GthGrh8IegA8OUhbqfN4I1FWF6EZP9h12MIyWWhfqFtOtxwGEje3k5hzKZpM127jfK6ZxlBBIi18qENBXRenL3NACkcW84mzXzMXUUWSj8zTEz6tTF6xetwjvnTjM_Ne1WVNfnSO61UmX2seqmfo1f6wVaMjD7VS2ibeK1CY4aM9izw1Oo4IREG9gkNEADQoBeWJVNqFouyR3Ts8Ij0mgTVmKVNpGvzvwZRCaw5jqkeEm4lB8-Anwffw0ItkJxCxTMJ1YhILkL42AGCYwRWmJrT3iE1MCb5ro8iLEFYhzVfstlcBF5dCvuvXvRj3YWkg0WEN_GuUxsw19OInuMknHQsB9YOuXFjUga7nsa0FNFSiI_D4TM93HMS315lfz_YOwiAPj8NJ8UeSZx4rKILP748jMY40g_A2I0eRslp-8VBg=w1909-h425-no)
 
-We run through the loop 10 times and each next iteration gives us increasing by 1 point position at X coordinate (see P[x] in geometry spreadsheet). But what if we want to determine another then 1 incremental value for the X position? In other words, how we can modify the distance between points? Since we are using **cycle step** value to determine coordinates we should modify this cycle step value to modify coordinates. So we will **multiply** the cycle step (which is currently equal our distance) by **another value**, let`s call it **distance coefficient**. If distance coefficient would be less then 1 — the distance will decrease, and if it would be greater than 1 the distance will increase. You should know that multiply a value by 0.5 it is the same as divide this value by 2, right? So we get increasing or decreasing of some value with the same multiplication operation. This is how we start using math to achieve our goals!
+We run through the loop 10 times and each next iteration gives us increasing by 1 point position at X coordinate (see P[x] in geometry spreadsheet). But what if we want to determine another then 1 incremental value for the X position? In other words, how we can modify the distance between points?
+
+Since we are using **cycle step** value to determine coordinates we should modify this cycle step value to modify coordinates. So we will **multiply** the cycle step (which is currently equal our distance) by **another value**, let`s call it **distance coefficient**. If distance coefficient would be less then 1 — the distance will decrease, and if it would be greater than 1 the distance will increase.
+
+You should know that multiply a value by 0.5 it is the same as divide this value by 2, right? So we get increasing or decreasing of some value with the same multiplication operation. This is how we start using math to achieve our goals!
 
 In this case, distance coefficient would be a constant (same value for each step of the loop iterations). And we can define it in our code:
 ```C
 // Create 10 points with 0.5 unit distance between them along the X-axis
+float distCoef = 0.5;
 for (int n=0; n<10; n++){
-    addpoint(0, set(n*0.5, 0, 0));   
+    addpoint(0, set(n*distCoef, 0, 0));   
     }
 ```
 
