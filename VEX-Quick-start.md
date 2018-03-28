@@ -132,7 +132,7 @@ for (int n=0; n<10; n++){
 Changing distance coefficient value in the Wrangle code is not very handy and interactive. So let`s create a UI element on the Wrangle node which will drive our distance:
 
 ```C
-// Create 10 along the X-axis
+// Create 10 points along the X-axis
 float distCoef = chf('Distance');
 for (int n=0; n<10; n++){
     addpoint(0, set(n*distCoef, 0, 0));   
@@ -145,6 +145,16 @@ There are several options for creating UI in Wrangle node:
 - Float: `int floatValue = chi('Float');`
 - Vector: `vector vectorValue = chv('Vector');`
 - Modify parameter throug ramp: `float remapPosition_X = chramp('remap_P.x',@P.x);`
+
+Ok, let`s define a point number with UI also:
+```C
+// Create points along the X-axis
+float distCoef = chf('Distance');
+int pointNumber = chi('Number_Of_Points');
+for (int n=0; n<pointNumber; n++){
+    addpoint(0, set(n*distCoef, 0, 0));   
+    }
+```
  
 #### Create a circle
 Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
