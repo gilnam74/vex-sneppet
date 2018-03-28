@@ -59,6 +59,21 @@ vector axis = {0, 1, 0};
 @P = qrotate(quaternion(angle, axis), @P);
 ```
 
+#### Rotate copies with quaternion multiply
+```C
+@N;
+@up = {0,1,0};
+
+@orient = quaternion(maketransform(@N,@up));
+vector4 rotate_X = quaternion(radians(ch('Rotate_X')),{1,0,0});
+vector4 rotate_Y = quaternion(radians(ch('Rotate_Y')),{0,1,0});
+vector4 rotate_Z = quaternion(radians(ch('Rotate_Z')),{0,0,1});
+
+@orient = qmultiply(@orient, rotate_X);
+@orient = qmultiply(@orient, rotate_Y);
+@orient = qmultiply(@orient, rotate_Z);
+```
+
 #### Create geometry from points array:
 ```c
 float searchRadius = ch('searchRadius');
