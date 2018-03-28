@@ -155,8 +155,12 @@ for (int n=0; n<pointNumber; n++){
     addpoint(0, set(n*distCoef, 0, 0));   
     }
 ```
+
+To finalize line creation we need to connect our points with polygons to build an actual line. 
+
+In Houdini to create a polygon, you need to define a primitive with vertexes. 
  
 #### Create a circle
-Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
+Here we come to a more fancy stuff! At this point, we will start using trigonometry to draw a circle. 
 
 #### Sine 
