@@ -158,7 +158,19 @@ for (int n=0; n<pointNumber; n++){
 
 To finalize line creation we need to connect our points with polygons to build an actual line. 
 
-In Houdini to create a polygon, you need to define a primitive with vertexes. Create another Wrangle (Run Over Points) and connect points creation wrangle as a first input.
+In Houdini to create a polygon, you need to define a primitive with vertexes. Create another Wrangle (Run Over Points) and connect points creation wrangle as a first input. Enter the code:
+
+```C
+// Create LINE primitive
+int primitive = addprim(0, 'polyline'); 
+// Calculate total number of points
+int numberOfPoints = @numpt;
+
+// Create a vertex for each point in primitive
+for (int n=0; n<numberOfPoints; n++){
+    addvertex(0, primitive, n);  
+    }
+```
  
 #### Create a circle
 Here we come to a more fancy stuff! At this point, we will start using trigonometry to draw a circle. 
