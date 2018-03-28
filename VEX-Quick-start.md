@@ -129,6 +129,16 @@ for (int n=0; n<10; n++){
     }
 ```
 
+Changing distance coefficient value in the wrangle is not very handy and interactive. So let`s create a slider on the wrangle node which will drive our distance:
+
+```C
+// Create 10 along the X-axis
+float distCoef = chf('Distance');
+for (int n=0; n<10; n++){
+    addpoint(0, set(n*distCoef, 0, 0));   
+    }
+```
+Where `chf('Distance')` 
 
 #### Create a circle
 Here we come to a more fancy stuff, at this point, we will start using math to solve our tasks. 
