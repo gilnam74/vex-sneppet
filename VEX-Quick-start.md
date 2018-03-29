@@ -202,4 +202,10 @@ Why Radians? Because radians is a mathematical angle definition based on circle 
 
 [![](https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif)](https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif)
 
+Let`s apply theory in practice an build our magic circle finally! We will use the same logic as we did with the line:
+- define the number of points 
+- in the loop (for each of point number):
+  * will create a point 
+  * set point X and Y coordinates with angle
+
 #### Sine 
