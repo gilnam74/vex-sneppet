@@ -10,7 +10,8 @@ To understand **applied Math** in 3D using VEX in Houdini our mission here.
 
 If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** parameter to **"Detail"**. If you will feed some data to Attribute Wrangle (connect any node to input) leave Run Over parameter at default Point state.
 
-We will create: [point](#create-a-point), [line](#create-a-line), [circle](#create-a-circle).
+As an exerseises we will create:  
+[point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)
 
 All exercises from this chapter you can find in [VEX snippets hip file](https://drive.google.com/open?id=1qgdJa9TuYlrWgDfXWkMcpQcZu_DjC6kQ).
 
