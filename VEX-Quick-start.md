@@ -205,11 +205,14 @@ Why Radians? Because radians is a mathematical angle definition based on circle 
 Let`s put theory into practice an build our magic circle finally! We will use the same concept as we did with the line: 
 
 - define the number of points 
+- define an angle of each point rotation
 - in the loop (for each of point number):
   * create a point 
   * set point X and Y coordinates through the angle keeping the same distance from the origin
 
-The only thing we are missing now in our [pseudocode](Programming-basics#pseudocode) is an increment (iteration step) definition. With the line example, we use [iteration](Programming-basics#loop-iterations) number of the loop directly: in each iteration, set X coordinate of the newly created point equal to the iteration number.
+The number of points could be either constant (12 points) or user-defined variable with UI: `int numberOfPoints = chi(number_of_points);`
+
+The only thing we are missing now in our [pseudocode](Programming-basics#pseudocode) is an increment (iteration step) definition. With the line example, we use [iteration](Programming-basics#loop-iterations) number of the loop directly: in each iteration, set X coordinate of the newly created point equal to the iteration number. But in case of the circle we need to modify an angle, which 
 
 
 
