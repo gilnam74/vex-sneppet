@@ -60,7 +60,7 @@ addpoind(0,0);
 
 Turn on **Display points** and **Display pint numbers**. If you did everything right you should get one point at the origin of Houdini scene:
 
-[![](https://flic.kr/p/FXEUMx)](https://flic.kr/p/FXEUMx)
+[![](https://c1.staticflickr.com/1/882/26227913057_5d72523824_o.gif)](https://c1.staticflickr.com/1/882/26227913057_5d72523824_o.gif)
 
 Check Geometry Spreadsheet to see point attributes: point number `0` has one vector attribute `P` which is "point position" and value of this attribute is `P.x = 0.0, P.y = 0.0, P.z = 0.0`
 
