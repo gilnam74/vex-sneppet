@@ -102,7 +102,7 @@ for (int n=0; n<10; n++){
     }
 ```
 
-Where `int n=0; n<10; n++` is a description how many times we will run the code inside the loop: starting from 0, ending at 10, with a step of 1. Here `n` is a variable which define a **iteration step**: 1,2,3,4 ... 10.
+Where `int n=0; n<10; n++` is a description how many times we will run the code inside the loop: starting from 0, ending at 10, with a step of 1. Here `n` is a variable which define a [**iteration step**](Programming-basics#loop-iterations): 1,2,3,4 ... 10.
 
 Check geometry spreadsheet, we get our 10 points. Now they all share the same position {0,0,0}.
 
