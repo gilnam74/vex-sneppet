@@ -200,6 +200,6 @@ It's time to speak about the **angle**. We can consider a **circle** as one **fu
 
 Why Radians? Because radians is a mathematical angle definition based on circle attributes. One turn (360 degrees) is equal 2*[PI](https://en.wikipedia.org/wiki/Pi) radians. Radians are all about the relation between circle radius and circumference:
 
-[![](https://photos.app.goo.gl/jPi4y3t7PEfuES452)](https://photos.app.goo.gl/jPi4y3t7PEfuES452)
+[![](https://photos.google.com/share/AF1QipNZF8g94OYRxPFW0q339OngOEShgyo8SqJxYWRZ76HGYPdwUyTqdFkcMnjf_5T8lg?key=b1IzM2R2NEY1cXVZTHFVRlo4Q3pMWDlSMmMxbFR3)](https://photos.google.com/share/AF1QipNZF8g94OYRxPFW0q339OngOEShgyo8SqJxYWRZ76HGYPdwUyTqdFkcMnjf_5T8lg?key=b1IzM2R2NEY1cXVZTHFVRlo4Q3pMWDlSMmMxbFR3)
 
 #### Sine 
