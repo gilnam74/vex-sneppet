@@ -196,6 +196,7 @@ In VEX code this part will look like:
 ```C
 float angle = 0;
 vector position = {0,0,0};
+int numberOfPoints = 256;
 
 for (int n=0; n<numberOfPoints; n++){
     position.x = cos(angle);
