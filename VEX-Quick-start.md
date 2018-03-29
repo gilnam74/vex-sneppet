@@ -198,19 +198,25 @@ Very simple and elegant, right? The image from the Sine article on Wikipedia ill
 
 It's time to speak about the **angle**. We can consider a **circle** as one **full turn** of a point around the origin. And we use to know that **angle of one turn** is equal to 360 degrees. Degrees (measurement of the angles) were designed for human usability and they are really good in this role, but in Math and computer graphics, you will have to deal with **Radians**.
 
-Why Radians? Because radians is a mathematical angle definition based on circle attributes. One turn (360 degrees) is equal 2*[PI](https://en.wikipedia.org/wiki/Pi) radians. Radians are all about the relation between circle radius and circumference:
+Why Radians? Because radians is a mathematical angle definition based on circle attributes. One turn (360 degrees) is equal 2*[Pi](https://en.wikipedia.org/wiki/Pi) radians. Radians are all about the relation between circle radius and circumference:
 
 [![](https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif)](https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif)
 
 Let`s put theory into practice an build our magic circle finally! We will use the same concept as we did with the line: 
 
-- define the number of points 
-- define an angle of each point rotation
+- define the **number of points** 
+- define starting **angle** of rotation
+- define a **segment rotation angle** for each point
 - in the loop (for each of point number):
   * create a point 
-  * set point X and Y coordinates through the angle keeping the same distance from the origin
+  * set point **X and Y coordinates** through the **angle**
+  * increment angle by segment rotation angle
 
-The number of points could be either constant (12 points) or user-defined variable with UI: `int numberOfPoints = chi(number_of_points);`
+The number of points could be either constant (12 points) or user-defined with UI variable:  
+`int numberOfPoints = chi(number_of_points);`
+
+A full turn of one point (circle) equal 2Pi radians. If we use more then one point, each point will need to rotate only by the fraction of 2Pi. In other words, the segment rotation angle for each point will be equal 2Pi divided by the number of points:  
+`float segmentAngle = 2*3,14/numberOfPoints;`
 
 The only thing we are missing now in our [pseudocode](Programming-basics#pseudocode) is an increment (iteration step) definition. With the line example, we use [iteration](Programming-basics#loop-iterations) number of the loop directly: in each iteration, set X coordinate of the newly created point equal to the iteration number. But in case of the circle we need to modify an angle, which 
 
