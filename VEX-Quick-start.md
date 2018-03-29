@@ -181,6 +181,13 @@ In the [line example](#create-a-line) we define the position of each point in 3D
 
 With the Polar coordinate system, you can define point position on the plane using **angle** and **distance** from the center. If the distant would be a constant value then we can set point position on the perfect **circle** by specifying only the **angle for each point**! 
 
-However, Houdini uses a Cartesian coordinate system to determine objects transformations (position, rotation and scale), so after we define point positions of the circle in Polar coordinates we would need to convert them to Cartesian. And the relationship between Polar and the Cartesian coordinate systems can be expressed through sine and cosine functions. See the corresponding chapter in [math basics](Math-basics) section. 
+However, Houdini uses a Cartesian coordinate system to determine objects transformations (position, rotation and scale), hence you need to feed `{X,Y,Z}` values to `addpoint()` function, it would not understand the angle. So after we define point positions of the circle in Polar coordinates (angle) we would need to convert them to Cartesian (X,Y,Z). And the relationship between Polar and the Cartesian coordinate systems can be expressed through sine and cosine functions: 
+
+- position X = sine(angle)
+- position Y = cosine(angle)
+
+See the corresponding chapter in [math basics](Math-basics) section for more details. 
+
+
 
 #### Sine 
