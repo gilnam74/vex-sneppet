@@ -128,6 +128,7 @@ In this case, distance coefficient would be a constant (same value for each step
 ```C
 // Create 10 points with 0.5 unit distance between them along the X-axis
 float distCoef = 0.5;
+
 for (int n=0; n<10; n++){
     addpoint(0, set(n*distCoef, 0, 0));   
     }
@@ -138,6 +139,7 @@ Changing distance coefficient value in the Wrangle code is not very handy and in
 ```C
 // Create 10 points along the X-axis
 float distCoef = chf('Distance');
+
 for (int n=0; n<10; n++){
     addpoint(0, set(n*distCoef, 0, 0));   
     }
@@ -155,6 +157,7 @@ Ok, let`s define a point number with UI also:
 // Create points along the X-axis
 float distCoef = chf('Distance');
 int pointNumber = chi('Number_Of_Points');
+
 for (int n=0; n<pointNumber; n++){
     addpoint(0, set(n*distCoef, 0, 0));   
     }
@@ -192,6 +195,10 @@ However, Houdini uses a Cartesian coordinate system to determine objects transfo
 - position X = cosine(angle)
 - position Y = sine(angle)
 
+Very simple and elegant, right? The image from the Sine article on Wikipedia illustrates this dependency very well:
+
+[![](https://c1.staticflickr.com/1/808/40204608805_2258ee27c4_o.gif)](https://c1.staticflickr.com/1/808/40204608805_2258ee27c4_o.gif)
+
 In VEX code this part will look like:
 ```C
 float angle = 0;
@@ -203,10 +210,6 @@ for (int n=0; n<numberOfPoints; n++){
     position.z = sin(angle);
     addpoint(0, position);
 ```
-
-Very simple and elegant, right? The image from the Sine article on Wikipedia illustrates this dependency very well:
-
-[![](https://c1.staticflickr.com/1/808/40204608805_2258ee27c4_o.gif)](https://c1.staticflickr.com/1/808/40204608805_2258ee27c4_o.gif)
 
 It's time to speak about the **angle**. We can consider a **circle** as one **full turn** of a point around the origin. And we use to know that **angle of one turn** is equal to 360 degrees. Degrees (measurement of the angles) were designed for human usability and they are really good in this role, but in Math and computer graphics, you will have to deal with **Radians**.
 
