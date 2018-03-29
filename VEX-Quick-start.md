@@ -1,6 +1,8 @@
 # Introduction
 If you want to learn VEX and Math beginning from the basics here is a good place to start. You need elementary knowledge of Houdini UI and understanding of core programming concepts. If you can render metal sphere in Houdini and know what is syntax, data types, variables and loops then you are fine to go (check [Programming Basics tutorial](Programming-basics) if not).
 
+To understand **applied Math** in 3D using VEX in Houdini our mission here.
+
 ##### Create a wrangle in a fresh Houdini scene
 - Press TAB in Node View, type `geometry`, hit ENTER
 - Dive inside "Geometry" node, delete "File" node
