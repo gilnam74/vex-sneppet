@@ -207,7 +207,7 @@ Let`s put theory into practice an build our magic circle finally! We will use th
 - define the number of points 
 - in the loop (for each of point number):
   * create a point 
-  * set point X and Y coordinates with angle
+  * set point X and Y coordinates through the angle keeping the same distance from the origin
 
 The only thing we are missing now in our [pseudocode](Programming-basics#pseudocode) is an increment (iteration step) definition. With the line example, we use iteration step number of the loop directly: in each iteration, set X coordinate of the newly created point equal to iteration step number.
 
