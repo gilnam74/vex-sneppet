@@ -218,8 +218,8 @@ The number of points could be either constant (12 points) or user-defined with U
 A full turn of one point (circle) equal 2Pi radians. If we use more then one point, each point will need to rotate only by the fraction of 2Pi. In other words, the segment rotation angle for each point will be equal 2Pi divided by the number of points:  
 `float segmentAngle = 2*3,14/numberOfPoints;`
 
-The only thing we are missing now in our [pseudocode](Programming-basics#pseudocode) is an increment (iteration step) definition. With the line example, we use [iteration](Programming-basics#loop-iterations) number of the loop directly: in each iteration, set X coordinate of the newly created point equal to the iteration number. But in case of the circle we need to modify an angle, which 
-
+The first point will have rotation value equal 0. For the second point rotation value, we will add segment rotation angle to a previous rotation value (0 + segment rotation angle). For the third point rotation value, we will add segment rotation angle to a previous rotation value (0 + segment rotation angle + segment rotation angle). And so on. In such way, we will increment angle by segment rotation angle:  
+`angle = angle + segmentAngle;`
 
 
 
