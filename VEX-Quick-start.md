@@ -242,6 +242,6 @@ for (int i=0; i<numberOfPoints; i++){
     angle = angle + segmentAngle;
 }
 ```
-
+[![](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)
 
 #### Sine 
