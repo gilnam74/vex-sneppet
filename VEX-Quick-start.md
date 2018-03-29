@@ -221,7 +221,27 @@ A full turn of one point (circle) equal 2Pi radians. If we use more then one poi
 The first point will have rotation value equal 0. For the second point rotation value, we will add segment rotation angle to a previous rotation value (0 + segment rotation angle). For the third point rotation value, we will add segment rotation angle to a previous rotation value (0 + segment rotation angle + segment rotation angle). And so on. In such way, we will increment angle by segment rotation angle:  
 `angle = angle + segmentAngle;`
 
-
+Lets put all together. Create attibute wrangle in **Detail mode** and enter code:
+```C
+// Initialize angle and position
+float angle = 0;
+vector position = {0,0,0};
+// Get number of points from UI
+int numberOfPoints = chi('number_of_points');
+// Calculate angle for each point
+float segmentAngle = 2*3.1415/numberOfPoints; 
+   
+// Build a circle
+for (int i=0; i<numberOfPoints; i++){
+    // Set position throuth angle
+    position.x = cos(angle);
+    position.z = sin(angle);
+    // Create a point
+    addpoint(0, position);
+    // Increment rotation angle
+    angle = angle + segmentAngle;
+}
+```
 
 
 #### Sine 
