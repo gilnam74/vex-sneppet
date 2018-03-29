@@ -196,8 +196,8 @@ Very simple and elegant, right? The image from the Sine article on Wikipedia ill
 
 [![](https://lh3.googleusercontent.com/Mzwe5NKafWe2z951Dw0sO98l7cwgy4JWw1ptQlEIN1CJENfQpYvPizYxOFNc_4LhXWKJE0Mt44spf1cVh0vNi4lSj4Wsqu5liDk7K1kYAzQb6a8lANbGMlWYWs2-4LFF1ehKS6RVOXd_4eyneKYTWU5FZ_1p1INNMuafR5Tte4p9EaTW9A132Ne3BJ2_VqnJ8Ck2Ug9xVX3ITXa5WTkx9js9eUrt_SELdACEb00aHJ-6_bFbnTfELI9Ztu-yf3HMv4NRkfF0QwehgdcvC2HjazYUVQkK9Pw-WDpz0i8FJU6lXx0O2X_H6vm4lR17ldlafu7haaqcpKTM_S9GsxhffGsQGuKcyoRx7roYxtHiuiE9a4WOdBX2w0QrlpsnPlAAQlLneEg-BLOOWSZL3eVeuzzTvYEtocjg45R7DzGfqb6siInPLcXDMzN4o6rBSX67h5Q1vnJ6TZ1BiaHsk0OgjZCsPvZbWElB1aWGtn_lPL0rjdqhcunjKmXNT_fgrLNHkcCgZPZ2LKkbC2x0dyIbsHWf7bzJmUXLhgdhWzZXSTawWE-15fLgxVE5Hkp6WC_EbmV9vZbk-A10ujneTEquNMAXrrgqzdMPUYR9kRc=s352-no)](https://lh3.googleusercontent.com/Mzwe5NKafWe2z951Dw0sO98l7cwgy4JWw1ptQlEIN1CJENfQpYvPizYxOFNc_4LhXWKJE0Mt44spf1cVh0vNi4lSj4Wsqu5liDk7K1kYAzQb6a8lANbGMlWYWs2-4LFF1ehKS6RVOXd_4eyneKYTWU5FZ_1p1INNMuafR5Tte4p9EaTW9A132Ne3BJ2_VqnJ8Ck2Ug9xVX3ITXa5WTkx9js9eUrt_SELdACEb00aHJ-6_bFbnTfELI9Ztu-yf3HMv4NRkfF0QwehgdcvC2HjazYUVQkK9Pw-WDpz0i8FJU6lXx0O2X_H6vm4lR17ldlafu7haaqcpKTM_S9GsxhffGsQGuKcyoRx7roYxtHiuiE9a4WOdBX2w0QrlpsnPlAAQlLneEg-BLOOWSZL3eVeuzzTvYEtocjg45R7DzGfqb6siInPLcXDMzN4o6rBSX67h5Q1vnJ6TZ1BiaHsk0OgjZCsPvZbWElB1aWGtn_lPL0rjdqhcunjKmXNT_fgrLNHkcCgZPZ2LKkbC2x0dyIbsHWf7bzJmUXLhgdhWzZXSTawWE-15fLgxVE5Hkp6WC_EbmV9vZbk-A10ujneTEquNMAXrrgqzdMPUYR9kRc=s352-no)
 
-Angle and radians. 
+It's time to speak about the **angle**. We can consider a **circle** as one **full turn** of a point around the origin. And we use to know that **angle of one turn** is equal to 360 degrees. Degrees (measurement of the angles) were designed for human usability and they are really good in this role, but in Math and computer graphics, you will have to deal with **Radians**.
 
-
+Why Radians? Because radians is a mathematical angle definition based on circle attributes.
 
 #### Sine 
