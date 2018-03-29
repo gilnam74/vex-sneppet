@@ -102,13 +102,13 @@ for (int n=0; n<10; n++){
     }
 ```
 
-Where `int n=0; n<10; n++` is a description how many times we will run the code inside the loop: starting from 0, ending at 10, with a step of 1. Here `n` is a variable which define a **cycle step**: 1,2,3,4 ... 10.
+Where `int n=0; n<10; n++` is a description how many times we will run the code inside the loop: starting from 0, ending at 10, with a step of 1. Here `n` is a variable which define a **iteration step**: 1,2,3,4 ... 10.
 
 Check geometry spreadsheet, we get our 10 points. Now they all share the same position {0,0,0}.
 
 [![](https://c1.staticflickr.com/1/809/40204608945_7ecb8fe916_o.gif)](https://c1.staticflickr.com/1/809/40204608945_7ecb8fe916_o.gif)
 
-Next, we need to set a proper position for each point inside our loop to form a line. Our first point may stay at the origin `{0, 0, 0}` but each next point should have X coordinate increasing by the certain value — distance from the previous point: `{<distanse>, 0, 0}`. The most obvious and common way to define this increasing value is to use **cycle step** of the loop `n`:
+Next, we need to set a proper position for each point inside our loop to form a line. Our first point may stay at the origin `{0, 0, 0}` but each next point should have X coordinate increasing by the certain value — distance from the previous point: `{<distanse>, 0, 0}`. The most obvious and common way to define this increasing value is to use **iteration step** of the loop `n`:
 
 ```C
 // Create 10 points with 1 unit distance between them along the X-axis
@@ -120,7 +120,7 @@ for (int n=0; n<10; n++){
 
 We run through the loop 10 times and each next iteration gives us increasing by 1 point position at X coordinate (see P[x] in geometry spreadsheet). But what if we want to determine another then 1 incremental value for the X position? In other words, how we can modify the distance between points?
 
-Since we are using **cycle step** value to determine coordinates we should modify this cycle step value to modify coordinates. So we will **multiply** the cycle step (which is currently equal our distance) by **another value**, let`s call it **distance coefficient**. If distance coefficient would be less then 1 — the distance will decrease, and if it would be greater than 1 the distance will increase.
+Since we are using **iteration step** value to determine coordinates we should modify this iteration step value to modify coordinates. So we will **multiply** the iteration step (which is currently equal our distance) by **another value**, let`s call it **distance coefficient**. If distance coefficient would be less then 1 — the distance will decrease, and if it would be greater than 1 the distance will increase.
 
 You should know that multiply a value by 0.5 it is the same as divide this value by 2, right? So we get increasing or decreasing of some value with the same multiplication operation. This is how we start using math to achieve our goals!
 
@@ -209,10 +209,10 @@ Let`s put theory into practice an build our magic circle finally! We will use th
   * create a point 
   * set point X and Y coordinates with angle
 
-The only thing we are missing now in our [pseudocode](Programming-basics#pseudocode) is an increment (cycle step) definition. With the line example, we use cycle step of the loop directly: 
-- first loop iteration — cycle step = 0;
-- secont loop iteration — cycle step = 1;
-- third loop iteratuion — cycle step = 2;
-- etc
+The only thing we are missing now in our [pseudocode](Programming-basics#pseudocode) is an increment (iteration step) definition. With the line example, we use iteration step number of the loop directly: in each iteration, set X coordinate of the newly created point equal to iteration step number.
+
+
+
+
 
 #### Sine 
