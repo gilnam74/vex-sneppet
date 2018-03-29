@@ -180,6 +180,8 @@ for (int n=0; n<numberOfPoints; n++){
     addvertex(0, primitive, n);  
     }
 ```
+
+Here we create a primitive: `addprim()` and get a number of points we created in the first Wrangle node: `numberOfPoints = @numpt`, the `@numpt` is a built-in attribute which returns the total number of points from the first input. Then in the loop for each point we create vertex and add this ertex to a primitive: `addvertex()`.
  
 #### Create a circle
 Here we come to a more fancy stuff! At this point, we will start using trigonometry to draw a circle.
