@@ -192,6 +192,17 @@ However, Houdini uses a Cartesian coordinate system to determine objects transfo
 - position X = cosine(angle)
 - position Y = sine(angle)
 
+In VEX code this part will look like:
+```C
+float angle = 0;
+vector position = {0,0,0};
+
+for (int n=0; n<numberOfPoints; n++){
+    position.x = cos(angle);
+    position.z = sin(angle);
+    addpoint(0, position);
+```
+
 Very simple and elegant, right? The image from the Sine article on Wikipedia illustrates this dependency very well:
 
 [![](https://c1.staticflickr.com/1/808/40204608805_2258ee27c4_o.gif)](https://c1.staticflickr.com/1/808/40204608805_2258ee27c4_o.gif)
@@ -232,7 +243,7 @@ int numberOfPoints = chi('number_of_points');
 float segmentAngle = 2*3.1415/numberOfPoints; 
    
 // Build a circle
-for (int i=0; i<numberOfPoints; i++){
+for (int n=0; n<numberOfPoints; n++){
     // Set position throuth angle
     position.x = cos(angle);
     position.z = sin(angle);
