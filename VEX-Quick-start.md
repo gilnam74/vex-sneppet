@@ -205,7 +205,7 @@ Why Radians? Because radians is a mathematical angle definition based on circle 
 Let`s put theory into practice an build our magic circle finally! We will use the same concept as we did with the line: 
 
 - define the **number of points** 
-- define starting **angle** of rotation
+- define starting **angle** of rotation and position
 - define a **segment rotation angle** for each point
 - in the loop (for each of point number):
   * create a point 
