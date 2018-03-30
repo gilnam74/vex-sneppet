@@ -123,7 +123,7 @@ for (int n=0; n<10; n++){
 
 We run through the loop 10 times and each next iteration gives us increasing by 1 point position at X coordinate (see P[x] in geometry spreadsheet). But what if we want to determine another then 1 incremental value for the X position? In other words, how we can modify the distance between points?
 
-Since we are using **iteration step** value to determine coordinates we should modify this iteration step value to modify coordinates. So we will **multiply** the iteration step (which is currently equal our distance) by **another value**, let`s call it **distance coefficient**. If distance coefficient would be less then 1 — the distance will decrease, and if it would be greater than 1 the distance will increase.
+Since we are using **iteration step** value to determine coordinates we should modify this iteration step value to modify coordinates. So we will **multiply** the iteration step by **another value**, let`s call it **distance coefficient**. If distance coefficient would be less then 1 — the distance will decrease, and if it would be greater than 1 the distance will increase.
 
 You should know that multiply a value by 0.5 it is the same as divide this value by 2, right? So we get increasing or decreasing of some value with the same multiplication operation. This is how we start using math to achieve our goals!
 
