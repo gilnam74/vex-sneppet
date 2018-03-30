@@ -155,13 +155,13 @@ There are several options for creating UI in Wrangle node:
 - Vector: `vector vectorValue = chv('Vector');`
 - Modify parameter throug ramp: `float remapPosition_X = chramp('remap_P.x',@P.x);`
 
-Ok, let`s define a point number with UI also:
+Ok, let`s define a number of points with UI also:
 ```C
 // Create points along the X-axis
 float distCoef = chf('Distance');
-int pointNumber = chi('Number_Of_Points');
+int numberOfPoints = chi('Number_Of_Points');
 
-for (int n=0; n<pointNumber; n++){
+for (int n=0; n<numberOfPoints; n++){
     addpoint(0, set(n*distCoef, 0, 0));   
     }
 ```
