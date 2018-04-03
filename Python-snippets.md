@@ -33,6 +33,7 @@ def convert_FBX():
     
     # Create merge node for parts
     merge = geometry.createNode('merge')
+    merge.setName('merge_parts')
     
     # Replicate FBX structure in Geometry node
     for geo in geometry_FBX: 
@@ -42,8 +43,13 @@ def convert_FBX():
         # Set path to FBX part object
         objectMerge.parm('objpath1').set(geo.path())
         objectMerge.parm('xformtype').set(1)
-        # Link part to merge
-        merge.setNextInput(objectMerge)
+        # Create Material node
+        material = geometry.createNode('material')
+        material.setName('MAT_{}'.format(geo.name()))
+        # Link Material to Object Merge
+        material.setNextInput(objectMerge)
+        # Link part to Merge
+        merge.setNextInput(material)
     
     # Set Merge Node flags to Render
     merge.setDisplayFlag(1)
