@@ -33,6 +33,15 @@ f@attribute;
 ## Basic procedures
 More complex solutions
 
+#### Fade grid Y deformation closer to border
+```C
+float objectSize = getbbox_max(0).x;
+float dist = distance(0,@P);
+float offset = chf('offset');
+float fade = chramp('fade', fit(dist, 0, objectSize + offset, 0, 1));
+@P.y *= fade;
+``` 
+
 #### Rotate with matrix
 ```C
 // Create rotation matrix
