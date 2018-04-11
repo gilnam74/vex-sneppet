@@ -5,9 +5,10 @@ Here you will find isolated blocks of VEX code, each of them performs one certai
 Core one line stuff
 #### Attributes
 ```C
-// Get attribute value:  
+// Get attribute value from first Wrangle input:  
 vector pointPos = v@opinput0_P;
 vector pointPos = point(0, "P", @ptnum);
+// Get attribute value from scene geometry:  
 vector pointPos = point("op:../geometryName", "P", @ptnum); 
 
 // Create color attribute and set it`s value to red
