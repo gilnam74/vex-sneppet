@@ -60,6 +60,7 @@ rotate ( matrx, angle, axis);
 ```
 
 #### Rotate with quaternion along XYZ axys
+```C
 // Setup angle control with UI
 float angle_X = radians(chf('angle_X'));
 float angle_Y = radians(chf('angle_Y'));
