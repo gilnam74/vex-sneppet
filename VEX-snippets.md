@@ -85,36 +85,7 @@ vector4 rotate_Z = quaternion(radians(ch('Rotate_Z')),{0,0,1});
 @orient = qmultiply(@orient, rotate_Y);
 @orient = qmultiply(@orient, rotate_Z);
 ```
-#### Phylotaxis
-```C
-int count = 400;
-float bound = 10.0;
-float tau = 6.28318530; // 2*$PI
-float phi = (1+ sqrt(5))/2; // Golden ratio = 1.618
-float golden_angle = (2 - phi)*tau; // In radians(*tau)
-vector pos = {0,0,0};
-float radius = 1.0;
-float theta = 0;
-int pt;
 
-
-vector polar_to_cartesian(float theta; float radius){
-    return set(cos(theta)*radius, 0, sin(theta)*radius);
-}
-
-for (int n=0; n<count; n++){
-    radius = bound * pow(float(n)/float(count), ch('power'));
-    theta += golden_angle;
-    
-    pos = polar_to_cartesian(theta, radius);
-
-    // Create UP, pscale and N attr
-    pt = addpoint(0, pos);
-    setpointattrib(0, "pscale", pt, pow(radius,0.5));
-    setpointattrib(0, "N", pt, normalize(-pos));
-    setpointattrib(0, "up", pt, set(0,1,0));
-}
-```
 
 #### Spiral 
 ```C
@@ -149,6 +120,36 @@ for (int n=0; n<npoints; n++) {
     pos.z = cos(angle) * angle;
 
     addpoint(0, pos);
+}
+```
+#### Phylotaxis
+```C
+int count = 400;
+float bound = 10.0;
+float tau = 6.28318530; // 2*$PI
+float phi = (1+ sqrt(5))/2; // Golden ratio = 1.618
+float golden_angle = (2 - phi)*tau; // In radians(*tau)
+vector pos = {0,0,0};
+float radius = 1.0;
+float theta = 0;
+int pt;
+
+
+vector polar_to_cartesian(float theta; float radius){
+    return set(cos(theta)*radius, 0, sin(theta)*radius);
+}
+
+for (int n=0; n<count; n++){
+    radius = bound * pow(float(n)/float(count), ch('power'));
+    theta += golden_angle;
+    
+    pos = polar_to_cartesian(theta, radius);
+
+    // Create UP, pscale and N attr
+    pt = addpoint(0, pos);
+    setpointattrib(0, "pscale", pt, pow(radius,0.5));
+    setpointattrib(0, "N", pt, normalize(-pos));
+    setpointattrib(0, "up", pt, set(0,1,0));
 }
 ```
 
