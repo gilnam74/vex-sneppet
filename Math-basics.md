@@ -7,9 +7,9 @@ The coordinate systems are used to define a **point position in space**. In othe
 
 By the space (or environment) we mean our universe. But in human experience universe is a non-intuitive environment, we used to a much fewer scales, such as our home, a street or maybe a city. To get the intuitive analogy of environment we can limit the universe to the room where you are currently located. So how we can get numeric values of your position in the room?
 
-To get or set values (measure them) we need a measuring tape. This tape is called an **Axis** of the coordinate system. We can use a different amount of axis to determinate a coordinate system. One axis will give us a representation of one-dimensional space (hard to imagine how you would feel yourself on one-dimensional world, right?). But our universe is 3-dimensional (until you will try to learn whats going on on the atom level), so we would need 3 axes to get an [abstraction](#Abstraction) of the real world with math. 
+To get or set values (measure them) we need a measuring tape. This tape is called an **Axis** of the coordinate system. We can use a different amount of axis to determinate a coordinate system. One axis will give us a representation of one-dimensional space (hard to imagine how you would feel yourself in the one-dimensional world, right?). Since our universe is 3-dimensional, we would need 3 axes to get an [abstraction](#Abstraction) of the real world dimensions with math.
 
-The core of any coordinate system is an **Origin** — a place where all coordinates are equal to a 0, where all space begins.
+Besides axes, we need to define one more core item of the coordinate system — the beginning point, a place where all axis starts (where all coordinates are equal to a 0). The item is called an **Origin** and we may arbitrary define an origin in the real environment: let it be the bottom left corner of the room.
 
 
 Since math is an abstraction space definition in math is also an abstraction, this means
