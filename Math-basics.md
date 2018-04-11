@@ -5,7 +5,9 @@ Math is a pure [abstraction](#Abstraction). It was designed by humans to describ
 
 Numbers and counting, the very basic mathematical stuff, is an abstraction: 1, 2, 3, 4, 5 has no representation in reality. But we can count all apples in the basket and explain number concept with a help of real objects. This is how the **analogy** works and we will extensively use this technique here.
 
-# Theory
+# Mathematic
+## Abstraction
+
 ## Coordinate systems
 The coordinate systems are used to define a **point position in space**. In other words, it gives you the ability to **get** or **set** numeric point **coordinates** within a particular environment. 
 
@@ -17,4 +19,3 @@ Besides axes, we need to define one more core item of the coordinate system — 
 
 ## Circle
 
-## Abstraction
