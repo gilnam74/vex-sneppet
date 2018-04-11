@@ -6,6 +6,7 @@ Math is a pure [abstraction](#abstraction). It was designed by humans to describ
 Numbers and counting, the very basic mathematical stuff, is an abstraction: 1, 2, 3, 4, 5 has no representation in reality. But we can count all apples in the basket and explain number concept with a help of real objects. This is how the **analogy** works and we will extensively use this technique here.
 
 # Mathematic generall
+## Math bvranches
 ## Abstraction
 
 # Geometry
