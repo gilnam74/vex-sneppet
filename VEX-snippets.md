@@ -59,14 +59,15 @@ rotate ( matrx, angle, axis);
 @P *= matrx; 
 ```
 
-#### Rotate with quaternion
-```C
-// Define rotation angle and axis
-float angle = radians(chf('angle'));
-vector axis = {0, 1, 0};
+#### Rotate with quaternion along XYZ axys
+// Setup angle control with UI
+float angle_X = radians(chf('angle_X'));
+float angle_Y = radians(chf('angle_Y'));
+float angle_Z = radians(chf('angle_Z'));
 
 // Apply rotation
-@P = qrotate(quaternion(angle, axis), @P);
+vector rotations = set(angle_X,angle_Y,angle_Z);
+@P = qrotate(quaternion(rotations), @P);
 ```
 
 #### Rotate copies with quaternion multiply
