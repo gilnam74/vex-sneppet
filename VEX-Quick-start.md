@@ -11,7 +11,7 @@ To understand **applied Math** in 3D using VEX in Houdini our mission here.
 If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** parameter to **"Detail"**. If you will feed some data to Attribute Wrangle (connect any node to input) leave Run Over parameter at default Point state.
 
 As an exerseises we will create:  
-[point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)
+[point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)  | [sine](#sine)
 
 All exercises from this chapter you can find in [VEX snippets hip file](https://drive.google.com/open?id=1qgdJa9TuYlrWgDfXWkMcpQcZu_DjC6kQ).
 
@@ -265,3 +265,4 @@ for (int n=0; n<numberOfPoints; n++){
 [![](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)
 
 #### Sine 
+In the example above we used **sine** and **cosine** to build a circle. Let's take a closer look at this magic functions!
