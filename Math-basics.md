@@ -9,6 +9,8 @@ Numbers and counting, the very basic mathematical stuff, is an abstraction: 1, 2
 ## Abstraction
 
 # Geometry
+Here we deal with shape, size and position of objects.
+
 ## Coordinate systems
 The coordinate systems are used to define a **point position in space**. In other words, it gives you the ability to **get** or **set** numeric point **coordinates** within a particular environment. 
 
