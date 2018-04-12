@@ -17,4 +17,4 @@ Download [Randomize Copies hip file](../blob/master/hips/randomizeCopiesVOP_001.
 #### Rotate copies VEX
 Satter points, copy objects onto points, rotate copies on X, Y, Z axes. 
 [![](https://c1.staticflickr.com/1/797/40518974875_6ee730364a_o.gif)](https://c1.staticflickr.com/1/797/40518974875_6ee730364a_o.gif)
-Download [Randomize Copies hip file](../blob/master/hips/rotateCopiesVEX_001.hipnc)
+Download [Rotate Copies hip file](../blob/master/hips/rotateCopiesVEX_001.hipnc)
