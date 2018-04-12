@@ -30,6 +30,10 @@ f@attribute;
 // Modify with a ramp
 @attribute = chramp('Modify_Value',@attribute);
 ```
+##### Multiply distribution (make small smaller, big bigger)
+```c
+value = pow(value, 8.0);
+```
 
 ## Basic procedures
 More complex solutions
