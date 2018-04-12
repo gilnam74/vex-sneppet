@@ -13,7 +13,7 @@ If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** par
 As an exerseises we will create:  
 [point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)  | [sine](#sine)
 
-All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/hips/VEX_snippets_03.hipnc).
+All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/hips/VEX_snippets_003.hipnc).
 
 # VEX first steps
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
