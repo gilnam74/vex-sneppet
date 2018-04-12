@@ -23,3 +23,21 @@ Here you will find Houdini UI tips
 - **Go to** quickmark 1: `1`  
 - **Togle** quickmarks: tilda
 
+## Project setup
+### Houdini variables
+Environment variables allow to setup variables and values in Houdini.  
+List all available variables: `hconfig.exe -a`  
+Check variable value in Houdini: in Texport window run `echo <$VAR_NAME>`  
+Variables which works with paths divided into 2 types:  
+- Location (HIP, JOB, etc)
+- Path (HOUDINI_SCRIPT_PATH, etc)
+
+`$JOB` - root for Houdini project.  
+`$HIP` - path where Houdini scene is.  
+`HOME` - Houdini settings for user
+
+## Attributes and parameters
+[Attributes](http://www.sidefx.com/docs/houdini/model/attributes)  
+[Global expression variables](http://www.sidefx.com/docs/houdini14.0/expressions/_globals)  
+[Standard variables](http://www.sidefx.com/docs/houdini/nodes/sop/standardvariables)  
+[Local SOP variables](http://www.sidefx.com/docs/houdini/nodes/sop/point#locals)
