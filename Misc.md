@@ -14,14 +14,6 @@ Variables which works with paths divided into 2 types:
 `$HIP` - path where Houdini scene is.  
 `HOME` - Houdini settings for user
 
-## Houdini 16
-New features of H16
-### SOP changes
-- `Point` SOP and `Vertex` SOP becomes an `Attribute Expression` 
-- `Copy` SOP becomes a `Copy Stamp` 
-- `Group` SOP replaced with new ones
-- `Extrude` becomes `Extrude OLD`
-
 ## Attributes and parameters
 [Attributes](http://www.sidefx.com/docs/houdini/model/attributes)  
 [Global expression variables](http://www.sidefx.com/docs/houdini14.0/expressions/_globals)  
@@ -31,6 +23,11 @@ New features of H16
 
 ## SOP
 Surface operation context
+
+#### Space colonization algorithm
+Download [Space Colonisation hip file](../blob/master/hips/spaceColonization_001.hipnc)
+[![](https://c1.staticflickr.com/1/797/39601799870_0e3dfe55b3_o.gif)](https://c1.staticflickr.com/1/797/39601799870_0e3dfe55b3_o.gif)
+
 #### Scale PolyWire
 Create `line`, add `UV Texture`, `Attribute Wrangle`, `Poly Wire`.  
 Code in wrangle: `f@width = chf('Base_Width') * chramp('Width_Ramp', @uv.x);`  
