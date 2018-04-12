@@ -18,3 +18,8 @@ Download [Randomize Copies hip file](../blob/master/hips/randomizeCopiesVOP_001.
 Satter points, copy objects onto points, rotate copies on X, Y, Z axes. 
 [![](https://c1.staticflickr.com/1/797/40518974875_6ee730364a_o.gif)](https://c1.staticflickr.com/1/797/40518974875_6ee730364a_o.gif)
 Download [Rotate Copies hip file](../blob/master/hips/rotateCopiesVEX_001.hipnc)
+
+#### Pack the object
+Scatter object along the surface of another object without intersections
+[![](https://c1.staticflickr.com/1/809/40700249024_aba39f76e1_o.gif)](https://c1.staticflickr.com/1/809/40700249024_aba39f76e1_o.gif)
+Download [Pack the object hip file](../blob/master/hips/packObject_001.hipnc)
