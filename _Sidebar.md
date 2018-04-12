@@ -1,11 +1,11 @@
 * [Introduction](https://github.com/kiryha/Houdini/wiki)
 * Tutorials
-  - [Interface](interface)
+  - [Houdini basics](houdini-basics)
   - [Programming basics](Programming-basics)
   - [Math basics](Math-basics)
   - [Python in Houdini](Python)
   - [Python snippets](python-snippets)
   - [VEX quickstart](vex-quick-start)
   - [VEX snippets](vex-snippets)
-  - [Misc](misc)
+  - [HIP Examples](examples)
 * [Glossary](Glossary)
