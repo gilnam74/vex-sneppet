@@ -2,7 +2,6 @@
 Here you will find Houdini general usage tips
 
 ## Project setup
-### Houdini variables
 Environment variables allow to setup variables and values in Houdini.  
 List all available variables: `hconfig.exe -a`  
 Check the variable value in Houdini: in Texport window run `echo <$VAR_NAME>`  
