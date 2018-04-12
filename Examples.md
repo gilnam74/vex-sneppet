@@ -1,6 +1,6 @@
 # SOP
 #### Space colonization algorithm
+Scatter points along surface or volume, grow organic structure.
+[![](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)
 Download [Space Colonisation hip file](../blob/master/hips/spaceColonization_001.hipnc)
-[![](https://c1.staticflickr.com/1/797/39601799870_0e3dfe55b3_o.gif)](https://c1.staticflickr.com/1/797/39601799870_0e3dfe55b3_o.gif)
-
 #### Randomize copies
