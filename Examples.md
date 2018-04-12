@@ -3,4 +3,6 @@
 Scatter points along surface or volume, grow organic structure.
 [![](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)
 Download [Space Colonisation hip file](../blob/master/hips/spaceColonization_001.hipnc)
-#### Randomize copies
+
+#### Randomize copies VOP
+Satter points, copy objects onto points, randomize position, rotation and scale of the copies. 
