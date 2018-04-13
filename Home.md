@@ -1,4 +1,4 @@
-Here you will find a structured record of my Houdini learning. 
+Here you will find a structured record of my Houdini learning. Vist [VEX quick start](vex-quick-start) first!
 
 [Houdini Basics](houdini-basics) — General Houdini techniques and triks  
 [Math basics](Math-basics) — Math theory for artists  
