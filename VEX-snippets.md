@@ -3,7 +3,16 @@ Here you will find isolated blocks of VEX code, each of them performs one certai
 
 ## Basic manipulations
 Core one line stuff
-#### Attributes
+#### Datatypes
+```C
+// Integers
+int myInteger = 1;
+i@myInteger = set(1);
+// Arrays
+string variations[] = {'A','B','C'};
+s[]@variations = {'A','B','C'};
+```
+#### Get and set attributes
 ```C
 // Get attribute value from first Wrangle input:  
 vector pointPos = v@opinput0_P;
