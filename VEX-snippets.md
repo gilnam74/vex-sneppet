@@ -65,8 +65,8 @@ string fileName = sprintf('fileName_%02d.abc', version);
 ```C
 // Get random file from sim_A_01.abc, sim_B_01.abc, sim_C_01.abc
 string variations[] = {'A','B','C'};
-int variationIndex = rint(fit(rand(@ptnum), 0, 1, 0, 3));
-string path = sprintf('D:/PROJECTS/VEX/geo/sim_%s_01.abc', variations[variationIndex-1])
+int variationIndex = rint(fit(rand(@ptnum), 0, 1, 0, 2));
+string path = sprintf('D:/PROJECTS/VEX/geo/sim_%s_01.abc', variations[variationIndex])
 ```
 
 #### Fade grid Y deformation closer to border
