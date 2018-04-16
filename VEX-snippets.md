@@ -7,10 +7,17 @@ Core one line stuff
 ```C
 // Integers
 int myInteger = 1;
-i@myInteger = set(1);
+i@myInteger = 1;
+// Floats
+float myFloat = 4.14;
+f@myFloat = 3.14;
+// String
+string myStiring = 'C:/cache/animation.abc';
+s@myString = 'C:/cache/animation.abc';
 // Arrays
 string variations[] = {'A','B','C'};
 s[]@variations = {'A','B','C'};
+
 ```
 #### Get and set attributes
 ```C
@@ -28,6 +35,7 @@ addpointattrib(0, "Cd", {1,0,0});
 setpointattrib(0, "<attributeName>", <pointNumber>, <valutToSet>, "set");  
 
 // Set attribute value:
+f@pi = 3.1415;
 v@vectorAttribute = {1, 2, 3};  
 v@vectorAttribute = set(1, 2, @P.z);  
 ```
