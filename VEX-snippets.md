@@ -56,7 +56,7 @@ value = pow(value, 8.0);
 ```C
 // Build fileName_##.abc with variable
 int version = 1;
-string fileName = sprintf(`fileName_%02d.abc', version);
+string fileName = sprintf('fileName_%02d.abc', version);
 // result: fileName_01.abc
 ```
 
