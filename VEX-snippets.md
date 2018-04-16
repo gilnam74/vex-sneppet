@@ -59,7 +59,7 @@ More complex solutions
 ```C
 // Get random file from sim_A_01.abc, sim_B_01.abc, sim_C_01.abc
 string variations[] = {'A','B','C'};
-int variationIndex = rint(fit(rand(@ptnum), 0, 1, 0, 3));
+int variationIndex = rint(fit(rand(@ptnum), 0, 1, 0, 3)); // 0-3 cos 3 element in variations array
 string path = sprintf('D:/PROJECTS/VEX/geo/sim_%s_01.abc', variations[variationIndex-1])
 ```
 
