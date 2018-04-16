@@ -52,6 +52,8 @@ f@attribute;
 value = pow(value, 8.0);
 ```
 
+## Basic procedures
+More complex solutions
 #### VEX strings
 ```C
 // Build fileName_##.abc with variable
@@ -59,10 +61,6 @@ int version = 1;
 string fileName = sprintf('fileName_%02d.abc', version);
 // result: fileName_01.abc
 ```
-
-## Basic procedures
-More complex solutions
-
 #### Randomize file name
 ```C
 // Get random file from sim_A_01.abc, sim_B_01.abc, sim_C_01.abc
