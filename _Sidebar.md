@@ -1,5 +1,5 @@
 * [Introduction](https://github.com/kiryha/Houdini/wiki)
-* Tutorials
+* Learn
   - [Houdini basics](houdini-basics)
   - [Programming basics](Programming-basics)
   - [Math basics](Math-basics)
