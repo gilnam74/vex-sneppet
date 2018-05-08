@@ -6,4 +6,5 @@ Here you will find a structured record of my Houdini learning. Vist [VEX quick s
 [Programming basics](programming-basics) — Programming concepts for artists  
 [Python in Houdini](python) | [Python snippets](python-snippets) — Python in Houdini usage  
 [VEX quick start](vex-quick-start) | [VEX snippets](vex-snippets) — VEX magic  
-[HIP Examples](examples) — Example tehniques as HIP files
+[HIP Examples](examples) — Tehniques as HIP files   
+[Tutorials](tutorials) — Tehniques with step by step descriptions
