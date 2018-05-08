@@ -8,4 +8,5 @@
   - [VEX quickstart](vex-quick-start)
   - [VEX snippets](vex-snippets)
   - [HIP Examples](examples)
+  - [Tutorials](tutorials)
 * [Glossary](Glossary)
