@@ -47,6 +47,13 @@ f@attribute;
 // Modify with a ramp
 @attribute = chramp('Modify_Value',@attribute);
 ```
+
+##### Add point attribute in Detail mode
+```c
+addpoint(0, {0,0,0});
+setpointattrib(0, 'myAttribute', 0, 'attributrValue', "set");
+```
+
 ##### Multiply distribution (make small smaller, big bigger)
 ```c
 value = pow(value, 8.0);
