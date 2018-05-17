@@ -68,6 +68,13 @@ i@group_high = @P.x > 1 ? 1:0;
 // And even shorter
 i@group_high = @P.x > 1;
 ```
+##### Select border points
+```c
+// Get number of connectet points
+int nbPts = neighbourcount(0,@ptnum);
+// Create "outline" group with border points
+i@group_outline = nbPts == 3 | nbPts == 2; 
+```
 
 ##### Multiply distribution (make small smaller, big bigger)
 ```c
