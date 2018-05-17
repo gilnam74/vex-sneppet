@@ -57,9 +57,8 @@ setpointattrib(0, 'myAttribute', 0, 'attributrValue', "set");
 ```c
 // Add points with X position > 1 to group "high"
 if (@P.x > 1){
-    i@group_high = 1
-    // Alternative option:
-    // setpointgroup(0, 'high', @ptnum, 1, 'set');
+    setpointgroup(0, 'high', @ptnum, 1, 'set');
+    // Alternative: i@group_high = 1
     }
 
 // Short form    
