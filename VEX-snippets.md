@@ -1,4 +1,3 @@
-# VEX snippets
 Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
 
 ## Basic manipulations
