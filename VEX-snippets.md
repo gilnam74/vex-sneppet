@@ -64,6 +64,9 @@ if (@P.x > 1){
 
 // Short form    
 i@group_high = @P.x > 1 ? 1:0;
+
+// And even shorter
+i@group_high = @P.x > 1;
 ```
 
 ##### Multiply distribution (make small smaller, big bigger)
