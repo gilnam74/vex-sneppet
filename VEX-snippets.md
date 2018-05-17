@@ -53,10 +53,25 @@ addpoint(0, {0,0,0});
 setpointattrib(0, 'myAttribute', 0, 'attributrValue', "set");
 ```
 
+##### Create groups
+```c
+// Add points with X position > 1 to group "high"
+if (@P.x > 1){
+    i@group_high = 1
+    // Alternative option:
+    // setpointgroup(0, 'high', @ptnum, 1, 'set');
+    }
+
+// Short form    
+i@group_high = @P.x > 1 ? 1:0;
+```
+
 ##### Multiply distribution (make small smaller, big bigger)
 ```c
 value = pow(value, 8.0);
 ```
+
+
 
 ## Basic procedures
 More complex solutions
