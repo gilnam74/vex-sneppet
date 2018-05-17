@@ -54,6 +54,7 @@ setpointattrib(0, 'myAttribute', 0, 'attributrValue', "set");
 ```
 
 ##### Create groups
+To **highlight** VEX group in the viewport enter group name in the **Output Selection Group** field in **Bindings** tab of the Wrangler node.
 ```c
 // Add points with X position > 1 to group "high"
 if (@P.x > 1){
