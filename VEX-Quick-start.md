@@ -151,7 +151,7 @@ Where `chf('Distance')` tells to take value from 'Distance' parameter on the Wra
 
 There are several options for creating UI in Wrangle node:
 - Integer: `int integerValue = chi('Integer');`
-- Float: `int floatValue = chi('Float');`
+- Float: `int floatValue = chf('Float');`
 - Vector: `vector vectorValue = chv('Vector');`
 - Modify parameter throug ramp: `float remapPosition_X = chramp('remap_P.x',@P.x);`
 
