@@ -25,7 +25,7 @@ Scatter object along the surface of another object without intersections
 Download [Pack the object hip file](../blob/master/hips/packObject_001.hipnc)
 
 #### Randomize Alembic copies
-Create seamles animation, create different animation versions, export to Alembic, copy ABC and randomize file versions and time shift for each copie.
+Create seamles animation, create different animation versions, export to Alembic, copy ABC and randomize file versions and time shift for each copie.  
 [![](https://c1.staticflickr.com/1/912/27320532997_02d02ff488_o.gif)]
-(https://c1.staticflickr.com/1/912/27320532997_02d02ff488_o.gif)
+(https://c1.staticflickr.com/1/912/27320532997_02d02ff488_o.gif)  
 Download [Randomize ABC copies hip file](../blob/master/hips/packObject_001.hipnc)
