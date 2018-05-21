@@ -109,7 +109,7 @@ float fade = chramp('fade', fit(dist, 0, objectSize + offset, 0, 1));
 @P.y *= fade;
 ``` 
 
-#### Rotate with matrix
+#### Rotate GEO with matrix
 ```C
 // Create rotation matrix
 matrix3 matrx = ident();
@@ -125,7 +125,7 @@ rotate ( matrx, angle, axis);
 @P *= matrx; 
 ```
 
-#### Rotate with quaternion along XYZ axys
+#### Rotate GEO with quaternion along XYZ axys
 ```C
 // Setup angle control with UI
 float angle_X = radians(chf('angle_X'));
@@ -137,7 +137,7 @@ vector rotations = set(angle_X,angle_Y,angle_Z);
 @P = qrotate(quaternion(rotations), @P);
 ```
 
-#### Rotate copies with quaternion multiply
+#### Rotate COPIES with quaternion multiply
 ```C
 @N;
 @up = {0,1,0};
