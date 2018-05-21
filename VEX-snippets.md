@@ -109,7 +109,7 @@ float fade = chramp('fade', fit(dist, 0, objectSize + offset, 0, 1));
 @P.y *= fade;
 ``` 
 
-#### Rotate GEO with matrix
+#### Rotate GEO with matrix along Y axis
 ```C
 // Create rotation matrix
 matrix3 matrx = ident();
