@@ -61,23 +61,48 @@ if (@P.x > 1){
     setpointgroup(0, 'high', @ptnum, 1, 'set');
     // Alternative: i@group_high = 1
     }
-
-// Short form    
-i@group_high = @P.x > 1 ? 1:0;
-
-// And even shorter
-i@group_high = @P.x > 1;
 ```
 
 #### Loops
+```c
+// Create OPEN shape 
+
+// Create LINE primitive
+int primitive = addprim(0, 'polyline'); 
+// Calculate total number of points
+int numberOfPoints = @numpt;
+
+// Create a vertex for each point in primitive
+for (int n=0; n<numberOfPoints; n++){
+    addvertex(0, primitive, n);  
+    }
+```
+
+'''c
+// Create CLOSED shape
+
+// Create POLYGON primitive
+int primitive = addprim(0, 'poly');
+// Store all points in array
+int allPoints[] =  expandpointgroup(0, "!*");
+
+// Create a vertex for each point in primitive
+foreach (int currentPoint; allPoints){     
+        addvertex(0, primitive, currentPoint);
+        }
+```
 
 #### Conditions
 ```c
 // Scale 10 times first and last points
 if ((@ptnum == 0) || (@ptnum == (@numpt-1))) f@pscale = 10; 
+else else f@pscale = 1;
 ```
 
-
+```c
+// Scale 10 times first and last points, short form    
+f@pscale = (@ptnum == 0) || (@ptnum ==(@numpt-1)) ? 10 : 1;
+```
 
 
 
