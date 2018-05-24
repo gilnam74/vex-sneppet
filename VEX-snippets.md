@@ -81,7 +81,7 @@ for (int n=0; n<numberOfPoints; n++){
     }
 ```
 
-'''c
+```c
 // Create CLOSED shape
 
 // Create POLYGON primitive
