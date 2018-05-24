@@ -97,6 +97,15 @@ int version = 1;
 string fileName = sprintf('fileName_%02d.abc', version);
 // result: fileName_01.abc
 ```
+
+#### Find closest points
+```c
+float maxdist = 0.8;
+int maxpoints = 10;
+
+int closept[] = pcfind(0, 'P', @P, maxdist, maxpoints);
+```
+
 #### Randomize file name
 ```C
 // Get random file from sim_A_01.abc, sim_B_01.abc, sim_C_01.abc
