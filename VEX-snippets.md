@@ -83,6 +83,11 @@ value = pow(value, 8.0);
 
 
 
+
+
+
+
+
 ## Basic procedures
 More complex solutions
 #### VEX strings
