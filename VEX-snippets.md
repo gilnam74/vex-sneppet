@@ -1,7 +1,7 @@
 Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
 
-## Basic manipulations
-Core one line stuff
+## Functions
+Core stuff
 #### Datatypes
 ```C
 // Integers
@@ -47,13 +47,13 @@ f@attribute;
 @attribute = chramp('Modify_Value',@attribute);
 ```
 
-##### Add point attribute in Detail mode
+#### Add point attribute in Detail mode
 ```c
 addpoint(0, {0,0,0});
 setpointattrib(0, 'myAttribute', 0, 'attributrValue', "set");
 ```
 
-##### Create groups
+#### Create groups
 To **highlight** VEX group in the viewport enter group name in the **Output Selection Group** field in **Bindings** tab of the Wrangler node.
 ```c
 // Add points with X position > 1 to group "high"
@@ -68,6 +68,30 @@ i@group_high = @P.x > 1 ? 1:0;
 // And even shorter
 i@group_high = @P.x > 1;
 ```
+
+#### Loops
+
+#### Conditions
+```c
+// Scale 10 times first and last points
+if ((@ptnum == 0) || (@ptnum == (@numpt-1))) f@pscale = 10; 
+```
+
+
+
+
+
+
+
+
+## Procedures
+Complete solutions of basic tasks
+
+##### Multiply distribution (make small smaller, big bigger)
+```c
+value = pow(value, 8.0);
+```
+
 ##### Select border points
 ```c
 // Get number of connectet points
@@ -76,20 +100,6 @@ int nbPts = neighbourcount(0,@ptnum);
 i@group_outline = nbPts == 3 | nbPts == 2; 
 ```
 
-##### Multiply distribution (make small smaller, big bigger)
-```c
-value = pow(value, 8.0);
-```
-
-
-
-
-
-
-
-
-## Basic procedures
-More complex solutions
 #### VEX strings
 ```C
 // Build fileName_##.abc with variable
