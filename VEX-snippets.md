@@ -217,7 +217,9 @@ float randRot_Y = fit01(rand(@ptnum), -ch('Rotate_Y'), ch('Rotate_Y'));
 float randRot_Z = fit01(rand(@ptnum), -ch('Rotate_Z'), ch('Rotate_Z'));
 
 // Apply random positions
-@P = @P + randPos*@N; 
+@P.x += randPos_X; 
+@P += randPos_Y*@N; 
+@P.z += randPos_Z; 
 
 // Apply random rotations
 @orient = quaternion(maketransform(@N,@up));
