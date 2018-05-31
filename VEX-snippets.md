@@ -189,19 +189,14 @@ vector rotations = set(angle_X,angle_Y,angle_Z);
 @P = qrotate(quaternion(rotations), @P);
 ```
 
-#### Rotate COPIES with quaternion multiply
+#### Rotate Y COPIES with quaternion multiply
 ```C
 @N;
 @up = {0,1,0};
 
 @orient = quaternion(maketransform(@N,@up));
-vector4 rotate_X = quaternion(radians(ch('Rotate_X')),{1,0,0});
 vector4 rotate_Y = quaternion(radians(ch('Rotate_Y')),{0,1,0});
-vector4 rotate_Z = quaternion(radians(ch('Rotate_Z')),{0,0,1});
-
-@orient = qmultiply(@orient, rotate_X);
 @orient = qmultiply(@orient, rotate_Y);
-@orient = qmultiply(@orient, rotate_Z);
 ```
 
 #### Randomize copies
@@ -214,15 +209,15 @@ vector4 rotate_Z = quaternion(radians(ch('Rotate_Z')),{0,0,1});
 float randPos_X = fit01(rand(@ptnum), -ch('Translate_X'), ch('Translate_X'));
 float randPos_Y = fit01(rand(@ptnum), -ch('Translate_Y'), ch('Translate_Y'));
 float randPos_Z = fit01(rand(@ptnum), -ch('Translate_Z'), ch('Translate_Z'));
+vector randPos = set(randPos_X, randPos_Y, randPos_Z);
+
 // Define random rotation values
 float randRot_X = fit01(rand(@ptnum), -ch('Rotate_X'), ch('Rotate_X'));
 float randRot_Y = fit01(rand(@ptnum), -ch('Rotate_Y'), ch('Rotate_Y'));
 float randRot_Z = fit01(rand(@ptnum), -ch('Rotate_Z'), ch('Rotate_Z'));
 
 // Apply random positions
-@P.x += randPos_X;
-@P.y += randPos_Y;
-@P.z += randPos_Z;
+@P = @P + randPos*@N; 
 
 // Apply random rotations
 vector4 rotate_X = quaternion(radians(randRot_X),{1,0,0});
@@ -233,7 +228,7 @@ vector4 rotate_Z = quaternion(radians(randRot_Z),{0,0,1});
 @orient = qmultiply(@orient, rotate_Z);
 
 // Apply random scale
-@scale = fit01(rand(@ptnum), chf('Scale_MIN'), chf('Scale_MAX'));
+@scale = fit01(rand(@ptnum), chf('Scale_MIN'), chf('Scale_MAX'));;
 ```
 
 #### Spiral 
