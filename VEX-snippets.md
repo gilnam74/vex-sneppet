@@ -122,12 +122,13 @@ value = pow(value, 8.0);
 
 ##### Noise the points
 ```c
+// Define UI controls
 float noise = chf('Noise_Power');
 float freq = chf('Noise_Frequency');
-float noiseXYZ = fit(noise(@P*freq), 0,1, -1, 1)*noise;
-@P.x  += noiseXYZ;
-@P.y  += noiseXYZ;
-@P.z  += noiseXYZ;
+// Create noise
+vector noiseXYZ = noise(@P*freq);
+// Apply noise to a point position
+@P  += fit(noiseXYZ, 0,1, -1, 1)*noise;
 ```
 
 
