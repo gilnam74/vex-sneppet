@@ -120,12 +120,23 @@ Complete solutions of basic tasks
 value = pow(value, 8.0);
 ```
 
-##### Select border points
+##### Noise the points
+```c
+float noise = chf('Noise_Power');
+float freq = chf('Noise_Frequency');
+float noiseXYZ = fit(noise(@P*freq), 0,1, -1, 1)*noise;
+@P.x  += noiseXYZ;
+@P.y  += noiseXYZ;
+@P.z  += noiseXYZ;
+```
+
+
+##### Select mesh border points
 ```c
 // Get number of connectet points
 int nbPts = neighbourcount(0,@ptnum);
-// Create "outline" group with border points
-i@group_outline = nbPts == 3 | nbPts == 2; 
+// Create "border" group with border points
+i@group_border = nbPts == 3 | nbPts == 2; 
 ```
 
 #### VEX strings
