@@ -12,7 +12,12 @@ Download [Space Colonisation hip file](../blob/master/hips/spaceColonization_001
 #### Randomize copies VOP
 Satter points, copy objects onto points, randomize position, rotation and scale of the copies. 
 [![](https://c1.staticflickr.com/1/887/41411521611_697f823b58_o.gif)](https://c1.staticflickr.com/1/887/41411521611_697f823b58_o.gif)
-Download [Randomize Copies hip file](../blob/master/hips/randomizeCopiesVOP_001.hipnc)
+Download [Randomize Copies VOP hip file](../blob/master/hips/randomizeCopiesVOP_001.hipnc)
+
+#### Randomize copies VEX
+Satter points, copy objects onto points, randomize position, rotation and scale of the copies. 
+[![](https://c2.staticflickr.com/2/1745/27753095197_866b79e412_o.gif)](https://c2.staticflickr.com/2/1745/27753095197_866b79e412_o.gif)
+Download [Randomize Copies VEX hip file](../blob/master/hips/EXA_randomizeCopiesVEX_001.hipnc)
 
 #### Rotate copies VEX
 Satter points, copy objects onto points, rotate copies on X, Y, Z axes. 
