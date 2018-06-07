@@ -128,7 +128,9 @@ float freq = chf('Noise_Frequency');
 // Create noise
 vector noiseXYZ = noise(@P*freq);
 // Apply noise to a point position
-@P  += fit(noiseXYZ, 0,1, -1, 1)*noise;
+v@ns = fit(noiseXYZ, 0,1, -1, 1)*noise;
+@P.x  += @ns.x;
+@P.z  += @ns.z;
 ```
 
 
