@@ -108,19 +108,26 @@ f@pscale = (@ptnum == 0) || (@ptnum ==(@numpt-1)) ? 10 : 1;
 ```
 
 
+## Expressions
+Using VEX in parameter interface
 
+#### Get Attributes
+'''c
+detail("../nodeName/", 'attributeName', 0)
+point("../nodeName/",@ptnum, 'attributeName',0)
+'''
 
 
 
 ## Procedures
 Complete solutions of basic tasks
 
-##### Multiply distribution (make small smaller, big bigger)
+#### Multiply distribution (make small smaller, big bigger)
 ```c
 value = pow(value, 8.0);
 ```
 
-##### Noise the points
+#### Noise the points
 ```c
 // Define UI controls
 float noise = chf('Noise_Power');
@@ -134,7 +141,7 @@ v@ns = fit(noiseXYZ, 0,1, -1, 1)*noise;
 ```
 
 
-##### Select mesh border points
+#### Select mesh border points
 ```c
 // Get number of connectet points
 int nbPts = neighbourcount(0,@ptnum);
