@@ -112,10 +112,10 @@ f@pscale = (@ptnum == 0) || (@ptnum ==(@numpt-1)) ? 10 : 1;
 Using VEX in parameter interface
 
 #### Get Attributes
-'''c
+```c
 detail("../nodeName/", 'attributeName', 0)
 point("../nodeName/",@ptnum, 'attributeName',0)
-'''
+```
 
 
 
