@@ -275,7 +275,7 @@ Y = sin(X) means: for any input value (X) sine will calculate a particular outpu
 
 Second, sine function returns a [float](Programming-basics#data-types) value. 
 
-You can imagine a sine as a **global invisible power field** existing in your scene which can modify point positions by certain values according to its shape. What is the shape of this field? We see the sine graph, it's obviously an infinite **wave**. Let's create a grid and apply the power of our field to visualize sine in the 3D scene!
+You can imagine a sine as a **global invisible power field** existing in your scene which can modify point positions by certain values according to its shape. What is the shape of this field? We see the sine graph, it's obviously a **wave**. Let's create a grid and apply the power of our field to visualize sine in the 3D scene!
 
 Create a grid with a decent amount of rows and columns (say, 50) drop Attribute Wrangle node after grid and enter the code:
 
@@ -284,4 +284,4 @@ Create a grid with a decent amount of rows and columns (say, 50) drop Attribute 
 ```
 This means: we are modifying Y position of all grid points by the value which will give us a sine function of Pi divided by two. Since sine returns a float we need to use it with a float (Y) component of a vector (XYZ) position. 
 
-What happened with the grid? Y coordinate of very point become equal one, in other words, we move grid one unit up. Everything is correct, according to a sine graph the argument of 1/2 Pi should return 1. But where is a wave?
+What happened with the grid? Check Geometry Spreadsheet: Y coordinate of very point become equal one, in other words, we move grid one unit up. Everything is correct, according to a sine graph the argument of 1/2 Pi should return 1. But where is a wave?
