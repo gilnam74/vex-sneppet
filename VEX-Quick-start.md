@@ -284,4 +284,4 @@ Create a grid with a decent amount of rows and columns (say, 50) drop Attribute 
 ```
 This means: we are modifying Y position of all grid points by the value which will give us a sine function of Pi divided by two. Since sine returns a float we need to use it with a float (Y) component of a vector (XYZ) position. 
 
-What happened with the grid? Y coordinate of very point become equal one, in other words, we move grid one unit up. Everything is correct but the result is far away from a wave shape.
+What happened with the grid? Y coordinate of very point become equal one, in other words, we move grid one unit up. Everything is correct, according to a sine graph the argument of 1/2 Pi should return 1. But where is a wave?
