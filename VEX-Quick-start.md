@@ -269,13 +269,16 @@ In the example above we used **sine** and **cosine** to build a circle. Let's ta
 
 First, we need to understand how math function works. Same as [functions](Programming-basics#functions) in programming math function produce some results (return values) based on input data (arguments). Check [wiki sine article](https://en.wikipedia.org/wiki/Sine):
 
-[![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sine_one_period.svg/600px-Sine_one_period.svg.png)]
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sine_one_period.svg/600px-Sine_one_period.svg.png)
 
 Y = sin(X) means: for any input value (X) sine will calculate a particular output value Y. Here X is an argument of a sine function. Sine of Pi divided by two will give you one.
 
 Second, sine function returns a [float](Programming-basics#data-types) value. 
 
-You can imagine a sine as a **global invisible power field** existing in your scene which can modify point positions by certain values according to its shape. What is the shape of this field? Sine graph gives us a clue: it's obviously an infinite **wave**. How is it positioned in 3D space? Since 3D space is a vector 
+You can imagine a sine as a **global invisible power field** existing in your scene which can modify point positions by certain values according to its shape. What is the shape of this field? We see the sine graph, it's obviously an infinite **wave**. Let's create a grid and apply the power of our field to visualize sine in the 3D scene!
 
 Create a grid with a decent amount of rows and columns (say, 50) drop Attribute Wrangle node after grid and enter the code:
 
+```c
+@P.y = sin(@P.x);
+```
