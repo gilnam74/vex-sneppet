@@ -271,7 +271,7 @@ First, we need to understand how math function works. Same as [functions](Progra
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sine_one_period.svg/600px-Sine_one_period.svg.png)
 
-Y = sin(X) means: for any input value (X) sine will calculate a particular output value Y. Here X is an argument of a sine function. Sine of Pi divided by two will give you one.
+Y = sin(X) means: for any input value (X) sine will calculate a particular output value Y. Here X is an argument of a sine function. Sine of 1/2 Pi will give you one.
 
 Second, sine function returns a [float](Programming-basics#data-types) value. 
 
@@ -280,5 +280,5 @@ You can imagine a sine as a **global invisible power field** existing in your sc
 Create a grid with a decent amount of rows and columns (say, 50) drop Attribute Wrangle node after grid and enter the code:
 
 ```c
-@P.y = sin(@P.x);
+@P.y = sin(PI*0.5);
 ```
