@@ -311,5 +311,6 @@ And here we are! Our magic sine field visualized in the scene with a help of gri
 
 This sine investigation should clear for us how to work with math function: 
 - Any function returns a value of certain data type (vector, float etc) 
-- Some function may required argument (input value) to produce a result
-- You can use variable value to get variable result
+- Some function may be required argument (input value) to produce a result
+- You can use variable value to get a variable result
+- Common variation conditions are: time `@Time` and point number `@ptnum`
