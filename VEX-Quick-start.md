@@ -292,10 +292,24 @@ Take a look at sine graph: we have X-axis and moving along this axis from 0 to 2
 @P.y = sin(@Time);
 ```
 
-Press play: you grid is going up and down over the time. We visualize a sine function in our scene under the time condition. Works great but this is not we keen to get: currently, all grid points get the same value which changes over the time. To deform our grid (points) with the sine we have to find another condition which will take into account our points (and give an individual result for each point). Another widely used example of variation condition is a **point number** which you can get with a `@ptnum` built-in VEX variable. We can use point number as an argument to a sine function and the grid will be deformed, but the result would not be clean enough.
+Press play: you grid is going up and down over the time. We visualize a sine function in our scene under the time condition. Works great but this is not we keen to get: currently, all grid points get the same value which changes over the time. To deform our grid (points) with the sine we have to find another condition which will take into account our points (and give an individual result for each point). 
+
+Another widely used example of variation condition is a **point number** which you can get with a `@ptnum` built-in VEX variable. We can use point number as an argument to a sine function and the grid will be deformed, but the result would not be clean enough.
 
 In our case, we need to find another variation condition related to points and it could be a point position. Since sine function required a float argument and point position is a vector we can use only one axis of position:
 
+```c
 @P.y = sin(@P.x);
+```
 
-And here we are! Our magic sine function visualized in the scene with a help of grid deformation.
+And here we are! Our magic sine field visualized in the scene with a help of grid deformation. Curious minds may already have an idea how we can modify position and shape of this field, by modifying argument and sine output values:
+
+```c
+@P.y = sin(1+ @P.x*chf('Period'))*chf('Amplitude');
+```
+[![](https://c2.staticflickr.com/2/1754/41855185615_93a6665981_o.gif)](https://c2.staticflickr.com/2/1754/41855185615_93a6665981_o.gif)
+
+This sine investigation should clear for us how to work with math function: 
+- Any function returns a value of certain data type (vector, float etc) 
+- Some function may required argument (input value) to produce a result
+- You can use variable value to get variable result
