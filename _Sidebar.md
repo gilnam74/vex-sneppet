@@ -5,7 +5,7 @@
   - [Math basics](Math-basics)
   - [Python in Houdini](Python)
   - [Python snippets](python-snippets)
-  - [VEX quickstart](vex-quick-start)
+  - [VEX for artists](vex-for-artists)
   - [VEX snippets](vex-snippets)
   - [HIP Examples](examples)
   - [Tutorials](tutorials)
