@@ -315,3 +315,6 @@ This sine investigation should clear for us how to work with math function:
 - Some function may be required argument (input value) to produce a result
 - You can use variable value to get a variable result
 - Common variation conditions are: time `@Time` and point number `@ptnum`
+
+# VEX basics
+Check [VEX snippets](vex-snippets) for more VEX examples.
