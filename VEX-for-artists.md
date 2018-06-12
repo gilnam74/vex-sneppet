@@ -1,5 +1,5 @@
 # Introduction
-If you want to learn VEX and Math beginning from the basics here is a good place to start. You need elementary knowledge of Houdini UI and understanding of core programming concepts. If you can render metal sphere in Houdini and know what is syntax, data types, variables and loops then you are fine to go (check [Programming Basics tutorial](Programming-basics) if not).
+For those who tried (or afraid to start) to learn VEX but fail and stop because it was too hard. Here you will learn VEX and some Math beginning from the basics with a clear detailed explanation. You need elementary knowledge of Houdini UI and understanding of core programming concepts. If you can render metal sphere in Houdini and know what is syntax, data types, variables and loops then you are fine to go (check [Programming Basics tutorial](Programming-basics) if not).
 
 To understand **applied Math** in 3D using VEX in Houdini our mission here.
 
