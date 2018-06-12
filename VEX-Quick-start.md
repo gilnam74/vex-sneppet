@@ -286,8 +286,10 @@ This means: we are modifying Y position of all grid points by the value which wi
 
 What happened with the grid? Check Geometry Spreadsheet: Y coordinate of very point become equal one, in other words, we move grid one unit up. Everything is correct, according to a sine graph the argument of 1/2 Pi should return 1. But where is a wave?
 
-Take a look at sine graph: we have X-axis and moving along this axis from 0 to 2Pi we get different values Y, returned by the sine function. This Y values based on constantly growing X values give us a wave shape. Currently, we feed a **constant** to our sine function as an argument (PI*0.5). Constant means a value which **does not change** under any conditions. So to get wave shape we have to feed to a sine some **varying** value — a value which will **change** over some condition. The most common example of such condition is time: time is a constantly growing value which you can feed as an argument to your function. VEX has built-in variable `@Time` which returns current time in seconds.
+Take a look at sine graph: we have X-axis and moving along this axis from 0 to 2Pi we get different values Y, returned by the sine function. This Y values based on constantly growing X values give us a wave shape. Currently, we feed a **constant** to our sine function as an argument (PI*0.5). Constant means a value which **does not change** under any **conditions**. So to get wave shape we have to feed to a sine some **varying** value — a value which will **change** over some condition. The most common example of such condition is **time**: time is a constantly growing value which you can feed as an argument to your function. VEX has built-in variable `@Time` which returns current time in seconds.
 
 ```c
 @P.y = sin(@Time);
 ```
+
+Press play: you grid is going up and down over the time. We visualize a sine function in our scene under the time condition. Works great but this is not we keen to get: currently, all grid points get the same value which changes over the time. To deform our grid (points) with the sine we have to find another condition which will take into account our points. Another widely used example of such condition is a **point number** which you can get with a `@ptnum` built-in VEX variable.
