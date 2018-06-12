@@ -15,7 +15,7 @@ As an exerseises we will create:
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/hips/VEX_snippets_003.hipnc).
 
-# VEX first steps
+# VEX orientation
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
 
 ## Points
@@ -185,7 +185,8 @@ for (int n=0; n<numberOfPoints; n++){
 ```
 
 Here we create a primitive: `addprim()` and get a number of points we created in the first Wrangle node: `numberOfPoints = @numpt`, the `@numpt` is a built-in attribute which returns the total number of points from the first input. Then in the loop for each point we create vertex and add this ertex to a primitive: `addvertex()`.
- 
+
+# VEX first steps
 #### Create a circle
 Here we come to a more fancy stuff! At this point, we will start using trigonometry to draw a circle.
 
