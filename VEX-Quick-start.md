@@ -305,7 +305,7 @@ In our case, we need to find another variation condition related to points and i
 And here we are! Our magic sine field visualized in the scene with a help of grid deformation. Curious minds may already have an idea how we can modify position and shape of this field, by modifying argument and sine output values:
 
 ```c
-@P.y = sin(1+ @P.x*chf('Period'))*chf('Amplitude');
+@P.y = sin(@P.x*chf('Period'))*chf('Amplitude');
 ```
 [![](https://c2.staticflickr.com/2/1754/41855185615_93a6665981_o.gif)](https://c2.staticflickr.com/2/1754/41855185615_93a6665981_o.gif)
 
