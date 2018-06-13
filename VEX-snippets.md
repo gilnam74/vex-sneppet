@@ -47,6 +47,12 @@ f@attribute;
 @attribute = chramp('Modify_Value',@attribute);
 ```
 
+#### Get points and primitives
+```c
+int points[] = expandpointgroup(0, "!*");
+int prims[] = expandprimgroup(0, "!*");
+```
+
 #### Add point attribute in Detail mode
 ```c
 addpoint(0, {0,0,0});
