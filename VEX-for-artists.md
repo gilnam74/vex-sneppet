@@ -26,8 +26,9 @@ The goal here is to start with the very simple and basic tasks keeping the amoun
 Imagine Attribute Wrangle node as a [loop](Programming-basics#loops), for example Attribute Wrangle run over Points:
 
 ```c
-for (every point):
-   do everything from VEX expression window;
+for (every input point){
+    do everything from VEX expression window;
+    }
 ``` 
 
 ## Points
