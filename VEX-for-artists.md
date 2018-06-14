@@ -30,7 +30,7 @@ for (every input point){
     do everything from VEX expression window;
     }
 ``` 
-[![](https://c2.staticflickr.com/2/1748/40983698480_d550fdfb22_o.gif)](https://c2.staticflickr.com/2/1748/40983698480_d550fdfb22_o.gif)
+[![](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)
 ## Points
 #### Point concept
 Point is a basement of 3 Dimensional data representation and its a core entity in Houdini. Understanding points allow understanding a huge part of SOP context (an area where you are creating models) in Houdini. To make things simple you can consider the single point as a complete geometry of any complexity.
