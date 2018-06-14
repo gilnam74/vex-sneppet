@@ -23,7 +23,7 @@ All exercises from this chapter you can find in [VEX snippets hip file](../blob/
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
 
 ## Attribute Wrangle
-Imagine Attribute Wrangle node as a [loop](Programming-basics#loops), for example Attribute Wrangle run over Points:
+Imagine **Attribute Wrangle** as a [loop](Programming-basics#loops) node, for example Attribute Wrangle run over Points:
 
 ```c
 for (every input point){
@@ -31,6 +31,8 @@ for (every input point){
     }
 ``` 
 [![](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)
+
+
 ## Points
 #### Point concept
 Point is a basement of 3 Dimensional data representation and its a core entity in Houdini. Understanding points allow understanding a huge part of SOP context (an area where you are creating models) in Houdini. To make things simple you can consider the single point as a complete geometry of any complexity.
