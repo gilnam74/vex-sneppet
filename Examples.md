@@ -27,7 +27,7 @@ Download [Rotate Copies hip file](../blob/master/hips/rotateCopiesVEX_001.hipnc)
 #### Pack the object
 Scatter object along the surface of another object without intersections
 [![](https://c1.staticflickr.com/1/809/40700249024_aba39f76e1_o.gif)](https://c1.staticflickr.com/1/809/40700249024_aba39f76e1_o.gif)
-Download [Pack the object hip file](../blob/master/hips/packObject_001.hipnc)
+Download [Pack the object hip file](../blob/master/hips/EXA_packObject_001.hipnc)
 
 #### Randomize Alembic copies
 Create seamles animation, create different animation versions, export to Alembic, copy ABC and randomize file versions and time shift for each copie.  
