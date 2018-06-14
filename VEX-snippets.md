@@ -145,14 +145,25 @@ v@ns = fit(noiseXYZ, 0,1, -1, 1)*noise;
 @P.x  += @ns.x;
 @P.z  += @ns.z;
 ```
-
-
 #### Select mesh border points
 ```c
 // Get number of connectet points
 int nbPts = neighbourcount(0,@ptnum);
 // Create "border" group with border points
 i@group_border = nbPts == 3 | nbPts == 2; 
+```
+#### Shape Polywire with ramp for combined curves
+```c
+// Create Primitive Wrangle before polywire, use @width as Wire Radius
+// Get array of points in each curve (primitive)
+i[]@primPts = primpoints(0, @primnum);
+
+// For each point in current curve
+foreach (int i; int currentPoint; @primPts){
+    float ramp_index = fit(i, 0, len(@primPts),0,1);
+    f@widthPrim = chramp("shape", ramp_index)/20;
+    setpointattrib(0, "width", currentPoint, @widthPrim, "set"); 
+    }
 ```
 
 #### VEX strings
