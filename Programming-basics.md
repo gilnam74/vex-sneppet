@@ -144,7 +144,6 @@ foreach(int grade;  listGrades){
 
 Note, that you can have access to the index of the item in the loop in addition to item value:
 ```c
-// Create array with a students grades 
 foreach(int index; int grade;  listGrades){
     ...
     } 
