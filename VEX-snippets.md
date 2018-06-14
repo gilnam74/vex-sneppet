@@ -1,4 +1,4 @@
-Here you will find isolated blocks of VEX code, each of them performs one certain small task.  
+Here you will find isolated blocks of VEX code, each of them performs one certain small task. These and other examples are in[VEX snippets hip file](../blob/master/hips/VEX_snippets_004.hipnc). 
 
 ## Functions
 Core stuff
