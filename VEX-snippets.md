@@ -160,7 +160,7 @@ i[]@primPts = primpoints(0, @primnum);
 
 // For each point in current curve
 foreach (int i; int currentPoint; @primPts){
-    float ramp_index = fit(i, 0, len(@primPts),0,1);
+    float ramp_index = fit(i, 0, len(@primPts)-1, 0,1);
     f@widthPrim = chramp("shape", ramp_index)/20;
     setpointattrib(0, "width", currentPoint, @widthPrim, "set"); 
     }
