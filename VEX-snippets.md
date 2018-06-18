@@ -49,8 +49,11 @@ f@attribute;
 
 #### Get points and primitives
 ```c
+// Run over points
 int points[] = expandpointgroup(0, "!*");
 int primitives[] = expandprimgroup(0, "!*");
+// Run over primitives
+int points[] = primpoints(0, @primnum); 
 ```
 
 #### Add point attribute in Detail mode
