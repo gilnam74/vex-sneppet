@@ -108,7 +108,7 @@ foreach (int currentPoint; allPoints){
 ```c
 // Scale 10 times first and last points
 if ((@ptnum == 0) || (@ptnum == (@numpt-1))) f@pscale = 10; 
-else else f@pscale = 1;
+else f@pscale = 1;
 ```
 
 ```c
