@@ -1,6 +1,6 @@
 [![](https://c1.staticflickr.com/1/865/26558997907_fbcb313dfc_o.gif)](https://c1.staticflickr.com/1/865/26558997907_fbcb313dfc_o.gif)
 
-Wellcome to **Houdini Magic Wiki**!  
+Wellcome to **Magic of Houdini Wiki**!  
 
 In future, this repository would include a complete Houdini Pipeline Toolkit and documentation, same as [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) for Maya, but now it contains only learning resources: some tips, tutorials, code snippets etc. 
 
