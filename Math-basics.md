@@ -27,4 +27,4 @@ Trigonometry is all about **length** and **angles** in **triangles**. Since the 
 ## Circle
 
 # Vectors
-Here we come closer to a really useful stuff when we deal with 3D graphics. We speak about [vector data type](Programming-basics#data-types) in  Programming section. Vectors in math is a different thing, don't mess them up.
+Here we come closer to a really useful stuff when we deal with 3D graphics.
