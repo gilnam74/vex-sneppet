@@ -391,7 +391,7 @@ if(noseValues > 0.5){
     @Cd.r = 1;
     }
 ```
-Now we can see a clear noise pattern! Switch to Primitives and UI elements to examine the noise function parameters interactively:
+Now we can see a clear noise pattern! Switch to Primitives and add UI elements to examine the noise function parameters interactively:
 
 ```c
 // Make geometry black
