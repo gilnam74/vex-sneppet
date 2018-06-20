@@ -14,7 +14,7 @@ Article structure:
 - [VEX orientation](#vex-orientation)  
 [point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)  
 - [VEX first steps](#vex-first-steps)  
-[sine](#sine)
+[sine](#sine)  |  [noise](#noise)
 - [VEX basics](#vex-basics)
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/hips/VEX_snippets_004.hipnc).
@@ -330,6 +330,82 @@ This sine investigation should clear for us how to work with math function:
 - Some function may be required argument (input value) to produce a result
 - You can use variable value to get a variable result
 - Common variation conditions are: time `@Time` and point number `@ptnum`
+
+#### Noise
+Let`s examine one more interesting function without going into the math background: [noise](http://www.sidefx.com/docs/houdini/vex/functions/noise.html). What this function produces (returns) and what it requires as an argument to work? 
+
+According to a documentation, you can use point position as an argument and noise can return either float or vector data. There is no description of the output of the noise itself, but we can make an assumption based on the name: we will get some variations of output values depending on the position. In other words, depending on each point position noise function will return certain value for this point. Ok, but how this variation pattern looks like?
+
+Instead of a thousand words, let's just take a look at the noise beast in our scene! Rather than deform geometry (modify @P attribute) we will literally paint points with noise values with a help of @Cd attribute.
+
+`@Cd` is one of the built-in Houdini attributes and it`s responsible for the color values of points or primitives. You can see this values in the viewport on your geometry. This is an attribute of a vector data type: 
+
+`@Cd = {<valueRed>, <valueGreen>, <valueBlue>}`
+
+To **visualize the nose function with colors** create a grid with 200 rows and columns and drop Attribute Wrangle after the grid. Let's learn how we can use `@Cd` attribute, fill the grid with a black color:
+
+```c
+// Make geometry black
+@Cd = {0, 0, 0};
+```
+Note, your grid become black in the viewport! You can try to make it red (or green, or blue) as a simple exercise or yellow if you gonna become a real developer. 
+
+It is time to play with a noise function but what option should we choose from the variety of available in docs? Since color is a vector attribute, let's use a vector as a return data type, and vector position as an argument: `vector  noise(vector pos)` and link each point color with noise values:
+
+```c
+// Paint geometry with noise values
+@Cd = noise(@P);
+```
+Nice! Here we visualize the noise function on our grid with a color. Curious minds may try to visualize nose with a geometry deformation (`@P = noise(@P);`) but the result would not be clear enough.
+
+[![](https://c2.staticflickr.com/2/1785/42922412061_de666b1a24_o.gif)](https://c2.staticflickr.com/2/1785/42922412061_de666b1a24_o.gif)
+
+Even now while you can see the noise pattern in the scene it is not obvious how it's designed and how we can use it. So we will simplify our color vector visualization and use black and white float data to discover the red channel of noise:
+
+```c
+// Paint geometry with noise values
+@Cd.r = noise(@P);
+```
+Not quite what we can expect? Check our VEX developer best friend — Geometry Spreadsheet, two other components of our @Cd attribute (@Cd.g and @Cd.b) are equal 1, so we need to make them 0 before:
+
+```c
+// Make geometry black
+@Cd = {0, 0, 0};
+// Paint geometry with noise values
+@Cd.r = noise(@P);
+```
+Better, but still... too blurry! We can learn from docs that noise function returns values in a range from 0 to 1. So each point gets value within this range according to the noise pattern. Let's make our visualization more contrast: if the value is lower than some value (and we can use the average value of our range here) it becomes black, otherwise, it becomes red. And average of our 0-1 range = (0 + 1)/2 = 0.5 
+
+If... Otherwise... Sounds like we need to use a [condition](Programming-basics#conditions) programming concept! We will get a noise value and assign it to a variable named "noseValues". Float variable, because we will set one float channel `@Cd.r`. Then we will check if this value is greater then a threshold (average) then we will paint point to a red color. Otherwise, it will remain black and we don't need to set this up in our code. If you don't use `else` statement this means: otherwise — do nothing.
+
+```c
+// Make geometry black
+@Cd = {0, 0, 0};
+// Assign noise values to variable 
+float noseValues = noise(@P);
+
+// Paint geometry with noise values
+if(noseValues > 0.5){
+    @Cd.r = 1;
+    }
+```
+Now we can see a clear noise pattern! Add UI elements to examine the noise function parameters interactively:
+
+```c
+// Make geometry black
+@Cd = {0, 0, 0};
+// Assign noise values to variable 
+float noseValues = noise(@P*chf('Size') + chf('Offset'));
+
+// Paint geometry with noise values
+if(noseValues > chf('Threshold')){
+    @Cd.r = 1;
+    }
+```
+
+[![](https://c1.staticflickr.com/1/896/42204724394_e2b44bccd5_o.gif)](https://c1.staticflickr.com/1/896/42204724394_e2b44bccd5_o.gif)
+
+So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
