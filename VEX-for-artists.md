@@ -334,6 +334,8 @@ This sine investigation should clear for us how to work with math function:
 #### Noise
 Let`s examine one more interesting function without going into the math background: [noise](http://www.sidefx.com/docs/houdini/vex/functions/noise.html). What this function produces (returns) and what it requires as an argument to work? 
 
+[![](https://c2.staticflickr.com/2/1826/42878139242_b03dccb888_o.gif)](https://c2.staticflickr.com/2/1826/42878139242_b03dccb888_o.gif)
+
 According to a documentation, you can use point position as an argument and noise can return either float or vector data. There is no description of the output of the noise itself, but we can make an assumption based on the name: we will get some variations of output values depending on the position. In other words, depending on each point position noise function will return certain value for this point. Ok, but how this variation pattern looks like?
 
 Instead of a thousand words, let's just take a look at the noise beast in our scene! Rather than deform geometry (modify @P attribute) we will literally paint points with noise values with a help of @Cd attribute.
