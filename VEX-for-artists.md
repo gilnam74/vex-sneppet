@@ -409,7 +409,7 @@ if(noseValues > chf('Threshold')){
 
 How can we use noise function in production? For example, you can scatter points according to a noise pattern: add primitives to a [group](vex-snippets#create-groups) and use this group in scatter node. Or you can deform geometry with the noise pattern. Or anywhere you need controlled procedural variation!
 
-So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
+So now we have **two methods to visualize VEX functions**: you can [deform geometry](vex-snippets#noise-the-points) as we did with a [sine](#sine) or paint geometry as in the current example.
 
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
