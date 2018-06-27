@@ -44,7 +44,7 @@ Variables which works with paths divided into 2 types:
 
 ## Pipeline developing notes
 #### Introduction
-This repository is a Houdini pipeline toolset in the early stage of developing. Working name is "Mother".
+This repository is a Houdini pipeline toolset in the early stage of developing. Working name is "Mother". This section is my notes on developing process, it does not intend to have valuable public content. I mean, skip it!
 
 Once released, Mother would be **out of the box VFX pipeline** for Houdini and Nuke applications under control of Shotgun management system.
 
