@@ -59,3 +59,5 @@ Install GitHub Desktop. Clone this repo to a PIPELINE folder of a project used t
 Create a project in PyCharm, set PIPELINE folder as root.
 
 Exclude PyCharm project folder (.idea) from GitHub commits: go to `PIPELINE/.git/info`, add `.idea` line to "exclude" file.
+
+Modify code, commit changes, Fetch Origin!
