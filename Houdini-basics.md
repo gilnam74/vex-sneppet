@@ -4,14 +4,15 @@ Here you will find Houdini general usage tips
 ## Project setup
 Environment variables allow to setup variables and values in Houdini.  
 List all available variables: `hconfig.exe -a`  
-Check the variable value in Houdini: in Texport window run `echo <$VAR_NAME>`  
+Check the variable value in Houdini: in Texport window run `echo $<VAR_NAME>`  
 Variables which works with paths divided into 2 types:  
 - Location (HIP, JOB, etc)
 - Path (HOUDINI_SCRIPT_PATH, etc)
 
-`$JOB` - root for Houdini project.  
-`$HIP` - path where Houdini scene is.  
-`HOME` - Houdini settings for user
+`JOB` - root for Houdini project.  
+`HIP` - path where Houdini scene is.  
+`HOME` - Houdini settings for the user
+`HFS` - Houdini install dir
 
 ## Attributes and parameters
 [Attributes](http://www.sidefx.com/docs/houdini/model/attributes)  
