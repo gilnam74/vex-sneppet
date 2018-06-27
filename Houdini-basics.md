@@ -42,3 +42,15 @@ Variables which works with paths divided into 2 types:
 - **Go to** quickmark 1: `1`  
 - **Togle** quickmarks: tilda
 
+## Pipeline developing notes
+#### Introduction
+This repository is a Houdini pipeline toolset in the early stage of developing. Working name is "Mother".
+
+Once released, Mother would be **out of the box VFX pipeline** for Houdini and Nuke applications under control of Shotgun management system.
+
+Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
+
+#### Usage
+Create a project [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) and place repo content in `<rootProject>/PREP/PIPELINE` to use Mother.
+
+#### Github
