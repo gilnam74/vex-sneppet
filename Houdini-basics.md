@@ -53,4 +53,9 @@ Despite the Houdini data management part is not developed yet, the whole VFX pip
 #### Usage
 Create a project [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) and place repo content in `<rootProject>/PREP/PIPELINE` to use Mother.
 
-#### Github
+#### Github developer notes
+Install GitHub Desktop. Clone this repo to a PIPELINE folder of a project used to develop the pipeline `E:\256\PROJECTS\NSI\PREP\PIPELINE`.
+
+Create a project in PyCharm, set PIPELINE folder as root.
+
+Exclude PyCharm project folder (.idea) from GitHub commits: go to `PIPELINE/.git/info`, add `.idea` line to "exclude" file.
