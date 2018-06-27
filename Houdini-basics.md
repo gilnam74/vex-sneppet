@@ -11,7 +11,7 @@ Variables which works with paths divided into 2 types:
 
 `JOB` - root for Houdini project.  
 `HIP` - path where Houdini scene is.  
-`HOME` - Houdini settings for the user
+`HOME` - Houdini settings for the user  
 `HFS` - Houdini install dir
 
 ## Attributes and parameters
