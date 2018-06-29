@@ -50,6 +50,13 @@ Once released, Mother would be **out of the box VFX pipeline** for Houdini and N
 
 Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
 
+#### Pipeline definition and goals
+What is PP? 
+Pipeline covers:
+- Communications  
+- Data storage, exchange and tracking
+
+
 #### Agile and Organic Pipeline
 There is a well-known VFX production structure with strict vertical hierarchy and tasks division between departments. We well research agile project management option with task division between teams. 
 
