@@ -60,8 +60,9 @@ The first option more suitable when you have a limited amount of big and complex
 #### Pipeline deploy
 This is basically pipeline for pipeline developing. Where you keep source code, how you modify it and track changes, how you deliver pipeline to a production for the studio and for outsoursers.
 
-#### Usage
-Create a project [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) and place repo content in `<rootProject>/PREP/PIPELINE` to use Mother.
+#### Run new project.
+Create a project [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) and place repo content in `<rootProject>/PREP/PIPELINE` to use Mother.  
+TBD: create a script `projectBuild.py` to create a folder structure and pull pipeline from GitHub into a proper folder. 
 
 #### Github developer notes
 Install GitHub Desktop. Clone this repo to a PIPELINE folder of a project used to develop the pipeline `E:\256\PROJECTS\NSI\PREP\PIPELINE`.
