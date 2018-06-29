@@ -50,6 +50,13 @@ Once released, Mother would be **out of the box VFX pipeline** for Houdini and N
 
 Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
 
+#### Agile and Organic Pipeline
+There is a well-known VFX production structure with strict vertical hierarchy and tasks division between departments. We well research agile project management option with task division between teams. 
+
+The term "production pipeline" by itself defines our perception of movie making process. Obviously, we see the similarity between movie production and any other manufacturing where we use machines, tools and other mechanical devices. Such conception gives quite successful results.
+
+However, we try to look at production process from the biological point of view and get some interesting ideas. The difference between machine and organism is similar to the difference between nodes and layers — the same task could be achieved differently and perception could define algorithms. Organic pipeline research is our goal here.
+
 #### Project-pipeline relation
 At the highest level, there are two options for defining the relation between a pipeline and projects:
 - One pipeline driving all projects  
