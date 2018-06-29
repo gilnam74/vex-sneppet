@@ -57,7 +57,7 @@ The term "production pipeline" by itself defines our perception of movie making 
 
 However, we try to look at production process from the biological point of view and get some interesting ideas. The difference between machine and organism is similar to the difference between nodes and layers — the same task could be achieved differently and perception could define algorithms. Organic pipeline research is our goal here.
 
-We are going to born shots with Mother...
+We are going to breed shots with Mother...
 
 #### Project-pipeline relation
 At the highest level, there are two options for defining the relation between a pipeline and projects:
