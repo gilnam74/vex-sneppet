@@ -6,8 +6,8 @@ Environment variables allow to setup variables and values in Houdini.
 List all available variables: run `cmds`, run command `hconfig.exe -a`  
 Check the variable value in Houdini: in Texport window run `echo $<VAR_NAME>`  
 Variables which works with paths divided into 2 types:  
-- Location (HIP, JOB, etc)
-- Path (HOUDINI_SCRIPT_PATH, etc)
+- Location (HIP, JOB, etc), one specific directory
+- Path (HOUDINI_SCRIPT_PATH, etc), list of dirs
 
 `JOB` - root for Houdini project.  
 `HIP` - path where Houdini scene is.  
