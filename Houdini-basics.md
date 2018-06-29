@@ -50,6 +50,15 @@ Once released, Mother would be **out of the box VFX pipeline** for Houdini and N
 
 Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
 
+#### Project-pipeline relation
+At the highest level, there are two options for defining the relation between a pipeline and projects:
+- One pipeline driving all projects  
+- Each project has its own pipeline version  
+The first option more suitable when you have a limited amount of big and complex long-term projects (like animation feature), second fits better for a bunch of fast tasks, like commercials. Here we will design the first option.
+
+#### Pipeline deploy
+This is basically pipeline for pipeline developing. Where you keep source code, how you modify it and track changes, how you deliver pipeline to a production for the studio and for outsoursers.
+
 #### Usage
 Create a project [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) and place repo content in `<rootProject>/PREP/PIPELINE` to use Mother.
 
