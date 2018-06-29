@@ -54,6 +54,7 @@ Despite the Houdini data management part is not developed yet, the whole VFX pip
 At the highest level, there are two options for defining the relation between a pipeline and projects:
 - One pipeline driving all projects  
 - Each project has its own pipeline version  
+
 The first option more suitable when you have a limited amount of big and complex long-term projects (like animation feature), second fits better for a bunch of fast tasks, like commercials. Here we will design the first option.
 
 #### Pipeline deploy
