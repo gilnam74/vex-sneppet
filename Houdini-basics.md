@@ -14,6 +14,9 @@ Variables which works with paths divided into 2 types:
 `HOME` - Houdini settings for the user  
 `HFS` - Houdini install dir
 
+#### Check Houdini environment
+Run Windows > Shell. Enter `hconfig-ap`
+
 ## Attributes and parameters
 [Attributes](http://www.sidefx.com/docs/houdini/model/attributes)  
 [Global expression variables](http://www.sidefx.com/docs/houdini14.0/expressions/_globals)  
