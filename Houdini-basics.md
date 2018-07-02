@@ -82,9 +82,7 @@ Sure, there is a third option available, a combination of this two methods, when
 This is basically pipeline for pipeline developing. Where you keep source code, how you modify it and track changes, how you deliver pipeline to a production for the studio and for outsoursers.
 
 #### Run new project.
-Create a project [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) and place repo content in `<rootProject>/PREP/PIPELINE` to use Mother.  
-
-TBD: Download repository as a zip file, extract and run `setupProject.bat` to create a project folder structure and copy pipeline into a proper folder. 
+Download repository as a zip file, extract to any temp location and run `setupProject.bat`. Select directory to hold the project, enter project name and press "CREATE PROJECT" to build a project folder structure and copy pipeline into it. 
 
 #### Github developer notes
 Install GitHub Desktop. Clone this repo to a PIPELINE folder of a project used to develop the pipeline `E:\256\PROJECTS\NSI\PREP\PIPELINE`.
