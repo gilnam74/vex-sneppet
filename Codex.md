@@ -26,6 +26,7 @@ Here we will record pipeline developing process
 
 #### Core concepts
 All project data located in one folder on the network drive.  
+All project data structured as ASSETS and SHOTS. Shots are the part of one project.  
 All project management data and record of project data changes are located in Shotgun.
 
 #### Pipeline definition and goals
