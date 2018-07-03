@@ -1,6 +1,12 @@
 # Introduction
 MOTHER — out of the box Houdini Pipeline toolkit.
 
+This repository is a Houdini pipeline toolset in the early stage of developing. Working name is "Mother". This section is my notes on developing process, it does not intend to have valuable public content. I mean, skip it!
+
+Once released, Mother would be **out of the box VFX pipeline** for Houdini and Nuke applications under control of Shotgun management system.
+
+Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
+
 ## Project setup
 Environment variables allow to setup variables and values in Houdini.  
 List all available variables: run `cmds`, run command `hconfig.exe -a`  
@@ -18,15 +24,10 @@ Variables which works with paths divided into 2 types:
 Run Windows > Shell (which runs `cmds`). Enter `hconfig-ap`
 
 ## Pipeline developing notes
-#### Introduction
-This repository is a Houdini pipeline toolset in the early stage of developing. Working name is "Mother". This section is my notes on developing process, it does not intend to have valuable public content. I mean, skip it!
-
-Once released, Mother would be **out of the box VFX pipeline** for Houdini and Nuke applications under control of Shotgun management system.
-
-Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
+Here we will record pipeline developing process
 
 #### Pipeline definition and goals
-What is PP? 
+What is PP  
 Pipeline covers:
 - Communications  
 - Data storage, exchange and tracking
