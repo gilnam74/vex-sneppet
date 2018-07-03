@@ -1,6 +1,7 @@
 * [Introduction](https://github.com/kiryha/Houdini/wiki)
-* Learn
+* Documentation
   - [Houdini basics](houdini-basics)
+* Learn
   - [Programming basics](Programming-basics)
   - [Math basics](Math-basics)
   - [Python in Houdini](Python)
