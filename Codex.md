@@ -5,7 +5,7 @@ This section is on the early stage of developing, it does not intend to have val
 
 Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
 
-## Project setup
+# Project setup
 Environment variables allow to setup variables and values in Houdini.  
 List all available variables: run `cmds`, run command `hconfig.exe -a`  
 Check the variable value in Houdini: in Texport window run `echo $<VAR_NAME>`  
@@ -21,8 +21,12 @@ Variables which works with paths divided into 2 types:
 #### Check Houdini environment
 Run Windows > Shell (which runs `cmds`). Enter `hconfig-ap`
 
-## Pipeline developing notes
+# Pipeline developing notes
 Here we will record pipeline developing process
+
+#### Core concepts
+All project data located in one folder on the network drive.  
+All project management data and record of project data changes are located in Shotgun.
 
 #### Pipeline definition and goals
 What is PP  
