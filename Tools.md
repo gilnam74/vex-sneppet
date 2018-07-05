@@ -1,4 +1,4 @@
-# Mother tools
+# Introduction
 This page contains a user guide for all available tools in Mother Houdini Pipeline Toolkit.
 
 ## Project Management
