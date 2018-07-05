@@ -1,5 +1,5 @@
 # Introduction
-MOTHER — out of the box Houdini Pipeline Toolkit under control of Shotgun management system. 
+**Mother** — out of the box Houdini Pipeline Toolkit under control of Shotgun management system. 
 
 This section is on the early stage of developing, it does not intend to have valuable public content. I mean, **skip it**!
 
