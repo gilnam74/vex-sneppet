@@ -1,6 +1,7 @@
 * [Introduction](https://github.com/kiryha/Houdini/wiki)
 * Documentation
   - [Codex](codex)
+  - [Tools](tools)
 * Learn
   - [Houdini basics](houdini-basics)
   - [Programming basics](Programming-basics)
