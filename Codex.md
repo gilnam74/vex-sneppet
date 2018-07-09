@@ -26,10 +26,10 @@ How we sort all project data
 
 #### Film structure
 The default structure of the final product (film, clip etc) is:  
-FILM > SEQUENCE > SHOT
+**FILM** > **SEQUENCE** > **SHOT**
 
-For bigger projects like animation feature, it has a sense to group sequences into reels (around 25 minutes length):  
-FILM > REEL > SEQUENCE > SHOT
+For bigger projects like animation feature, it has a sense to group sequences into reels:  
+**FILM** > **REEL** > **SEQUENCE** > **SHOT**
 
 The default [Shotgun schema](https://support.shotgunsoftware.com/hc/en-us/articles/219031358-Shotgun-schema) match this structure.
 
