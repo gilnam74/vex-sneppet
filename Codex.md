@@ -25,7 +25,11 @@ Run Windows > Shell (which runs `cmds`). Enter `hconfig-ap`
 How we sort all project data
 
 #### Film structure
+The default structure of the final product (film, clip etc) is:  
 FILM > SEQUENCE > SHOT
+
+For bigger projects like animation feature, it has a sense to group sequences into reels (around 25 minutes length):
+REEL > SEQUENCE > SHOT
 
 #### Folder structure
 
