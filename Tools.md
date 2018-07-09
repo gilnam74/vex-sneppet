@@ -5,7 +5,7 @@ This page contains a user guide for all available tools in Mother Houdini Pipeli
 Creating and managing projects 
 
 #### Create Project
-Create Project tool allows to setup and run a new project with Mother. Run createProject.bat, Create Project main window will rise:
+Create Project tool allows to setup and run a new project with Mother. Run `createProject.bat`, Create Project main window will rise:
 
 [![](https://c2.staticflickr.com/2/1801/42501789174_f5af9c9462_o.gif)](https://c2.staticflickr.com/2/1801/42501789174_f5af9c9462_o.gif)
 
