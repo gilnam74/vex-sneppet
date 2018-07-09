@@ -21,6 +21,13 @@ Variables which works with paths divided into 2 types:
 #### Check Houdini environment
 Run Windows > Shell (which runs `cmds`). Enter `hconfig-ap`
 
+# Project folder structure
+Project folder structure description
+
+EDIT:
+- OUT — Output of editing branch, final movie will be rendered into this folder
+- PROJECT — Editing software project files (Final Cut, Premiere etc)
+
 # Pipeline developing notes
 Here we will record pipeline developing process
 
