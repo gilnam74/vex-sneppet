@@ -28,8 +28,10 @@ How we sort all project data
 The default structure of the final product (film, clip etc) is:  
 FILM > SEQUENCE > SHOT
 
-For bigger projects like animation feature, it has a sense to group sequences into reels (around 25 minutes length):
-REEL > SEQUENCE > SHOT
+For bigger projects like animation feature, it has a sense to group sequences into reels (around 25 minutes length):  
+FILM > REEL > SEQUENCE > SHOT
+
+In [Shotgun](https://support.shotgunsoftware.com/hc/en-us/articles/219031358-Shotgun-schema) the terms matching this structure are the same.
 
 #### Folder structure
 
