@@ -31,7 +31,7 @@ FILM > SEQUENCE > SHOT
 For bigger projects like animation feature, it has a sense to group sequences into reels (around 25 minutes length):  
 FILM > REEL > SEQUENCE > SHOT
 
-In [Shotgun](https://support.shotgunsoftware.com/hc/en-us/articles/219031358-Shotgun-schema) the terms matching this structure are the same.
+The default [Shotgun schema](https://support.shotgunsoftware.com/hc/en-us/articles/219031358-Shotgun-schema) match this structure.
 
 #### Folder structure
 
