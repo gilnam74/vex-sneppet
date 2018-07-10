@@ -90,3 +90,7 @@ Create a project in PyCharm, set PIPELINE folder as root.
 Exclude PyCharm project folder (.idea) from GitHub commits: go to `PIPELINE/.git/info`, add `.idea` line to "exclude" file.
 
 Modify code, commit changes, Fetch Origin!
+
+#### Paths snippets
+
+$JOB/render/BLAST/010/SHOT_010/001/E010_S010_001.$F.pic
