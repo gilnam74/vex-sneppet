@@ -93,4 +93,4 @@ Modify code, commit changes, Fetch Origin!
 
 #### Paths snippets
 
-$JOB/render/BLAST/010/SHOT_010/001/E010_S010_001.$F.pic
+$JOB/render/010/SHOT_010/001/E010_S010_001.$F.pic
