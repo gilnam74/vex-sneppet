@@ -94,3 +94,4 @@ Modify code, commit changes, Fetch Origin!
 #### Paths snippets
 
 $JOB/render/010/SHOT_010/001/E010_S010_001.$F.pic
+E:/256/PROJECTS/NSI/PROD/2D/RENDER/010/SHOT_010/E010_S010_v001.mov
