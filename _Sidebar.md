@@ -2,7 +2,7 @@
 * Documentation
   - [Codex](codex)
   - [Tools](tools)
-  - [Tutorials](tutor-pipeline)
+  - [Tutorials](pipeline-tutorials)
 * Learn
   - [Houdini basics](houdini-basics)
   - [Programming basics](Programming-basics)
