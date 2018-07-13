@@ -43,6 +43,11 @@ PREP — Preproduction brunch
 
 PROD — Production brunch
 
+3D:
+- geo  
+- hda  
+- lib [librarys of animations, materials??]  
+
 # Pipeline developing notes
 Here we will record pipeline developing process
 
