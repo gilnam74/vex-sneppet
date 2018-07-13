@@ -48,6 +48,8 @@ PROD — Production brunch
 - hda [Houdini digital assets]  
 - lib [librarys of animations, materials, etc]  
 
+`lib` structure needs to be developed. It does not fit into ASSETS or SHOTS structure scheme.
+
 # Pipeline developing notes
 Here we will record pipeline developing process
 
