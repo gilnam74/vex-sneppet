@@ -44,9 +44,9 @@ PREP — Preproduction brunch
 PROD — Production brunch
 
 3D:
-- geo  
-- hda  
-- lib [librarys of animations, materials??]  
+- geo [geometry caches: FBX, ABC, etc]  
+- hda [Houdini digital assets]  
+- lib [librarys of animations, materials, etc]  
 
 # Pipeline developing notes
 Here we will record pipeline developing process
