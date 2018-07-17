@@ -110,7 +110,8 @@ MOTHER — folder with pipeline files:
 `MainMenuCommon.xml` — modify menu, add MOTHER.
   - toolbar — custom MOTHER shelves  
   - scripts:
-    - 123.py — run when Houdini is launching
+    - 123.py — run when Houdini is launching  
+    - 456.py — ren wen open or create a new scene
 
  
 #### Paths snippets
