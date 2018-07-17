@@ -3,13 +3,15 @@ Houdini Python API exists as **HOM** - Houdini Object Model (the module name is 
 
 Python integration in Houdini:
 - Windows > Python Shell - Python shell for small scripts/commands  
-- Windows > Python Source Editor - Python editor which saves the code with *.hip file.  
+- Windows > Python Source Editor - Python editor which saves the code with *.hip file (runs when open file).    
 - In the parameters fields of any node (switch to Python from HScript).  
 - Python node in SOP context
 - In assets: create asset, right-click > Type properties > Scripts tab.
 - Python Panel - to create PySide UI
 
 To use Python Script in all scenes you need to save Python script to the Shell.
+
+Examples below meant to be executed in **Python Source Editor**. 
 
 ##### Get node from the scene
 ```python
