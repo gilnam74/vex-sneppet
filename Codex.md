@@ -17,7 +17,7 @@ Variables which works with paths divided into 2 types:
 `HIP` - path where Houdini scene is.  
 `HOME` - Houdini settings for the user  
 `HFS` - Houdini install dir  
-`HOUDINI_PATH` - Additional to Houdini install dir. Add or override standard Houdini behavior. Share assets between projects.
+`HOUDINI_PATH` - Modify (add items) or override standard Houdini behavior. 
 
 #### Check Houdini environment
 Run Windows > Shell (which runs `cmds`). Enter `hconfig-ap`
@@ -99,6 +99,16 @@ Exclude PyCharm project folder (.idea) from GitHub commits: go to `PIPELINE/.git
 
 Modify code, commit changes, Fetch Origin!
 
+#### Pipeline structure
+Pripeline root folder: `<projectName>/PREP/PIPELINE`  
+`runHoudini.py` — Houdini wrapper to launch app. Set Houdini environment  
+`createProject.py` — [Create project tool](tools#create-project)  
+
+MOTHER — folder with pipeline files:
+- houdini — folder mapped to HOUDINI_PATH, additional to Houdini install dir. Modify Shelves, Menus etc. `jump.pref`  — add bookmarks to File Open dialog in Houdini. `MainMenuCommon.xml` — modify menu, add MOTHER.
+  - toolbar — custom MOTHER shelves
+
+ 
 #### Paths snippets
 
 $JOB/render/010/SHOT_010/001/E010_S010_001.$F.pic
