@@ -105,8 +105,12 @@ Pripeline root folder: `<projectName>/PREP/PIPELINE`
 `createProject.py` — [Create project tool](tools#create-project)  
 
 MOTHER — folder with pipeline files:
-- houdini — folder mapped to HOUDINI_PATH, additional to Houdini install dir. Modify Shelves, Menus etc. `jump.pref`  — add bookmarks to File Open dialog in Houdini. `MainMenuCommon.xml` — modify menu, add MOTHER.
-  - toolbar — custom MOTHER shelves
+- houdini — folder mapped to HOUDINI_PATH, additional to Houdini install dir. Modify Shelves, Menus etc.  
+`jump.pref`  — add bookmarks to File Open dialog in Houdini.  
+`MainMenuCommon.xml` — modify menu, add MOTHER.
+  - toolbar — custom MOTHER shelves  
+  - scripts:
+    - 123.py — run when Houdini is launching
 
  
 #### Paths snippets
