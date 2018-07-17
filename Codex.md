@@ -16,7 +16,8 @@ Variables which works with paths divided into 2 types:
 `JOB` - root for Houdini project.  
 `HIP` - path where Houdini scene is.  
 `HOME` - Houdini settings for the user  
-`HFS` - Houdini install dir
+`HFS` - Houdini install dir  
+`HOUDINI_PATH` - Additional to Houdini install dir. Add or override standard Houdini behavior. Share assets between projects.
 
 #### Check Houdini environment
 Run Windows > Shell (which runs `cmds`). Enter `hconfig-ap`
