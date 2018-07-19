@@ -54,9 +54,9 @@ PROD — Production brunch
 
 ## Unsorted
 #### Animation transfer ANM >> RND
-Characters: caches and props(bgeo.sc - geo/SHOTS/...)  
+Characters and props: caches (bgeo.sc - geo/SHOTS/...)  
 Cameras: caches (Alembic - geo/SHOTS/...)  
-Environments: HDA (hda/ASSETS/ENVIRONMENTS). Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/...)  
+Environments: HDA (HDA - hda/ASSETS/ENVIRONMENTS/...). Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVIRONMENTS/...)  
 
 
 # Pipeline developing notes
