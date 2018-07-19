@@ -5,7 +5,8 @@ This section is on the early stage of developing, it does not intend to have val
 
 Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
 
-# Project setup
+# Documentation
+## Project setup
 Environment variables allow to setup variables and values in Houdini.  
 List all available variables: run `cmds`, run command `hconfig.exe -a`  
 Check the variable value in Houdini: in Texport window run `echo $<VAR_NAME>`  
@@ -50,6 +51,13 @@ PROD — Production brunch
 - lib [librarys of animations, materials, etc]  
 
 `lib` structure needs to be developed. It does not fit into ASSETS or SHOTS structure scheme.
+
+## Unsorted
+#### Animation transfer ANM >> RND
+Characters: caches and props(bgeo.sc)  
+Cameras: caches ()  
+Environments: HDA  
+
 
 # Pipeline developing notes
 Here we will record pipeline developing process
