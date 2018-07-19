@@ -19,7 +19,7 @@ Get your [X64 Python 2.7.5](https://www.python.org/downloads/release/python-275/
 #### Install pip
 To install PIP do the folowing:
 * Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py), place in Python folder, e.g `C:/Python27/` 
-* Run cmd and execute: `python get-pip.py`  
+* Run cmd in C:/Python27 folder and execute: `python get-pip.py`  
 * Add pip path to a system environment variables: `PATH = c:/Python27/scripts`  
 
 #### Install Pyside
