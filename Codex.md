@@ -23,7 +23,7 @@ Variables which works with paths divided into 2 types:
 #### Check Houdini environment
 Run Windows > Shell (which runs `cmds`). Enter `hconfig-ap`
 
-# Project structure
+## Project structure
 How we sort all project data
 
 #### Film structure
