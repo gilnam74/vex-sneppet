@@ -121,11 +121,22 @@ def convert_FBX():
     mat = geometry.createNode('material') 
     mat.setNextInput(merge)
     mat.setName('MATERIAL')
+    # Hardcode ROMA material asignment
+    mat.parm('num_materials').set('3')
+    mat.parm('group1').set('ROMA_EYE_L_OUT ROMA_EYE_R_OUT')
+    mat.parm('shop_materialpath1').set('/obj/MATERIALS/GENERAL/GEN_EYE')
+    mat.parm('group2').set('ROMA_EYE_L_BLACK ROMA_EYE_R_BLACK')
+    mat.parm('shop_materialpath2').set('/obj/MATERIALS/GENERAL/GEN_PUPIL')
+    mat.parm('group3').set('ROMA_ARMS ROMA_BEARD ROMA_HEAD ROMA_IRON ROMA_PENS ROMA_SHOES ROMA_TSHIRT')
+    mat.parm('shop_materialpath3').set('/obj/MATERIALS/GENERAL/GEN_BASE')
+    
+    
     
     # Create groupdelete node
     gdel = geometry.createNode('groupdelete') 
     gdel.setNextInput(mat)
     gdel.setName('CLEAN')
+    gdel.parm('group1').set('*')
     
     # Create FileCache    
     cache = geometry.createNode('filecache')    
