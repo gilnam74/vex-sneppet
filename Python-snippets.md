@@ -76,6 +76,7 @@ import hou
 # Get selected FBX container and scene root
 FBX = hou.selectedNodes()
 OBJ = hou.node('/obj/')
+fileVersion = '001'
 
 def checkConditions():
     '''
@@ -139,7 +140,9 @@ def convert_FBX():
     gdel.parm('group1').set('*')
     
     # Create FileCache    
+    fileName = FBX.name().split('_')[0]
     cache = geometry.createNode('filecache')    
+    cache.parm('file').set('$JOB/lib/ANIMATION/CHARACTERS/ROMA/GEO/{0}/{1}/{0}_{1}.$F.bgeo.sc'.format(fileName, fileVersion))
     cache.setNextInput(gdel)
     cache.setName('CACHE_ANIM')
     
