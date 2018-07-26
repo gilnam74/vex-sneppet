@@ -58,6 +58,14 @@ node.parmTuple('t').set([0,1,0])
 hou.parm('/obj/geo1/tx').set(2)
 ```
 
+##### Get Translate X keyframes of selected node
+```Python
+import hou
+node = hou.selectedNodes()[0]
+
+node.parm('tx').keyframes()
+```
+
 ##### Run hscript command form Python
 ```Python
 # Run Redshift IPR
