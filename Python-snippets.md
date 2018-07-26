@@ -1,6 +1,21 @@
 # Introduction
 Here you can find small code chunks to perform miscellaneous tasks in Houdini
 
+### Import FBX into Houdini
+```Python
+import hou
+from os import listdir
+from os.path import isfile, join
+
+dirFBX = 'P:/PROJECTS/NSI/PROD/3D/lib/ANIMATION/CHARACTERS/ROMA/FBX/' 
+filesNamesFBX = [fileName for fileName in listdir(dirFBX) if isfile(join(dirFBX, fileName))]
+
+for fileName in filesNamesFBX:
+    fileFBX =  '{0}{1}'.format(dirFBX,fileName)
+    if not hou.node('/obj/{}'.format(fileName)):
+        hou.hipFile.importFBX(fileFBX) 
+```
+
 ### Convert imported FBX to geometry 
 ```Python
 # 256 Pipeline tools
