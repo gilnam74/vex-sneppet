@@ -2,6 +2,7 @@
 Here you can find small code chunks to perform miscellaneous tasks in Houdini
 
 ### Import FBX into Houdini
+```Python
 import hou
 import os 
 
