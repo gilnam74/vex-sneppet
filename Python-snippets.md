@@ -8,7 +8,6 @@ import os
 
 dirFBX = 'P:/PROJECTS/NSI/PROD/3D/lib/ANIMATION/CHARACTERS/ROMA/FBX/' 
 filesNamesFBX = [fileName for fileName in os.listdir(dirFBX) if os.path.isfile(join(dirFBX, fileName))]
-print filesNamesFBX
 
 for fileName in filesNamesFBX:
     fileFBX =  '{0}{1}'.format(dirFBX,fileName)
