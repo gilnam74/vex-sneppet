@@ -11,3 +11,12 @@ Create Project tool allows to setup and run a new project with Mother. Run `crea
 
 [ SET LOCATION ] — Folder to store all project data  
 [ CREATE PROJECT ] — Run the project creation process. This will add a folder with a folder structure, copy pipeline files inside, create a project in Shotgun based on user-defined settings.
+
+## Unsorted
+Will be sorted after getting a descent amount of tools
+
+#### Convert FBX
+`FBX>GEO` button on MOTHER shelf. Converts imported to a Houdini scene FBX files with a character animations from Mixamo to a Geometry Cache. For each selected FBX Subnetwork node creates:
+- a subnetwork with merged from FBX geometries,  
+- a material group for each part and apply a material to each geometry via material SOP,
+- File Cache node to write the character animation caches to an Animation library
