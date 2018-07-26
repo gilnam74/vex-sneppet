@@ -69,24 +69,39 @@ if checkConditions() != 0:
 ### Convert animated FBX to file caches and apply materials
 ```Python
 # 256 Pipeline tools
-# Convert FBX subnetwork to Geometry node
-# Import FBX into Houdini, select FBX subnetwork, run script in Python Source Editor
+# Convert animated mixamo FBX subnetwork to Geometry cache
+# Import FBX into Houdini, select FBX subnetworks, run script in Python Source Editor
+# Cache geometry in GEO_<FBX name> subnetworks
 
 import hou
-# Get selected FBX container and scene root
-FBX = hou.selectedNodes()
-OBJ = hou.node('/obj/')
+# Define common variables
 fileVersion = '001'
+
+# Get selected FBX container and scene root
+FBXS = hou.selectedNodes()
+OBJ = hou.node('/obj/')
 
 def checkConditions():
     '''
     Check if environment conditions allows to run script without errors
     '''
-    if not FBX:  # If user select anything
+    if not FBXS:  # If user select anything
         print '>> Nothing selected! Select FBX subnetwork!'
         return 0
 
-def convert_FBX():
+def getLastFrame(node):
+    '''
+    Return last frame of translate X animation from input node 
+    '''
+    for i in node:
+        keys = i.parm('tx').keyframes()
+        listKeys = []
+        for key in keys:
+            listKeys.append(key.frame())
+        lastFrame = int(sorted(listKeys)[-1])
+        return lastFrame
+
+def convert_FBX(FBX):
     '''
     Create Geometry node and import all FBX part inside
     '''
@@ -96,6 +111,10 @@ def convert_FBX():
     geometry.moveToGoodPosition()
     # Get all paerts inside FBX container
     geometry_FBX = [node for node in FBX.children() if node.type().name() == 'geo']
+    # Get FBX root animated node
+    mixamoRoot = [node for node in FBX.children() if node.name() == 'mixamorig_Hips']
+    # Get last frame number from animation
+    lastFrame = getLastFrame(mixamoRoot)
     
     # Create merge node for parts
     merge = geometry.createNode('merge')
@@ -143,6 +162,8 @@ def convert_FBX():
     fileName = FBX.name().split('_')[0]
     cache = geometry.createNode('filecache')    
     cache.parm('file').set('$JOB/lib/ANIMATION/CHARACTERS/ROMA/GEO/{0}/{1}/{0}_{1}.$F.bgeo.sc'.format(fileName, fileVersion))
+    cache.parm('f2').deleteAllKeyframes() # Delete expression on end frame
+    cache.parm('f2').set(lastFrame) # Sete end frame
     cache.setNextInput(gdel)
     cache.setName('CACHE_ANIM')
     
@@ -155,9 +176,9 @@ def convert_FBX():
 # Check if everything is fine and run script
 if checkConditions() != 0:
     # Get FBX network
-    FBX = FBX[0]
-    # run conversion
-    convert_FBX()
+    for FBX in FBXS:
+        # run conversion
+        convert_FBX(FBX)
     print '>> CONVERSION DONE!'
 ```
 
