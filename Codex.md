@@ -58,6 +58,10 @@ Characters and props: caches (bgeo.sc - geo/SHOTS/...)
 Cameras: caches (Alembic - geo/SHOTS/...)  
 Environments: HDA (HDA - hda/ASSETS/ENVIRONMENTS/...). Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVIRONMENTS/...)  
 
+#### Materials workflow
+Assets. In modeling scene load `material library HDA` to the root, rename to `MATERIALS`. Assign materials from library to asset parts with material SOP via groups(create a primitive group for each material). It will create attribute @shop_materialpath. Export asset geometry to `bgeo.sc`. Load  `material library HDA` and asset geometry to a render scene. Materials assigned automatically.
+
+Crowds. Create material stylesheet for a geometry node containing crowds. [Setup materials for character parts](https://forums.odforce.net/uploads/monthly_2018_07/styleSheets_A_01.PNG.d184634bdbe15d4f1c85b8b1a8d790c6.PNG) (30_Material Stylesheets.MP4 from Crowds for feature films course): Add Stylesheet parameter > Add Style > Add Target > Add Subtarget > Add Override. 
 
 # Pipeline developing notes
 Here we will record pipeline developing process
