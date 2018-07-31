@@ -100,7 +100,14 @@ merge.inputs()
 # Get node outputs
 merge.outputs()
 ```
+##### Get groups
+```Python
+import hou
 
+node = hou.selectedNodes()[0]
+groups = [g.name() for g in node.geometry().primGroups()]
+print groups
+```
 ##### Builder workflow (shop context)
 Create "Material Surface Builder" in SHOP context, dive inside.
 ```python
