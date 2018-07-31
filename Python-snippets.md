@@ -58,9 +58,6 @@ def buildGroupsList(object, listParts):
         groupsList += ' ' + name
 
     return groupsList
-    
-    
-objectsMap = buildObjectsMap(listGroups)
 
 def expandABC():
     # Recreate alembic hierarchy
@@ -86,6 +83,9 @@ def run():
         
         # Get all groups (PARTS) from alembic
         listGroups = [g.name() for g in ABC.geometry().primGroups()]
+        
+        # Build Objects Map
+        objectsMap = buildObjectsMap(listGroups)
         
         # Expand Alembic
         expandABC()
