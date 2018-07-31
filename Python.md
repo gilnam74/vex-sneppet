@@ -17,7 +17,7 @@ Examples below meant to be executed in **Python Source Editor**.
 ```python
 import hou
 node = hou.node('/<nodePath>/<nodeName>') # By name
-node = hou.selectedNodes() # By selection
+node = hou.selectedNodes()[0] # By selection
 # Get node content
 node.children()
 ```
