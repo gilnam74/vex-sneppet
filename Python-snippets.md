@@ -1,15 +1,6 @@
 # Introduction
 Here you can find small code chunks to perform miscellaneous tasks in Houdini
 
-### Get groups
-```Python
-import hou
-
-node = hou.selectedNodes()[0]
-groups = [g.name() for g in node.geometry().primGroups()]
-print groups
-```
-
 ### Expand Alembic
 ```Python
 # Expand Alembic
