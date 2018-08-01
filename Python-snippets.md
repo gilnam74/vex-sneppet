@@ -4,8 +4,8 @@ Here you can find small code chunks to perform miscellaneous tasks in Houdini
 ### Expand Alembic
 ```Python
 # Expand Alembic
-# Rebuild single alembic SOP from multiple geometry nodes using Alembic hierarchy
-# Select Alembic node, run script
+# Recreate alembic hierarchy by object groups and names
+# Select Alembic node, set 
 
 # Naming convention
 # Hirarchy in alembic: OBJECT (group)/PART_01, ..., PART_## (meshes)
@@ -13,6 +13,9 @@ Here you can find small code chunks to perform miscellaneous tasks in Houdini
 # PARTS: <objectName>_<objectVariation>_<objectPart> : bootle_A_label
 
 import hou
+    
+# Get Alembic SOP
+ABC = hou.selectedNodes()[0]
 
 def checkConditions():
     '''
@@ -49,8 +52,10 @@ def buildGroupsList(object, listParts):
         groupsList += ' ' + name
 
     return groupsList
+    
+    
 
-def expandABC():
+def expandABC(OBJ, objectsMap):
     # Recreate alembic hierarchy
     
     for object in sorted(objectsMap.keys()):             
@@ -63,9 +68,7 @@ def expandABC():
         blast.moveToGoodPosition()
 
 def run():
-    if checkConditions() != 0:
-        # Get Alembic SOP
-        ABC = hou.selectedNodes()[0]
+    if checkConditions() != 0:    
         # Setup Alembic properties
         ABC.parm('loadmode').set(1) 
         ABC.parm('groupnames').set(4) 
@@ -77,12 +80,10 @@ def run():
         
         # Build Objects Map
         objectsMap = buildObjectsMap(listGroups)
-        
         # Expand Alembic
-        expandABC()
+        expandABC(OBJ, objectsMap)
         
-        print '>> EXPANDING DONE!'
-        
+        print '>> EXPANDING DONE!'     
         
 run()
 ```
