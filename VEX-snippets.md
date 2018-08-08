@@ -136,7 +136,7 @@ detail("../nodeName/", 'attributeName', 0)
 point("../nodeName/",@ptnum, 'attributeName',0)
 ```
 
-#### Select border points
+#### Select corner points
 ```c
 # create Groupexpreesion SOP
 neighbourcount(0, @ptnum) == 2
