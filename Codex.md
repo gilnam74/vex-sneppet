@@ -46,7 +46,7 @@ PREP — Preproduction brunch
 PROD — Production brunch
 
 3D:
-- geo [geometry caches: FBX, ABC, etc]  
+- geo [geometry (and other) caches: FBX, ABC, etc]  
 - hda [Houdini digital assets]  
 - lib [librarys of animations, materials, etc]  
 
@@ -54,15 +54,18 @@ PROD — Production brunch
 
 ## Unsorted
 #### Animation transfer ANM >> RND
-Characters and props: caches (bgeo.sc - geo/SHOTS/...)  
-Cameras: caches (Alembic - geo/SHOTS/...)  
+Characters and props: caches (bgeo.sc - geo/SHOTS/010/SHOT_010/ROMA/001/E010_S010_ROMA_001.$F.bgeo.sc)  
+Cameras: caches (Alembic - geo/SHOTS/010/010/SHOT_010/CAM/E010_S010_001.abc)  
 Environments: HDA (HDA - hda/ASSETS/ENVIRONMENTS/...).  
 Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVIRONMENTS/...)  
 
 #### Materials workflow
 Assets. In modeling scene load `material library HDA` to the root, rename to `MATERIALS`. Assign materials from library to asset parts with material SOP via groups(create a primitive group for each material). It will create attribute @shop_materialpath. Export asset geometry to `bgeo.sc`. Load  `material library HDA` and asset geometry to a render scene. Materials assigned automatically.
 
-Crowds. Create material stylesheet for a geometry node containing crowds. [Setup materials for character parts](https://forums.odforce.net/uploads/monthly_2018_07/styleSheets_A_01.PNG.d184634bdbe15d4f1c85b8b1a8d790c6.PNG) (30_Material Stylesheets.MP4 from Crowds for feature films course): Add Stylesheet parameter > Add Style > Add Target > Add Subtarget > Add Override. 
+Crowds. Create material stylesheet for a geometry node containing crowds. [Setup materials for character parts](https://forums.odforce.net/uploads/monthly_2018_07/styleSheets_A_01.PNG.d184634bdbe15d4f1c85b8b1a8d790c6.PNG) (30_Material Stylesheets.MP4 from Crowds for feature films course): Add Stylesheet parameter > Add Style > Add Target > Add Subtarget > Add Override. Disclaimer: crowds stylesheets does not work as expected, need to use one mat for all agents.
+
+#### Create of render scene
+1) Save scene to $JOB/scenes/RENDER/010/SHOT_010/RND_E010_S010_001.hipnc
 
 # Pipeline developing notes
 Here we will record pipeline developing process
