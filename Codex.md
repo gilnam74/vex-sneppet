@@ -66,6 +66,10 @@ Crowds. Create material stylesheet for a geometry node containing crowds. [Setup
 
 #### Create of render scene
 1) Save scene to $JOB/scenes/RENDER/010/SHOT_010/RND_E010_S010_001.hipnc
+2) Set shot frame range
+3) Create CHARACTERS and ENVIRONMENT geometry nodes. Add ROMA cache to CHARACTERS node, add CITY HDA to ENVIRONMENT node.
+4) Create materials HDA, rename to MATERIALS
+5) Get shot camera
 
 # Pipeline developing notes
 Here we will record pipeline developing process
