@@ -60,7 +60,7 @@ Environments: HDA (HDA - hda/ASSETS/ENVIRONMENTS/...).
 Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVIRONMENTS/...)  
 
 #### Materials workflow
-Assets. In modeling scene load `material library HDA` to the root, rename to `MATERIALS`. Assign materials from library to asset parts with material SOP via groups(create a primitive group for each material). It will create attribute @shop_materialpath. Export asset geometry to `bgeo.sc`. Load  `material library HDA` and asset geometry to a render scene. Materials assigned automatically.
+Assets. In modeling scene load `material library HDA` to the root, rename to `MATERIALS`. Assign materials from library to asset parts with material SOP via groups(create a primitive group for each material). It will create attribute @shop_materialpath. Export asset geometry to `bgeo.sc`. Load  `material library HDA` and asset geometry to a render scene. Materials assigned automatically. For the ROMA character save material data to a database to be able to convert FBXs from MIXAMO to geo cashes with material assignment.
 
 Crowds. Create material stylesheet for a geometry node containing crowds. [Setup materials for character parts](https://forums.odforce.net/uploads/monthly_2018_07/styleSheets_A_01.PNG.d184634bdbe15d4f1c85b8b1a8d790c6.PNG) (30_Material Stylesheets.MP4 from Crowds for feature films course): Add Stylesheet parameter > Add Style > Add Target > Add Subtarget > Add Override. Disclaimer: crowds stylesheets does not work as expected, need to use one mat for all agents.
 
