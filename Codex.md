@@ -56,7 +56,8 @@ PROD — Production brunch
 #### Animation transfer ANM >> RND
 Characters and props: caches (bgeo.sc - geo/SHOTS/...)  
 Cameras: caches (Alembic - geo/SHOTS/...)  
-Environments: HDA (HDA - hda/ASSETS/ENVIRONMENTS/...). Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVIRONMENTS/...)  
+Environments: HDA (HDA - hda/ASSETS/ENVIRONMENTS/...).  
+Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVIRONMENTS/...)  
 
 #### Materials workflow
 Assets. In modeling scene load `material library HDA` to the root, rename to `MATERIALS`. Assign materials from library to asset parts with material SOP via groups(create a primitive group for each material). It will create attribute @shop_materialpath. Export asset geometry to `bgeo.sc`. Load  `material library HDA` and asset geometry to a render scene. Materials assigned automatically.
