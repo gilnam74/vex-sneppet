@@ -170,6 +170,8 @@ win.show()
 You should have your window opened. Now, let's add some functionality to our UI to create a tool.
 
 #### Create geometry node tool
-This tool will create a geometry node named 'GEO' in the root of the current scene.
+This tool will create a geometry node named 'GEO' in the root of the current scene. We will run the code from Python Source Editor while developing necessary functionality. After tool would be ready we will set up launching it as a Shelf Tool.
+
+First, let`s develop a functional part of the code. Run Python Source Editor.
 
 Build a UI with a single button. Rename button object to `btn_create`.
