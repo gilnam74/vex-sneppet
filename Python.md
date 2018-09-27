@@ -160,7 +160,7 @@ from PySide2 import QtCore, QtUiTools, QtWidgets
 class MyWidget(QtWidgets.QWidget):
     def __init__(self):
         super(MyWidget,self).__init__()
-        ui_file = 'path/to/file.ui'
+        ui_file = 'C:/path/to/file.ui'
         self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
 
@@ -182,4 +182,17 @@ OBJ = hou.node('/obj/')
 # Create Geometry node in scene root
 geometry = OBJ.createNode('geo')
 ```
+Run the code and you will get the Geometry node named 'geo1' in the scene root with file node inside. To name the newly created object according to our needs we would use `setName()` command. To get rid of the file node we would set to False `run_init_scripts` flag for `createNode()` command.
+
+```python 
+import hou
+
+# Get scene root node
+OBJ = hou.node('/obj/')
+# Create Geometry node in scene root
+geometry = OBJ.createNode('geo', run_init_scripts=False)
+# Set Geometry node name
+geometry.setName('GEO')
+```
+
 Build a UI with a single button. Rename button object to `btn_create`.
