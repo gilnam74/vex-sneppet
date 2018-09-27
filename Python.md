@@ -146,4 +146,4 @@ vops = [node for node in selectedNode.children() if node.type().name() == 'vopsu
 ```
 
 ## PySide interfaces in Houdini
-One of possible workflow for building tools with UI in Houdini is creating interfaces with QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
+One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
