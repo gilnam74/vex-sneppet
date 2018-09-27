@@ -1,7 +1,7 @@
 # Python in Houdini
 Houdini Python API exists as **HOM** - Houdini Object Model (the module name is hou: `import hou`).  
 
-## Python Integration
+## Python integration basics
 Python integration in Houdini:
 - Windows > Python Shell - Python shell for small scripts/commands  
 - Windows > Python Source Editor - Python editor which saves the code with *.hip file. Each time you open the file Python code in Source Editor will be executed.    
@@ -146,3 +146,4 @@ vops = [node for node in selectedNode.children() if node.type().name() == 'vopsu
 ```
 
 ## PySide interfaces in Houdini
+One of possible workflow for building tools with UI in Houdini is creating interfaces with QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
