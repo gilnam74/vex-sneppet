@@ -148,7 +148,7 @@ vops = [node for node in selectedNode.children() if node.type().name() == 'vopsu
 ## PySide interfaces in Houdini
 One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
 
-#### Blank window
+#### Launch a blank window
 Create and save a UI file with QT Designer. It could be just a blank widget (but not Main Window). In Houdini run this code in Python Source Editor window:
 
 ```python
@@ -169,8 +169,10 @@ win.show()
 ```
 You should have your window opened. Now, let's add some functionality to our UI to create a tool.
 
-#### Create geometry node tool
-This tool will create a geometry node named 'GEO' in the root of the current scene. We will run the code from Python Source Editor while developing necessary functionality. After tool would be ready we will set up launching it as a Shelf Tool.
+#### Create Basic Example tool
+This tool will create an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but quite nice to get started to build your own custom tools. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
+
+We will run the code from Python Source Editor while developing necessary functionality. After tool would be ready we will set up launching it as a Shelf Tool.
 
 First, lets develop a functional part of the code. Run Python Source Editor. To create any node in Houdini with Python you need to define a parent for this node. In our case, parent object would be a root of the object context: `hou.node('/obj/')`. Then you can create a geometry node setting this object as a parent.
 
