@@ -167,7 +167,7 @@ class MyWidget(QtWidgets.QWidget):
 win = MyWidget()
 win.show()
 ```
-You should have your window opened. Now, let's add some functionality to our tool.
+You should have your window opened. Now, let's add some functionality to our UI to create a tool.
 
 #### Create geometry node tool
 This tool will create a geometry node named 'GEO' in the root of the current scene.
