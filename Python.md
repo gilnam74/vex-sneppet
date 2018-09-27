@@ -1,5 +1,5 @@
 # Python in Houdini
-Basics  |  [Creating custom tool with UI]()
+Basics  |  [Creating custom tool with UI](#pyside-interfaces-in-houdini)
 
 ## Python integration basics
 Houdini Python API exists as **HOM** - Houdini Object Model (the module name is hou: `import hou`).  
