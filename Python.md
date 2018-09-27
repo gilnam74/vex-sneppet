@@ -172,6 +172,14 @@ You should have your window opened. Now, let's add some functionality to our UI 
 #### Create geometry node tool
 This tool will create a geometry node named 'GEO' in the root of the current scene. We will run the code from Python Source Editor while developing necessary functionality. After tool would be ready we will set up launching it as a Shelf Tool.
 
-First, let`s develop a functional part of the code. Run Python Source Editor.
+First, let`s develop a functional part of the code. Run Python Source Editor. To create any node in Houdini with Python you need to define a parent for this node. In our case, parent object would be a root of the object context: `hou.node('/obj/')`. Then you can create a geometry node setting this object as a parent.
 
+```python 
+import hou
+
+# Get scene root node
+OBJ = hou.node('/obj/')
+# Create Geometry node in scene root
+geometry = OBJ.createNode('geo')
+```
 Build a UI with a single button. Rename button object to `btn_create`.
