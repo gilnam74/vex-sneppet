@@ -32,6 +32,12 @@ To be able to write real programs and scripts for Houdini, besides Python integr
 ```python
 import hou
 ```
+Let's extend our first Hello World program a bit by using built-in UI in Houdini Python API:
+
+```python
+import hou
+hou.ui.displayMessage('Hello, World')
+```
 
 ## Create custom Python tool with UI
 Here we will create from scratch custom tool for Houdini with UI. One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
