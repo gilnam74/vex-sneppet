@@ -1,5 +1,5 @@
 # Python in Houdini
-Basics  |  [Creating custom tool with UI](#pyside-interfaces-in-houdini)
+Basics  |  [Creating custom tool with UI]()
 
 ## Python integration basics
 Houdini Python API exists as **HOM** - Houdini Object Model (the module name is hou: `import hou`).  
@@ -147,10 +147,10 @@ selectedNode = hou.selectedNodes()
 vops = [node for node in selectedNode.children() if node.type().name() == 'vopsurface']
 ```
 
-## PySide interfaces in Houdini
+## Create custom Python tool with UI
 One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
 
-#### Launch a blank window
+### Launch a blank window
 Create and save a UI file with QT Designer. It could be just a blank widget (but not Main Window). In Houdini run this code in Python Source Editor window:
 
 ```python
@@ -169,9 +169,11 @@ class MyWidget(QtWidgets.QWidget):
 win = MyWidget()
 win.show()
 ```
-You should have your window opened. Now, let's add some functionality to our UI to create a tool.
+You should have your window opened. 
 
-#### Create Basic Example tool
+It might seem scary for those who never try programming in Houdini so let's create a simple tool step by step with a detail explanation. 
+
+### Create Basic Example Tool
 This tool will create an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but quite nice to get started to build your own custom tools. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
 
 We will run the code from Python Source Editor while developing necessary functionality. After tool would be ready we will set up launching it as a Shelf Tool.
