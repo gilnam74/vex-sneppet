@@ -2,17 +2,15 @@
 [Basics](#python-in-houdini)  |  [Creating custom tool with UI]()
 
 ## Python integration basics
-Houdini Python API exists as **HOM** - Houdini Object Model (the module name is hou: `import hou`).  
-
-Python integration in Houdini:
+Python integrated in Houdini in several ways:
 - Windows > Python Shell - Python shell for small scripts/commands  
-- Windows > Python Source Editor - Python editor which saves the code with *.hip file. Each time you open the file Python code in Source Editor will be executed.    
+- Windows > Python Source Editor - Python editor which saves the code with *.hip file. Each time you open the file Python code in Source Editor will be executed. Best option to develop basic chanks of code and test their functionality. To use Python Scripts in all the scenes you need to save them to the Shell and run from there.    
 - In the parameters fields of any node (switch to Python from HScript).  
-- Python node in SOP context
-- In assets: create asset, right-click > Type properties > Scripts tab.
+- Python node in SOP context - This is how you can use Python in your nodes graph to create and modify geometry.
+- In assets - create asset, right-click > Type properties > Scripts tab.
 - Python Panel - to create PySide UI
 
-To use Python Script in all scenes you need to save Python script to the Shell.
+Houdini Python API exists as **HOM** - Houdini Object Model (the module name is hou: `import hou`). API allows you to communicate with Houdini: give certain instructions to create and modify scene content.
 
 ## Create custom Python tool with UI
 Here we will create from scratch custom tool for Houdini with UI. One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
