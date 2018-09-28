@@ -25,7 +25,7 @@ Launch a `Python Source Editor` and type a code in the top window:
 ```python
 print 'Hello, World'
 ```
-Press the `Apply` button, Houdini Console window should appear with a printed message  'Hello, World'. Was it that hard?
+Press the `Apply` button, Houdini Console window should appear with a printed message  'Hello, World'. [Was it that hard](Programming-basics#programming-learning-curve)?
 
 To be able to write real programs and scripts for Houdini, besides Python integration, we would need the ability to access Houdini scene components (to query and modify necessary data). This ability provided by Application Programm Interface (API). Houdini Python API exists as **HOM** - Houdini Object Model. To use this module in Houdini we need to import it to our python code:
 
