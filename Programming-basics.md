@@ -6,7 +6,7 @@ The goal of this section is to give artist **fast understanding** of core progra
 At the end of the lesson, you should be comfortable with [syntax](#syntax), [data types](#data-types), [variables](#variables), [commands](#commands), [functions](#functions), [loops](#loops), [conditions](#conditions).  
 
 ## Programming learning curve
-Yes, it could be hard from the beginning and the first line of code you create by yourself without following any tutorial may take hours or days to complete. But it would be dramatically easier later very soon, several one-line-of-code scripts, then first procedure created, then you would not notice how fast you solve your issues. Try hard and you will be rewarded!
+Yes, it could be complex from the beginning and the first line of code you will create by yourself without following any tutorial may take hours or days to complete. But it would be dramatically easier later very soon, several one-line-of-code scripts, then first procedure created, then you would not notice as you become a descent coder. Try hard and you will be rewarded!
 
 # Programming theory basics
 ## Programming and programs
