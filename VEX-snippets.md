@@ -1,7 +1,7 @@
 Here you will find isolated blocks of VEX code, each of them performs one certain small task. These and other examples you can find in [VEX snippets hip file](../blob/master/hips/VEX_snippets_004.hipnc). 
 
-## Functions
-Core stuff
+## Basic snippets
+Basement for VEX development.
 #### Datatypes
 ```C
 // Integers
@@ -126,9 +126,8 @@ else f@pscale = 1;
 f@pscale = (@ptnum == 0) || (@ptnum ==(@numpt-1)) ? 10 : 1;
 ```
 
-
-## Expressions
-Using VEX in parameter interface
+## VEX expressions
+Using VEX in parameter interface of Houdini nodes.
 
 #### Get Attributes
 ```c
@@ -142,8 +141,8 @@ point("../nodeName/",@ptnum, 'attributeName',0)
 neighbourcount(0, @ptnum) == 2
 ```
 
-## Procedures
-Complete solutions of basic tasks
+## Tools
+Complete solutions for basic tasks
 
 #### Multiply distribution (make small smaller, big bigger)
 ```c
