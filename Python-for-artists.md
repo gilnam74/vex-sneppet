@@ -1,4 +1,4 @@
-# Python in Houdini for artists
+# Introduction
 [Basics](#python-in-houdini)  |  [Creating custom tool with UI]()
 
 ## Python integration basics
