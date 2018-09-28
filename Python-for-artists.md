@@ -3,9 +3,13 @@ I hope nobody doubts that the ability to write even simple scripts it's a huge b
 
 Try to follow these tutorials and you will get the knowledge on how to build your own working tools!
 
+When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
+
 [Basics](#python-in-houdini)  |  [Creating custom tool with UI]()
 
 ## Python integration basics
+You don't need to do any extra step to start writing Python code in Houdini, Python already integrated there.
+
 Python integrated in Houdini in several ways:
 - Windows > Python Shell - Python shell for small scripts/commands  
 - Windows > Python Source Editor - Python editor which saves the code with *.hip file. Each time you open the file Python code in Source Editor will be executed. Best option to develop basic chanks of code and test their functionality. To use Python Scripts in all the scenes you need to save them to the Shell and run from there.    
@@ -21,6 +25,12 @@ To be able to write programs and scripts for Houdini, besides Python integration
 ```python
 import hou
 ```
+Launch a `Python Source Editor` and type a code in the top window:
+
+```python
+print 'Hello, World'
+```
+Press the `Apply` button, Houdini Console window should appear with a printed message  'Hello, World'.
 
 ## Create custom Python tool with UI
 Here we will create from scratch custom tool for Houdini with UI. One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
