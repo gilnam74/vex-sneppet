@@ -10,6 +10,8 @@ Python integrated in Houdini in several ways:
 - In assets - create asset, right-click > Type properties > Scripts tab.
 - Python Panel - to create PySide UI
 
+For the most types of tasks here, we will use `Python Source Editor`. It allows you to write and execute Python code in the current Houdini scene. If you are completely new to programming I recommend you to read [Programming Basic](https://github.com/kiryha/Houdini/wiki/Programming-basics) tutorial first.
+
 Houdini Python API exists as **HOM** - Houdini Object Model (the module name is hou: `import hou`). API allows you to communicate with Houdini: give certain instructions to create and modify scene content.
 
 ## Create custom Python tool with UI
