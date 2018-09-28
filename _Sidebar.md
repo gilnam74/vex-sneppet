@@ -7,7 +7,7 @@
   - [Houdini basics](houdini-basics)
   - [Programming basics](Programming-basics)
   - [Math basics](Math-basics)
-  - [Python in Houdini](Python)
+  - [Python for artists](python-for-artists)
   - [Python snippets](python-snippets)
   - [VEX for artists](vex-for-artists)
   - [VEX snippets](vex-snippets)
