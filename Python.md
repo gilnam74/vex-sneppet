@@ -199,4 +199,6 @@ geometry = OBJ.createNode('geo', run_init_scripts=False)
 geometry.setName('GEO')
 ```
 
+Code structuring. Create run() function
+
 Build a UI with a single button. Rename button object to `btn_create`.
