@@ -189,12 +189,15 @@ Common condition operators:
 - Does A not equal to B: `A != B`
 - Does A grater or equel to B: `A >= B` 
 
-In conjunction with the conditional operators you may use **logical operator** like AND, OR and NOT. If the rain is heavy and I have an umbrella and i dont have a cold — go outside.
+In conjunction with the conditional operators you may use **logical operator** like AND, OR and NOT. If the rain is heavy and I have an umbrella and I don't have a cold — go outside.
 
 Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you are interested in more fancy coding stuff, go ahead and read the next section.
 
 # Programming theory next steps
-This is not a necessary section for starting VEX experiments but it could be useful for curious minds. Here we can go further from the basics and learn about [pseudocode](#pseudocode), [dictionaries](#dictionaries), algorithms and abstraction.
+This is not a necessary section for starting VEX experiments but it could be useful for curious minds. Here we can go further from the basics and learn about [objects](#objects), [pseudocode](#pseudocode), [dictionaries](#dictionaries), algorithms and abstraction.
+
+## Objects
+What is "object" in the context of object-oriented programming?
 
 ## Pseudocode
 Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
@@ -211,3 +214,5 @@ This will give you a palette of necessary colors and you can use colors in your 
 `pointColor = colors('RED') // Returns [1, 0, 0]`
 
 VEX do not support dictionaries directly.
+
+## Abstraction
