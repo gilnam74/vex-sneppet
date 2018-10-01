@@ -149,7 +149,7 @@ geometryName = 'MY_GEO'
 # Get scene root node
 sceneRoot = hou.node('/obj/')
 # Check if "MY_GEO" exists
-if hou.node('/obj/{}'.format()) == None:
+if hou.node('/obj/{}'.format(geometryName)) == None:
     # Create empty geometry node in scene root
     geometry = sceneRoot.createNode('geo', run_init_scripts=False)
     # Set geometry node name
@@ -160,8 +160,13 @@ else:
     # Display fail message
     hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
 ```
-
-Now lets create a [function](Programming-basics#functions) from our program:
+Here we use **Pyhon string formatting** to replace {} with value from variable:
+'''python
+print 'The fruits are {0}, {1}, {2}!'.format('Apple', 'Banana', 'Kiwi')
+>> Numbers are Apple, Banana, Kiwi!
+'''
+ 
+Now lets wrap a part of our program to a [function](Programming-basics#functions):
 
 ```python
 import hou
