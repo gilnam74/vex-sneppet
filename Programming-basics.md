@@ -71,6 +71,7 @@ Commands exist within the given programming language, it predefined by the langu
 
 So basically coding process happens like this: you break your global program task into small command pieces and search for commands which could solve this pieces within a given programming language.
 
+### Arguments and objects
 Commands also can have **inputs** and **outputs** of data as we discover with programs. The input for the command is called an **argument**:
 
 ```c
@@ -196,10 +197,7 @@ In conjunction with the conditional operators you may use **logical operator** l
 Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you are interested in more fancy coding stuff, go ahead and read the next section.
 
 # Programming theory next steps
-This is not a necessary section for starting VEX experiments but it could be useful for curious minds. Here we can go further from the basics and learn about [objects](#objects), [pseudocode](#pseudocode), [dictionaries](#dictionaries), algorithms and abstraction.
-
-## Objects
-In the context of object-oriented programming "object" is an instance of a class.
+This is not a necessary section for starting VEX experiments but it could be useful for curious minds. Here we can go further from the basics and learn about [pseudocode](#pseudocode), [dictionaries](#dictionaries), algorithms and abstraction.
 
 ## Pseudocode
 Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
