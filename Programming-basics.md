@@ -78,7 +78,7 @@ Commands also can have **inputs** and **outputs** of data as we discover with pr
 printf('Hello, World!');
 ```
 
-Here `Hello, World` is an argument of a print() function.
+Here `Hello, World` is an argument of a VEX printf() function.
  
 ## Functions
 What if there is no appropriate command to solve your task in a given programming language? Write and use your own!
