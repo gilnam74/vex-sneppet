@@ -219,6 +219,38 @@ def createGeoNode(geometryName):
 # Execute node creation 
 createGeoNode(name)
 ```
+The last step in organizing is to separate two logical parts of our script: geometry node creation and checking if the node exists:
+
+```python
+import hou
+
+# Define geometry node name
+name = 'MY_GEO'
+
+def checkExisting(geometryName):
+    # Check if "MY_GEO" exists
+    if hou.node('/obj/{}'.format(geometryName)):
+        # Display fail message
+        hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
+        return 0
+    
+
+def createGeoNode(geometryName):
+    # Get scene root node
+    sceneRoot = hou.node('/obj/')
+    # Create empty geometry node in scene root
+    geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+    # Set geometry node name
+    geometry.setName(geometryName)
+    # Display creation message
+    hou.ui.displayMessage('{} node created!'.format(geometryName))
+
+# Execute node creation 
+if checkExisting(name) != 0:
+    createGeoNode(name)
+```
+
+Here we have created `checkExisting()` function which checks if a node with input name (`name`) exists in the scene. If so, it raises the message window and returns zero. Later we run this function and check if it does not return zero (geometry not exists), we create a geometry node. 
 
 ### Create and setup UI
 One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements.
