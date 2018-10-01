@@ -29,15 +29,3 @@ Run cmd and exequte: `pip install PySide`
 * Download [HPT repository](https://github.com/kiryha/Houdini) as a ZIP file, extract to any temporary location.
 * Modify `houdini` variable in runHoudini.py to match your Houdini install dir
 * Run createProjecrt.but and follow instructions
-
-## Project Management system
-Currently, I consider 3 main option to explore: Ftrack, Shotgun, JSON file.
-
-### JSON
-Free but hard to edit.
-
-### Ftrack
-Affordable $10 license per user
-
-### Shotgun
-Too expensive
