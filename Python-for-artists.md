@@ -40,7 +40,7 @@ hou.ui.displayMessage('Hello, World')
 ```
 
 ## Creating a first custom tool
-Here we will create from scratch a custom tool (lets name it `GeoCreator`) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
+Here we will create from scratch a custom tool (let's name it `GeoCreator`) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
 
 We will begin with building a functional part of the code in the Python Source Editor, then we will add and setup UI and finally we will save the code as a Python file and make it launch from the Shelve.
 
@@ -65,9 +65,9 @@ Delete the grid_object1, open a Python Source Editor and type the code:
 import hou
 
 # Get scene root node
-OBJ = hou.node('/obj/')
+sceneRoot = hou.node('/obj/')
 # Create Geometry node in scene root
-OBJ.createNode('geo')
+sceneRoot.createNode('geo')
 ```
 Run the code and you will get the Geometry node named 'geo1' in the scene root with file node inside. To give a certain name to the newly created node we have 2 options:
 - pass the desired name as a string argument after the node type argument in `createNode()` command. 
@@ -79,12 +79,12 @@ To get rid of the file node we would set to False `run_init_scripts` flag for `c
 import hou
 
 # Get scene root node
-OBJ = hou.node('/obj/')
+sceneRoot = hou.node('/obj/')
 # Create empty "MY_GEO" geometry node in scene root
-OBJ.createNode('geo', 'MY_GEO', run_init_scripts=False)
+sceneRoot.createNode('geo', 'MY_GEO', run_init_scripts=False)
 ```
 
-Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve! If it was a real task from the production experience we could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But since we are building a `GeoCreator` Shelf Tool with UI we will need some more work to make it done. **Delete** "MY_GEO" node.
+Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve! If it was a real task from the production experience we could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But since we are building a `GeoCreator` Shelf Tool with UI we will need some more work to make it done. 
 
 Let's use another naming option, rename object after creation. To create a Python object we just need to store the result of createNode() command as a variable. Then you can use this object to apply `setName()` command:
 
@@ -92,11 +92,11 @@ Let's use another naming option, rename object after creation. To create a Pytho
 import hou
 
 # Get scene root node
-OBJ = hou.node('/obj/')
+sceneRoot = hou.node('/obj/')
 # Create empty geometry node in scene root
-GEO = OBJ.createNode('geo', run_init_scripts=False)
+geometry = OBJ.createNode('geo', run_init_scripts=False)
 # Set geometry node name
-GEO.setName('MY_GEO')
+geometry.setName('MY_GEO')
 ```
 
 First, try to run this code again and you will get an error. One more geometry node ("geo1") will be created in the scene but after creation, a script would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. 
