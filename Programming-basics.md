@@ -29,6 +29,10 @@ _VEX syntaxis examples:_
 - You should end every sentence in VEX with a semicolon: `;` 
 - Comments line should start with a double slash: `//`
 
+_Python syntaxis examples:_  
+- You should separate your sentences in Python with Tab (4 spaces)
+- Comments line should start with a hash: `#`
+
 ## Data types
 The concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
 
