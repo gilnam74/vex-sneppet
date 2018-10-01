@@ -116,7 +116,20 @@ if hou.node('/obj/MY_GEO') == None:
     geometry.setName('MY_GEO')
 ```
 
+Now the script will create "MY_GEO" node only if it does not exists in the scene already. If the "MY_GEO" node exists GeoCreator will do nothing and it could be frustrating for the end users. Scripts always should inform users about program execution. Usually, it could be print statements (seeing in Houdini Console).  We will rise the window with the appropriate message:
 
+```python
+import hou
+
+# Get scene root node
+sceneRoot = hou.node('/obj/')
+# Check if "MY_GEO" exists
+if hou.node('/obj/MY_GEO') == None:
+    # Create empty geometry node in scene root
+    geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+    # Set geometry node name
+    geometry.setName('MY_GEO')
+```
 
 We will organize the code better with functions. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
 
