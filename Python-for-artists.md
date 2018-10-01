@@ -5,7 +5,7 @@ Try to follow these tutorials and you will get the knowledge on how to build you
 
 When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
 
-[Basics](#python-in-houdini)  |  [Creating custom tool with UI]()
+[Basics](#python-in-houdini)  |  [Creating a first custom tool]()
 
 ## Python integration basics
 You don't need to do any extra step to start writing Python code in Houdini, Python already integrated there.
@@ -39,13 +39,10 @@ import hou
 hou.ui.displayMessage('Hello, World')
 ```
 
-## Create custom Python tool with UI
-Here we will create from scratch custom tool for Houdini with UI. One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
+## Creating a first custom tool
+Here we will create from scratch a custom tool (lets name it GeoCreator) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
 
-### Intro
-This tool will create an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but quite nice to get started to build your own custom tools. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
-
-We will run the code from Python Source Editor while developing necessary functionality. After tool would be ready we will set up launching it as a Shelf Tool.
+We will start with building a functional part of the code in the Python Source Editor, then we will add and setup UI and finally we will save the code as a Python file and make it launch from the Shelve.
 
 ### Develop functionality
 First, let's develop a functional part of the code. Run Python Source Editor. To create any node in Houdini with Python you need to define a parent for this node. In our case, parent object would be a root of the object context: `hou.node('/obj/')`. Then you can create a geometry node setting this object as a parent.
@@ -78,6 +75,8 @@ Now the code is being executed line by line from the top to the bottom.
 Code structuring. Create run() function
 
 ### Create and setup UI
+One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
+
 Build a UI with a single button. Rename button object to `btn_create`.
 
 ### Run tool from the Shell
