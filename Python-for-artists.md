@@ -166,7 +166,7 @@ print 'The fruits are {0}, {1}, {2}!'.format('Apple', 'Banana', 'Kiwi')
 >>>> The fruits are Apple, Banana, Kiwi!
 ```
  
-Now lets wrap a part of our program to a [function](Programming-basics#functions):
+Now lets wrap a part of our program to a [function](Programming-basics#functions) and run this function:
 
 ```python
 import hou
