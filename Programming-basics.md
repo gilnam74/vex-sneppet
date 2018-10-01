@@ -26,11 +26,11 @@ _A particular example: when you copy a file from one folder to another your OS e
 As you can speak different languages, computers understand different programming languages also. The written rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another. 
 
 _VEX syntaxis examples:_  
-- You should end every sentence in VEX with a semicolon: `;` 
+- You should end every sentence with a semicolon: `;` 
 - Comments line should start with a double slash: `//`
 
 _Python syntaxis examples:_  
-- You should separate your sentences in Python with Tab (4 spaces)
+- You should separate your sentences with Tab (4 spaces)
 - Comments line should start with a hash: `#`
 
 ## Data types
