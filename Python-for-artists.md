@@ -171,31 +171,54 @@ Now lets wrap a part of our program to a [function](Programming-basics#functions
 ```python
 import hou
 
-def createGeometry():
+# Define geometry node name
+geometryName = 'MY_GEO'
+
+def createGeoNode():
     # Get scene root node
-    OBJ = hou.node('/obj/')
-    # Create Geometry node in scene root
-    geometry = OBJ.createNode('geo', run_init_scripts=False)
-    # Set Geometry node name
-    geometry.setName('MY_GEO')
+    sceneRoot = hou.node('/obj/')
+    # Check if "MY_GEO" exists
+    if hou.node('/obj/{}'.format(geometryName)) == None:
+        # Create empty geometry node in scene root
+        geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+        # Set geometry node name
+        geometry.setName(geometryName)
+        # Display creation message
+        hou.ui.displayMessage('{} node created!'.format(geometryName))
+    else:
+        # Display fail message
+        hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
+
+# Execute node creation 
+createGeoNode()
 ```
 
-Now if you run this code nothing will happen because we have the function but we did not execute it anywhere in the program. Let's fix it:
+And pass the name of geometry to our function explicitly:
 
 ```python
-
 import hou
 
-def createGeometry():
+# Define geometry node name
+name = 'MY_GEO'
 
-# Run Create geometry function    
-createGeometry()
+def createGeoNode(geometryName):
+    # Get scene root node
+    sceneRoot = hou.node('/obj/')
+    # Check if "MY_GEO" exists
+    if hou.node('/obj/{}'.format(geometryName)) == None:
+        # Create empty geometry node in scene root
+        geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+        # Set geometry node name
+        geometry.setName(geometryName)
+        # Display creation message
+        hou.ui.displayMessage('{} node created!'.format(geometryName))
+    else:
+        # Display fail message
+        hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
+
+# Execute node creation 
+createGeoNode(name)
 ```
-So we restore the initial functionality but organize the code a bit better. But t
-
-Now the code is being executed line by line from the top to the bottom.
-
-Code structuring. Create run() function
 
 ### Create and setup UI
 One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements.
