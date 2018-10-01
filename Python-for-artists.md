@@ -89,7 +89,7 @@ Now the code is being executed line by line from the top to the bottom.
 Code structuring. Create run() function
 
 ### Create and setup UI
-One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will develop the tool functionality.
+One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements.
 
 Build a UI with a single button. Rename button object to `btn_create`.
 
