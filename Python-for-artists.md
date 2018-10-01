@@ -5,7 +5,7 @@ Try to follow these tutorials and you will get the knowledge on how to build you
 
 When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
 
-[Basics](#python-in-houdini)  |  [Creating a first custom tool]()
+[Basics](#python-in-houdini)  |  [Creating a first custom tool](#creating-a-first-custom-tool)
 
 ## Python integration basics
 You don't need to do any extra step to start writing Python code in Houdini, Python already integrated there.
@@ -53,8 +53,9 @@ To create a node in Houdini with Python use a `createNode()` command. To run thi
 
 The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
 [![](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)
-open a Python Source Editor. 
 
+The type of node is written in brackets under the object name: Geometry Object (geo), so the node type we need to create is `geo`. Delete the grid_object1 and open a Python Source Editor. 
+ 
 In our case, parent object would be a root of the object context: `hou.node('/obj/')`. 
 
 ```python 
