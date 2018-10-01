@@ -76,6 +76,9 @@ Create material stylesheet for a geometry node containing crowds. [Setup materia
 # Pipeline developing notes
 Here we will record pipeline developing process
 
+## Project Management system
+Currently, I consider 3 main option to explore: Ftrack($10/month), Shotgun($30/month), JSON file (Free but hard to edit).
+
 #### Core concepts
 All project data located in one folder on the network drive.  
 All project data structured as ASSETS and SHOTS. Shots are the part of one project.  
