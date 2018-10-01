@@ -74,10 +74,11 @@ So basically coding process happens like this: you break your global program tas
 Commands also can have **inputs** and **outputs** of data as we discover with programs. The input for the command is called an **argument**:
 
 ```c
-// Command with argument example: print "Hello, World!"
+// VEX command with argument example: print "Hello, World!"
 printf('Hello, World!');
 ```
 
+Here `Hello, World` is an argument of a print() function.
  
 ## Functions
 What if there is no appropriate command to solve your task in a given programming language? Write and use your own!
