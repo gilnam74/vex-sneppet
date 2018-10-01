@@ -219,6 +219,8 @@ def createGeoNode(geometryName):
 # Execute node creation 
 createGeoNode(name)
 ```
+Here we change the initial name of the variable `geometryName` to `name` to avoid confusion on how this variable is being passed through the code. If you remain the old name 'geometryName' the script will work the same. 
+
 The last step in organizing is to separate two logical parts of our script: geometry node creation and checking if the node exists:
 
 ```python
