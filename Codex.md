@@ -79,19 +79,19 @@ Here we will record pipeline developing process
 ## Project Management system
 Currently, I consider 3 main option to explore: Ftrack($10/month), Shotgun($30/month), JSON file (Free but hard to edit).
 
-#### Core concepts
+## Core concepts
 All project data located in one folder on the network drive.  
 All project data structured as ASSETS and SHOTS. Shots are the part of one project.  
 All project management data and record of project data changes are located in Shotgun.
 
-#### Pipeline definition and goals
+## Pipeline definition and goals
 What is PP  
 Pipeline covers:
 - Communications  
 - Data storage, exchange and tracking
 
 
-#### Agile and Organic Pipeline
+## Agile and Organic Pipeline
 There is a well-known VFX production structure with strict vertical hierarchy and tasks division between departments. We well research agile project management option with task division between teams. 
 
 The term "production pipeline" by itself defines our perception of movie making process. Obviously, we see the similarity between movie production and any other manufacturing where we use machines, tools and other mechanical devices. Such conception gives quite successful results.
@@ -100,7 +100,7 @@ However, we try to look at production process from the biological point of view 
 
 We are going to breed shots with Mother...
 
-#### Project-pipeline relation
+## Project-pipeline relation
 At the highest level, there are two options for defining the relation between a pipeline and projects:
 - One pipeline driving all projects  
 - Each project has its own pipeline version  
@@ -109,13 +109,13 @@ The first option more suitable when you have a limited amount of big and complex
 
 Sure, there is a third option available, a combination of this two methods, when you have one pipeline driving all projects and each project has the ability to customize pipeline individually.
 
-#### Pipeline deploy
+## Pipeline deploy
 This is basically pipeline for pipeline developing. Where you keep source code, how you modify it and track changes, how you deliver pipeline to a production for the studio and for outsourcers.
 
-#### Run new project.
+## Run new project.
 Download repository as a zip file, extract to any temp location and run `setupProject.bat`. Select directory to hold the project, enter project name and press "CREATE PROJECT" to build a project folder structure with a pipeline. 
 
-#### Github developer notes
+## Github developer notes
 Install GitHub Desktop. Clone this repo to a PIPELINE folder of a project used to develop the pipeline `E:\256\PROJECTS\NSI\PREP\PIPELINE`.
 
 Create a project in PyCharm, set PIPELINE folder as root.
@@ -124,7 +124,7 @@ Exclude PyCharm project folder (.idea) from GitHub commits: go to `PIPELINE/.git
 
 Modify code, commit changes, Fetch Origin!
 
-#### Pipeline structure
+## Pipeline structure
 Pripeline root folder: `<projectName>/PREP/PIPELINE`  
 `runHoudini.py` — Houdini wrapper to launch app. Set Houdini environment  
 `createProject.py` — [Create project tool](tools#create-project)  
@@ -139,7 +139,7 @@ MOTHER — folder with pipeline files:
     - 456.py — ren wen open or create a new scene
 
  
-#### Paths snippets
+## Paths snippets
 
 $JOB/render/010/SHOT_010/001/E010_S010_001.$F.pic
 E:/256/PROJECTS/NSI/PROD/2D/RENDER/010/SHOT_010/E010_S010_v001.mov
