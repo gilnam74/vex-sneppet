@@ -49,7 +49,7 @@ Let's design a Python program which will solve the task of creating a geometry n
 
 To create a node in Houdini with Python use a `createNode()` command. To run this command successfully we need two main things: 
 - A [string](Programming-basics#data-types) [argument](Programming-basics#commands) which will define the type of node which will be created. 
-- A parent [object](Programming-basics#arguments-and-objects), where this node will be created (the syntax for this is: `parentObject.createNode()`).
+- A parent [object](Programming-basics#arguments-and-objects), where this node will be created: `parentObject.createNode()`.
 
 The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
 [![](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)
