@@ -114,9 +114,8 @@ def createGeometry():
 
 # Run Create geometry function    
 createGeometry()
-
-
-Try to run this code again and you will get an error, one more geometry node will be created ('geo1') but it would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. Sure, you can delete "MY_GEO" and the code will work again, but again only once. A better option is to check if there is a node with such a name before we will try to create a new one.
+```
+So we restore the initial functionality but organize the code with a function. Try to run this code again and you will get an error, one more geometry node will be created ('geo1') but it would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. Sure, you can delete "MY_GEO" run the code and it will work again, but again only once. A better option is to check if there is a node with such a name before we will try to create a new one.
 
 Now the code is being executed line by line from the top to the bottom.
 
