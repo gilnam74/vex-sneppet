@@ -52,7 +52,7 @@ To create a node in Houdini with Python use a `createNode()` command. To run thi
 - A parent object, where this node will be placed (). In case
 
 The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
-
+[![](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)
 open a Python Source Editor. 
 
 In our case, parent object would be a root of the object context: `hou.node('/obj/')`. 
