@@ -82,7 +82,20 @@ geometry = OBJ.createNode('geo', run_init_scripts=False)
 geometry.setName('MY_GEO')
 ```
 
-Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve. If it was a real task from the production experience we could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But we will organize the code better for the learning purposes so you will understand how to build more complex tools in the future and extend functionality to fix an issue we discover later.
+Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve. If it was a real task from the production experience we could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But we will organize the code better and extend functionality to fix an issue we discover later. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
+
+First lets create a [function](Programming-basics#functions) from our program:
+```python
+import hou
+
+def createGeometry():
+    # Get scene root node
+    OBJ = hou.node('/obj/')
+    # Create Geometry node in scene root
+    geometry = OBJ.createNode('geo', run_init_scripts=False)
+    # Set Geometry node name
+    geometry.setName('MY_GEO')
+```
 
 Try to run this code again and you will get an error, one more geometry node will be created ('geo1') but it would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. Sure, you can delete "MY_GEO" and the code will work again, but again only once. A better option is to check if there is a node with such a name before we will try to create a new one.
 
