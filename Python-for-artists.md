@@ -56,7 +56,7 @@ The most obvious way to get the name of a required node type is to create this n
 
 The type of node is written in brackets under the object name: Geometry Object (geo), so the node type we need to create is `geo`.
 
-The node created with `parentObject.createNode()` command will be placed inside the parent object. In the case of scene root, the parent object will be the scene context. To create a Python object from the object in the scene use `hou.node()` command and give a path to object in the scene as an argument to this command. In case of scene root, it would be hou.node('/obj/')`.
+The node created with `parentObject.createNode()` command will be placed inside the parent object. In the case of scene root, the parent object will be the scene context. To create a Python object from the object in the scene use `hou.node()` command and give a path to object in the scene as an argument to this command. In case of scene root, it would be `hou.node('/obj/')`.
 
 
 Delete the grid_object1, open a Python Source Editor and type the code: 
