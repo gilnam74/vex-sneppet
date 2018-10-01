@@ -252,7 +252,7 @@ if checkExisting(name) != 0:
     createGeoNode(name)
 ```
 
-Here we have created `checkExisting()` function which checks if a node with input name (`name`) exists in the scene. If so, it raises the message window and returns zero. Later we run this function and check if it does not return zero (geometry not exists), we create a geometry node. 
+Here we have created `checkExisting()` function which checks if a node with input name (`name`) exists in the scene. If so, it raises the message window and returns zero. Later we run this function and check if it does not return zero (geometry not exists), we create a geometry node. Same functionality but a bit more sophisticated structure which is currently may seem over complicated but its more flexible for the future extensions. For example, if you will need to check more conditions later in addition to an existing name (if the user has select anything we need, if the selection is correct, etc) it will be more easy to implement and the code would be cleaner if we would try to fit everything in one createGeoNode() function.
 
 ### Create and setup UI
 One of the possible workflows for building tools with UI in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements.
