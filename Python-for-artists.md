@@ -40,7 +40,7 @@ hou.ui.displayMessage('Hello, World')
 ```
 
 ## Creating a first custom tool
-Here we will create from scratch a custom tool (lets name it GeoCreator) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
+Here we will create from scratch a custom tool (lets name it `GeoCreator`) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
 
 We will begin with building a functional part of the code in the Python Source Editor, then we will add and setup UI and finally we will save the code as a Python file and make it launch from the Shelve.
 
@@ -82,7 +82,14 @@ geometry = OBJ.createNode('geo', run_init_scripts=False)
 geometry.setName('MY_GEO')
 ```
 
-Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve. If it was a real task from the production experience we could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But we will organize the code better and extend functionality to fix an issue we discover later. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
+Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve. If it was a real task from the production experience we could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But since we are building a `GeoCreator` Shelf Tool with UI we will need some more work to make it done.
+
+First, try to run this code again and you will get an error, one more geometry node will be created ('geo1') but it would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. Sure, you can delete "MY_GEO" run the code and it will work again, but again only once. A better option would be to check if there is a node with such a name in the scene before we will try to create a new one.
+
+
+
+
+But we will organize the code better and extend functionality to fix an issue we discover later. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
 
 First lets create a [function](Programming-basics#functions) from our program:
 
@@ -115,7 +122,7 @@ def createGeometry():
 # Run Create geometry function    
 createGeometry()
 ```
-So we restore the initial functionality but organize the code a bit better. Try to run this code again and you will get an error, one more geometry node will be created ('geo1') but it would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. Sure, you can delete "MY_GEO" run the code and it will work again, but again only once. A better option is to check if there is a node with such a name before we will try to create a new one.
+So we restore the initial functionality but organize the code a bit better. But t
 
 Now the code is being executed line by line from the top to the bottom.
 
