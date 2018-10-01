@@ -40,7 +40,7 @@ hou.ui.displayMessage('Hello, World')
 ```
 
 ## Creating a first custom tool
-Here we will create from scratch a custom tool (let's name it `GeoCreator`) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
+Here we will create from scratch a custom tool (let's name it `GeoCreator`) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name ("MY_GEO") in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
 
 We will begin with building a functional part of the code in the Python Source Editor, then we will add and setup UI and finally we will save the code as a Python file and make it launch from the Shelve.
 
@@ -94,19 +94,20 @@ import hou
 # Get scene root node
 sceneRoot = hou.node('/obj/')
 # Create empty geometry node in scene root
-geometry = OBJ.createNode('geo', run_init_scripts=False)
+geometry = sceneRoot.createNode('geo', run_init_scripts=False)
 # Set geometry node name
 geometry.setName('MY_GEO')
 ```
 
-First, try to run this code again and you will get an error. One more geometry node ("geo1") will be created in the scene but after creation, a script would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. 
+Delete the existing "MY_GEO" node and run the code. We have the same result again, "MY_GEO" node in the root of the scene. Try to run this code again and you will get an error. One more geometry node ("geo1") will be created in the scene but after creation, a script would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. If we run the script several times using the first naming option (pass name as an argument to a `createNode()` command) we would not get an error, Houdini just add a number to an existing name (MY_GEO1, MY_GEO2, etc) which is not that bad as an error but not what we need to get as well. 
 
-Sure, you can delete "MY_GEO" run the code and it will work again, but again only once. A better option would be to check if there is a node with such a name in the scene before we will try to create a new one.
-
-
+Either way, we have to extend the functionality of the GeoCreator to be able to handle existing objects with the same name.
 
 
-But we will organize the code better and extend functionality to fix an issue we discover later. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
+
+
+
+We will organize the code better with functions. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
 
 First lets create a [function](Programming-basics#functions) from our program:
 
