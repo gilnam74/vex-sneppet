@@ -48,15 +48,17 @@ We will begin with building a functional part of the code in the Python Source E
 Let's design a Python program which will solve the task of creating a geometry node with a specific name. 
 
 To create a node in Houdini with Python use a `createNode()` command. To run this command successfully we need two main things: 
-- A [string](Programming-basics#data-types) [argument](Programming-basics#commands) which will define the type of node which will be created. 
-- A parent object, where this node will be placed (). In case
-
-The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
+- A [string](Programming-basics#data-types) [argument](Programming-basics#commands) which will define the type of node which will be created. The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
 [![](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)
+- A parent object, where this node will be created (the syntax for this is: `parentObject.createNode()`). The node created with createNode() command will be placed inside this parent object. In the case of scene root, the parent object will be the scene context.
 
+
+
+When you set some node as a parent object for the newly created node
+In case, parent object would be a root of the object context: `hou.node('/obj/')`.
 The type of node is written in brackets under the object name: Geometry Object (geo), so the node type we need to create is `geo`. Delete the grid_object1 and open a Python Source Editor. 
  
-In our case, parent object would be a root of the object context: `hou.node('/obj/')`. 
+ 
 
 ```python 
 import hou
