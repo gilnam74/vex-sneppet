@@ -47,6 +47,7 @@ This tool will create an empty geometry node with a certain name in the root of 
 
 We will run the code from Python Source Editor while developing necessary functionality. After tool would be ready we will set up launching it as a Shelf Tool.
 
+### Develop functionality
 First, let's develop a functional part of the code. Run Python Source Editor. To create any node in Houdini with Python you need to define a parent for this node. In our case, parent object would be a root of the object context: `hou.node('/obj/')`. Then you can create a geometry node setting this object as a parent.
 
 ```python 
@@ -67,9 +68,16 @@ OBJ = hou.node('/obj/')
 # Create Geometry node in scene root
 geometry = OBJ.createNode('geo', run_init_scripts=False)
 # Set Geometry node name
-geometry.setName('GEO')
+geometry.setName('MY_GEO')
 ```
+
+Run the code and get empty geometry node named `MY_GEO`. Great
+
+Now the code is being executed line by line from the top to the bottom.
 
 Code structuring. Create run() function
 
+### Create and setup UI
 Build a UI with a single button. Rename button object to `btn_create`.
+
+### Run tool from the Shell
