@@ -1,5 +1,5 @@
 # Introduction
-I hope nobody doubts that the ability to write even simple scripts it's a huge benefit for any CG artist. Why then it's not that common for artists to be able to code? Probably there is only one reason besides laziness: people thinking that coding is hard and requires a special gift. But this is not true, anybody can build programs that will make your life way easier.
+I hope nobody doubts that the ability to write even simple scripts it's a huge benefit for any CG artist. Why then it's not that common for artists to be able to code? Probably there is only one reason besides laziness: people thinking that coding is hard and requires a special gift. But this is not the case, anybody can build programs that will make your life way easier.
 
 Try to follow these tutorials and you will get the knowledge on how to build your own working tools!
 
