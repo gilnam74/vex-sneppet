@@ -78,11 +78,13 @@ Commands also can have **inputs** and **outputs** of data as we discover with pr
 printf('Hello, World!');
 ```
 
-Here `Hello, World` is an argument of a VEX printf() function.
- 
+Here `Hello, World` is an argument (or input) of a VEX printf() function.
+
+The **output** of the command it is an entity created by this command called **object**. In the case of the print command its hard to presume which object is being created. But let's imagine that you created a sphere in the scene with a Python command `createNode('sphere')`. You will get a sphere object in the scene, which you can select and do anything you need later. In addition to the object in the scene, you can create an object in the code, which you can select and do anything you need later (in the code). To create an object in the code you just need to assign a command to some variable and this variable would be our object in the code: `shereObject = createNode('sphere')`. So you can, for example, rename it: `shereObject.rename('myShpere')`. In other words you have your object in the scene and at the same time you can have an instance of this object in the code.
+
 ## Functions
 What if there is no appropriate command to solve your task in a given programming language? Write and use your own!
-Let`s define a **function** as a **custom command to perform a specific task** inside your programm.
+Let`s define a **function** as a **custom command to perform a specific task** inside you program.
 
 Now we can assume that **command** is a **built-in function** in a certain language. 
 
@@ -197,7 +199,7 @@ Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you
 This is not a necessary section for starting VEX experiments but it could be useful for curious minds. Here we can go further from the basics and learn about [objects](#objects), [pseudocode](#pseudocode), [dictionaries](#dictionaries), algorithms and abstraction.
 
 ## Objects
-What is "object" in the context of object-oriented programming?
+In the context of object-oriented programming "object" is an instance of a class.
 
 ## Pseudocode
 Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
