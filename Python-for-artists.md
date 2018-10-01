@@ -160,7 +160,7 @@ else:
     # Display fail message
     hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
 ```
-Here we use **Pyhon string formatting** to replace {} with value from variable:
+Here we use **Pyhon string formatting** to replace `{ }` with value from variable:
 ```python
 print 'The fruits are {0}, {1}, {2}!'.format('Apple', 'Banana', 'Kiwi')
 >> Numbers are Apple, Banana, Kiwi!
