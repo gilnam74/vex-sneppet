@@ -70,7 +70,7 @@ sceneRoot = hou.node('/obj/')
 sceneRoot.createNode('geo')
 ```
 Run the code and you will get the Geometry node named 'geo1' in the scene root with file node inside. To give a certain name to the newly created node we have 2 options:
-- pass the desired name as a string argument after the node type argument in `createNode()` command. 
+- pass the desired name as a string argument after the node type argument in `createNode()` command. We will use this option first. 
 - rename node after it has been created with `setName('<objectName>')` command.
 
 To get rid of the file node we would set to False `run_init_scripts` flag for `createNode()` command.
@@ -101,9 +101,20 @@ geometry.setName('MY_GEO')
 
 Delete the existing "MY_GEO" node and run the code. We have the same result again, "MY_GEO" node in the root of the scene. Try to run this code again and you will get an error. One more geometry node ("geo1") will be created in the scene but after creation, a script would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. If we run the script several times using the first naming option (pass name as an argument to a `createNode()` command) we would not get an error, Houdini just add a number to an existing name (MY_GEO1, MY_GEO2, etc) which is not that bad as an error but not what we need to get as well. 
 
-Either way, we have to extend the functionality of the GeoCreator to be able to handle existing objects with the same name.
+Either way, we have to extend the functionality of the GeoCreator tool to be able to behave differently if the object with a required name already exists. One option to solve this is trying to create an object from "MY_GEO" node with `hou.node()` command passing the path to "MY_GEO" as an argument and then check if this object does not have a value of `None`: 
 
+```python
+import hou
 
+# Get scene root node
+sceneRoot = hou.node('/obj/')
+# Check if "MY_GEO" exists
+if hou.node('/obj/MY_GEO') == None:
+    # Create empty geometry node in scene root
+    geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+    # Set geometry node name
+    geometry.setName('MY_GEO')
+```
 
 
 
