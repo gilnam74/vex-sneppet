@@ -48,19 +48,19 @@ We will begin with building a functional part of the code in the Python Source E
 Let's design a Python program which will solve the task of creating a geometry node with a specific name. 
 
 To create a node in Houdini with Python use a `createNode()` command. To run this command successfully we need two main things: 
-- A [string](Programming-basics#data-types) [argument](Programming-basics#commands) which will define the type of node which will be created. The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
+- A [string](Programming-basics#data-types) [argument](Programming-basics#commands) which will define the type of node which will be created. 
+- A parent [object](Programming-basics#arguments-and-objects), where this node will be created (the syntax for this is: `parentObject.createNode()`).
+
+The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
 [![](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)
 
 The type of node is written in brackets under the object name: Geometry Object (geo), so the node type we need to create is `geo`.
-- A parent object, where this node will be created (the syntax for this is: `parentObject.createNode()`). The node created with createNode() command will be placed inside this parent object. In the case of scene root, the parent object will be the scene context.
+
+The node created with `parentObject.createNode()` command will be placed inside the parent object. In the case of scene root, the parent object will be the scene context. To create a Python object from the object in the scene use `hou.node()` command and give a path to object in the scene as an argument to this command. In case of scene root, it would be hou.node('/obj/')`.
 
 
-
-
-Delete the grid_object1 and open a Python Source Editor. 
+Delete the grid_object1, open a Python Source Editor and type the code: 
  
- 
-
 ```python 
 import hou
 
