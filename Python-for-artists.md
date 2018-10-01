@@ -129,14 +129,39 @@ if hou.node('/obj/MY_GEO') == None:
     geometry = sceneRoot.createNode('geo', run_init_scripts=False)
     # Set geometry node name
     geometry.setName('MY_GEO')
+    # Display creation message
     hou.ui.displayMessage('MY_GEO node created!')
 else:
+    # Display fail message
     hou.ui.displayMessage('MY_GEO already exists in the scene')
 ```
 
-Now let's organize our code a bit using logical blocks. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
+Now let's organize our code a bit better. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
 
-First lets create a [function](Programming-basics#functions) from our program:
+What issue should be obvious to improve is that we use the same mane "MY_GEO" several times in our code. Despite it is a static name we are not going to change it by the program brief it is always better to build a code which is easy to edit and read. Common practice for such cases is to create a variable with a required name once and then use this variable in code as many time as you need later:
+
+```python
+import hou
+
+# Define geometry node name
+geometryName = 'MY_GEO'
+
+# Get scene root node
+sceneRoot = hou.node('/obj/')
+# Check if "MY_GEO" exists
+if hou.node('/obj/{}'.format()) == None:
+    # Create empty geometry node in scene root
+    geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+    # Set geometry node name
+    geometry.setName(geometryName)
+    # Display creation message
+    hou.ui.displayMessage('{} node created!'.format(geometryName))
+else:
+    # Display fail message
+    hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
+```
+
+Now lets create a [function](Programming-basics#functions) from our program:
 
 ```python
 import hou
@@ -157,12 +182,6 @@ Now if you run this code nothing will happen because we have the function but we
 import hou
 
 def createGeometry():
-    # Get scene root node
-    OBJ = hou.node('/obj/')
-    # Create Geometry node in scene root
-    geometry = OBJ.createNode('geo', run_init_scripts=False)
-    # Set Geometry node name
-    geometry.setName('MY_GEO')
 
 # Run Create geometry function    
 createGeometry()
