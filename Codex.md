@@ -83,8 +83,11 @@ Currently, I consider 3 main option to explore: Ftrack($10/month), Shotgun($30/m
 There are 2 files ASSETS.json and SHOTS.json in `<rootProject>\PREP\PIPELINE\MOTHER\database`.
 The question is how to setup a list of assets and a list of shots. It could be nested dictionaries (current) or list o dictionaries. Conserns: list of dictionaries may be more close-to Shotgun database type, so it would be more easy to switch from JSON to SG later. But nested dictionaries more easy to work with.
 
-Let's switch to lists of dictionaries in a joined file DATABASE.json:
+Switch to lists of dictionaries in a joined file DATABASE.json:
+
 {ASSETS: {CHAR: [{code:ROMA, materials:[GEN_BASE:[list of objects]]}, {}], ENV: [], PROPS: []}, SHOTS: {010:[{SHOT_010}]}}
+
+concerns: list of sequences/shots ???
 
 ## Core concepts
 All project data located in one folder on the network drive.  
