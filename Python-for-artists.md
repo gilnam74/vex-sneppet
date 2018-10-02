@@ -5,7 +5,7 @@ Follow this tutorial and you will get the knowledge on how to build your own wor
 
 When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
 
-[Basics](#python-in-houdini)  |  [Creating a first custom tool](#creating-a-first-custom-tool)
+[Python in Houdini basics](#python-integration-basics)  |  [Creating a first custom tool](#creating-a-first-custom-tool)
 
 ## Python integration basics
 You don't need to do any extra step to start writing Python code in Houdini, Python already integrated there.
