@@ -258,8 +258,8 @@ Here we have created `checkExisting()` function which checks if a node with inpu
 One of the possible workflows for [building tools with UI](python-snippets#run-pyside-ui) in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements. 
 
 To get QT Designer you need to [install Python 2.7 and PySide](pipeline-tutorials#requirments-and-installation). To build our UI:
-- Run QT Designer and create a new widget: File > New > Widget. You will have an empty window widget From Widget Box (vertical panel with a list of QT widgets, located on the left side) drag into our  
-
+- Run QT Designer and create a new widget: File > New > Widget. You will have an empty window widget. You can resize it and modify some properties in Object Inspector (vertical panel located on the right side). I change `ObjectName` to "GeoCreator" and `Window Title` to "Create Geometry"
+- From Widget Box (vertical panel with a list of QT widgets, located on the left side) drag into our  
 - Save the file somewhere, for example `'C:/temp/uiGeoCreator.ui'`
 
 ### Run tool from the Shell
