@@ -1,5 +1,5 @@
 # Introduction
-I hope nobody doubts that the ability to write even simple scripts it's a huge benefit for any CG artist. Why then it's not that common for artists to be able to code? Probably there is only one reason besides laziness: people thinking that coding is hard and requires a special gift. But this is not the case, anybody can build programs that will make their life way easier.
+I hope nobody doubts that the ability to write even simple scripts it's a huge benefit for a CG artist. Why then it's not that common for artists to be able to code? Probably there is only one reason besides laziness: people thinking that coding is hard and requires a special gift. But this is not the case, anybody can build programs that will make their life way easier.
 
 Follow this tutorial and you will get the knowledge on how to build your own working tools!
 
@@ -8,9 +8,9 @@ When dealing with a programming we should decide which language we would use to 
 [Python in Houdini basics](#python-integration-basics)  |  [Creating a first custom tool](#creating-a-first-custom-tool)
 
 ## Python integration basics
-You don't need to do any extra step to start writing Python code in Houdini, Python already integrated there.
+You don't need to do any extra step to start writing Python code in Houdini, it is already there.
 
-Python integrated in Houdini in several ways:
+Python integrated into Houdini in several ways:
 - Windows > Python Shell - Python shell for small scripts/commands  
 - Windows > Python Source Editor - Python editor which saves the code with *.hip file. Each time you open the file Python code in Source Editor will be executed. Best option to develop basic chanks of code and test their functionality. To use Python Scripts in all the scenes you need to save them to the Shell and run from there.    
 - In the parameters fields of any node (switch to Python from HScript).  
@@ -257,6 +257,6 @@ Here we have created `checkExisting()` function which checks if a node with inpu
 ### Create and setup UI
 One of the possible workflows for [building tools with UI](python-snippets#run-pyside-ui) in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements. 
 
-Build a UI with a single button. Rename button object to `btn_create`.
+To get QT Designer you need to [install Python 2.7 and PySide](pipeline-tutorials#requirments-and-installation). Run QT Designer and create a new widget: File > New > Widget.
 
 ### Run tool from the Shell
