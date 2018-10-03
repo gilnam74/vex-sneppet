@@ -292,7 +292,7 @@ win.show()
 Run this code and you should get your UI in Houdini!
 [![](https://c2.staticflickr.com/2/1955/43262621080_9542664e1b_o.gif)](https://c2.staticflickr.com/2/1955/43262621080_9542664e1b_o.gif)
 
-This is a minimum amount of code to run UI file in Houdini, you can always use it as a starting point while developing your tools. Don't worry it contains `class` (if you have no idea what is it) or looks to scarry it would be not that hard to work with. 
+This is a minimum amount of code to run UI file in Houdini, you can always use it as a starting point while developing your tools. Don't worry it contains `class` (if you have no idea what is it) or looks to scarry it would be not that hard to work with. You may take some Python tutorials about **Object-Oriented Programming** and **classes** but even without understanding those concepts you will be able to move forward and even build your own basic stuff.
 
 Classes are the small programs, just like functions. Imagine classes as containers for basic functions. Our class "GeoCreator" contains one function `__init__()`, where we import UI file in code and setup how all widgets will work.
 
