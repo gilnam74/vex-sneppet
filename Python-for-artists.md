@@ -616,4 +616,4 @@ Save this code as `C:/temp/PROJECTS/projectName_A/PIPELINE/runHoudini.bat`:
 "C:\Python27\python.exe" %cd%\runHoudini.py
 ```
 
-Each project should have its own wrapper, 
+The `runHoudini.bat` runs `runHoudini.by` via Python located in `C:/Python27`, you should have Python [installed](pipeline-tutorials#requirments-and-installation). Double click on `runHoudini.bat` and you should have you Houdini launched.
