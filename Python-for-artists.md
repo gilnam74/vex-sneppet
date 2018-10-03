@@ -262,7 +262,9 @@ In PySide, any UI element is called a **widget**. A window is a widget, a button
 - **QPushButton** to create a button (it will run the program that we created earlier),
 - **QLineEdit** to get a text from the user (to set the name of created geometry).
 
-To get QT Designer you need to [install Python 2.7 and PySide](pipeline-tutorials#requirments-and-installation). To build our UI:
+To get QT Designer you need to [install Python 2.7 and PySide](pipeline-tutorials#requirments-and-installation) on your system. QT designer will be located at `C:/Python27/Lib/site-packages/PySide/designer.exe` 
+
+To build our UI:
 - Run QT Designer and create a new widget: File > New > Widget. You will have an empty window widget. You can resize it and modify some properties in Object Inspector (vertical panel located on the right side). I change `ObjectName` to "GeoCreator" and `Window Title` to "Create Geometry"
 - From Widget Box (vertical panel with a list of QT widgets, located on the left side) drag into our window:
     * Line Edit (Input Widgets section), change "ObjectName" parameter to `name`, "text" to `MY_GEO`, 
