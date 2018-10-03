@@ -59,12 +59,11 @@ To create a node in Houdini with Python use a `createNode()` command. To run thi
 The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
 [![](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)](https://c2.staticflickr.com/2/1907/44985678922_808fbd207a_o.png)
 
-The type of node is written in brackets under the object name: Geometry Object (geo), so the node type we need to create is `geo`.
+The type of node is written in brackets under the object name: `Geometry Object (geo)`, so the node type we need to create is `geo`.
 
-The node created with `parentObject.createNode()` command will be placed inside the parent object. In the case of scene root, the parent object will be the scene context. To create a Python object from the object in the scene use `hou.node()` command and give a path to object in the scene as an argument to this command. In case of scene root, it would be `hou.node('/obj/')`.
+The node created with `parentObject.createNode()` command will be placed inside the parent object. In the case of scene root, the **parent object** will be the **scene (obj) context**. To **create a Python object** from the object in the scene use `hou.node()` command and give it a **path to object in the scene** as an argument. In case of scene root, it would be `hou.node('/obj/')`.
 
-
-Delete the grid_object1, open a Python Source Editor and type the code: 
+Delete the "grid_object1", open a Python Source Editor and type the code: 
  
 ```python 
 import hou
@@ -74,7 +73,9 @@ sceneRoot = hou.node('/obj/')
 # Create Geometry node in scene root
 sceneRoot.createNode('geo')
 ```
-Run the code and you will get the Geometry node named 'geo1' in the scene root with file node inside. To give a certain name to the newly created node we have 2 options:
+Run the code and you will get the **Geometry node** named 'geo1' in the **scene root** with file node inside. 
+
+To give a certain name to the newly created node we have 2 options:
 - pass the desired name as a string argument after the node type argument in `createNode()` command. We will use this option first. 
 - rename node after it has been created with `setName('<objectName>')` command.
 
