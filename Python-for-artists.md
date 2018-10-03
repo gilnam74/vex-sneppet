@@ -126,7 +126,9 @@ if hou.node('/obj/MY_GEO') == None:
     geometry.setName('MY_GEO')
 ```
 
-Now the script will create "MY_GEO" node only if it does not exists in the scene already. If the "MY_GEO" node exists GeoCreator will do nothing and it could be frustrating for the end users. Scripts always should inform users about program execution. Usually, it could be print statements (seeing in Houdini Console).  We will raise the window with the appropriate message if the "MY_GEO" node exists or has been created:
+Now the script will create "MY_GEO" node **only if this name is unique** the for current scene. If the "MY_GEO" node exists, `Geo Creator` will do nothing and it could be frustrating for the end users. You run a script and nothing happens, so you don't know what is going on! 
+
+**Scripts always should inform users about program execution**. Usually, it could be print statements (seeing in Houdini Console).  We will **raise the window** with the appropriate message if the "MY_GEO" node exists or has been created:
 
 ```python
 import hou
@@ -146,7 +148,7 @@ else:
     hou.ui.displayMessage('MY_GEO already exists in the scene')
 ```
 
-Now let's organize our code a bit better. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
+Now let's **organize our code** a bit better. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
 
 What issue should be obvious to improve is that we use the same mane "MY_GEO" several times in our code. Despite it is a static name we are not going to change it by the program brief it is always better to build a code which is easy to edit and read. Common practice for such cases is to create a variable with a required name once and then use this variable in code as many time as you need later:
 
