@@ -265,6 +265,8 @@ To get QT Designer you need to [install Python 2.7 and PySide](pipeline-tutorial
 - Select Window widget (either click on empty space in the window widget or click on GeoCreator in object inspector) and press "Lay Out Vertically" button on the toolbar.
 - Save the file somewhere, for example `'C:/temp/uiGeoCreator.ui'`. Here you can download [uiGeoCreator.ui](../blob/master/hips/uiGeoCreator.ui)
 
+[![](https://c2.staticflickr.com/2/1968/45026795222_fe7e37bab5_o.gif)](https://c2.staticflickr.com/2/1968/45026795222_fe7e37bab5_o.gif)
+
 Now clean all code in Python Source editor, go to [Run PySide UI](python-snippets#run-pyside-ui) section of Python Snippets page, copy paste the code to Python Source editor and change the path to UI file:
 ```python
 import hou
@@ -280,6 +282,9 @@ class MyWidget(QtWidgets.QWidget):
 win = MyWidget()
 win.show()
 ```
+Run this code and you should get your UI in Houdini!
+[![]()]()
+
 This is a minimum amount of code to run UI file in Houdini, you can always use it as a starting point while developing your tools. Don't worry it contain `class` (if you have no idea what is it) or looks to scarry it would be not that hard to work with.
 
 Next, we will bring back the functional part of our code we develop previously and link everything with UI elements.
