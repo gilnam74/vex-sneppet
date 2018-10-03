@@ -76,8 +76,8 @@ sceneRoot.createNode('geo')
 Run the code and you will get the **Geometry node** named 'geo1' in the **scene root** with file node inside. 
 
 To give a certain name to the newly created node we have 2 options:
-- pass the desired name as a string argument after the node type argument in `createNode()` command. We will use this option first. 
-- rename node after it has been created with `setName('<objectName>')` command.
+- **pass** the desired **name as a string argument** after the node type argument in `createNode()` command. We will use this option first. 
+- **rename node** after it has been created with `setName('<objectName>')` command.
 
 To get rid of the file node we would set to False `run_init_scripts` flag for `createNode()` command.
 
@@ -90,9 +90,9 @@ sceneRoot = hou.node('/obj/')
 sceneRoot.createNode('geo', 'MY_GEO', run_init_scripts=False)
 ```
 
-Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve! If it was a real task from the production experience we could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But since we are building a `GeoCreator` Shelf Tool with UI we will need some more work to make it done. 
+Run the code and get empty geometry node named `MY_GEO`. Great, the code is working and produce the result we aimed to achieve! If it was a real production case we probably could stop at this point and just use this code when we need to create "MY_GEO" geometry node. But since we are building a `Geo Creator` Shelf Tool with UI we will need some more work to make it done. 
 
-Let's use another naming option, rename object after creation. To create a Python object we just need to store the result of createNode() command as a variable. Then you can use this object to apply `setName()` command:
+Let's use another naming option, rename geometry node after creation. To create a Python object we just need to store the result of `createNode()` command as a variable. Then you can use this object to apply `setName()` command:
 
 ```python
 import hou
@@ -105,9 +105,13 @@ geometry = sceneRoot.createNode('geo', run_init_scripts=False)
 geometry.setName('MY_GEO')
 ```
 
-Delete the existing "MY_GEO" node and run the code. We have the same result again, "MY_GEO" node in the root of the scene. Try to run this code again and you will get an error. One more geometry node ("geo1") will be created in the scene but after creation, a script would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. If we run the script several times using the first naming option (pass name as an argument to a `createNode()` command) we would not get an error, Houdini just add a number to an existing name (MY_GEO1, MY_GEO2, etc) which is not that bad as an error but not what we need to get as well. 
+**Delete** the existing "MY_GEO" node and run the code. We have the same result again, "MY_GEO" node in the root of the scene. Try to run this code again and you will get an error. One more geometry node ("geo1") will be created in the scene but after creation, a script would not be able to rename the node to "MY_GEO" because the node with such a name already exists in our scene. 
 
-Either way, we have to extend the functionality of the GeoCreator tool to be able to behave differently if the object with a required name already exists. One option to solve this is trying to create an object from "MY_GEO" node with `hou.node()` command passing the path to "MY_GEO" as an argument and then check if this object does not have a value of `None`: 
+If we run the script several times using the first naming option (pass name as an argument to a `createNode()` command) we would not get an error, Houdini just add a number to an existing name (MY_GEO1, MY_GEO2, etc) which is not that bad as an error but not what we need to get as well. 
+
+Either way, we have to **extend the functionality** of the GeoCreator tool to be able to behave differently if the object with a required **name already exists**. One option to achieve this is:
+- Create an object from "MY_GEO" node with `hou.node()` command (passing the path to "MY_GEO" as an argument). 
+- Then check if this object does not have a value of `None`. 
 
 ```python
 import hou
