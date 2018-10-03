@@ -698,5 +698,6 @@ reload(GeoCreator)
 GeoCreator.run()
 ```
 Hit "Accept" and launch our GeoCreator tool. Now we don't have any hardcoded path in our scripts, so if you will clone the `projectName_A` folder with content as `projectName_B` (or even place it to another location) everything will work as expected.
+[![](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)
 
-Congrats, you made a first step with building your own pipeline!
+Congratulations, you made a first step to building your own pipeline!
