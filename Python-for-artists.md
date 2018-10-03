@@ -5,7 +5,7 @@ Follow this tutorial and you will get the knowledge on how to build your own wor
 
 When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
 
-[Python in Houdini basics](#python-integration-basics)  |  [Creating a first custom tool](#creating-a-first-custom-tool)
+[Python in Houdini basics](#python-integration-basics)  |  [Creating a first custom tool](#creating-a-first-custom-tool)  |  [Build a Houdini wrapper](#wrapper)
 
 ## Python integration basics
 You don't need to do any extra step to start writing Python code in Houdini, it is already there.
@@ -532,4 +532,9 @@ reload(GeoCreator)
 GeoCreator.run()
 ```
 
-The "New Tool" will appear on the Create shelf which will run our GeoCreator tool. Congratulations, you just finish to build a first custom tool for Houdini!
+The "New Tool" will appear on the Create shelf which will run our GeoCreator tool. Congratulations, you just finish building a first custom tool for Houdini!
+
+One thing we need to notice is that we used hardcoded path to our UI and Python file `C:/temp` which is works fine but not the best way to do such things.
+
+## Wrapper
+The **wrapper** is a file which defines the software environment and launch Houdini within this environment. It allows controlling a lot of things related to Houdini such as setting up $JOB variable, defining path
