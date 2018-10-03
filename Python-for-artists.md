@@ -3,11 +3,13 @@ I hope nobody doubts that the ability to write even simple scripts it's a huge b
 
 Follow this tutorial and you will get the knowledge on how to build your own working tools!
 
-When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
+[![](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)
 
 [Python in Houdini basics](#python-integration-basics)  |  [Creating a first custom tool](#creating-a-first-custom-tool)  |  [Build a Houdini wrapper](#wrapper)
 
 ## Python integration basics
+When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
+
 You don't need to do any extra step to start writing Python code in Houdini, it is already there.
 
 Python integrated into Houdini in several ways:
@@ -698,6 +700,5 @@ reload(GeoCreator)
 GeoCreator.run()
 ```
 Hit "Accept" and launch our GeoCreator tool. Now we don't have any hardcoded path in our scripts, so if you will clone the `projectName_A` folder with content as `projectName_B` (or even place it to another location) everything will work as expected.
-[![](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)
 
 Congratulations, you made a first step to building your own pipeline!
