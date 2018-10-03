@@ -272,23 +272,25 @@ Now clean all code in Python Source editor, go to [Run PySide UI](python-snippet
 import hou
 from PySide2 import QtCore, QtUiTools, QtWidgets
 
-class MyWidget(QtWidgets.QWidget):
+class GeoCreator(QtWidgets.QWidget):
     def __init__(self):
-        super(MyWidget,self).__init__()
+        super(GeoCreator,self).__init__()
         ui_file = 'C:/temp/uiGeoCreator.ui'
         self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
 
-win = MyWidget()
+win = GeoCreator()
 win.show()
 ```
 Run this code and you should get your UI in Houdini!
-[![](https://c2.staticflickr.com/2/1932/45026795262_bc3caa959a_o.gif)](https://c2.staticflickr.com/2/1932/45026795262_bc3caa959a_o.gif)
+[![](https://c2.staticflickr.com/2/1955/43262621080_9542664e1b_o.gif)](https://c2.staticflickr.com/2/1955/43262621080_9542664e1b_o.gif)
 
-This is a minimum amount of code to run UI file in Houdini, you can always use it as a starting point while developing your tools. Don't worry it contain `class` (if you have no idea what is it) or looks to scarry it would be not that hard to work with.
+This is a minimum amount of code to run UI file in Houdini, you can always use it as a starting point while developing your tools. Don't worry it contains `class` (if you have no idea what is it) or looks to scarry it would be not that hard to work with. 
+
+Classes are the small programs, just like functions. Imagine classes as containers for basic functions. You run class program same way as a usual function: `GeoCreator()`. If you assign the result of class execution to a variable (`win = GeoCreator()`) you create an instance of a class — object `win`. Same thing we did when create a Houdini root scene object (`sceneRoot = hou.node('/obj/')`). 
 
 Next, we will bring back the functional part of our code we develop previously and link everything with UI elements.
 
-Let's discover how to work with UI widgets we have. We want something happened when user press the button, so we need to create a function in the
+Let's discover how to work with UI widgets we have. We want something happened when user presses the button, so we need to create a function in the
 
 ### Run tool from the Shell
