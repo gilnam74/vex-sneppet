@@ -429,6 +429,55 @@ win.show()
 So now you have several examples of how to deal with data using classes so you can build your own stuff without understanding classes concepts (but I would recommend studying this topic anyway!). This should be enough to build a lot of tools: you know how to take string data from the user with a QlineEdit widget and setup buttons to execute your functions with a QPushButton widget. I build a [complete pipeline toolset](https://github.com/kiryha/AnimationDNA/wiki/03-Tools) using only this two widgets.
 
 It's time to bring a functional part of the code we develop before to our tool:
+
+```python
+import hou
+from PySide2 import QtCore, QtUiTools, QtWidgets
+
+def checkExisting(geometryName):
+    # Check if "MY_GEO" exists
+    if hou.node('/obj/{}'.format(geometryName)):
+        # Display fail message
+        hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
+        return True
+
+
+def createGeoNode(geometryName):
+    # Get scene root node
+    sceneRoot = hou.node('/obj/')
+    # Create empty geometry node in scene root
+    geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+    # Set geometry node name
+    geometry.setName(geometryName)
+    # Display creation message
+    hou.ui.displayMessage('{} node created!'.format(geometryName))
+
+
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = 'C:/temp/uiGeoCreator.ui'
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+        # Define geometry node name
+        self.customName = self.ui.lin_name.text()
+        # Setup "Create Geometry" button
+        self.ui.btn_create.clicked.connect(self.buttonClicked)
+        
+    def buttonClicked(self):
+        # Execute node creation 
+        if checkExisting(self.customName) != True:
+            createGeoNode(self.customName)
+    
+
+win = GeoCreator()
+win.show()
+```
+I just copy-paste code which creates geometry node we develop before into existing code with UI, change `name` variable we had with a hardcoded value "MY_GEO" to `self.customName` so it gets the geometry name from UI and place it inside `__init__()` function and place code which runs checking and node creation into `buttonClicked()` function.
+
+You can place all your functions inside the `GeoCreator()` class:
+
 ```python
 import hou
 from PySide2 import QtCore, QtUiTools, QtWidgets
@@ -470,7 +519,7 @@ class GeoCreator(QtWidgets.QWidget):
 win = GeoCreator()
 win.show()
 ```
-I just copy-paste code which creates geometry node we develop before into existing code with UI, change `name` variable we had with a hardcoded value "MY_GEO" to `self.customName` so it gets the geometry name from UI, bring functions to a class, add `self` to them and place code which runs checking and node creation into `buttonClicked()` function.
+Here we added a `self` method to `checkExisting()` and `createGeoNode()` functions to allow them working inside the class.
 
 ### Run tool from the Shell
 Finally, we will create a shelf tool from our Python script. First lets put the last two lines (which launches the tool with UI) inside the `run()` function:
