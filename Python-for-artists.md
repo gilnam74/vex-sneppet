@@ -271,7 +271,9 @@ Here we have created `checkExisting()` function, it verifies if a node with inpu
 Same functionality but a bit more sophisticated structure which is currently may seem over complicated but its more flexible for the future extensions. For example, if you will need to check more conditions later in addition to an existing name (if the user has select anything we need, if the selection is correct, etc) it will be more easy to implement and the code would be cleaner if we would try to fit everything in one `createGeoNode()` function.
 
 ### Create and setup UI
-One of the possible workflows for [building tools with UI](python-snippets#run-pyside-ui) in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements. 
+One of the possible workflows for [building tools with UI](python-snippets#run-pyside-ui) in Houdini is creating **PySide** interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements. 
+
+PySide is a **module** which contains all possible **UI elements** you may need as well as **functionality** how these elements should work in your scripts. It is so powerful that now PySide is a standard for building interfaces in the majority of applications, including Houdini, Maya, Nuke etc. It could be hard for a complete noob to develop PySide UI but we will keep thing simple and give examples which could help to complete a lot of miscellaneous tasks.
 
 In PySide, any UI element is called a **widget**. A window is a widget, a button is a widget too. If you have a button in the window this means that button is parented to a window. There are a lot of widgets in PySide to solve a variety of tasks, you can examine the whole list in **Widget Box** panel in QT Designer. For our GeoCreator tool will use 3 widgets:
 - **QWidget** to create the GeoCreator window (a window will contain all UI we need for the tool), 
