@@ -612,7 +612,7 @@ houdini = 'C:/Program Files/Side Effects Software/Houdini 16.5.536/bin/houdinifx
 subprocess.Popen(houdini)
 ```
 Save this code as `C:/temp/PROJECTS/projectName_A/PIPELINE/runHoudini.bat`: 
-```c
+```
 "C:\Python27\python.exe" %cd%\runHoudini.py
 ```
 
