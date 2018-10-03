@@ -283,7 +283,7 @@ win = MyWidget()
 win.show()
 ```
 Run this code and you should get your UI in Houdini!
-[![]()]()
+[![](https://c2.staticflickr.com/2/1932/45026795262_bc3caa959a_o.gif)](https://c2.staticflickr.com/2/1932/45026795262_bc3caa959a_o.gif)
 
 This is a minimum amount of code to run UI file in Houdini, you can always use it as a starting point while developing your tools. Don't worry it contain `class` (if you have no idea what is it) or looks to scarry it would be not that hard to work with.
 
