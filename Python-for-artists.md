@@ -534,7 +534,7 @@ GeoCreator.run()
 
 The "New Tool" will appear on the Create shelf which will run our GeoCreator tool. Congratulations, you just finish building a first custom tool for Houdini!
 
-One thing we need to notice is that we used hardcoded path to our UI and Python file `C:/temp` which is works fine but not the best way to do such things.
+One thing we need to notice is that we used hardcoded path to our UI and Python file `C:/temp` which is working fine but it's not the best way to deal with such things. If you create your custom tools you probably would like to make flexible, reliable and easy to use in all the projects you might have. So next, and it would be a first step for building your own pipeline, you can create a [Houdini Wrapper](#wrapper).  
 
 ## Wrapper
-The **wrapper** is a file which defines the software environment and launch Houdini within this environment. It allows controlling a lot of things related to Houdini such as setting up $JOB variable, defining path
+The **wrapper** is a file which defines the software environment and launch Houdini within this environment. It allows controlling a lot of things related to Houdini such as setting up $JOB variable (Houdini project root), defining paths to custom python scripts, modifying native Houdini UIs etc.
