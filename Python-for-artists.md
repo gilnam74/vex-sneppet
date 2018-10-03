@@ -235,7 +235,7 @@ createGeoNode(name)
 ```
 Here we change the initial name of the variable `geometryName` to `name` to avoid confusion on how this variable is being passed through the code. If you remain the old name 'geometryName' the script will work the same. 
 
-The last step in organizing is to separate two logical parts of our script: geometry node creation and checking if the node exists:
+The last step in organizing is to separate two logical parts of our script, geometry node creation and checking if the node exists:
 
 ```python
 import hou
@@ -266,7 +266,9 @@ if checkExisting(name) != True:
     createGeoNode(name)
 ```
 
-Here we have created `checkExisting()` function which checks if a node with input name (`name`) exists in the scene. If so, it raises the message window and returns zero (if not, it returns `None`). Later we run this function and check if it does not return zero (geometry not exists), we create a geometry node. Same functionality but a bit more sophisticated structure which is currently may seem over complicated but its more flexible for the future extensions. For example, if you will need to check more conditions later in addition to an existing name (if the user has select anything we need, if the selection is correct, etc) it will be more easy to implement and the code would be cleaner if we would try to fit everything in one createGeoNode() function.
+Here we have created `checkExisting()` function, it verifies if a node with input name (`name = "MY_GEO"`) exists in the scene. If so, it raises the message window and returns zero (if not, it returns `None`). Later we run this function and check if it does not return zero (geometry not exists), we create a geometry node (`createGeoNode(name)`). 
+
+Same functionality but a bit more sophisticated structure which is currently may seem over complicated but its more flexible for the future extensions. For example, if you will need to check more conditions later in addition to an existing name (if the user has select anything we need, if the selection is correct, etc) it will be more easy to implement and the code would be cleaner if we would try to fit everything in one createGeoNode() function.
 
 ### Create and setup UI
 One of the possible workflows for [building tools with UI](python-snippets#run-pyside-ui) in Houdini is creating interfaces in QT Designer (shipped with Python27) and importing *.ui files into your Python code where you will set up the functionality of UI elements. 
