@@ -263,6 +263,6 @@ To get QT Designer you need to [install Python 2.7 and PySide](pipeline-tutorial
     * Line Edit (Input Widgets section), change "ObjectName" parameter to `name`, "text" to `MY_GEO`, 
     * Push Button (Buttons section), change "ObjectName" parameter to `create`, "text" to `Create Geometry`, "minimumSize > height" = 35
 - Select Window widget (either click on empty space in the window widget or click on GeoCreator in object inspector) and press "Lay Out Vertically" button on the toolbar.
-- Save the file somewhere, for example `'C:/temp/uiGeoCreator.ui'`. [uiGeoCreator.ui](../blob/master/hips/uiGeoCreator.ui)
+- Save the file somewhere, for example `'C:/temp/uiGeoCreator.ui'`. Here you can download [uiGeoCreator.ui](../blob/master/hips/uiGeoCreator.ui)
 
 ### Run tool from the Shell
