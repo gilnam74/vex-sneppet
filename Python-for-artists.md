@@ -596,6 +596,6 @@ The `3D` folder is a root of the Houdini project, where we will store all Houdin
 
 [![](https://c2.staticflickr.com/2/1979/44359655044_12d01390f5_o.gif)](https://c2.staticflickr.com/2/1979/44359655044_12d01390f5_o.gif) 
 
-You don`t need to set up each Houdini project with `New Project` tool, just save this empty folder structure and copy-paste it in all next projects (or write a [script to build a project](..blob/master/createProject.py).
+You don't need to set up each Houdini project with `New Project` tool, just save this empty folder structure and copy-paste it in all next projects (or write a [script to build a project](https://github.com/kiryha/Houdini/blob/master/createProject.py)).
 
 Each project should have its own wrapper, 
