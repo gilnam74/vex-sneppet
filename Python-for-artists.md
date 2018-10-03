@@ -296,6 +296,16 @@ This is a minimum amount of code to run UI file in Houdini, you can always use i
 
 Classes are the small programs, just like functions. Imagine classes as containers for basic functions. Our class "GeoCreator" contains one function `__init__()`, where we import UI file in code and setup how all widgets will work.
 
+Any function declaration inside the class should contain `self` argument. When you define a function without a class:
+```python
+def helloWorld():
+    print 'Hello, World!'
+```
+When you define a function inside the class:
+```python
+def helloWorld(self):
+    print 'Hello, World!'
+```
 If you have a class named "GeoCreator" you will run this program same way as a usual function: `GeoCreator()`. If you assign the result of class execution to a variable (`win = GeoCreator()`) you will create an instance of a class — object `win`. Same thing we did when create a Houdini root scene object (`sceneRoot = hou.node('/obj/')`). Then you can apply a specific command to this objects, e.g. to display UI in Houdini we use `show()` command: `win.show()`. 
 
 And you need PySide libraries in your program to make UI widgets works, so we import them at the beginning: `from PySide2 import QtCore, QtUiTools, QtWidgets`. This basic template will remain the same with any other tool you will want to create, you will need just to build actual functionality on top of that. 
