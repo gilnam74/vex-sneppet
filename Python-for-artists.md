@@ -353,6 +353,6 @@ class GeoCreator(QtWidgets.QWidget):
 win = GeoCreator()
 win.show()
 ```
-Run the code, press "Create Geometry" button and you will get "Hello, World!" printed in Houdini Console. We link `buttonClicked()` function to our button widget with this line: `self.ui.btn_create.clicked.connect(self.buttonClicked)`, where `self.ui` is a UI object we created in QT Designer and imported into the code (window with button and text field), `btn_create` is a button object which launch `buttonClicked` function (`connect(self.buttonClicked)`) and event which will run this function is a button click (`clicked`).
+Run the code, press "Create Geometry" button and you will get "Hello, World!" printed in Houdini Console. We link `buttonClicked()` function to our button widget with this line: `self.ui.btn_create.clicked.connect(self.buttonClicked)`, where `self.ui` is a UI object we created in QT Designer and imported into the code (window with button and text field), `btn_create` is a button widget which launch `buttonClicked` function (`connect(self.buttonClicked)`) and event which will run this function is a button click (`clicked`).
 
 ### Run tool from the Shell
