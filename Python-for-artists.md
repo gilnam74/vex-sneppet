@@ -1,16 +1,16 @@
 # Introduction
-These day's nobody doubts, that the ability to write even simple scripts it's a huge benefit for a CG artist. Why then it's not that common for artists to be able to code? Probably there is only one main reason: people thinking that coding is hard and requires a special gift. But this is not the case, anybody can build programs that will make their life way easier.
+These day's nobody doubts, that the ability to write even simple scripts it's a **huge benefit for a CG artist**. Why then it's not that common for artists to be able to code? Probably there is only one main reason: people thinking that coding is hard and requires a **special gift**. But this is not the case, anybody can build programs that will make their life way easier.
 
-Follow this tutorial and you will get the knowledge on how to build your own working tools!
+Follow this tutorial and you will **get the knowledge** on how to build your own working tools!
 
 [![](https://c2.staticflickr.com/2/1942/45033680972_a2ff4a9a82_o.gif)](https://c2.staticflickr.com/2/1942/45033680972_a2ff4a9a82_o.gif)
 
 [Python in Houdini basics](#python-integration-basics)  |  [Creating a first custom tool](#creating-a-first-custom-tool)  |  [Build a Houdini wrapper](#wrapper)
 
 ## Python integration basics
-When dealing with a programming we should decide which language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
+When dealing with a programming we should decide which programming language we would use to achieve our goals first. And choosing the proper language sometimes is a really sophisticated task required a huge experience in computer science. Fortunately for CG artist, this choice has been already made by the developer of your favorite software. Lucky users of Maya, Nuke, Houdini and a lot of other major DCC (hello, Adobe!) support Python. And this is super awesome great because Python is very easy to learn and use.
 
-You don't need to do any extra step to start writing Python code in Houdini, it is already there.
+You don't need any extra step to start writing Python code in Houdini, it is already there.
 
 Python integrated into Houdini in several ways:
 - Windows > Python Shell - Python shell for small scripts/commands  
@@ -27,22 +27,23 @@ Launch a `Python Source Editor` and type a code in the top window:
 ```python
 print 'Hello, World'
 ```
-Press the `Apply` button, Houdini Console window should appear with a printed message  'Hello, World'. [Was it that hard](Programming-basics#programming-learning-curve)?
+Press the `Apply` button, Houdini Console window should appear with a printed message  'Hello, World'. It [was not that hard](Programming-basics#programming-learning-curve), right?
 
-To be able to write real programs and scripts for Houdini, besides Python integration, we would need the ability to access Houdini scene components (to query and modify necessary data). This ability provided by Application Programm Interface (API). Houdini Python API exists as **HOM** - Houdini Object Model. To use this module in Houdini we need to import it to our python code:
+To be able to write more valuable scripts for Houdini, besides Python integration, we would need the ability to access Houdini scene components (to query and modify necessary data). This ability is provided by **Application Programm Interface** (API). Houdini Python API exists as Houdini Object Model (HOM). To use this module in Houdini we need to import it to our python code:
 
 ```python
 import hou
 ```
-Let's extend our first Hello World program a bit by using built-in UI in Houdini Python API:
+Let's extend our first Hello World program a bit by using UI built in Houdini Python API:
 
 ```python
 import hou
 hou.ui.displayMessage('Hello, World')
 ```
+This code will rise a window with a "Hello, World!" message.
 
 ## Creating a first custom tool
-Here we will create from scratch a custom tool (let's name it `GeoCreator`) for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name ("MY_GEO") in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
+Let's do some fancy stuff now! Here we will create from scratch a **custom tool**, let's name it "**Geo Creator**" for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name ("MY_GEO") in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
 
 We will begin with building a functional part of the code in the Python Source Editor, then we will add and setup UI and finally we will save the code as a Python file and make it launch from the Shelve.
 
