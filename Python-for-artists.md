@@ -616,4 +616,78 @@ Save this code as `C:/temp/PROJECTS/projectName_A/PIPELINE/runHoudini.bat`:
 "C:\Python27\python.exe" %cd%\runHoudini.py
 ```
 
-The `runHoudini.bat` runs `runHoudini.by` via Python located in `C:/Python27` (you should have Python [installed](pipeline-tutorials#requirments-and-installation)) and `runHoudini.by` is the actual wrapper which is doing nothing but launching Houdini right now. Double click on `runHoudini.bat` and you should have you Houdini launched. Check all paths you have (to Houdini and to Python) if its not working.
+The `runHoudini.bat` runs `runHoudini.by` via Python located in `C:/Python27` (you should have Python [installed](pipeline-tutorials#requirments-and-installation)) and `runHoudini.by` is the actual wrapper which is doing nothing but launching Houdini right now. Double click on `runHoudini.bat` and you should have you Houdini launched. Check all paths you have (to Houdini and to Python) if it's not working.
+
+Now, let's add some useful environment stuff to our wrapper:
+```python
+# Wrapper to run Houdini with custom environment
+import os, sys, subprocess
+
+# Set path to Houdini executable
+houdini = 'C:/Program Files/Side Effects Software/Houdini 16.5.536/bin/houdinifx.exe'
+
+# SETUP PROJECT ENVIRONMENT
+# Get the path to PIPELINE folder
+rootPipeline = os.path.dirname(__file__).replace('\\','/')
+# Add path to custom python tools
+os.environ['PYTHONPATH'] = '{}/tools;&'.format(rootPipeline)
+# Create environment variable pointing to a pipeline folder
+os.environ['ROOT_PIPELINE'] = rootPipeline
+# Set root of houdini project
+os.environ['JOB'] = '{}/3D/'.format(os.path.dirname(os.path.dirname(__file__)))
+
+# Run Houdini
+subprocess.Popen(houdini)
+```
+Discover what we have here:
+- `rootPipeline` variable will contain string path to a pipeline folder, for this particular case it would be `C:\temp\PROJECTS\projectName_A\PIPELINE`. 
+- The `PYTHONPATH` variable allows Python to "see" all files in that location, so we can import them to our code. This variable already exists in our OS, so we add our path to existing paths (with `;&`) instead of replacing existing with our.
+- The `ROOT_PIPELINE` is our custom variable, we will use it in our scripts to define relativa paths. For example, we will setup path to UI file via this variable.
+- `JOB` is a core Houdini variable which define a root of Houdini project.
+
+Copy `GeoCreator.py` and `uiGeoCreator.ui` to `C:/temp/PROJECTS/projectName_A/PIPELINE/tools/`
+Modify GeoCreator.py, we need to update a path to UI file (don't forget import os module):
+
+```python
+import hou
+import os
+from PySide2 import QtCore, QtUiTools, QtWidgets
+
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = '{}/tools/uiGeoCreator.ui'.format(os.environ['ROOT_PIPELINE'])
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+        # Define geometry node name
+        self.customName = self.ui.lin_name.text()
+        # Setup "Create Geometry" button
+        self.ui.btn_create.clicked.connect(self.buttonClicked)
+        
+    def buttonClicked(self):
+        # Execute node creation 
+        if self.checkExisting(self.customName) != True:
+            self.createGeoNode(self.customName)
+    
+    def checkExisting(self, geometryName):
+        # Check if "MY_GEO" exists
+        if hou.node('/obj/{}'.format(geometryName)):
+            # Display fail message
+            hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
+            return True    
+
+    def createGeoNode(self, geometryName):
+        # Get scene root node
+        sceneRoot = hou.node('/obj/')
+        # Create empty geometry node in scene root
+        geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+        # Set geometry node name
+        geometry.setName(geometryName)
+        # Display creation message
+        hou.ui.displayMessage('{} node created!'.format(geometryName))
+
+def run():
+    win = GeoCreator()
+    win.show()
+```
