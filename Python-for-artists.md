@@ -267,12 +267,12 @@ To get QT Designer you need to [install Python 2.7 and PySide](pipeline-tutorial
 To build our UI:
 - Run QT Designer and create a new widget: File > New > Widget. You will have an empty window widget. You can resize it and modify some properties in Object Inspector (vertical panel located on the right side). I change `ObjectName` to "GeoCreator" and `Window Title` to "Create Geometry"
 - From Widget Box (vertical panel with a list of QT widgets, located on the left side) drag into our window:
-    * Line Edit (Input Widgets section), change "ObjectName" parameter to `name`, "text" to `MY_GEO`, 
-    * Push Button (Buttons section), change "ObjectName" parameter to `create`, "text" to `Create Geometry`, "minimumSize > height" = 35
+    * Line Edit (Input Widgets section), change "ObjectName" parameter to `lin_name`, "text" to `MY_GEO`, 
+    * Push Button (Buttons section), change "ObjectName" parameter to `btn_create`, "text" to `Create Geometry`, "minimumSize > height" = 35
 - Select Window widget (either click on empty space in the window widget or click on GeoCreator in object inspector) and press "Lay Out Vertically" button on the toolbar.
 - Save the file somewhere, for example `'C:/temp/uiGeoCreator.ui'`. Here you can download [uiGeoCreator.ui](../blob/master/hips/uiGeoCreator.ui)
 
-[![](https://c2.staticflickr.com/2/1968/45026795222_fe7e37bab5_o.gif)](https://c2.staticflickr.com/2/1968/45026795222_fe7e37bab5_o.gif)
+[![](https://c2.staticflickr.com/2/1962/44356680464_2a3ba7d302_o.gif)](https://c2.staticflickr.com/2/1962/44356680464_2a3ba7d302_o.gif)
 
 Now clean all code in Python Source editor, go to [Run PySide UI](python-snippets#run-pyside-ui) section of Python Snippets page, copy paste the code to Python Source editor and change the path to UI file:
 ```python
@@ -321,7 +321,7 @@ class GeoCreator(QtWidgets.QWidget):
 win = GeoCreator()
 win.show()
 ```
-If you run it now the button widget would not work, we need to link the event of particular button click with a corresponding function. We will setup all widget:
+If you run it now the button widget would not work, we need to link the event of particular button click with a corresponding function. We will setup all widgets in `__init__` function:
 
 ```python
 
