@@ -588,6 +588,14 @@ One thing we need to notice is that we used hardcoded path to our UI and Python 
 ## Wrapper
 The **wrapper** is a Python file which defines the software environment and launch Houdini within this environment. It allows controlling a lot of things related to Houdini such as setting up $JOB variable (Houdini project root), defining paths to custom python scripts and HDAs, modifying native Houdini UIs etc.
 
-Before we can move forward we should define our project folder structure. It's a tricky task and a lot of options could be considered (here is a [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) example I used to build a pipeline for Maya) but we will keep things simple here. Say we have all our projects in a "PROJECTS" folder somewhere on HDD: `C:/temp/PROJECTS`, each in a separate folder "projectName_A", "projectName_B" etc.
+Before we can move forward we should define our project folder structure. It's a tricky task and a lot of options could be considered (here is a [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) example I used to build a pipeline for Maya) but we will keep things simple here. 
+
+Say we have all our projects in a "PROJECTS" folder somewhere on HDD: `C:/temp/PROJECTS`, each in a separate folder "projectName_A", "projectName_B" etc. Lets each project folder contain two folders: `3D` and `PIPELINE`. 
+
+The `3D` folder is a root of the Houdini project, where we will store all Houdini data. You can use the default Houdini project structure which may be created with `File > New Project` tool:
+
+[![](https://c2.staticflickr.com/2/1979/44359655044_12d01390f5_o.gif)](https://c2.staticflickr.com/2/1979/44359655044_12d01390f5_o.gif) 
+
+You don`t need to set up each Houdini project with `New Project` tool, just save this empty folder structure and copy-paste it in all next projects (or write a [script to build a project](..blob/master/createProject.py).
 
 Each project should have its own wrapper, 
