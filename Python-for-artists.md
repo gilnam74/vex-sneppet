@@ -287,10 +287,32 @@ Run this code and you should get your UI in Houdini!
 
 This is a minimum amount of code to run UI file in Houdini, you can always use it as a starting point while developing your tools. Don't worry it contains `class` (if you have no idea what is it) or looks to scarry it would be not that hard to work with. 
 
-Classes are the small programs, just like functions. Imagine classes as containers for basic functions. If you have a class named "GeoCreator" you will run this program same way as a usual function: `GeoCreator()`. If you assign the result of class execution to a variable (`win = GeoCreator()`) you will create an instance of a class — object `win`. Same thing we did when create a Houdini root scene object (`sceneRoot = hou.node('/obj/')`). Then you can apply a specific command to this objects, e.g. to display UI in Houdini we use `show()` command: `win.show()`. And you need PySide libraries in your program to make UI widgets works, so we import them at the beginning: `from PySide2 import QtCore, QtUiTools, QtWidgets`. This basic template will remain the same with any other tool you will want to create, you will need just to build actual functionality on top of that. 
+Classes are the small programs, just like functions. Imagine classes as containers for basic functions. Our class "GeoCreator" contains one function `__init__()`, where we import UI file in code and setup how all widgets will work.
+
+If you have a class named "GeoCreator" you will run this program same way as a usual function: `GeoCreator()`. If you assign the result of class execution to a variable (`win = GeoCreator()`) you will create an instance of a class — object `win`. Same thing we did when create a Houdini root scene object (`sceneRoot = hou.node('/obj/')`). Then you can apply a specific command to this objects, e.g. to display UI in Houdini we use `show()` command: `win.show()`. 
+
+And you need PySide libraries in your program to make UI widgets works, so we import them at the beginning: `from PySide2 import QtCore, QtUiTools, QtWidgets`. This basic template will remain the same with any other tool you will want to create, you will need just to build actual functionality on top of that. 
 
 Next, we will bring back the functional part of our code we develop previously and link everything with UI elements.
 
-Let's discover how to work with UI widgets we have. We want something happened when user presses the button, so we need to create a function in the
+Let's discover how to work with UI widgets we have. We want something happened when the user presses the button, so we need to create a function in the class which will be executed on button click event. Let this function print "Hello, World!" for now:
+
+```python
+import hou
+from PySide2 import QtCore, QtUiTools, QtWidgets
+
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = 'C:/temp/uiGeoCreator.ui'
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+    def buttonClicked():
+        print 'Hello, World'
+
+win = GeoCreator()
+win.show()
+```
 
 ### Run tool from the Shell
