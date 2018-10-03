@@ -379,6 +379,53 @@ class GeoCreator(QtWidgets.QWidget):
 win = GeoCreator()
 win.show()
 ```
-Where we take text from ui (`lin_name` widget) and put it in `customName` variable with `self.ui.lin_name.text()` and send this text to `buttonClicked` function `lambda: self.buttonClicked(customName)`
+Where we take text from ui (`lin_name` widget) and put it in `customName` variable with `self.ui.lin_name.text()` and send this text to `buttonClicked` function `lambda: self.buttonClicked(customName)`. Alternatively, you can create a variable which will be avaliable in buttonClicked function (add `self` before variable name, othervise it would be visible only inside `__init__` function) and use it there:
+
+```python
+import hou
+from PySide2 import QtCore, QtUiTools, QtWidgets
+
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = 'C:/temp/uiGeoCreator.ui'
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+        # Get name from user
+        self.customName = self.ui.lin_name.text()
+        # Setup "Create Geometry" button
+        self.ui.btn_create.clicked.connect(self.buttonClicked)
+        
+    def buttonClicked(self):
+        print self.customName
+
+win = GeoCreator()
+win.show()
+```
+Or we can grab user text from UI directly in `buttonClicked` function:
+```python
+import hou
+from PySide2 import QtCore, QtUiTools, QtWidgets
+
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = 'C:/temp/uiGeoCreator.ui'
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+        # Setup "Create Geometry" button
+        self.ui.btn_create.clicked.connect(self.buttonClicked)
+        
+    def buttonClicked(self):
+        # Get name from user
+        customName = self.ui.lin_name.text()
+        print customName
+
+win = GeoCreator()
+win.show()
+```
+So now you have several examples of how to deal with data using classes so you can build your own stuff without understanding classes concepts, but I would recomend to study this topic anyway.
 
 ### Run tool from the Shell
