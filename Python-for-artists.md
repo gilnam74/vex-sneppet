@@ -126,9 +126,11 @@ if hou.node('/obj/MY_GEO') == None:
     geometry.setName('MY_GEO')
 ```
 
-Now the script will create "MY_GEO" node **only if this name is unique** the for current scene. If the "MY_GEO" node exists, `Geo Creator` will do nothing and it could be frustrating for the end users. You run a script and nothing happens, so you don't know what is going on! 
+Now the script will create "MY_GEO" node **only if this name is unique** the for current scene. If the "MY_GEO" node exists, `Geo Creator` will do nothing and it could be frustrating for the end users. Imagine, you run a script and nothing happens, so you don't know what is going on... 
 
-**Scripts always should inform users about program execution**. Usually, it could be print statements (seeing in Houdini Console).  We will **raise the window** with the appropriate message if the "MY_GEO" node exists or has been created:
+**Scripts always should inform users about program execution**. 
+
+Usually, it could be print statements (seeing in Houdini Console) indicated particular results.  For our example we will **raise the window** with the appropriate message in both cases, if the "MY_GEO" node exists or if it has been created:
 
 ```python
 import hou
@@ -150,7 +152,7 @@ else:
 
 Now let's **organize our code** a bit better. It may seem redundant to organize several lines of code but we do this for the learning purposes, so you will understand how to build more complex tools in the future and it becomes necessary later when we will start building UI.
 
-What issue should be obvious to improve is that we use the same mane "MY_GEO" several times in our code. Despite it is a static name we are not going to change it by the program brief it is always better to build a code which is easy to edit and read. Common practice for such cases is to create a variable with a required name once and then use this variable in code as many time as you need later:
+What issue should be obvious to **improve** is that we use the same mane "MY_GEO" several times in our code. Despite it is a static name we are not going to change it (according to the initial brief) it is always better to build a code which is **easy to edit and read**. Common practice for such cases is to **create a variable** with a required name once and then use this variable in the code as many time as you need later:
 
 ```python
 import hou
@@ -174,8 +176,8 @@ else:
 ```
 Here we use **Pyhon string formatting** to replace `{ }` with value from variable:
 ```python
-print 'The fruits are {0}, {1}, {2}!'.format('Apple', 'Banana', 'Kiwi')
->>>> The fruits are Apple, Banana, Kiwi!
+print 'The fruits are {0}, {2}, {1}!'.format('Apple', 'Banana', 'Kiwi')
+>>>> The fruits are Apple, Kiwi, Banana!
 ```
  
 Now lets wrap a part of our program to a [function](Programming-basics#functions) and run this function:
