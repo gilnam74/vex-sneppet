@@ -569,7 +569,7 @@ def run():
 ```
 
 Save this code somewhere as a python file, for example in `C:/temp/GeoCreator.py`
-Right click on empty space in Create shelf and select "New Tool...", switch to "Script" tab, paste the code and hit "Apply":
+Right click on empty space in "Create" shelf and select "New Tool...", change the label to "Geo Creator", switch to "Script" tab, paste the code and hit "Apply":
 
 ```python
 import sys
@@ -581,7 +581,7 @@ reload(GeoCreator)
 GeoCreator.run()
 ```
 
-The "New Tool" will appear on the Create shelf which will run our GeoCreator tool. Congratulations, you just finish building a first custom tool for Houdini!
+The "Geo Creator" tool will appear on the "Create" shelf which will run our GeoCreator tool. Congratulations, you just finish building a first custom tool for Houdini!
 
 One thing we need to notice is that we used hardcoded path to our UI and Python file `C:/temp` which is working fine but it's not the best way to deal with such things. If you create your custom tools you probably would like to make flexible, reliable and easy to use in all the projects you might have. So next, and it would be a first step for building your own pipeline, you can create a [Houdini Wrapper](#wrapper).  
 
@@ -691,7 +691,7 @@ def run():
     win = GeoCreator()
     win.show()
 ```
-Double click runHoudini.bat to launch Houdini. Right-click on our custom tool in the shelf and select "Edit Tool.." and edit code in the "Script" tab:
+Double click runHoudini.bat to launch Houdini. Right-click on "Geo Creator" tool icon in the shelf and select "Edit Tool.." and edit code in the "Script" tab:
 ```python
 import GeoCreator
 reload(GeoCreator)
