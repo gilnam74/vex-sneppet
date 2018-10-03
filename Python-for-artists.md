@@ -598,4 +598,16 @@ The `3D` folder is a root of the Houdini project, where we will store all Houdin
 
 You don't need to set up each Houdini project with `New Project` tool, just save this empty folder structure and copy-paste it in all next projects (or write a [script to build a project](https://github.com/kiryha/Houdini/blob/master/createProject.py)).
 
+The `PIPELINE` folder will contain our wrapper and all our custom tools. Save this code as `C:/temp/PROJECTS/projectName_A/PIPELINE/runHoudini.py`: 
+```python
+# Wrapper to run Houdini with custom environment
+import os, subprocess
+
+# Set path to Houdini executable
+houdini = 'C:/Program Files/Side Effects Software/Houdini 16.5.536/bin/houdinifx.exe'
+
+# Run Houdini
+subprocess.Popen(houdini)
+```
+
 Each project should have its own wrapper, 
