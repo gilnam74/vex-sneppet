@@ -531,3 +531,5 @@ import GeoCreator
 reload(GeoCreator)
 GeoCreator.run()
 ```
+
+The "New Tool" will appear on the Create shelf which will run our GeoCreator tool. Congratulations, you just finish to build a first custom tool for Houdini!
