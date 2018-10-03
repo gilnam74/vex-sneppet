@@ -334,7 +334,25 @@ win.show()
 If you run it now the button widget would not work, we need to link the event of particular button click with a corresponding function. We will setup all widgets in `__init__` function:
 
 ```python
+import hou
+from PySide2 import QtCore, QtUiTools, QtWidgets
 
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = 'C:/temp/uiGeoCreator.ui'
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+        # Setup "Create Geometry" button
+        self.ui.btn_create.clicked.connect(self.buttonClicked)
+        
+    def buttonClicked(self):
+        print 'Hello, World'
+
+win = GeoCreator()
+win.show()
 ```
+Run the code, press "Create Geometry" button and you will get "Hello, World!" printed in Houdini Console. We link `buttonClicked()` function to our button widget with this line: `self.ui.btn_create.clicked.connect(self.buttonClicked)`, where `self.ui` is a UI object we created in QT Designer and imported into the code (window with button and text field), `btn_create` is a button object which launch `buttonClicked` function (`connect(self.buttonClicked)`) and event which will run this function is a button click (`clicked`).
 
 ### Run tool from the Shell
