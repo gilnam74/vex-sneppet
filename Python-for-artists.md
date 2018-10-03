@@ -433,7 +433,6 @@ It's time to bring a functional part of the code we develop before to our tool:
 import hou
 from PySide2 import QtCore, QtUiTools, QtWidgets
 
-
 class GeoCreator(QtWidgets.QWidget):
     def __init__(self):
         super(GeoCreator,self).__init__()
@@ -474,3 +473,61 @@ win.show()
 I just copy-paste code which creates geometry node we develop before into existing code with UI, change `name` variable we had with a hardcoded value "MY_GEO" to `self.customName` so it gets the geometry name from UI, bring functions to a class, add `self` to them and place code which runs checking and node creation into `buttonClicked()` function.
 
 ### Run tool from the Shell
+Finally, we will create a shelf tool from our Python script. First lets put the last two lines (which launches the tool with UI) inside the `run()` function:
+
+```python
+import hou
+from PySide2 import QtCore, QtUiTools, QtWidgets
+
+
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = 'C:/temp/uiGeoCreator.ui'
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+        # Define geometry node name
+        self.customName = self.ui.lin_name.text()
+        # Setup "Create Geometry" button
+        self.ui.btn_create.clicked.connect(self.buttonClicked)
+        
+    def buttonClicked(self):
+        # Execute node creation 
+        if self.checkExisting(self.customName) != True:
+            self.createGeoNode(self.customName)
+    
+    def checkExisting(self, geometryName):
+        # Check if "MY_GEO" exists
+        if hou.node('/obj/{}'.format(geometryName)):
+            # Display fail message
+            hou.ui.displayMessage('{} already exists in the scene'.format(geometryName))
+            return True    
+
+    def createGeoNode(self, geometryName):
+        # Get scene root node
+        sceneRoot = hou.node('/obj/')
+        # Create empty geometry node in scene root
+        geometry = sceneRoot.createNode('geo', run_init_scripts=False)
+        # Set geometry node name
+        geometry.setName(geometryName)
+        # Display creation message
+        hou.ui.displayMessage('{} node created!'.format(geometryName))
+
+def run():
+    win = GeoCreator()
+    win.show()
+```
+
+Save this code somewhere as a python file, for example in `C:/temp/GeoCreator.py`
+Right click on empty space in Create shelf and select "New Tool...", switch to "Script" tab, paste the code and hit "Apply":
+
+```python
+import sys
+path = 'C:/temp/'
+sys.path.append(path)
+
+import GeoCreator
+reload(GeoCreator)
+GeoCreator.run()
+```
