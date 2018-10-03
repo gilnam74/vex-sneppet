@@ -43,15 +43,17 @@ hou.ui.displayMessage('Hello, World')
 This code will rise a window with a "Hello, World!" message.
 
 ## Creating a first custom tool
-Let's do some fancy stuff now! Here we will create from scratch a **custom tool**, let's name it "**Geo Creator**" for Houdini with a User Interface. GeoCreator will generate an empty geometry node with a certain name ("MY_GEO") in the root of the current scene. Not an outstanding functionality but it's just a basic example which will help us to start solving tasks in Houdini with Python. Besides a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting File node and creating a grid, while you can do the same by CTR + click on Grid shelf tool. So might be useful in some cases.
+Here we will create from scratch a **custom tool** (let's name it `Geo Creator`) for Houdini with a **User Interface**. `Geo Creator` will generate an empty geometry node with a certain name ("MY_GEO") in the root of the current scene. 
 
-We will begin with building a functional part of the code in the Python Source Editor, then we will add and setup UI and finally we will save the code as a Python file and make it launch from the Shelve.
+Not an outstanding functionality but it's just a **basic example** which will give you a clue of **how to solve tasks** in Houdini with Python. Besides, a huge amount of video tutorials starts from creating a geometry node, diving inside, deleting "File" node and creating a grid, while you can do the same by CTR + click on "Grid" shelf tool. So might be useful in some cases.
+
+We will begin with building a **functional part** of the code (create geometry node) in the Python Source Editor, then we will **add and setup UI** and finally, we will save the code as a Python file and make it **launch from the Shelf**.
 
 ### Develop functionality
 Let's design a Python program which will solve the task of creating a geometry node with a specific name. 
 
 To create a node in Houdini with Python use a `createNode()` command. To run this command successfully we need two main things: 
-- A [string](Programming-basics#data-types) [argument](Programming-basics#commands) which will define the type of node which will be created. 
+- An [argument](Programming-basics#commands) ([string](Programming-basics#data-types)), which will define the type of node which will be created. 
 - A parent [object](Programming-basics#arguments-and-objects), where this node will be created: `parentObject.createNode()`.
 
 The most obvious way to get the name of a required node type is to create this node with UI and take the name from Info Box window. Run Houdini, CTR + click on the Grid Tool in the Create Shelf tab and open Info Box for `grid_object1` node. 
