@@ -471,6 +471,6 @@ class GeoCreator(QtWidgets.QWidget):
 win = GeoCreator()
 win.show()
 ```
-I just copy-paste code which creates geometry node we develop before into existing code with UI, bring functions to a class, add `self` to them and place code which runs checking and node creation into buttonClicked function.
+I just copy-paste code which creates geometry node we develop before into existing code with UI, change `name` variable we had with a hardcoded value "MY_GEO" to `self.customName` so it gets the geometry name from UI, bring functions to a class, add `self` to them and place code which runs checking and node creation into `buttonClicked()` function.
 
 ### Run tool from the Shell
