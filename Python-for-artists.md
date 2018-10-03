@@ -355,4 +355,30 @@ win.show()
 ```
 Run the code, press "Create Geometry" button and you will get "Hello, World!" printed in Houdini Console. We link `buttonClicked()` function to our button widget with this line: `self.ui.btn_create.clicked.connect(self.buttonClicked)`, where `self.ui` is a UI object we created in QT Designer and imported into the code (window with button and text field), `btn_create` is a button widget which launch `buttonClicked` function (`connect(self.buttonClicked)`) and event which will run this function is a button click (`clicked`).
 
+Now let's grab the text from the text filed (QLineEdit widget named lin_name) and print it instead of "Hello, World!". You can do it in `__init__` function via variable and send this variable value to `buttonClicked` function:
+
+```python
+import hou
+from PySide2 import QtCore, QtUiTools, QtWidgets
+
+class GeoCreator(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeoCreator,self).__init__()
+        ui_file = 'C:/temp/uiGeoCreator.ui'
+        self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
+        self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+        
+        # Get name from user
+        customName = self.ui.lin_name.text()
+        # Setup "Create Geometry" button
+        self.ui.btn_create.clicked.connect(lambda: self.buttonClicked(customName))
+        
+    def buttonClicked(self, name):
+        print name
+
+win = GeoCreator()
+win.show()
+```
+Where we take text from ui (`lin_name` widget) and put it in `customName` variable with `self.ui.lin_name.text()` and send this text to `buttonClicked` function `lambda: self.buttonClicked(customName)`
+
 ### Run tool from the Shell
