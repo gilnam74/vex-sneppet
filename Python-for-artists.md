@@ -3,7 +3,7 @@ I hope nobody doubts that the ability to write even simple scripts it's a huge b
 
 Follow this tutorial and you will get the knowledge on how to build your own working tools!
 
-[![](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)](https://c2.staticflickr.com/2/1935/45081953171_de8b5eaf0d_o.gif)
+[![](https://c2.staticflickr.com/2/1942/45033680972_a2ff4a9a82_o.gif)](https://c2.staticflickr.com/2/1942/45033680972_a2ff4a9a82_o.gif)
 
 [Python in Houdini basics](#python-integration-basics)  |  [Creating a first custom tool](#creating-a-first-custom-tool)  |  [Build a Houdini wrapper](#wrapper)
 
