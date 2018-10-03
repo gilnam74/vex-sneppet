@@ -325,7 +325,7 @@ class GeoCreator(QtWidgets.QWidget):
         self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
         
-    def buttonClicked():
+    def buttonClicked(self):
         print 'Hello, World'
 
 win = GeoCreator()
