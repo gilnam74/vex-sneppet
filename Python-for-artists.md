@@ -428,4 +428,6 @@ win.show()
 ```
 So now you have several examples of how to deal with data using classes so you can build your own stuff without understanding classes concepts (but I would recommend studying this topic anyway!). This should be enough to build a lot of tools: you know how to take string data from the user with a QlineEdit widget and setup buttons to execute your functions with a QPushButton widget. I build a [complete pipeline toolset](https://github.com/kiryha/AnimationDNA/wiki/03-Tools) using only this two widgets.
 
+It's time to bring a functional part of the code we develop before to our tool:
+
 ### Run tool from the Shell
