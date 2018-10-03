@@ -691,3 +691,12 @@ def run():
     win = GeoCreator()
     win.show()
 ```
+Double click runHoudini.bat to launch Houdini. Right-click on our custom tool in the shelf and select "Edit Tool.." and edit code in the "Script" tab:
+```python
+import GeoCreator
+reload(GeoCreator)
+GeoCreator.run()
+```
+Hit "Accept" and launch our GeoCreator tool. Now we don't have any hardcoded path in our scripts, so if you will clone the `projectName_A` folder with content as `projectName_B` (or even place it to another location) everything will work as expected.
+
+Congrats, you made a first step with building your own pipeline!
