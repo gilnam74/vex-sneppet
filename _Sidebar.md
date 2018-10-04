@@ -13,4 +13,5 @@
   - [VEX snippets](vex-snippets)
   - [HIP Examples](examples)
   - [Tutorials](tutorials)
+  - [Ftrack](ftrack)
 * [Glossary](Glossary)
