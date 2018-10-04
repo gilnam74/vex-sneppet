@@ -14,6 +14,14 @@ Create Project tool allows to setup and run a new project with Mother. Run `crea
 
 ## Unsorted
 Will be sorted after getting a descent amount of tools
+#### Save Next Version
+`SNV` button on MOTHER shelf. Incrementaly saves current houdini scene (<fileCode>_001.hip >> <fileCode>_002.hip).
+
+If a file with next version exists, warning window rise with options:
+- Overwrite  a file with next version
+- Save the file with the latest available version
+
+[![](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)
 
 #### Convert FBX
 `FBX>GEO` button on MOTHER shelf. Converts imported to a Houdini scene FBX files with a character animations from Mixamo to a Geometry Cache. For each selected FBX Subnetwork node creates:
