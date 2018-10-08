@@ -64,7 +64,7 @@ Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVI
 In the modeling scene $JOB/scenes/ASSETS/CHARACTERS/ROMA/GEO/GEO_ROMA_001.hip load `material library HDA` to the root, rename it to `MATERIALS`. Assign materials from HDA library to asset parts with `material SOP` via groups(create a primitive group for each material, or use groups from transforms in case of alembic SRC geometry: Prim Groups = NameGroup Using Transform Node Name). It will create attribute @shop_materialpath. Export asset geometry to `bgeo.sc`. Load  `material library HDA` and asset geometry to a render scene. Materials assigned automatically. For the ROMA character save material data to a database to be able to convert FBXs from MIXAMO to geo cashes with material assignment.
 
 ##### Crowds
-Create material stylesheet for a geometry node containing crowds. [Setup materials for character parts](https://forums.odforce.net/uploads/monthly_2018_07/styleSheets_A_01.PNG.d184634bdbe15d4f1c85b8b1a8d790c6.PNG) (30_Material Stylesheets.MP4 from Crowds for feature films course): Add Stylesheet parameter > Add Style > Add Target > Add Subtarget > Add Override. Disclaimer: crowds stylesheets does not work as expected, need to use one mat for all agents.
+Create material stylesheet for a geometry node containing crowds. [Setup materials for character parts](https://c2.staticflickr.com/2/1903/45181271151_8c3d3fda67_o.png) (30_Material Stylesheets.MP4 from Crowds for feature films course): Add Stylesheet parameter > Add Style > Add Target > Add Subtarget > Add Override. Disclaimer: crowds stylesheets does not work as expected, need to use one mat for all agents.
 
 #### Create of render scene
 1) Save scene to $JOB/scenes/RENDER/010/SHOT_010/RND_E010_S010_001.hipnc
