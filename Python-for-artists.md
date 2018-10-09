@@ -25,9 +25,10 @@ For the most types of tasks here, we will use `Python Source Editor`. It allows 
 Launch a `Python Source Editor` and type a code in the top window:
 
 ```python
-print 'Hello, World'
+print 'Hello, World!'
 ```
 Press the `Apply` button, Houdini Console window should appear with a printed message  'Hello, World'. It [was not that hard](Programming-basics#programming-learning-curve), right?
+[![](https://c2.staticflickr.com/2/1953/30264231737_5aec0e7005_o.gif)](https://c2.staticflickr.com/2/1953/30264231737_5aec0e7005_o.gif)
 
 To be able to write more valuable scripts for Houdini, besides Python integration, we would need the ability to access Houdini scene components (to query and modify necessary data). This ability is provided by **Application Programm Interface** (API). Houdini Python API exists as Houdini Object Model (HOM). To use this module in Houdini we need to import it to our python code:
 
@@ -38,9 +39,10 @@ Let's extend our first Hello World program a bit by using UI built in Houdini Py
 
 ```python
 import hou
-hou.ui.displayMessage('Hello, World')
+hou.ui.displayMessage('Hello, World!')
 ```
 This code will rise a window with a "Hello, World!" message.
+[![](https://c2.staticflickr.com/2/1975/45203339271_343b95363a_o.gif)](https://c2.staticflickr.com/2/1975/45203339271_343b95363a_o.gif)
 
 ## Creating a first custom tool
 Here we will create from scratch a **custom tool** (let's name it `Geo Creator`) for Houdini with a **User Interface**. `Geo Creator` will generate an empty geometry node with a certain name ("MY_GEO") in the root of the current scene. 
