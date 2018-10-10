@@ -153,3 +153,6 @@ MOTHER — folder with pipeline files:
 
 $JOB/render/010/SHOT_010/001/E010_S010_001.$F.pic
 E:/256/PROJECTS/NSI/PROD/2D/RENDER/010/SHOT_010/E010_S010_v001.mov
+
+# Vector math drafts
+[Subtraction gives the vector between two points ](http://www.leadinglesson.com/subtraction-gives-the-vector-between-two-points)
