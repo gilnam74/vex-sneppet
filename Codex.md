@@ -89,6 +89,11 @@ Switch to lists of dictionaries in a joined file DATABASE.json:
 
 concerns: list of sequences/shots ???
 
+## FX
+FX is a special type of animation done by simulation techniques (RBD, particles, fluids etc). To produce FX we need input data from modeling and animation department, eg. models, cameras, animations etc (FX INPUT DATA). The result of FX transferred to render scenes (FX OUTPUT DATA). FX could be done for SHOTS or for ASSETS (to be automatically present in all SHOTS with the particular asset).
+
+Houdini scenes with FX are located in $JOB/scenes/FX
+
 ## Core concepts
 All project data located in one folder on the network drive.  
 All project data structured as ASSETS and SHOTS. Shots are the part of one project.  
