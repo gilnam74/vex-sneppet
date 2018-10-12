@@ -93,10 +93,10 @@ concerns: list of sequences/shots ???
 FX is a special type of animation done by simulation techniques (RBD, particles, fluids etc). To produce FX we need input data from modeling and animation department, eg. models, cameras, animations etc (FX INPUT DATA). The result of FX transferred to render scenes (FX OUTPUT DATA). FX could be done for SHOTS or for ASSETS (to be automatically present in all SHOTS with the particular asset). Each FX should be named <FXName> (in form of 3 letter code?).
 
 #### FX scenes
-Houdini scenes with FX are located in $JOB/scenes/FX/ASSETS (SHOTS).
+Houdini scenes with FX are located in $JOB/scenes/FX/ASSETS(SHOTS).
 
 #### FX INPUT DATA
-`$JOB/fx/`
+`$JOB/fx/ASSETS(SHOTS)/<FXName>`
 
 #### FX OUTPUT DATA
 ASSETS: `$JOB/geo/ASSETS/<assetType>/<assetName>/<FXName>`  
