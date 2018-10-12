@@ -96,6 +96,7 @@ FX is a special type of animation done by simulation techniques (RBD, particles,
 Houdini scenes with FX are located in $JOB/scenes/FX/ASSETS (SHOTS).
 
 #### FX INPUT DATA
+`$JOB/fx/`
 
 #### FX OUTPUT DATA
 ASSETS: `$JOB/geo/ASSETS/<assetType>/<assetName>/<FXName>`  
