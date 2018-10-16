@@ -4,7 +4,7 @@ Here you can find small code chunks to perform miscellaneous tasks in Houdini.
 You can explore the node parameters with Python Shel:
 - Create any node and tweak its parameters
 - Run Python Shell.  
-- Type `node = ` and drag your node to Python Shell (you will get `hou.node('path/to/node')`), press enter.  
+- Type `node = `, drag node to Shell (you will get `hou.node('path/to/node')`), press enter.  
 - Type `print node.asCode()`
 
 ## Snippets
