@@ -50,6 +50,10 @@ hou.ch('/obj/geo1/tx')
 # set translate XYZ
 node.parmTuple('t').set([0,1,0])
 hou.parm('/obj/geo1/tx').set(2)
+
+# Set parameters for selected Remesh SOP
+remesh = hou.selectedNodes()[0]
+remesh.setParms({'group': 'myGroup', 'element_sizing1': 1, 'iterations': 2})
 ```
 
 ##### Get Translate X keyframes of selected node
