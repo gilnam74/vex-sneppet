@@ -168,6 +168,8 @@ $JOB/render/010/SHOT_010/001/E010_S010_001.$F.pic
 E:/256/PROJECTS/NSI/PROD/2D/RENDER/010/SHOT_010/E010_S010_v001.mov
 
 # Vector math drafts
+Before we deal with **scalar** numbers, which give us a certain **value** (like length, X coordinate, etc). Vector could give us the **direction** and **magnitude**. 
+
 [Subtraction gives the vector between two points ](http://www.leadinglesson.com/subtraction-gives-the-vector-between-two-points)
 
 If we have 2 points, A and B, the representation of vector AB between this points would be the difference in coordinates of points B and A. v@AB = [B.x, B.y, B.z] - [A.x, A.y., A.z]. [SRC](http://tutorial.math.lamar.edu/Classes/CalcII/Vectors_Basics.aspx)
