@@ -125,7 +125,7 @@ else f@pscale = 1;
 
 ```c
 // Scale 10 times first and last points, short form    
-f@pscale = (@ptnum == 0) || (@ptnum ==(@numpt-1)) ? 10 : 1;
+f@pscale = (@ptnum == 0) || @ptnum ==(@numpt-1) ? 10 : 1;
 ```
 
 ## VEX expressions
