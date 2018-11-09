@@ -27,6 +27,8 @@ vector pointPos = v@opinput0_P;
 vector pointPos = point(0, "P", @ptnum);
 // Get attribute value from scene geometry:  
 vector pointPos = point("op:../geometryName", "P", @ptnum); 
+// Get primitive attribute in point mode
+primattrib(0, "attributeName", @ptnum, 0);
 
 // Create color attribute and set it`s value to red
 addpointattrib(0, "Cd", {1,0,0});
