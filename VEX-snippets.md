@@ -148,6 +148,16 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
+#### Flatten surface bottom
+```c
+float min = ch("flatten_disrtance") + getbbox_min(0).y;
+float max = getbbox_max(0).y;
+float Y = clamp(@P.y, min, max);
+
+@P = set(@P.x, Y, @P.z);
+
+```
+
 #### Multiply distribution (make small smaller, big bigger)
 ```c
 value = pow(value, 8.0);
