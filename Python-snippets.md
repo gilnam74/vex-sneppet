@@ -42,6 +42,13 @@ import hou
 node = hou.node('/<nodePath>/<nodeName>')
 node.destroy() # Delete node
 ```
+##### Delete parameter expression (chennal, animation)
+```python
+import hou
+node = hou.node('/<nodePath>/<nodeName>')
+node.parm(<parameterName>).deleteAllKeyframes()
+```
+
 ##### Copy node to another location
 ```python
 import hou
