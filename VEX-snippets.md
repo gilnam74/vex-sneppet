@@ -138,6 +138,10 @@ Using VEX in parameter interface of Houdini nodes.
 detail("../nodeName/", 'attributeName', 0)
 point("../nodeName/",@ptnum, 'attributeName',0)
 ```
+#### Every N frame
+```c
+if(($F % N == 0),$F,0)
+```
 
 #### Select corner points
 ```c
