@@ -16,7 +16,19 @@ node = hou.selectedNodes()[0] # By selection
 # Get node content
 node.children()
 ```
-
+##### Delete node
+```python
+import hou
+node = hou.node('/<nodePath>/<nodeName>')
+node.destroy() # Delete node
+```
+##### Copy node to another location
+```python
+import hou
+node = hou.node('/<nodePath>/<nodeName>')
+parent = hou.node('/<parentPath>/')
+hou.copyNodesTo([node], parent)
+```
 ##### Create node in the scene
 To create any node wiyh Python you have to set parent node for that. You need to create Geometry node in OBJ context.
 ```Python
