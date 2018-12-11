@@ -141,6 +141,7 @@ point("../nodeName/",@ptnum, 'attributeName',0)
 #### Every N frame
 ```c
 if(($F % N == 0),$F,0)
+// Hscript version: floor($F/N)*N
 ```
 
 #### Select corner points
