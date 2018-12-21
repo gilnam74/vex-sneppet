@@ -9,7 +9,7 @@ Currently, [VEX for artists](vex-for-artists) and [Python for artists](python-fo
 [Houdini Basics](houdini-basics) — General Houdini techniques and triks  
 [Math basics](Math-basics) — Math theory for artists  
 [Programming basics](programming-basics) — Programming concepts for artists  
-[Python in Houdini](python) | [Python snippets](python-snippets) — Python in Houdini usage  
+[Python for artists](python-for-artists) | [Python snippets](python-snippets) — Python in Houdini usage  
 [VEX for artists](vex-for-artists) | [VEX snippets](vex-snippets) — VEX code examples  
 [HIP Examples](examples) — Tehniques as HIP files   
 [Tutorials](tutorials) — Tehniques with step by step descriptions
