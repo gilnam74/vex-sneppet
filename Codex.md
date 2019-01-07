@@ -1,5 +1,5 @@
 # Introduction
-**Mother** — out of the box Houdini Pipeline Toolkit under control of Shotgun management system. 
+**EVE** — out of the box Houdini Pipeline Toolkit under control of Shotgun management system. 
 
 This section is on the early stage of developing, it does not intend to have valuable public content. I mean, **skip it**!
 
@@ -81,7 +81,7 @@ Here we will record pipeline developing process
 Currently, I consider 3 main option to explore: Ftrack($10/month), Shotgun($30/month), JSON file (Free but hard to edit).
 
 ### JSON
-There are 2 files ASSETS.json and SHOTS.json in `<rootProject>\PREP\PIPELINE\MOTHER\database`.
+There are 2 files ASSETS.json and SHOTS.json in `<rootProject>\PREP\PIPELINE\EVE\database`.
 The question is how to setup a list of assets and a list of shots. It could be nested dictionaries (current) or list o dictionaries. Conserns: list of dictionaries may be more close-to Shotgun database type, so it would be more easy to switch from JSON to SG later. But nested dictionaries more easy to work with.
 
 Switch to lists of dictionaries in a joined file DATABASE.json:
@@ -122,7 +122,7 @@ The term "production pipeline" by itself defines our perception of movie making 
 
 However, we try to look at production process from the biological point of view and get some interesting ideas. The difference between machine and organism is similar to the difference between nodes and layers — the same task could be achieved differently and perception could define algorithms. Organic pipeline research is our goal here.
 
-We are going to breed shots with Mother...
+We are going to breed shots with EVE...
 
 ## Project-pipeline relation
 At the highest level, there are two options for defining the relation between a pipeline and projects:
@@ -153,11 +153,11 @@ Pripeline root folder: `<projectName>/PREP/PIPELINE`
 `runHoudini.py` — Houdini wrapper to launch app. Set Houdini environment  
 `createProject.py` — [Create project tool](tools#create-project)  
 
-MOTHER — folder with pipeline files:
+EVE — folder with pipeline files:
 - houdini — folder mapped to HOUDINI_PATH, additional to Houdini install dir.  
 `jump.pref`  — add bookmarks to File Open dialog in Houdini.  
-`MainMenuCommon.xml` — modify menu, add MOTHER.
-  - toolbar — custom MOTHER shelves  
+`MainMenuCommon.xml` — modify menu, add EVE.
+  - toolbar — custom EVE shelves  
   - scripts:
     - 123.py — run when Houdini is launching  
     - 456.py — ren wen open or create a new scene
