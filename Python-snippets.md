@@ -8,6 +8,14 @@ You can explore the node parameters with Python Shel:
 - Type `print node.asCode()`
 
 ## Snippets
+##### Get Houdini environment variable
+```python
+import hou
+
+# print current scene name
+print hou.expandString("$HIPNAME")
+```
+ 
 ##### Get node from the scene
 ```python
 import hou
