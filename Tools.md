@@ -17,9 +17,10 @@ Will be sorted after getting a descent amount of tools
 #### Save Next Version
 `SNV` button on EVE shelf. Incrementaly saves current houdini scene (<fileCode>_001.hip >> <fileCode>_002.hip).
 
-If a file with next version exists, warning window rise with options:
-- Overwrite  a file with next version
-- Save the file with the latest available version
+If a file with next version exists, tool finds the latest existing version and rise warning window with such options:  
+- Save Next Version — save the file with the latest available version  
+- Overwrite Existing — overwrite file with latest existing version
+
 
 [![](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)
 
