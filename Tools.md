@@ -23,9 +23,14 @@ If a file with next version exists, warning window rise with options:
 
 [![](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)
 
+#### Create Scene
+`Create Scene` button on EVE shelf. Create animation or render scene. WIP. Heavily rely on the database (Shotgun)
+
 #### Create Flipbook
 `FB` button on EVE shelf. Create Flipbook for current animation or render scene.
 
+## Temporary
+Tools currently used for "NSI" project. Will be removed for the final pipeline.
 #### Convert FBX
 `FBX>GEO` button on EVE shelf. Converts imported to a Houdini scene FBX files with a character animations from Mixamo to a Geometry Cache. For each selected FBX Subnetwork node creates:
 - a subnetwork with merged from FBX geometries,  
