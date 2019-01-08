@@ -31,6 +31,9 @@ If a file with next version exists, warning window rise with options:
 
 ## Temporary
 Tools currently used for "NSI" project. Will be removed for the final pipeline.
+#### Import FBX
+#### Save MATS
+
 #### Convert FBX
 `FBX>GEO` button on EVE shelf. Converts imported to a Houdini scene FBX files with a character animations from Mixamo to a Geometry Cache. For each selected FBX Subnetwork node creates:
 - a subnetwork with merged from FBX geometries,  
