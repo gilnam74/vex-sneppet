@@ -15,7 +15,8 @@ Create Project tool allows to setup and run a new project with Mother. Run `crea
 ## Unsorted
 Will be sorted after getting a descent amount of tools
 #### Save Next Version
-`SNV` button on EVE shelf. Incrementaly saves current houdini scene (fileCode_001.hip >> fileCode_002.hip).
+`SNV` button on EVE shelf. Incrementaly saves current houdini scene  
+fileCode_001.hip >> fileCode_002.hip
 
 If a file with next version exists, tool finds the latest existing version and rise warning window with such options:  
 - Save Next Version — save the file with the latest available version  
