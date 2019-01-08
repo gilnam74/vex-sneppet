@@ -29,6 +29,9 @@ If a file with next version exists, warning window rise with options:
 #### Create Flipbook
 `FB` button on EVE shelf. Create Flipbook for current animation or render scene.
 
+#### import ANM
+Import animation caches to a render scene. WIP.
+
 ## Temporary
 Tools currently used for "NSI" project. Will be removed for the final pipeline.
 #### Import FBX
