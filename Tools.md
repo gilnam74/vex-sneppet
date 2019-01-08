@@ -15,7 +15,7 @@ Create Project tool allows to setup and run a new project with Mother. Run `crea
 ## Unsorted
 Will be sorted after getting a descent amount of tools
 #### Save Next Version
-`SNV` button on MOTHER shelf. Incrementaly saves current houdini scene (<fileCode>_001.hip >> <fileCode>_002.hip).
+`SNV` button on EVE shelf. Incrementaly saves current houdini scene (<fileCode>_001.hip >> <fileCode>_002.hip).
 
 If a file with next version exists, warning window rise with options:
 - Overwrite  a file with next version
@@ -23,8 +23,11 @@ If a file with next version exists, warning window rise with options:
 
 [![](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)
 
+#### Create Flipbook
+`FB` button on EVE shelf. Create Flipbook for current animation or render scene.
+
 #### Convert FBX
-`FBX>GEO` button on MOTHER shelf. Converts imported to a Houdini scene FBX files with a character animations from Mixamo to a Geometry Cache. For each selected FBX Subnetwork node creates:
+`FBX>GEO` button on EVE shelf. Converts imported to a Houdini scene FBX files with a character animations from Mixamo to a Geometry Cache. For each selected FBX Subnetwork node creates:
 - a subnetwork with merged from FBX geometries,  
 - a material group for each part and apply a material to each geometry via material SOP,
 - File Cache node to write the character animation caches to an Animation library
