@@ -20,7 +20,8 @@ fileCode_001.hip >> fileCode_002.hip
 
 If a file with next version exists, tool finds the latest existing version and rise warning window with such options:  
 - Save Next Version — save the file with the latest available version  
-- Overwrite Existing — overwrite file with latest existing version
+- Overwrite Existing — overwrite a file with latest existing version  
+- Cancel — cancel saving file
 
 
 [![](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)
