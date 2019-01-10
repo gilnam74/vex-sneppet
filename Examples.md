@@ -9,6 +9,11 @@ Scatter points along surface or volume, grow organic structure.
 [![](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)
 Download [Space Colonisation hip file](../blob/master/hips/spaceColonization_001.hipnc)
 
+#### Grass
+Procedural grass generator
+[![]https://c1.staticflickr.com/5/4835/46693419671_16ff0f43d8_o.jpg](https://c1.staticflickr.com/5/4835/46693419671_16ff0f43d8_o.jpg)
+Download [Grass hip file](../blob/master/hips/grass_001.hipnc)
+
 #### Randomize copies VOP
 Satter points, copy objects onto points, randomize position, rotation and scale of the copies. 
 [![](https://c1.staticflickr.com/1/887/41411521611_697f823b58_o.gif)](https://c1.staticflickr.com/1/887/41411521611_697f823b58_o.gif)
