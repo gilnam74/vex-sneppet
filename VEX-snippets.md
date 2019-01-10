@@ -130,6 +130,23 @@ else f@pscale = 1;
 f@pscale = (@ptnum == 0) || @ptnum ==(@numpt-1) ? 10 : 1;
 ```
 
+#### Vectors
+```c
+// Find a vector between two points A and B (coords B - coords A)
+v@A = normalize(point(0, "P", <ptnum_B>));
+v@B = normalize(point(0, "P", <ptnum_A>));
+@AB = @A-@B;
+
+// Build tangent normals
+v@A = normalize(point(0, "P", @ptnum));
+v@B = normalize(point(0, "P", @ptnum + 1));
+@N = @A-@B; 
+
+// Get angle between 2 vectors in radians
+f@angle = acos(dot(normalize(v@vector1), normalize(v@vector2)));
+```
+
+
 ## VEX expressions
 Using VEX in parameter interface of Houdini nodes.
 
