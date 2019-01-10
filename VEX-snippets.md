@@ -72,7 +72,7 @@ int primitives[] = expandprimgroup(0, "!*");
 
 foreach (int currentPrim; primitives){   
         // print primitive number
-        printf('Prim %s \n', currentPrim)
+        printf('Prim %s \n', currentPrim);
         }
 ```
 
@@ -169,6 +169,46 @@ neighbourcount(0, @ptnum) == 2
 
 ## Tools
 Complete solutions for basic tasks
+
+#### Use Noise function
+```c
+// Visualise nose as Black and White values
+// Delete black and white points separatly
+
+// Default non zero values for 10X10 grid:
+// Noise_size = 1
+// Noise_threshold = 0.5
+
+// Make geometry white
+@Cd = {1, 1, 1};
+
+// Setup noise
+float noseValues = noise(@P*(1/chf('Noise_Size')) + chf('Noise_Offset'));
+
+// Paint-delete points with noise
+if(noseValues > chf('Noise_Threshold')){
+    @Cd = 0;
+    if(rand(@ptnum) < ch('delete_black')){
+        if(chi('del') == 0){
+            @Cd = {1,0,0};
+            }
+        else{
+            removepoint(0,@ptnum);
+            }
+        }
+    }
+
+if(noseValues < chf('Noise_Threshold')){
+    if ( rand(@ptnum) < ch('delete_white') ) {       
+        if(chi('del') == 0){
+            @Cd = {1,0,0};
+            }
+        else{
+            removepoint(0,@ptnum);
+            }
+        }
+    }
+```
 
 #### Flatten surface bottom
 ```c
