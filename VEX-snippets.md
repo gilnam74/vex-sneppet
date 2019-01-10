@@ -244,7 +244,7 @@ string path = sprintf('D:/PROJECTS/VEX/geo/sim_%s_01.abc', variations[variationI
 
 #### Fade grid Y deformation closer to border
 ```C
-float objectSize = getbbox_max(0).x;
+float objectSize = (getbbox_max(0).x + getbbox_max(0).z)/2;
 float dist = distance(0,@P);
 float offset = chf('offset');
 float fade = chramp('fade', fit(dist, 0, objectSize + offset, 0, 1));
