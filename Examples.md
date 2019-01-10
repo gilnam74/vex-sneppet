@@ -12,7 +12,7 @@ Download [Space Colonisation hip file](../blob/master/hips/spaceColonization_001
 #### Tree with a space colonization algorithm
 Tree made with a space colonization algorithm: create leaves, scutter over brunch, scatter brunches over the trunk
 [![](https://c1.staticflickr.com/5/4911/46693673621_84a829d7bc_o.jpg)](https://c1.staticflickr.com/5/4911/46693673621_84a829d7bc_o.jpg)
-Download [Space Colonisation hip file](../blob/master/hips/treeColonization_001.hipnc)
+Download [Tree hip file](../blob/master/hips/treeColonization_001.hipnc)
 
 #### Grass
 Procedural grass generator
