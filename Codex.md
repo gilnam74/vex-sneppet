@@ -72,11 +72,11 @@ Create material stylesheet for a geometry node containing crowds. [Setup materia
 2) Set shot frame range
 3) Create CHARACTERS and ENVIRONMENT geometry nodes. Add ROMA cache to CHARACTERS node, add CITY HDA to ENVIRONMENT node.
 4) Create materials HDA, rename to MATERIALS
-5) Get Sun, Sky and Fog  
+5) Get Sun and Sky  
 6) Get shot camera
 
-#### Lighting data (Sun, Sky and Fog) transfer between shots
-We can store lights in library <root3D>/lib/LIGHT and import this data into the shots. How to transfer lights modifications between shots?
+#### Lighting data (Sun and Sky) transfer between shots
+We can store lights in the library <root3D>/lib/LIGHT as HDA and import this data into the shots. How to transfer lights modifications between shots?
 
 # Pipeline developing notes
 Here we will record pipeline developing process
