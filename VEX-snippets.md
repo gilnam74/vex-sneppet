@@ -170,6 +170,31 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
+#### Move an object to the origin and return back
+Create wrangle to move object to the origin
+```c
+// Get center of the oject bounding box (centroid)
+vector min = {0, 0, 0};
+vector max = {0, 0, 0};
+getpointbbox(0, min, max);
+vector centroid = (max + min)/2.0;
+
+// Build and apply transformation matrix
+vector translate = centroid;
+vector rotate = {0,0,0};
+vector scale = {1,1,1};
+matrix xform = invert(maketransform(0, 0, translate, rotate, scale));
+@P *= xform;
+
+// Store transformation matrix in attribute
+4@xform_matrix = xform;
+```
+
+Create the second wrangle to return it to the original position
+```c
+@P *= invert(4@xform_matrix);
+```
+
 #### Use Noise function
 ```c
 // Visualise nose as Black and White values
