@@ -1,6 +1,6 @@
 [![](https://c1.staticflickr.com/1/865/26558997907_fbcb313dfc_o.gif)](https://c1.staticflickr.com/1/865/26558997907_fbcb313dfc_o.gif)
 
-This is EVE documentation and learning resource.
+This is EVE documentation and Houdini learning resource.
 
 ## What is EVE?
 EVE is an out of the box Houdini pipeline.
