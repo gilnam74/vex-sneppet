@@ -2,6 +2,10 @@
 
 This is EVE documentation and learning resource.
 
+## What is EVE?
+EVE is an out of the box Houdini pipeline.
+
+## What can I learn about Houdini here?
 Currently, [VEX for artists](vex-for-artists) and [Python for artists](python-for-artists) sections are **the best place to start**. Don't miss [Programming basics](programming-basics) if you don't have a programming experience!
 
 [Houdini Basics](houdini-basics) — General Houdini techniques and triks  
