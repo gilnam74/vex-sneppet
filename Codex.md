@@ -54,11 +54,18 @@ PROD — Production brunch
 
 ## Unsorted
 #### Animation transfer ANM >> RND
-Characters and props: caches (bgeo.sc - geo/SHOTS/010/SHOT_010/ROMA/001/E010_S010_ROMA_001.$F.bgeo.sc)  
-Cameras: caches (Alembic - geo/SHOTS/010/010/SHOT_010/CAM/E010_S010_001.abc)  
-Environments: HDA (HDA - hda/ASSETS/ENVIRONMENTS/...).  
-Animated parts of the ENVIRONMENT has to be stored in different HDA (cant render merged static and animated geo with MB) in ENVIRONMENT_ANM geometry container.
-Internal animation in HDA (traffic in a city): caches (bgeo.sc - geo/ASSETS/ENVIRONMENTS/...)  
+Characters and props caches (bgeo.sc):  
+`geo/SHOTS/010/SHOT_010/ROMA/001/E010_S010_ROMA_001.$F.bgeo.sc`
+ 
+Cameras caches (Alembic):  
+`geo/SHOTS/010/010/SHOT_010/CAM/E010_S010_001.abc`
+ 
+Environments (HDA): 
+`hda/ASSETS/ENVIRONMENTS/...`
+  
+Animated parts of the ENVIRONMENT has to be stored in different HDA (cant render merged static and animated geo with MB) in ENVIRONMENT_ANM geometry container.  
+ENVIRONMENT  ANM (HDA): 
+`geo/ASSETS/ENVIRONMENTS/...`  
 
 #### Materials workflow
 ##### Characters
