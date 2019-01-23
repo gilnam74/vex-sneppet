@@ -96,14 +96,10 @@ ANM_E010_S010_001.hip
 Currently, I consider 3 main option to explore: Ftrack($10/month), Shotgun($30/month), JSON file (Free but hard to edit).
 
 ### JSON
-There are 2 files ASSETS.json and SHOTS.json in `<rootProject>\PREP\PIPELINE\EVE\database`.
-The question is how to setup a list of assets and a list of shots. It could be nested dictionaries (current) or list o dictionaries. Conserns: list of dictionaries may be more close-to Shotgun database type, so it would be more easy to switch from JSON to SG later. But nested dictionaries more easy to work with.
+Before Shotgun implementation, we use the JSON file to store assets and shots data for the current project.  
+File location: `<rootPipeline>`/EVE/genes/genes.json
 
-Switch to lists of dictionaries in a joined file DATABASE.json:
-
-{ASSETS: {CHAR: [{code:ROMA, materials:[GEN_BASE:[list of objects]]}, {}], ENV: [], PROPS: []}, SHOTS: {010:[{SHOT_010}]}}
-
-concerns: list of sequences/shots ???
+The structure of genes.json mimic Shotgun database API calls, so it should be easy to switch to Shotgun database and maintain both systems in parallel (for those who can't afford Shotgun).
 
 ## FX
 FX is a special type of animation done by simulation techniques (RBD, particles, fluids etc). To produce FX we need input data from modeling and animation department, eg. models, cameras, animations etc (FX INPUT DATA). The result of FX transferred to render scenes (FX OUTPUT DATA). FX could be done for SHOTS or for ASSETS (to be automatically present in all SHOTS with the particular asset). Each FX should be named <FXName> (in form of 3 letter code?).
