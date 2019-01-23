@@ -81,6 +81,17 @@ We can store lights in the library <root3D>/lib/LIGHT as HDA and import this dat
 # Pipeline developing notes
 Here we will record pipeline developing process
 
+## Naming conventions for files
+#### HDA
+<hdaName>_001.hda  
+<hdaName> = [CITY, CITY_PRX]
+#### Render scenes
+RND_E010_S010_001.hip
+#### Animation scenes
+ANM_E010_S010_001.hip
+#### FX scenes
+<FXCode>_001.hip
+
 ## Project Management system
 Currently, I consider 3 main option to explore: Ftrack($10/month), Shotgun($30/month), JSON file (Free but hard to edit).
 
