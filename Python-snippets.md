@@ -40,6 +40,11 @@ node = hou.selectedNodes()[0] # By selection
 node.children()
 ```
 
+# Get node upstream connections
+```Python
+listParents = node.inputAncestors()
+```
+
 ##### Create node in the scene
 To create any node wiyh Python you have to set parent node for that. You need to create Geometry node in OBJ context.
 ```Python
