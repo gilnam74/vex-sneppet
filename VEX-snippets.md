@@ -316,7 +316,7 @@ float fade = chramp('fade', fit(dist, 0, objectSize + offset, 0, 1));
 @P.y *= fade;
 ``` 
 
-#### Fade noise with ramp
+#### Fade noise on curves with ramp
 ```c
 // Requires uvtexture SOP in "Pts and Columns" mode before this wrangle
 
