@@ -318,27 +318,21 @@ float fade = chramp('fade', fit(dist, 0, objectSize + offset, 0, 1));
 
 #### Fade noise with ramp
 ```c
-// Get UV values and assign to color
-// Require uv_texture SOP in "Pts and Columns" mode before this wrangle
-@Cd = @uv.x;
-
+// Requires uvtexture SOP in "Pts and Columns" mode before this wrangle
 
 // Define UI controls
-float remap_uv = chramp('remap_uv', @Cd.x);
+float remap_uv = chramp('remap_uv', @uv.x);
 float power = chf('Noise_Power');
 float freq = chf('Noise_Frequency');
 
-
 // Create noise
 vector noiseXYZ = noise(@P*freq);
-// Remap noise values to [-1;1] and increase by UI value
-vector displace = fit(noiseXYZ, 0,1, -1, 1)*power;
-// Remap color with ramp in UI
-@Cd *= remap_uv;
-// Apply remapped color to noise
-displace *= @Cd.x;
-// Apply noise to a point position
+// Modify noise values
+vector displace = fit(noiseXYZ, 0,1, -1, 1)*power*remap_uv;
+// Apply modified noise to a points position
 @P += displace;
+// Visualize fade ramp on curve
+@Cd = remap_uv;
 ```
 
 #### Rotate GEO with matrix along Y axis
