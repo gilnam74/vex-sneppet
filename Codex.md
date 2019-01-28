@@ -118,8 +118,8 @@ Houdini scenes with FX are located in $JOB/scenes/FX/ASSETS(SHOTS).
 `$JOB/fx/ASSETS(SHOTS)/<FXName>`
 
 #### FX OUTPUT DATA
-ASSETS: `$JOB/geo/ASSETS/<assetType>/<assetName>/<FXName>`  
-SHOTS:  `$JOB/geo/SHOTS/<episodeCode>/<shotCode>/<FXName>`
+ASSETS: `$JOB/geo/ASSETS/<assetType>/<assetName>/FX/<FXName>`  
+SHOTS:  `$JOB/geo/SHOTS/<episodeCode>/<shotCode>/FX/<FXName>`
 
 ## Core concepts
 All project data located in one folder on the network drive.  
