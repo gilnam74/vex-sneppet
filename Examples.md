@@ -9,10 +9,10 @@ Scatter points along surface or volume, grow organic structure.
 [![](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)](https://c1.staticflickr.com/1/813/40697098994_88c80c9110_o.gif)
 Download [Space Colonisation hip file](../blob/master/hips/spaceColonization_001.hipnc)
 
-#### Visualize and use VEX noise
+#### Visualize and use VEX noise to delete points
 Paint geometry (points) to black and white colors using noise pattern. Adjust noise look with "Size", "Offset" and "Threshold" parameters. Randomly delete (or paint with red color) black or white parts with "Delete White" and "Delete Black" sliders. To switch between deleting and painting use "Delete/Pint" toggle.
 [![](https://c1.staticflickr.com/5/4918/39729617033_85a925d74e_o.gif)](https://c1.staticflickr.com/5/4918/39729617033_85a925d74e_o.gif)
-Download [Infection hip file](../blob/master/hips/noise_001.hipnc)
+Download [noise](../blob/master/hips/noise_001.hipnc)
 
 #### Tree with a space colonization algorithm
 Tree made with a space colonization algorithm: create leaves, scutter over brunch, scatter brunches over the trunk
