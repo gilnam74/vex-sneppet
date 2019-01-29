@@ -55,7 +55,7 @@ PROD — Production brunch
 ## Unsorted
 #### Animation transfer ANM >> RND
 Characters and props caches (bgeo.sc):  
-`geo/SHOTS/010/SHOT_010/ROMA/001/E010_S010_ROMA_001.$F.bgeo.sc`
+`geo/SHOTS/010/SHOT_010/<assetName>/001/E010_S010_001.$F.bgeo.sc`
  
 Cameras caches (hip):  
 `geo/SHOTS/010/010/SHOT_010/CAM/CAM_E010_S010_001.hip`
