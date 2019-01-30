@@ -148,7 +148,7 @@ f@angle = acos(dot(normalize(v@vector1), normalize(v@vector2)));
 
 
 ## VEX expressions
-Using VEX in parameter interface of Houdini nodes.
+Using VEX in parameter interface of Houdini nodes. See [documentation](http://www.sidefx.com/docs/houdini/expressions/index.html)
 
 #### Get Attributes
 ```c
