@@ -48,3 +48,9 @@ Download [Pack the object hip file](../blob/master/hips/EXA_packObject_001.hipnc
 Create seamles animation, create different animation versions, export to Alembic, copy ABC and randomize file versions and time shift for each copie.  
 [![](https://c1.staticflickr.com/1/912/27320532997_02d02ff488_o.gif)](https://c1.staticflickr.com/1/912/27320532997_02d02ff488_o.gif) 
 Download [Randomize ABC copies hip file](../blob/master/hips/TUT_copyABC_001.hipnc)
+
+#### Recursive split
+Iterate N times to shatter geometry with boolean SOP and deformed plane
+[![](https://c2.staticflickr.com/8/7834/46940701961_58a4ec9ea9_o.jpg)](https://c2.staticflickr.com/8/7834/46940701961_58a4ec9ea9_o.jpg) 
+Download [Recursive Split](../blob/master/hips/recursiveSplit_001.hipnc)
+
