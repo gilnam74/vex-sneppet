@@ -68,7 +68,7 @@ setpointattrib(0, 'myAttribute', 0, 'attributrValue', "set");
 #### Debug VEX with print
 ```c
 // Get all primitives
-int primitives[] = expandprimgroup(0, "!*");
+int primitives[] = expandprimgroup(0, "*");
 
 foreach (int currentPrim; primitives){   
         // print primitive number
