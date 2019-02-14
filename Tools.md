@@ -16,6 +16,8 @@ Create Project tool allows to setup and run a new project with Mother. Run `crea
 `SNV` button on EVE shelf. Incrementaly saves current houdini scene  
 fileCode_001.hip >> fileCode_002.hip
 
+[![](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)
+
 If a file with next version exists, tool finds the latest existing version and rise warning window with such options:  
 - Save Next Version — save the file with the latest available version  
 - Overwrite Existing — overwrite a file with latest existing version  
@@ -24,26 +26,32 @@ If a file with next version exists, tool finds the latest existing version and r
 #### Create Scene
 `Create Scene` button on EVE shelf. Create animation or render scenes. Heavily rely on the database (Shotgun). At the current stage, the database exists as a JSON file which user has to edit manually in a text editor to setup assets and shots data. 
 
+[![](https://c2.staticflickr.com/8/7874/46370254914_29e08155e0_o.gif)](https://c2.staticflickr.com/8/7874/46370254914_29e08155e0_o.gif)
+
 The script creates render scene for desired shot: 
 - Name and save Houdini file
 - Import lights and materials via HDA
 - Creates assets based on shot data: environment, characters, props and FXs.
 - Add Mantra node and set its parameters (sampling and output file)
 
+#### Export Animation
+`Export ANM` button on EVE shelf. Exports data from animation to the render scene:
+- Export shot camera to Alembic
+- Export character caches
+
+#### Import Animation
+`Import ANM` button on EVE shelf. Import animation data in render scene including FXs:
+- Import shot camera from Alembic
+- Import character caches
+- Import FXs (TBD)
+
 ## Unsorted
-Will be sorted after getting a descent amount of tools
-
-
-
-[![](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)](https://c2.staticflickr.com/2/1915/45102596111_6576562e3a_o.gif)
-
-
+Will be sorted after getting a decent amount of tools
 
 #### Create Flipbook
 `FB` button on EVE shelf. Create Flipbook for current animation or render scene.
 
-#### import ANM
-Import animation caches to a render scene. WIP.
+
 
 ## Temporary
 Tools currently used for "NSI" project. Will be removed for the final pipeline.
