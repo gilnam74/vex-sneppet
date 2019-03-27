@@ -1,6 +1,6 @@
 [![](https://c1.staticflickr.com/1/865/26558997907_fbcb313dfc_o.gif)](https://c1.staticflickr.com/1/865/26558997907_fbcb313dfc_o.gif)
 
-This is EVE documentation and Houdini learning resource.
+This wiki is an EVE documentation and Houdini learning resource.
 
 ## What is EVE?
 EVE is an out of the box Houdini production pipeline. Download this repo as a zip file, extract, build a new project with a **Create Project** tool and you are ready to manage and deliver the CGI magic! 
