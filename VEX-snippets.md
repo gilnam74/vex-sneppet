@@ -176,7 +176,9 @@ Create TimeShift SOP after animated geo, Scatter SOP and Attribute Wrangler. Con
 int prim;
 vector uv;
 
+// What prim the scatterd point is close to, and position of this prim in uv space
 xyzdist(1, @P, prim, uv);
+// Set scattered point position 
 @P = primuv(2, "P", prim, uv);
 ```
 
