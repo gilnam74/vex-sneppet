@@ -170,6 +170,16 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
+### Stick points to animated geometry
+Create TimeShift SOP after animated geo, Scatter SOP and Attribute Wrangler. Connect scatter, timeShift, animated geo to inputs 0, 1 and 2 of the wrangle.
+```c
+int prim;
+vector uv;
+
+xyzdist(1, @P, prim, uv);
+@P = primuv(2, "P", prim, uv);
+```
+
 #### Move an object to the origin and return back
 Create wrangle to move object to the origin
 ```c
