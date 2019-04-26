@@ -48,7 +48,7 @@ The script creates render scene for desired shot:
 #### Render Farm
 `Farm` button on EVE shelf. Render shots manager which allows rendering sequence of hip files.
 
-[![](https://live.staticflickr.com/65535/47643518262_21993b12b8_o.gif)](https://live.staticflickr.com/65535/47643518262_21993b12b8_o.gif)
+[![](https://live.staticflickr.com/65535/33828394678_58eb5b37fb_o.gif)](https://live.staticflickr.com/65535/33828394678_58eb5b37fb_o.gif)
 
 ## Unsorted
 Will be sorted after getting a decent amount of tools
