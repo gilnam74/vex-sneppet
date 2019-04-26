@@ -46,7 +46,7 @@ The script creates render scene for desired shot:
 - Import FXs (TBD)
 
 #### Render Farm
-`Farm` button on EVE shelf. Render shots manager which allows rendering sequence of hip files.
+`Farm` button on EVE shelf. Process recursive rendering of a list of hip files until all frames will be complete.
 
 [![](https://live.staticflickr.com/65535/33828394678_58eb5b37fb_o.gif)](https://live.staticflickr.com/65535/33828394678_58eb5b37fb_o.gif)
 
