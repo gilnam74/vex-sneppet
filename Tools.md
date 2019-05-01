@@ -48,7 +48,7 @@ The script creates render scene for desired shot:
 #### Render Farm
 `Farm` button on EVE shelf. Process recursive rendering of a list of hip files until all frames will be complete. Add shots to the list via sequence and shot numbers. Before publishing will be implemented, assumes that the latest render scene outputs EXR to the latest rendering folder version. 
 
-[![](https://live.staticflickr.com/65535/33828394678_58eb5b37fb_o.gif)](https://live.staticflickr.com/65535/33828394678_58eb5b37fb_o.gif)
+[![](https://live.staticflickr.com/65535/33872484668_f1470dcb89_o.gif)](https://live.staticflickr.com/65535/33872484668_f1470dcb89_o.gif)
 
 ## Unsorted
 Will be sorted after getting a decent amount of tools
