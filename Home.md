@@ -5,6 +5,8 @@ This wiki is an EVE documentation and Houdini learning resource.
 ## What is EVE?
 EVE is an out of the box Houdini production pipeline. Download this repo as a zip file, extract, build a new project with a [Create Project](tools#create-project) tool and you are ready to manage and deliver the CGI magic! 
 
+This repository is a draft pipeline version. If you want to use Eve for your projects, go to the [new Eve repo](https://github.com/kiryha/Eve) and follow instructions. 
+
 ## What can I learn about Houdini here?
 Currently, [VEX for artists](vex-for-artists) and [Python for artists](python-for-artists) sections are **the best place to start**. Don't miss [Programming basics](programming-basics) if you don't have a programming experience!
 
