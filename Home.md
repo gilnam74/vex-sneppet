@@ -1,6 +1,6 @@
+## What is EVE?
 [![](https://live.staticflickr.com/65535/48087753286_d82d6097d2_o.jpg)](https://live.staticflickr.com/65535/48087753286_d82d6097d2_o.jpg)
 
-## What is EVE?
 "Eve" is an **out of the box VFX pipeline** for Houdini application. It is a full CG oriented pipeline which can handle small tasks with just a few shots as well as huge projects like animation feature or TV series. 
 
 Eve does not provide any particular solutions for any of CG techniques like modeling, rigging, rendering etc, it just structures all project data and provides tools for data managing and exchange. In other words, Eve is an abstract data management system for your Houdini projects.
