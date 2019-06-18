@@ -77,4 +77,4 @@ Here is an example of environment asset UI:
 
 Since we use simplified data, just create a geometry node inside "KIEV" HDA and load `<root3D>/caches/ASSETS/ENVIRONMENTS/KIEV/terrain_001.bgeo.sc` with File Cache node. Save "KIEV" HDA (right click > Save Node Type). 
 
-SNV
+Use "Save Next Version" tool to save the scene to the next version when needed.
