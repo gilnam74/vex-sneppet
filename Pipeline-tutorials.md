@@ -5,14 +5,14 @@ This section contains pipeline related tutorials.
 Currently, Houdini Pipeline Toolkit designed to be run on Windows OS. Here is the list of things you need to have before pipeline will works.
 
 Before running Houdini Pipeline Toolkit you need to install:
-- Houdini  
+- Houdini 
 - Python 2.7.5 x 64 (or later version) 
 - pip  
 - PySide
 - GitHub Desktop
 
 #### Install Houdini
-Go to [SESI site](https://www.sidefx.com/products/compare/), choose, download and install your Houdini version.
+Go to [SESI site](https://www.sidefx.com/products/compare/), choose, download and install your Houdini version. Eve assume Houdini would be located in `C:/Program Files/Side Effects Software/Houdini <buildNumber>/bin/houdinifx.exe`, otherwise you will need to tweak this path in `Eve/src/runHoudini.py` before creating any projects. 
 
 #### Install Python
 Get your [X64 Python 2.7.5](https://www.python.org/downloads/release/python-275/)
@@ -37,10 +37,11 @@ Alternatively, you can just download this repo as a zip file and extract to the 
 ## The first Eve project
 Here we will step by step create an example project to understand the basics of Eve workflow. 
 
-`Eve` presented as a folder with files on your hard drive and it does not include your project's data. For each of your project, we will need an additional folder usually located somewhere in "projects" dir, for example, `D:/projects/<projectName>`.
+`Eve` presented as a folder with files on your hard drive and it does not include your project's data. For each of your project, we will need an additional folder usually located somewhere in "projects" directory, for example, `D:/projects/<projectName>`. Those project folders would be created automatically with Eve `Create Project` tool.
 
 #### Create project
 Go to the Eve root folder `D:/Eve` and run `createProjecrt.bat`:
 
 [![](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)
 
+Select project location (`D:/projects/`), enter project name () and Houdini build number you have installed ()
