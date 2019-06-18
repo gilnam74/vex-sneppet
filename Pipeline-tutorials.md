@@ -63,7 +63,7 @@ Before dive deep into Houdini magic, we need to prepare some data. Run `Project 
 [![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
 
 #### Create asset files
-Select "KIEV" asset and press "Create Hip" button in Project Manager. The scene with the empty "KIEV" Houdini Digital Asset would be created in `<root3D>/scenes/ASSSETS/ENVIRONMENTS/KIEV/`. This is a working file where you suppose to create all elements of the environment asset. Houdini Digital Asset "KIEV" is a container to store resulting models (which meant to be used in animation and render scenes). Usually, it will contain baked geometry and volumes to represent final environment look. Lights? Once you finish modeling environment, create necessary nodes to load models in "KIEV" HDA and desired UI elements for the asset, if needed. Here is an example of environmnt asset UI:
+Select "KIEV" asset and press "Create Hip" button in Project Manager. The scene with the empty "KIEV" Houdini Digital Asset would be created in `<root3D>/scenes/ASSSETS/ENVIRONMENTS/KIEV/`. This is a working file where you suppose to create all elements of the environment asset. Houdini Digital Asset "KIEV" is a container to store resulting models (which meant to be used in animation and render scenes). Usually, it will contain baked geometry and volumes to represent final environment look as well as UI elements to controll asset behaivor. Lights? Here is an example of environmnt asset UI:
 
 [![](https://live.staticflickr.com/65535/48088489032_28baa44950_o.gif)](https://live.staticflickr.com/65535/48088489032_28baa44950_o.gif)
 
