@@ -61,3 +61,6 @@ Select the project location (`P:/projects/`), enter the project name (`beauty`),
 Before dive deep into Houdini magic, we need to prepare some data. Run `Project Manager` tool (`PM` button on Eve shelf) and create character asset "ROMA", environment asset "KIEV", FX asset "VANISH", sequence 010 and SHOT_010.
 
 [![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
+
+#### Create asset files
+Select "KIEV" asset and press "Create Hip" button in Project Manager. The scene with the empty "KIEV" Houdini Digital Asset would be created in `<root3D>/scenes/ASSSETS/ENVIRONMENTS/KIEV`
