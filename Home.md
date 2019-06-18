@@ -24,4 +24,4 @@ Don't miss [Programming basics](programming-basics) if you don't have programmin
 
 [Python for artists](python-for-artists) | [Python snippets](python-snippets) — Applyed Python in Houdini  
 [VEX for artists](vex-for-artists) | [VEX snippets](vex-snippets) — Applyed VEX  
-[HIP Examples](examples) — Example HIP files  
+[HIP Examples](examples) — Small solutions as a HIP files  
