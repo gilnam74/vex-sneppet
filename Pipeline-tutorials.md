@@ -32,7 +32,7 @@ where you supposing to keep Eve pipeline.
 
 [![](https://live.staticflickr.com/65535/48019681856_fd0a55facb_o.gif)](https://live.staticflickr.com/65535/48019681856_fd0a55facb_o.gif)
 
-Alternatively, you can just download this repo as a zip file and extract to the desired location. Hence you would not need GitHub Desktop nut, in this case, it would be more tricky to get updates. 
+Alternatively, you can just download this repo as a zip file and extract to the desired location. Hence you would not need GitHub Desktop but, in this case, it would be more tricky to get updates. 
 
  
 ## Create the first project
