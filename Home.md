@@ -21,7 +21,7 @@ The best places to start with VEX and Python:
 
 Don't miss [Programming basics](programming-basics) if you don't have programming experience!
 
-[Programming basics](programming-basics) — Programming concepts for artists  
-[Python for artists](python-for-artists) | [Python snippets](python-snippets) — Python in Houdini usage  
-[VEX for artists](vex-for-artists) | [VEX snippets](vex-snippets) — VEX code examples  
-[HIP Examples](examples) — Tehniques as HIP files   
+
+[Python for artists](python-for-artists) | [Python snippets](python-snippets) — Applyed Python in Houdini  
+[VEX for artists](vex-for-artists) | [VEX snippets](vex-snippets) — Applyed VEX  
+[HIP Examples](examples) — Example HIP files  
