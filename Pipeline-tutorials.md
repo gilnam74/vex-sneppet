@@ -27,18 +27,20 @@ To install PIP do the folowing:
 Run cmd and exequte: `pip install PySide`
 
 #### Install GitHub Desktop and clone pipeline
-Install [Github Desktop](https://electronjs.org/apps/github-desktop) and clone this repo to the local drive, 
-where you supposing to keep Eve pipeline. 
+Install [Github Desktop](https://electronjs.org/apps/github-desktop) and clone this repo to the hard drive where you suppose to keep Eve pipeline, for example, `D:/Eve`. 
 
 [![](https://live.staticflickr.com/65535/48019681856_fd0a55facb_o.gif)](https://live.staticflickr.com/65535/48019681856_fd0a55facb_o.gif)
 
-Alternatively, you can just download this repo as a zip file and extract to the desired location. Hence you would not need GitHub Desktop but, in this case, it would be more tricky to get updates. 
+Alternatively, you can just download this repo as a zip file and extract to the same desired location. Hence you would not need GitHub Desktop but, in this case, it would be more tricky to get updates each time (download again, extract, overwrite existing files). 
 
  
-## The first project
-Here we will step by step create an example project to understand the basics of Eve workflow.
+## The first Eve project
+Here we will step by step create an example project to understand the basics of Eve workflow. 
+
+`Eve` presented as a folder with files on your hard drive and it does not include your project's data. For each of your project, we will need an additional folder usually located somewhere in "projects" dir, for example, `D:/projects/<projectName>`.
 
 #### Create project
-Go to the Eve root folder and run `createProjecrt.bat`:
+Go to the Eve root folder `D:/Eve` and run `createProjecrt.bat`:
 
 [![](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)
+
