@@ -10,6 +10,8 @@ No matter how you would create your assets and renders, `Eve` will provide tools
 ## Learn more about Eve
 Interested to try Eve? Go to the [Eve Tutorials](pipeline-tutorials) section, install and create your first project!
 
+To get deeper take a look at [Eve Codex](codex) — full pipeline documentation.
+
 ## What else can I learn here?
 Currently, [VEX for artists](vex-for-artists) and [Python for artists](python-for-artists) sections are **the best place to start**. Don't miss [Programming basics](programming-basics) if you don't have programming experience!
 
