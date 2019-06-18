@@ -40,8 +40,8 @@ Here we will step by step create an example project to understand the basics of 
 `Eve` presented as a folder with files on your hard drive and it does not include your project's data. For each of your project, we will need an additional folder usually located somewhere in "projects" directory, for example, `D:/projects/<projectName>`. Those project folders would be created automatically with Eve `Create Project` tool.
 
 #### Create project
-Go to the Eve root folder `D:/Eve` and run `createProjecrt.bat`:
+Go to the Eve root folder `P:/Eve` and run `createProjecrt.bat`:
 
 [![](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)
 
-Select project location (`D:/projects/`), enter project name () and Houdini build number you have installed ()
+Select the project location (`P:/projects/`), enter the project name (`beauty`), Houdini build number you have installed and press the "Create Project" button. If everything went right, Windows Explorer will open a folder with a Houdini wrapper file (`runHoudini.bat`) located in `P:/projects/beauty/PREP/PIPELINE/`. Create a shortcut on Desktop to this file and launch Houdini by double-clicking it.
