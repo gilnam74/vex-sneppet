@@ -36,5 +36,6 @@ Alternatively, you can just download this repo as a zip file and extract to the 
 
  
 ## Create the first project
-Go to the Eve root folder and run `createProjecrt.but`:
+Go to the Eve root folder and run `createProjecrt.bat`:
+
 [![](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)
