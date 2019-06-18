@@ -36,6 +36,5 @@ Alternatively, you can just download this repo as a zip file and extract to the 
 
  
 ## Create the first project
-* Download [HPT repository](https://github.com/kiryha/Houdini) as a ZIP file, extract to any temporary location.
-* Modify `houdini` variable in runHoudini.py to match your Houdini install dir
-* Run createProjecrt.but and follow instructions
+Go to the Eve root folder and run `createProjecrt.but`:
+[![](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)
