@@ -58,4 +58,4 @@ Go to the Eve root folder `P:/Eve` and run `createProjecrt.bat`:
 Select the project location (`P:/projects/`), enter the project name (`beauty`), Houdini build number you have installed and press the "Create Project" button. If everything went right, Windows Explorer will open a folder with a Houdini wrapper file (`runHoudini.bat`) located in `P:/projects/beauty/PREP/PIPELINE/`. Create a shortcut on Desktop to this file and launch Houdini by double-clicking it.
 
 #### Create assets and shots in the database
-Before dive deep into Houdini magic, we need to prepare some data 
+Before dive deep into Houdini magic, we need to prepare some data. Run `Project Manager` tool (`PM` button on Eve shelf) and create character asset "ROMA", environment asset "KIEV", FX asset "VANISH", sequence 010 and SHOT_010.
