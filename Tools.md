@@ -12,6 +12,12 @@ Create Project tool allows to setup and run a new project with Eve. Run `createP
 [ SET LOCATION ] — Folder to store all project data  
 [ CREATE PROJECT ] — Run the project creation process. This will add a folder with a folder structure, copy pipeline files inside, create a project in Shotgun based on user-defined settings.
 
+#### Project Manager
+Once you have your project in place its time to create assets and shots and make connections between them. Project Manager is a sort of light Shotgun, a system which controls your pipeline data.
+
+[![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
+
+
 #### Save Next Version
 `SNV` button on EVE shelf. Incrementaly saves current houdini scene  
 fileCode_001.hip >> fileCode_002.hip
