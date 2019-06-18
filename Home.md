@@ -13,7 +13,13 @@ Interested to try Eve? Go to the [Eve Tutorials](pipeline-tutorials) section, in
 To get deeper take a look at [Eve Codex](codex) — full pipeline documentation.
 
 ## What else can I learn here?
-Currently, [VEX for artists](vex-for-artists) and [Python for artists](python-for-artists) sections are **the best place to start**. Don't miss [Programming basics](programming-basics) if you don't have programming experience!
+Attempt to make first steps with Houdini, Programming or Math? In addition to `Eve` specific materials, we have plenty of Houdini tutorials! 
+
+The best places to start with VEX and Python:
+- [VEX for artists](vex-for-artists) 
+- [Python for artists](python-for-artists)
+
+Don't miss [Programming basics](programming-basics) if you don't have programming experience!
 
 [Programming basics](programming-basics) — Programming concepts for artists  
 [Python for artists](python-for-artists) | [Python snippets](python-snippets) — Python in Houdini usage  
