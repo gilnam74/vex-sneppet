@@ -59,3 +59,5 @@ Select the project location (`P:/projects/`), enter the project name (`beauty`),
 
 #### Create assets and shots in the database
 Before dive deep into Houdini magic, we need to prepare some data. Run `Project Manager` tool (`PM` button on Eve shelf) and create character asset "ROMA", environment asset "KIEV", FX asset "VANISH", sequence 010 and SHOT_010.
+
+[![](https://live.staticflickr.com/65535/33872484668_f1470dcb89_o.gif)](https://live.staticflickr.com/65535/33872484668_f1470dcb89_o.gif)
