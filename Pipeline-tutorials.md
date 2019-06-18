@@ -38,10 +38,9 @@ Alternatively, you can just download this repo as a zip file and extract to the 
 Here we will step by step create an example project to understand the basics of Eve workflow. 
 [![](https://live.staticflickr.com/65535/48087767582_928942e9c1_o.jpg)](https://live.staticflickr.com/65535/48087767582_928942e9c1_o.jpg)
 
-
+#### Create project with Eve
 `Eve` presented as a folder with files on your hard drive and it does not include your project's data. For each of your project, we will need an additional folder usually located somewhere in "projects" directory, for example, `D:/projects/<projectName>`. Those project folders would be created automatically with Eve `Create Project` tool.
 
-#### Create project
 Go to the Eve root folder `P:/Eve` and run `createProjecrt.bat`:
 
 [![](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)
