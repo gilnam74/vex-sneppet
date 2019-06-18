@@ -2,7 +2,7 @@
 This section contains pipeline related tutorials.
 
 ## Installation
-Currently, Houdini Pipeline Toolkit designed to be run on Windows OS. Here is the list of things you need to have before pipeline will works.
+Currently `Eve` designed to be run on Windows OS. Here is the list of things you need to have before pipeline will works.
 
 Before running Houdini Pipeline Toolkit you need to install:
 - Houdini 
