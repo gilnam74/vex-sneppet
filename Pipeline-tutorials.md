@@ -55,7 +55,7 @@ Go to the Eve root folder `P:/Eve` and run `createProjecrt.bat`:
 
 [![](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)](https://live.staticflickr.com/65535/48019770601_10f9642217_o.gif)
 
-Select the project location (`P:/projects/`), enter the project name (`beauty`), Houdini build number you have installed and press the "Create Project" button. If everything went right, Windows Explorer will open a folder with a Houdini wrapper file (`runHoudini.bat`) located in `P:/projects/beauty/PREP/PIPELINE/`. Create a shortcut on Desktop to this file and launch Houdini by double-clicking it.
+Select the project location (`P:/projects/`), enter the project name (`beauty`), Houdini build number you have installed, check "Copy Example Data" and press the "Create Project" button. If everything went right, Windows Explorer will open a folder with a Houdini wrapper file (`runHoudini.bat`) located in `P:/projects/beauty/PREP/PIPELINE/`. Create a shortcut on Desktop to this file and launch Houdini by double-clicking it.
 
 #### Create assets and shots in the database
 Before dive deep into Houdini magic, we need to prepare some data. Run `Project Manager` tool (`PM` button on Eve shelf) and create character asset "ROMA", environment asset "KIEV", FX asset "VANISH", sequence 010 and SHOT_010.
@@ -63,4 +63,8 @@ Before dive deep into Houdini magic, we need to prepare some data. Run `Project 
 [![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
 
 #### Create asset files
-Select "KIEV" asset and press "Create Hip" button in Project Manager. The scene with the empty "KIEV" Houdini Digital Asset would be created in `<root3D>/scenes/ASSSETS/ENVIRONMENTS/KIEV`
+Select "KIEV" asset and press "Create Hip" button in Project Manager. The scene with the empty "KIEV" Houdini Digital Asset would be created in `<root3D>/scenes/ASSSETS/ENVIRONMENTS/KIEV/`. This is a working file where you suppose to create all elements of the environment asset. Houdini Digital Asset "KIEV" is a container to store resulting models (which meant to be used in animation and render scenes). Usually, it will contain baked geometry and volumes to represent final environment look. Lights? Once you finish modeling environment, create necessary nodes to load models in "KIEV" HDA and desired UI elements for the asset, if needed. Here is an example of environmnt asset UI:
+
+[![](https://live.staticflickr.com/65535/48088489032_28baa44950_o.gif)](https://live.staticflickr.com/65535/48088489032_28baa44950_o.gif)
+
+Since we use simplified data, just create a geometry node inside "KIEV" HDA and load `<root3D>/caches/ASSETS/ENVIRONMENTS/KIEV/terrain_001.bgeo.sc` with File Cache node. Save "KIEV" HDA (right click > Save Node Type)
