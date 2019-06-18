@@ -1,5 +1,5 @@
 * [Introduction](https://github.com/kiryha/Houdini/wiki)
-* Documentation
+* Eve Documentation
   - [Codex](codex)
   - [Tools](tools)
   - [Tutorials](pipeline-tutorials)
