@@ -88,6 +88,8 @@ If you checked "Cope Example Project" while creating this project, the environme
 
 Since we use simplified data, just create a geometry node inside "KIEV" HDA and load `<root3D>/caches/ASSETS/ENVIRONMENTS/KIEV/terrain_001.bgeo.sc` with File Cache node. Save "KIEV" HDA (right click > Save Node Type). 
 
+Open Project Manager, select KIEV asset, enter HDA name <KIEV> and press "Save Asset Edits"
+
 Use "Save Next Version" tool to save the scene to the next version when needed.
 
 ##### ROMA
