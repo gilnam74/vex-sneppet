@@ -93,3 +93,10 @@ Use "Save Next Version" tool to save the scene to the next version when needed.
 ##### ROMA
 Select "ROMA" asset and press "Create Hip" button in Project Manager. 
 
+The empty scene would be created in:
+`<root3D>/scenes/ASSETS/CHARACTERS/ROMA/GEO/GEO_ROMA_001.hiplc`
+
+#### VANISH
+Select "VANISH" asset and press "Create Hip" button in Project Manager. 
+
+The scene with empty "VANISH" Houdini Digital Asset would be created in:
