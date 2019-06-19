@@ -103,3 +103,7 @@ Create "ROMA" geometry node and load character geometry with FileCache node from
 Select "VANISH" asset and press "Create Hip" button in Project Manager. 
 
 The scene with empty "VANISH" Houdini Digital Asset would be created in:
+`<root3D>/scenes/FX/ASSETS/ENVIRONMENTS/VANISH/FXS_VANISH_001.hiplc`
+
+The HDA with VANISH effect would be saved in:
+`<root3D>/hda/FX/ASSETS/ENVIRONMENTS/VANISH/HDA_VANISH_001.hdalc`
