@@ -109,3 +109,5 @@ The scene with empty "VANISH" Houdini Digital Asset would be created in:
 
 The HDA with VANISH effect would be saved in:
 `<root3D>/hda/FX/ASSETS/ENVIRONMENTS/VANISH/HDA_VANISH_001.hdalc`
+
+Open Project Manager, select VANISH asset, enter HDA name `VANISH` and press "Save Asset Edits"
