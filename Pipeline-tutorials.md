@@ -65,6 +65,7 @@ Before dive deep into Houdini magic, we need to prepare some data. Run `Project 
 [![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
 
 #### Create asset files
+##### KIEV
 Select "KIEV" asset and press "Create Hip" button in Project Manager. 
 
 If you checked "Cope Example Project" while creating this project, the environment asset scene and environment asset HDA would be already in place, so the script will ask you if you want to create new versions of `ENV_KIEV_001.hiplc` and `HDA_KIEV_001.hiplc`. Save the next versions of files.
@@ -82,3 +83,6 @@ Here is an example of environment asset UI:
 Since we use simplified data, just create a geometry node inside "KIEV" HDA and load `<root3D>/caches/ASSETS/ENVIRONMENTS/KIEV/terrain_001.bgeo.sc` with File Cache node. Save "KIEV" HDA (right click > Save Node Type). 
 
 Use "Save Next Version" tool to save the scene to the next version when needed.
+
+Select "ROMA" asset and press "Create Hip" button in Project Manager. 
+
