@@ -65,7 +65,11 @@ Before dive deep into Houdini magic, we need to prepare some data. Run `Project 
 [![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
 
 #### Create asset files
-Select "KIEV" asset and press "Create Hip" button in Project Manager. The scene with the empty "KIEV" Houdini Digital Asset would be created in:
+Select "KIEV" asset and press "Create Hip" button in Project Manager. 
+
+If you checked "Cope Example Project" while creating this project, the environment asset scene and environment asset HDA would be already in place, so the script will ask you if you want to create new versions of `ENV_KIEV_001.hiplc` and `HDA_KIEV_001.hiplc`. Save the next versions of files.
+
+The scene with the empty "KIEV" Houdini Digital Asset would be created in:
 
 `<root3D>/scenes/ASSSETS/ENVIRONMENTS/KIEV/ENV_KIEV_001.hiplc`. 
 
