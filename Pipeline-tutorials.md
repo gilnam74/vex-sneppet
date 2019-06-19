@@ -96,6 +96,9 @@ Select "ROMA" asset and press "Create Hip" button in Project Manager.
 The empty scene would be created in:
 `<root3D>/scenes/ASSETS/CHARACTERS/ROMA/GEO/GEO_ROMA_001.hiplc`
 
+Create "ROMA" geometry node and load character geometry with FileCache node from:
+`<root3D>/caches/ASSETS/CHARACTERS/ROMA/GEO/GEO_ROMA_001.bgeo.sc`
+
 #### VANISH
 Select "VANISH" asset and press "Create Hip" button in Project Manager. 
 
