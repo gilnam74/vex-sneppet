@@ -70,17 +70,21 @@ Now let's make hip files for each of asset.
 ##### KIEV
 Select "KIEV" asset and press "Create Hip" button in Project Manager. 
 
-If you checked "Cope Example Project" while creating this project, the environment asset scene and environment asset HDA would be already in place, so the script will ask you if you want to create new versions of `ENV_KIEV_001.hiplc` and `HDA_KIEV_001.hiplc`. Save the next versions of files.
-
 The scene with the empty "KIEV" Houdini Digital Asset would be created in:
 
-`<root3D>/scenes/ASSSETS/ENVIRONMENTS/KIEV/ENV_KIEV_001.hiplc`. 
+`<root3D>/scenes/ASSETS/ENVIRONMENTS/KIEV/ENV_KIEV_001.hiplc`. 
 
-This is a working file where you suppose to create all elements of the environment asset. Houdini Digital Asset "KIEV" is a container to store resulting models (which meant to be used in animation and render scenes). Usually, it will contain baked geometry and volumes to represent final environment look as well as UI elements to control asset behavior. Lights? 
+Houdini Digital Asset would be saved to:
+
+`<root3D>/hda/ASSETS/ENVIRONMENTS/KIEV/HDA_KIEV_001.hdalc`. 
+
+Houdini scene is a working file where you suppose to create all elements of the environment asset. Houdini Digital Asset "KIEV" is a container to store resulting models (which meant to be used in animation and render scenes). Usually, it will contain baked geometry and volumes to represent final environment look as well as UI elements to control asset behavior. Lights? 
 
 Here is an example of environment asset UI:
 
 [![](https://live.staticflickr.com/65535/48088489032_28baa44950_o.gif)](https://live.staticflickr.com/65535/48088489032_28baa44950_o.gif)
+
+If you checked "Cope Example Project" while creating this project, the environment asset scene and environment asset HDA would be already in place, so the script will ask you if you want to create new versions of `ENV_KIEV_001.hiplc` and `HDA_KIEV_001.hiplc`. Save the next versions of files.
 
 Since we use simplified data, just create a geometry node inside "KIEV" HDA and load `<root3D>/caches/ASSETS/ENVIRONMENTS/KIEV/terrain_001.bgeo.sc` with File Cache node. Save "KIEV" HDA (right click > Save Node Type). 
 
