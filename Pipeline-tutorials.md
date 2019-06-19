@@ -65,6 +65,8 @@ Before dive deep into Houdini magic, we need to prepare some data. Run `Project 
 [![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
 
 #### Create asset files
+Now let's make hip files for each of asset.
+
 ##### KIEV
 Select "KIEV" asset and press "Create Hip" button in Project Manager. 
 
@@ -84,5 +86,6 @@ Since we use simplified data, just create a geometry node inside "KIEV" HDA and 
 
 Use "Save Next Version" tool to save the scene to the next version when needed.
 
+##### ROMA
 Select "ROMA" asset and press "Create Hip" button in Project Manager. 
 
