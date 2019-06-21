@@ -54,3 +54,7 @@ Iterate N times to shatter geometry with boolean SOP and deformed plane
 [![](https://c2.staticflickr.com/8/7834/46940701961_58a4ec9ea9_o.jpg)](https://c2.staticflickr.com/8/7834/46940701961_58a4ec9ea9_o.jpg) 
 Download [Recursive Split](../blob/master/src/hips/recursiveSplit_001.hipnc)
 
+#### Animate along the path
+Alows to move objects along input paths. There are 2 solutions in the file. 
+[![](https://live.staticflickr.com/65535/48103249366_471c0a9dc7_o.jpg)](https://live.staticflickr.com/65535/48103249366_471c0a9dc7_o.jpg) 
+Download [Path Animation](../blob/master/src/hips/pathAnimation.hiplc)
