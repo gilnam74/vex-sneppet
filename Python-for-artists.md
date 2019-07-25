@@ -14,7 +14,7 @@ You don't need any extra step to start writing Python code in Houdini, it is alr
 
 Python integrated into Houdini in several ways:
 - Windows > Python Shell - Python shell for small scripts/commands  
-- Windows > Python Source Editor - Python editor which saves the code with *.hip file. Each time you open the file Python code in Source Editor will be executed. Best option to develop basic chanks of code and test their functionality. To use Python Scripts in all the scenes you need to save them to the Shell and run from there.    
+- Windows > Python Source Editor - Python editor which saves the code with *.hip file. Each time you open the file Python code in Source Editor will be executed. Best option to develop basic chanks of code and test their functionality. To use Python Scripts in all the scenes you need to save them to the Shelf and run from there.    
 - In the parameters fields of any node (switch to Python from HScript).  
 - Python node in SOP context - This is how you can use Python in your nodes graph to create and modify geometry.
 - In assets - create asset, right-click > Type properties > Scripts tab.
