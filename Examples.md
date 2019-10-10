@@ -2,7 +2,7 @@
 #### Grooming: nested clamping
 Clump hairs around allready clumped hairs.
 [![](https://live.staticflickr.com/65535/48876131083_daaf1ee772_o.jpg)](https://live.staticflickr.com/65535/48876131083_daaf1ee772_o.jpg)
-Download [Infection hip file](../blob/master/src/hips/FUR_nestedClump_001.hiplc)
+Download [Nested clumping hip file](../blob/master/src/hips/FUR_nestedClump_001.hiplc)
 
 #### Infection algorythm
 Scatter points, infect arbitrary points, simulate infection of other points.
