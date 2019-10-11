@@ -170,6 +170,11 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
+### create UVs on hairs or curves
+```c
+f@uv = float(vertexprimindex(0, @ptnum))/(@numvtx-1);
+```  
+
 ### Stick points to animated geometry
 Create TimeShift SOP after animated geo, Scatter SOP and Attribute Wrangler. Connect scatter, timeShift, animated geo to inputs 0, 1 and 2 of the wrangle.
 ```c
