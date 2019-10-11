@@ -170,9 +170,19 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
-### create UVs on hairs or curves
+### create UVs on curves (hairs)
 ```c
+// For input cluster of curves
+// Set uv attribute from 0 at a root, to the 1 at a tip
 f@uv = float(vertexprimindex(0, @ptnum))/(@numvtx-1);
+
+// Paint curve and correct with ramp
+@Cd = chramp('Value',@uv); 
+ 
+// Add random 10% of red curves
+if(rand(@primnum) > 0.9){
+    @Cd={1,0,0};
+    }
 ```  
 
 ### Stick points to animated geometry
