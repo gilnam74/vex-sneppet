@@ -378,6 +378,17 @@ rotate ( matrx, angle, axis);
 @P *= matrx; 
 ```
 
+#### Adjust pivot point of rotation matrix
+```C
+matrix3 matrx = ident();
+float angle = radians(36);
+vector axis = {1, 0, 0};
+vector pivot = {0, 2.56, 0};
+
+rotate ( matrx, angle, axis); 
+@P = (@P - pivot) * matrx + pivot; 
+```
+
 #### Rotate GEO with quaternion along XYZ axys
 ```C
 // Setup angle control with UI
