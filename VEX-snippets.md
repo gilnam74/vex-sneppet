@@ -170,6 +170,33 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
+### Bend curves (hairs)
+```c
+// Primitive wrangle
+int points[] = primpoints(0, @primnum); 
+
+matrix3 matrx = ident();
+float angle = radians( chf('angle') );
+vector axis = {1, 0, 0};
+
+vector init_pos = point(0, "P", points[0]);
+vector prev_pos = init_pos;
+
+for (int n=0; n<len(points); n++){
+    vector curr_pos = point(0, "P", points[n]);
+    rotate(matrx, angle, axis);
+    
+    // init_pos *= 0.01; // spiral
+    vector new_pos = (curr_pos - init_pos)*matrx + prev_pos;
+    init_pos = curr_pos;
+    prev_pos = new_pos;
+    
+    setpointattrib(0, "P", points[n], new_pos); 
+    }
+
+```
+
+
 ### create UVs on curves (hairs)
 ```c
 // For input cluster of curves
