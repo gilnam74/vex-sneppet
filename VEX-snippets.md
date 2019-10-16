@@ -170,6 +170,11 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
+### Remap random from 0:1 to -1:1
+```c
+float random = rand(@ptnum)*2-1;
+```
+
 ### Bend (curl) curves (hairs)
 ```c
 // Primitive wrangle
