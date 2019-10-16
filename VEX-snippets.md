@@ -170,7 +170,7 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
-### Bend curves (hairs)
+### Bend (curl) curves (hairs)
 ```c
 // Primitive wrangle
 int points[] = primpoints(0, @primnum); 
