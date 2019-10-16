@@ -202,7 +202,7 @@ for (int n=0; n<len(points); n++){
 ```
 
 
-### create UVs on curves (hairs)
+### Create UVs on curves (hairs) and paint with ramp and random color
 ```c
 // For input cluster of curves
 // Set uv attribute from 0 at a root, to the 1 at a tip
