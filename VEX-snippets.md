@@ -150,6 +150,8 @@ f@angle = acos(dot(normalize(v@vector1), normalize(v@vector2)));
 ```c
 // Get matrix from scene object
 matrix matrx = optransform('obj/geometry_01');
+// Apply object transforms to a points
+@P *= matrx;
 ```
 
 
