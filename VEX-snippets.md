@@ -146,6 +146,12 @@ v@B = normalize(point(0, "P", @ptnum + 1));
 f@angle = acos(dot(normalize(v@vector1), normalize(v@vector2)));
 ```
 
+### Transformation matrix
+```c
+// Get matrix from scene object
+matrix matrx = optransform('obj/geometry_01');
+```
+
 
 ## VEX expressions
 Using VEX in parameter interface of Houdini nodes. See [documentation](http://www.sidefx.com/docs/houdini/expressions/index.html)
