@@ -178,6 +178,16 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 Complete solutions for basic tasks
 
+### Flatten mesh by UVs
+```c
+// Plave points as UVs in 3d
+v@rest = @P;
+@P = vertex(0, "uv", pointvertex(0, @ptnum));
+
+// Return them back
+@P = v@rest 
+```
+
 ### Remap random from 0:1 to -1:1
 ```c
 float random = rand(@ptnum)*2-1;
