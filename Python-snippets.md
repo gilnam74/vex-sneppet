@@ -225,7 +225,7 @@ class Window(QtWidgets.QDialog, interface.Ui_MyInterface):
         self.setupUi(self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
 
-        self.btn_updateScene.clicked.connect(self.prn)
+        self.pushButton.clicked.connect(self.prn)
 
     def prn(self):
         print 'OLA'
