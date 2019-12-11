@@ -220,3 +220,6 @@ This will give you a palette of necessary colors and you can use colors in your 
 VEX do not support dictionaries directly.
 
 ## Abstraction
+
+# Algorithms
+An algorithm is a common language to understand nature.
