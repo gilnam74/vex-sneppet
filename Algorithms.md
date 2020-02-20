@@ -8,6 +8,8 @@ Here I will record all patterns recognized while learning algorithms.
 One of the simplest pattern I can imagine. Do something with each element of the array.
 ```Python
 list = [1, 2, 3, 4]
+
 for element in list:
     print element
+# Result: 1, 2, 3, 4
 ```
