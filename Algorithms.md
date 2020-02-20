@@ -11,5 +11,6 @@ list = [1, 2, 3, 4]
 
 for element in list:
     print element
+
 # Result: 1, 2, 3, 4
 ```
