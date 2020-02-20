@@ -17,15 +17,16 @@ for element in list:
 ```
 
 #### Compare each element of the array.
-Let's imagine we have an array [1, 2, 3, 4] and we need to compare each number with the rest. To find the biggest one, for example.
+Let's imagine we have an array [10, 2, 13, 84] and we need to compare each number with the rest. To find the biggest one, for example.
 
-The first and most robust implementation would be to loop through each element and within each cycle loop through each element again. This would be a nested loop, with time complexity O(n^2).
+The first and most robust implementation would be to loop through each element and within each cycle loop through each element again. This would be a nested loop, with time complexity O(n^2). Simplify array to two elements for now: [10,2]
 
 ```Python
-list = [1, 2, 3, 4]
+list = [10, 2]
 
-for element in list:
-    print element
+for element_1 in list:
+    for element_2 in list:
+        print element_1, element_2
 
-# Result: 1, 2, 3, 4
+# Result: 
 ```
