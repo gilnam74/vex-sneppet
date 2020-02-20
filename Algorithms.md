@@ -19,7 +19,7 @@ for element in list:
 #### Compare each element of the array.
 Let's imagine we have an array [10, 2, 13, 84] and we need to compare each number with the rest. To find the biggest one, for example.
 
-The first and most robust implementation would be to loop through each element and within each cycle loop through each element again. This would be a nested loop, with time complexity O(n^2). Simplify array to two elements for now: [12,4]
+The first and most robust implementation would be to loop through each element and within each cycle loop through each element again. This would be a nested loop, with time complexity O(n^2). Simplify array to two elements for now: [12, 4]
 
 ```Python
 list = [12, 4]
@@ -29,4 +29,16 @@ for element_1 in list:
         print '{0}:{1}'.format(element_1, element_2)
 
 # Result: 12:12 12:4 4:12 4:4
+```
+
+First, we can see that there is a lot of redundancy, elements are compared to themselves (12:12 4:4), and they are compared twice (12:4 4:12). Let's optimize this disorder:
+
+```Python
+list = [12, 4]
+
+for element_1 in range(len(list)):
+    for element_2 in range(element_1+1, len(list)):
+        print '{0}:{1}'.format(list[element_1], list[element_2])
+
+# Result: 12:4
 ```
