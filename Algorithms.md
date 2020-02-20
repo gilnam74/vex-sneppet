@@ -17,9 +17,9 @@ for element in list:
 ```
 
 #### Compare each element of the array.
-Let's imagine we have an array [10, 2, 13, 84] and we need to compare each number with the rest. To find the biggest one, for example.
+Let's imagine we have an array of numbers and we need to compare each number with the rest. To find the biggest one, for example.
 
-The first and most robust implementation would be to loop through each element and within each cycle loop through each element again. This would be a nested loop, with time complexity O(n^2). Simplify array to two elements for now: [12, 4]
+The first and most robust implementation would be to loop through each element and within each cycle loop through each element again. This would be a nested loop, with time complexity O(n^2). We will use the simple array of two elements to track what's going on easier.
 
 ```Python
 list = [12, 4]
@@ -42,3 +42,5 @@ for element_1 in range(len(list)):
 
 # Result: 12:4
 ```
+
+In the second loop, with the help of the first value of the `range()` function, we skipping elements, that we already check in the first loop.
