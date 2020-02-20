@@ -14,3 +14,5 @@ for element in list:
 
 # Result: 1, 2, 3, 4
 ```
+
+#### Compare exh element of the array.
