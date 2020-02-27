@@ -1,7 +1,8 @@
 # Introduction
+Computer science for artists.
 
 ## Algorithm 
-The algorithm is a step by step instruction for solving a problem. The algorithm manipulates Data Structures.
+The algorithm is a step by step instruction for solving a problem. The algorithm allows to manipulate Data Structures.
 
 ## Data Structure
 Data Structure is a collection of values.
