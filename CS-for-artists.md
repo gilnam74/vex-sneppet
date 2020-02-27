@@ -1,6 +1,9 @@
 # Introduction
 A simplified explanation of Computer Science for people who have no clue about how a computer works.
 
+We will focus on Algorithms and Data Structures. Data Structure is a collection of values organized in a certain way. The algorithm is a set of instructions that manipulates Data Structure. A combination of Algorithms and Data Structures is a Computer Program.
+
+
 ### Data Structure
 Data Structure is a collection of values organized in a certain way.
 
