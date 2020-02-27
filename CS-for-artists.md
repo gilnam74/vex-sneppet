@@ -5,7 +5,7 @@ We will focus on Algorithms and Data Structures. Data Structure is a collection 
 
 
 ### Data Structures
-Data Structure is a collection of values organized in a certain way.
+Data Structure is a way to store things in computer memory. Those things could be different types, like numbers, text or images.
 
 ### Algorithms 
 The algorithm is a step by step instruction for solving a problem. The algorithm manipulates Data Structure.
