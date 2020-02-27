@@ -1,4 +1,8 @@
-# Unsorted data
+# Introduction
+## Algorithm 
+Algorithm  is a step by step instruction for solving a problem
+## Data Structure
+Data Structure is a collection of values 
 ## Basic solution patterns
 An algorithm is a step by step instruction for solving a problem. Those steps could be organized into the patterns, basic blocks of a problem solution. Pattern, like a programming function, does a simple and obvious action. For example, traveling through each element of the list is a pattern, which could be implemented in Python with a `for loop`.
 
