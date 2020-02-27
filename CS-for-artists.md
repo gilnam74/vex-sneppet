@@ -1,11 +1,14 @@
 # Introduction
-Computer science for artists.
+A simplified explanation of Computer Science.
 
-## Algorithm 
-The algorithm is a step by step instruction for solving a problem. The algorithm allows to manipulate Data Structures.
-
-## Data Structure
+### Data Structure
 Data Structure is a collection of values.
+
+### Algorithm 
+The algorithm is a step by step instruction for solving a problem. The algorithm manipulates Data Structure.
+
+### Program
+Computer Program is a combination of Algorithms and Data Structures.
 
 ## Basic solution patterns
 An algorithm is a step by step instruction for solving a problem. Those steps could be organized into the patterns, basic blocks of a problem solution. Pattern, like a programming function, does a simple and obvious action. For example, traveling through each element of the list is a pattern, which could be implemented in Python with a `for loop`.
