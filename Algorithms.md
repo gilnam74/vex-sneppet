@@ -43,4 +43,4 @@ for element_1 in range(len(list)):
 # Result: 12:4
 ```
 
-In the second loop, with the help of the first value of the `range()` function, we skipping elements, that we already check in the first loop.
+In the second loop, with the help of the first value of the `range()` function, we skipping elements, that we already check in the first loop. But its still O(n^2). Can we do better?
