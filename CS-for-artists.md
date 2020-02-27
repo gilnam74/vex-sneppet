@@ -1,8 +1,8 @@
 # Introduction
-A simplified explanation of Computer Science.
+A simplified explanation of Computer Science for people who have no clue about how a computer works.
 
 ### Data Structure
-Data Structure is a collection of values.
+Data Structure is a collection of values organized in a certain way.
 
 ### Algorithm 
 The algorithm is a step by step instruction for solving a problem. The algorithm manipulates Data Structure.
