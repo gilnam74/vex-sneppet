@@ -14,14 +14,6 @@ Let's define what is programming. Sure we can say that programming is a process 
 
 You can imagine programs as blocks. The program could be simple (like a lonely small block of code), or it could be more sophisticated and combined with numerous small blocks linked together. How we link blocks we will describe later in [data types](#data-types) section. 
 
-One important aspect of programming which worth to learn at the early stages is **comments**. Comment is a note in program code for humans, for those people who could read the code later, including a program author. One of the basement law of programming speaks: 
-
-**Code is read much more often than it is written**.
-
-So you can expect that you write a comment for yourself and its a **must follow practice**. Always comment your code precisely!
-
-_A particular example: when you copy a file from one folder to another your OS execute specific program._
-
 ## Syntax
 As you can speak different languages, computers understand different programming languages also. The written rules for each language (the alphabet, words and sentence structure, etc) is what we can call a **syntax**. Each programming language has its own syntax. Once you learn one of them it's more and more easy to learn another. 
 
@@ -32,6 +24,18 @@ _VEX syntaxis examples:_
 _Python syntaxis examples:_  
 - You should separate your sentences with Tab (4 spaces)
 - Comments line should start with a hash: `#`
+
+## The good code
+One of the basement law of programming speaks: 
+
+**Code is read much more often than it is written**.
+
+So in addition to obvious requirements that code should work, we have some more characteristics to consider. The good code:
+
+- Works and solve the problem
+- Readable and looks pleasant
+- Does not contain duplicates of the same code
+
 
 ## Data types
 The concept of data type is much more easy to understand than to explain. Let's define what is data first. **Data** is any piece of information you are dealing with inside your program (code). It's important to understand that data is not a part of the code (program) itself.  It is something that "comes inside" your program from the outer environment (everything around your program block). 
