@@ -40,7 +40,7 @@ node = hou.selectedNodes()[0] # By selection
 node.children()
 ```
 
-# Get node upstream connections
+##### Get node upstream connections
 ```Python
 listParents = node.inputAncestors()
 ```
