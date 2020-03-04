@@ -55,3 +55,6 @@ for element_1 in range(len(list)):
 ```
 
 In the second loop, with the help of the first value of the `range()` function, we skipping elements, that we already check in the first loop. But its still O(n^2). Can we do better?
+
+## Time and space complexity: Big O notation
+The relationship of input size to the number of steps the algorithm takes to run characterizes the algorithm time complexity.
