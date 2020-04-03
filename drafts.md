@@ -1,7 +1,5 @@
-# Intro
-Here is Ftrack API research
 
-# API
+# FTrack API
 #### Install ftrack Python API
 Run cmd and enter: `pip install ftrack-python-api`
 #### Connection
