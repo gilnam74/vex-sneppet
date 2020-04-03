@@ -496,15 +496,6 @@ Convert sine output to integers:
 
 #### Y = clump(sine(X))
 Clump sine output between 0 and 1:
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
-
-```c
-// Function y = clump(sine(x))
-@P.y = clamp(sin(@P.x), 0, 1);
-```
-
-#### Y = clump(sine(X))
-Clump sine output between 0 and 1:
 [![](https://live.staticflickr.com/65535/49732355796_fb2e686a63_o.gif)](https://live.staticflickr.com/65535/49732355796_fb2e686a63_o.gif)
 
 ```c
