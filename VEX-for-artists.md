@@ -414,12 +414,112 @@ So now we have **two methods to visualize VEX functions**: you can deform geomet
 ## Examine more functions
 Now create a Line SOP, orient it along with X-axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, play with arguments (add, subtract, multiply, divide arguments on arbitrary numbers), use other functions as arguments instead of constants.
 
-#### Y equal X function
+#### Y = X
+Probably the most basic function you can imagine (aside from `y = constant number`, e.g. `y = 256`). Each value of Y corresponds to the same number of X. Using points position of a line we can visualize it in 2D space. For each point of the Line SOP, we change Y coordinate of a line, according to its X coordinate. `X=1 >> Y=1, X=2 >> Y=2, ...`
 [![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
 
 ```c
-// Y=X
+// Function y = x
 @P.y = @P.x
+```
+
+#### Y = X*X
+Y equals square of X give us a parabola. `X=1 >> Y=1, X=2 >> Y=4, ...`
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = x*x
+@P.y = pow(@P.x, 2); 
+```
+
+#### Y = sine(X)
+We already discover this function above.
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = sine(x)
+@P.y = sin(@P.x); 
+```
+
+#### Y = floor(X)
+Floor function converts float number to the smalest integer. X=0.1 >> Y=0, X=0.9 >> Y=0, X=1.1 >> Y=1, ...
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = floor(x)
+@P.y = floor(@P.x);
+```
+
+#### Y = fraction(X)
+Fraction returns fractional component (numbers after the point) of a float. X=0.5 >> Y=0.5, X=1.5 >> Y=0.5
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = fraction(x)
+@P.y = frac(@P.x); 
+```
+
+
+#### Y = absolute(X)
+Absolute function returns the same value, but positive (inverted) if it was negative. X=-1 >> Y=1, X=1 >> Y=1
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = absolute(x)
+@P.y = abs(@P.x);
+```
+
+#### Y = absolute(sin(X))
+Now let`se try to combine several functions, using one function as argument for another. Get positive output from sine function: 
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = absolute(sine(x))
+@P.y = abs(sin(@P.x));
+```
+
+#### Y = floor(sin(X))
+Convert sine output to integers:
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = floor(sine(x))
+@P.y = floor(sin(@P.x)); 
+```
+
+#### Y = clump(sine(X))
+Clump sine output between 0 and 1:
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = clump(sine(x))
+@P.y = clamp(sin(@P.x), 0, 1);
+```
+
+#### Y = clump(sine(X))
+Clump sine output between 0 and 1:
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = clump(sine(x))
+@P.y = clamp(sin(@P.x), 0, 1);
+```
+
+#### Repetitive patterns
+With fraction() we can create repetitive patterns. If we use fraction as input for other functions we can modify patterns shape. Power of fraction:
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = fraction(x)*fraction(x)
+@P.y = pow(frac(@P.x), 2); 
+```
+
+Noise of fraction:
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Function y = noise(fraction(x))
+@P.y = noise(frac(@P.x)); 
 ```
 
 # VEX basics
