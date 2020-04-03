@@ -426,7 +426,7 @@ Probably the most basic function you can imagine (aside from `y = constant numbe
 #### Y = X*X
 Y equals square of X give us a parabola. `X=1 >> Y=1, X=2 >> Y=4, ...`
 
-[![](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif = 100x100)](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif)
+[![](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif=100x100)](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif)
 
 ```c
 // Function y = x*x
@@ -435,7 +435,7 @@ Y equals square of X give us a parabola. `X=1 >> Y=1, X=2 >> Y=4, ...`
 
 #### Y = sine(X)
 We already discover this function above.
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif=100x100)
 
 ```c
 // Function y = sine(x)
@@ -444,7 +444,7 @@ We already discover this function above.
 
 #### Y = floor(X)
 Floor function converts float number to the smalest integer. X=0.1 >> Y=0, X=0.9 >> Y=0, X=1.1 >> Y=1, ...
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif | width =100)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
 
 ```c
 // Function y = floor(x)
