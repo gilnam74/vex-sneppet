@@ -434,7 +434,7 @@ Y equals square of X give us a parabola. `X=1 >> Y=1, X=2 >> Y=4, ...`
 ```
 
 #### Y = sine(X)
-We already discover this function above.
+We already discover this function above. Simple, elegant and super powerfull.
 [![](https://live.staticflickr.com/65535/49731808468_f21b769daf_o.gif)](https://live.staticflickr.com/65535/49731808468_f21b769daf_o.gif)
 
 ```c
@@ -443,7 +443,9 @@ We already discover this function above.
 ```
 
 #### Y = floor(X)
-Floor function converts float number to the smalest integer. X=0.1 >> Y=0, X=0.9 >> Y=0, X=1.1 >> Y=1, ...
+Floor function converts float number to the smalest integer.  
+`X=0.1 >> Y=0, X=0.9 >> Y=0, X=1.1 >> Y=1, ...`
+
 [![](https://live.staticflickr.com/65535/49731808518_ce65258d0a_o.gif)](https://live.staticflickr.com/65535/49731808518_ce65258d0a_o.gif)
 
 ```c
@@ -452,7 +454,9 @@ Floor function converts float number to the smalest integer. X=0.1 >> Y=0, X=0.9
 ```
 
 #### Y = fraction(X)
-Fraction returns fractional component (numbers after the point) of a float. X=0.5 >> Y=0.5, X=1.5 >> Y=0.5
+Fraction returns fractional component (numbers after the point) of a float.  
+`X=0.5 >> Y=0.5, X=1.5 >> Y=0.5`
+
 [![](https://live.staticflickr.com/65535/49732677532_22a741fe7b_o.gif)](https://live.staticflickr.com/65535/49732677532_22a741fe7b_o.gif)
 
 ```c
@@ -462,7 +466,9 @@ Fraction returns fractional component (numbers after the point) of a float. X=0.
 
 
 #### Y = absolute(X)
-Absolute function returns the same value, but positive (inverted) if it was negative. X=-1 >> Y=1, X=1 >> Y=1
+Absolute function returns the same value, but positive (inverted) if it was negative.  
+`X=-1 >> Y=1, X=1 >> Y=1`
+
 [![](https://live.staticflickr.com/65535/49732355801_5bfe0a9be8_o.gif)](https://live.staticflickr.com/65535/49732355801_5bfe0a9be8_o.gif)
 
 ```c
@@ -516,6 +522,7 @@ With fraction() we can create repetitive patterns. If we use a fraction as input
 ```
 
 Noise of fraction:
+
 [![](https://live.staticflickr.com/65535/49731808498_87361ed536_o.gif)](https://live.staticflickr.com/65535/49731808498_87361ed536_o.gif)
 
 ```c
