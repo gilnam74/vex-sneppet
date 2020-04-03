@@ -426,7 +426,7 @@ Probably the most basic function you can imagine (aside from `y = constant numbe
 #### Y = X*X
 Y equals square of X give us a parabola. `X=1 >> Y=1, X=2 >> Y=4, ...`
 
-[![](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif=100x100)](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif)
+[![](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif)](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif)
 
 ```c
 // Function y = x*x
@@ -435,7 +435,7 @@ Y equals square of X give us a parabola. `X=1 >> Y=1, X=2 >> Y=4, ...`
 
 #### Y = sine(X)
 We already discover this function above.
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif=100x100)
+[![](https://live.staticflickr.com/65535/49731808468_f21b769daf_o.gif)](https://live.staticflickr.com/65535/49731808468_f21b769daf_o.gif)
 
 ```c
 // Function y = sine(x)
@@ -444,7 +444,7 @@ We already discover this function above.
 
 #### Y = floor(X)
 Floor function converts float number to the smalest integer. X=0.1 >> Y=0, X=0.9 >> Y=0, X=1.1 >> Y=1, ...
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif | width =100)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49731808518_ce65258d0a_o.gif)](https://live.staticflickr.com/65535/49731808518_ce65258d0a_o.gif)
 
 ```c
 // Function y = floor(x)
@@ -453,7 +453,7 @@ Floor function converts float number to the smalest integer. X=0.1 >> Y=0, X=0.9
 
 #### Y = fraction(X)
 Fraction returns fractional component (numbers after the point) of a float. X=0.5 >> Y=0.5, X=1.5 >> Y=0.5
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49732677532_22a741fe7b_o.gif)](https://live.staticflickr.com/65535/49732677532_22a741fe7b_o.gif)
 
 ```c
 // Function y = fraction(x)
@@ -463,7 +463,7 @@ Fraction returns fractional component (numbers after the point) of a float. X=0.
 
 #### Y = absolute(X)
 Absolute function returns the same value, but positive (inverted) if it was negative. X=-1 >> Y=1, X=1 >> Y=1
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49732355801_5bfe0a9be8_o.gif)](https://live.staticflickr.com/65535/49732355801_5bfe0a9be8_o.gif)
 
 ```c
 // Function y = absolute(x)
@@ -472,7 +472,7 @@ Absolute function returns the same value, but positive (inverted) if it was nega
 
 #### Y = absolute(sin(X))
 Now let`se try to combine several functions, using one function as argument for another. Get positive output from sine function: 
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49732355716_41474a0a99_o.gif)](https://live.staticflickr.com/65535/49732355716_41474a0a99_o.gif)
 
 ```c
 // Function y = absolute(sine(x))
@@ -481,7 +481,7 @@ Now let`se try to combine several functions, using one function as argument for 
 
 #### Y = floor(sin(X))
 Convert sine output to integers:
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49732677562_b32ea72057_o.gif)](https://live.staticflickr.com/65535/49732677562_b32ea72057_o.gif)
 
 ```c
 // Function y = floor(sine(x))
@@ -499,7 +499,7 @@ Clump sine output between 0 and 1:
 
 #### Y = clump(sine(X))
 Clump sine output between 0 and 1:
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49732355796_fb2e686a63_o.gif)](https://live.staticflickr.com/65535/49732355796_fb2e686a63_o.gif)
 
 ```c
 // Function y = clump(sine(x))
@@ -507,8 +507,8 @@ Clump sine output between 0 and 1:
 ```
 
 #### Repetitive patterns
-With fraction() we can create repetitive patterns. If we use fraction as input for other functions we can modify patterns shape. Power of fraction:
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+With fraction() we can create repetitive patterns. If we use a fraction as input for other functions we can modify patterns shape. Power of fraction:
+[![](https://live.staticflickr.com/65535/49732355741_62784d4857_o.gif)](https://live.staticflickr.com/65535/49732355741_62784d4857_o.gif)
 
 ```c
 // Function y = fraction(x)*fraction(x)
@@ -516,7 +516,7 @@ With fraction() we can create repetitive patterns. If we use fraction as input f
 ```
 
 Noise of fraction:
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+[![](https://live.staticflickr.com/65535/49731808498_87361ed536_o.gif)](https://live.staticflickr.com/65535/49731808498_87361ed536_o.gif)
 
 ```c
 // Function y = noise(fraction(x))
