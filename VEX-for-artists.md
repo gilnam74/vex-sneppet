@@ -411,5 +411,16 @@ How can we use noise function in production? For example, you can scatter points
 
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
+## Examine more functions
+Now create a Line SOP, orient it along with X-axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, play with arguments (add, subtract, multiply, divide arguments on arbitrary numbers), use other functions as arguments instead of constants.
+
+#### Y equal X function
+[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+```c
+// Y=X
+@P.y = @P.x
+```
+
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
