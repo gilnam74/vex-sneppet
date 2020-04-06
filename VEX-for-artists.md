@@ -17,7 +17,7 @@ Article structure:
 [sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)
 - [VEX basics](#vex-basics)
 
-All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/hips/VEX_snippets.hiplc).
+All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc)
 
 # VEX orientation
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
