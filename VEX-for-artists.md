@@ -280,8 +280,7 @@ for (int n=0; n<numberOfPoints; n++){
 ```
 [![](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)
 
-<img src="https://github.com/favicon.ico" width="48">
-<img src="https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif" width="48">
+<img src="https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif" width="730">
 
 #### Sine 
 In the example above we used **sine** and **cosine** to build a circle. Let's take a closer look at a sine magic function. How can we imagine (visualize) this function in our scene?
