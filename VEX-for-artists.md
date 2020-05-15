@@ -280,8 +280,6 @@ for (int n=0; n<numberOfPoints; n++){
 ```
 [![](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)
 
-<img src="https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif" width="730">
-
 #### Sine 
 In the example above we used **sine** and **cosine** to build a circle. Let's take a closer look at a sine magic function. How can we imagine (visualize) this function in our scene?
 
@@ -418,7 +416,10 @@ Now create a Line SOP, orient it along with X-axes, increase the number of point
 
 #### Y = X
 Probably the most basic function you can imagine (aside from `y = constant number`, e.g. `y = 256`). Each value of Y corresponds to the same number of X. Using points position of a line we can visualize it in 2D space. For each point of the Line SOP, we change Y coordinate of a line, according to its X coordinate. `X=1 >> Y=1, X=2 >> Y=2, ...`
+
 [![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+
+<img src="https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif" width="730">
 
 ```c
 // Function y = x
