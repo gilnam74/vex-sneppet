@@ -419,8 +419,6 @@ Probably the most basic function you can imagine (aside from `y = constant numbe
 
 [![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
 
-<img src="https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif" width="730">
-
 ```c
 // Function y = x
 @P.y = @P.x
