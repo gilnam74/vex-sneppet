@@ -414,10 +414,12 @@ So now we have **two methods to visualize VEX functions**: you can deform geomet
 ## Examine more functions
 Now create a Line SOP, orient it along with X-axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, play with arguments (add, subtract, multiply, divide arguments on arbitrary numbers), use other functions as arguments instead of constants.
 
+[![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
+
 #### Y = X
 Probably the most basic function you can imagine (aside from `y = constant number`, e.g. `y = 256`). Each value of Y corresponds to the same number of X. Using points position of a line we can visualize it in 2D space. For each point of the Line SOP, we change Y coordinate of a line, according to its X coordinate. `X=1 >> Y=1, X=2 >> Y=2, ...`
 
-[![](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)](https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif)
+<img src="https://live.staticflickr.com/65535/49731581958_9f8f53d30c_o.gif" width="730">
 
 ```c
 // Function y = x
@@ -427,16 +429,13 @@ Probably the most basic function you can imagine (aside from `y = constant numbe
 #### Y = X*X
 Y equals square of X give us a parabola. `X=1 >> Y=1, X=2 >> Y=4, ...`
 
-[![](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif)](https://live.staticflickr.com/65535/49731808458_02b6e310ba_o.gif)
-
 ```c
 // Function y = x*x
 @P.y = pow(@P.x, 2); 
 ```
 
 #### Y = sine(X)
-We already discover this function above. Simple, elegant and super powerfull.
-[![](https://live.staticflickr.com/65535/49731808468_f21b769daf_o.gif)](https://live.staticflickr.com/65535/49731808468_f21b769daf_o.gif)
+We already discover this function above. Simple, elegant, and super powerful.
 
 ```c
 // Function y = sine(x)
@@ -447,8 +446,6 @@ We already discover this function above. Simple, elegant and super powerfull.
 Floor function converts float number to the smalest integer.  
 `X=0.1 >> Y=0, X=0.9 >> Y=0, X=1.1 >> Y=1, ...`
 
-[![](https://live.staticflickr.com/65535/49731808518_ce65258d0a_o.gif)](https://live.staticflickr.com/65535/49731808518_ce65258d0a_o.gif)
-
 ```c
 // Function y = floor(x)
 @P.y = floor(@P.x);
@@ -458,7 +455,6 @@ Floor function converts float number to the smalest integer.
 Fraction returns fractional component (numbers after the point) of a float.  
 `X=0.5 >> Y=0.5, X=1.5 >> Y=0.5`
 
-[![](https://live.staticflickr.com/65535/49732677532_22a741fe7b_o.gif)](https://live.staticflickr.com/65535/49732677532_22a741fe7b_o.gif)
 
 ```c
 // Function y = fraction(x)
@@ -470,16 +466,13 @@ Fraction returns fractional component (numbers after the point) of a float.
 Absolute function returns the same value, but positive (inverted) if it was negative.  
 `X=-1 >> Y=1, X=1 >> Y=1`
 
-[![](https://live.staticflickr.com/65535/49732355801_5bfe0a9be8_o.gif)](https://live.staticflickr.com/65535/49732355801_5bfe0a9be8_o.gif)
-
 ```c
 // Function y = absolute(x)
 @P.y = abs(@P.x);
 ```
 
 #### Y = absolute(sin(X))
-Now let`se try to combine several functions, using one function as argument for another. Get positive output from sine function: 
-[![](https://live.staticflickr.com/65535/49732355716_41474a0a99_o.gif)](https://live.staticflickr.com/65535/49732355716_41474a0a99_o.gif)
+Now let's try to combine several functions, using one function as an argument for another. Get positive output from sine function: 
 
 ```c
 // Function y = absolute(sine(x))
@@ -488,7 +481,6 @@ Now let`se try to combine several functions, using one function as argument for 
 
 #### Y = floor(sin(X))
 Convert sine output to integers:
-[![](https://live.staticflickr.com/65535/49732677562_b32ea72057_o.gif)](https://live.staticflickr.com/65535/49732677562_b32ea72057_o.gif)
 
 ```c
 // Function y = floor(sine(x))
@@ -497,7 +489,7 @@ Convert sine output to integers:
 
 #### Y = clump(sine(X))
 Clump sine output between 0 and 1:
-[![](https://live.staticflickr.com/65535/49732355796_fb2e686a63_o.gif)](https://live.staticflickr.com/65535/49732355796_fb2e686a63_o.gif)
+
 
 ```c
 // Function y = clump(sine(x))
@@ -506,7 +498,6 @@ Clump sine output between 0 and 1:
 
 #### Repetitive patterns
 With fraction() we can create repetitive patterns. If we use a fraction as input for other functions we can modify patterns shape. Power of fraction:
-[![](https://live.staticflickr.com/65535/49732355741_62784d4857_o.gif)](https://live.staticflickr.com/65535/49732355741_62784d4857_o.gif)
 
 ```c
 // Function y = fraction(x)*fraction(x)
@@ -514,8 +505,6 @@ With fraction() we can create repetitive patterns. If we use a fraction as input
 ```
 
 Noise of fraction:
-
-[![](https://live.staticflickr.com/65535/49731808498_87361ed536_o.gif)](https://live.staticflickr.com/65535/49731808498_87361ed536_o.gif)
 
 ```c
 // Function y = noise(fraction(x))
