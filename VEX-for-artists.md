@@ -497,7 +497,9 @@ Clump sine output between 0 and 1:
 ```
 
 #### Repetitive patterns
-With fraction() we can create repetitive patterns. If we use a fraction as input for other functions we can modify patterns shape. Power of fraction:
+With fraction() we can create repetitive patterns. If we use a fraction as input for other functions we can modify patterns shape. Below we make a cycle from power and noise.
+
+Power of fraction:
 
 ```c
 // Function y = fraction(x)*fraction(x)
