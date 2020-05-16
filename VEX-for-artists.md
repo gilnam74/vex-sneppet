@@ -499,7 +499,17 @@ Clump sine output between 0 and 1:
 ```
 
 #### Repetitive patterns
-With fraction() we can create repetitive patterns. If we use a fraction as input for other functions we can modify patterns shape. Below we make a cycle from power and noise.
+With `fraction()` we can create procedural repetitive patterns (textures). The gist of such a design is a **constantly growing input** value used to **modify another value**. By modifying input value we can design a pattern.
+
+In the examples above, we used `position x` to modify `position y`. The first point of the line has `position x = 0`, every next point has a slightly bigger x coordinate, so we can say `position x` is a constantly growing value for points in the line. Obviously, `@P.y = @P.x` gives us a 45-degree rotated straight line.
+
+Another example of growing value is a `time` in frames, which you can apply to modify object `Y position`. The graph of object motion would be the same 45-degree rotated straight line. Same idea, another implementation.
+
+If we modify this input value (feeding it in a function, for example) we will get a modified output. 
+
+The modulus `%` operation can also produce repetitive patterns from 
+
+Below we make a cycle from power and noise.
 
 Power of fraction:
 
