@@ -516,7 +516,7 @@ Noise of fraction:
 ```
 
 ## Checker  
-Here we will combine the floor and the fraction functions to build a checker.
+Here we will combine the `floor` and the `fraction` functions to procedurally build a checker.
 
 We can create a "saw" pattern with a fraction:  
 ```c
@@ -546,7 +546,7 @@ Now the floor function will give us stepped sine:
 @P.y = floor(@P.x % 2);
 ```
 
-Now replace the line with a grid (plug Grid SOP into Attribute Wrangle).If instead of modifying position Y, we will change color we will get black and white stripes:
+Now replace the line with a grid (plug Grid SOP into Attribute Wrangle). If instead of modifying position Y, we will change the color, we will get black and white stripes:
 
 ```c
 // Option A
