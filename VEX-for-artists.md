@@ -505,11 +505,11 @@ In the examples above, we used `position x` to modify `position y`. The first po
 
 Another example of growing value is a `time` in frames, which you can apply to modify object `Y position`. The graph of object motion would be the same 45-degree rotated straight line. Same idea, another implementation.
 
-If we modify this input value (feeding it in a function, for example) we will get a modified output. 
+If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
-The modulus `%` operation can also produce repetitive patterns from 
+The modulus `%` operation can also produce repetitive patterns from constantly growing input.
 
-Below we make a cycle from power and noise.
+Below we make a pattern from parabola and noise lines.
 
 Power of fraction:
 
