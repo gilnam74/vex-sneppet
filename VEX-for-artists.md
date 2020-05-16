@@ -512,10 +512,52 @@ Noise of fraction:
 // Function y = noise(fraction(x))
 @P.y = noise(frac(@P.x)); 
 ```
-Checker
-Modulo `%` is a sort of fraction.
+Checker  
+
+We can create a "saw" pattern with a fraction:  
+```c
+@P.y = frac(@P.x);
+```
+
+Or use the modulus operator `%` to achieve the same goal:  
+```c
+@P.y = @P.x % 1
+```
+
+If we want to "pixelate" our saw, we can use the `floor` function. But to see the results we need to scale it twice before using floor function, otherwise, our line will remain flat:   
+```c
+// Option A: Scale fraction saw pattern
+@P.y = frac(@P.x/2)*2;
+
+// Option B: Scale modulus saw pattern
+@P.y = @P.x % 2;
+```
+
+Now the floor function will give us stepped sine:
+```c
+// Option A
+@P.y = floor(frac(@P.x/2)*2);
+
+// Option B
+@P.y = floor(@P.x % 2);
+```
+
+Now replace the line with a grid (plug Grid SOP into Attribute Wrangle).If instead of modifying position Y, we will change color we will get black and white stripes:
 
 ```c
+// Option A
+@Cd = floor(frac(@P.x/2)*2);
+
+// Option B
+@Cd = floor(@P.x % 2);
+```
+
+If we combine X and Z stripes we will get checker:  
+```c
+// Checker with fraction
+@Cd= floor((frac(@P.x+floor(@P.z*2)*0.5))*2);
+
+// Checker with modulus
 @Cd= floor((@P.x + floor(@P.z)) % 2);
 ```
 
