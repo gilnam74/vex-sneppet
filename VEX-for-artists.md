@@ -512,6 +512,13 @@ Noise of fraction:
 // Function y = noise(fraction(x))
 @P.y = noise(frac(@P.x)); 
 ```
+Checker
+Modulo `%` is a sort of fraction.
+
+```c
+@Cd= floor((@P.x + floor(@P.z)) % 2);
+```
+
 
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
