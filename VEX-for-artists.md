@@ -1,5 +1,5 @@
 # Introduction
-For those who tried (or afraid to start) to learn VEX but fail and stop because it was too hard. Here you will learn VEX and some Math beginning from the basics with a clear detailed explanation. You need elementary knowledge of Houdini UI and understanding of core programming concepts. If you can render metal sphere in Houdini and know what is syntax, data types, variables and loops then you are fine to go (check [Programming Basics tutorial](Programming-basics) if not).
+For those who tried (or afraid to start) to learn VEX but fail and stop because it was too hard. Here you will learn VEX and some Math beginning from the basics with a clear detailed explanation. You need elementary knowledge of Houdini UI and an understanding of core programming concepts. If you can render the metal sphere in Houdini and know what is syntax, data types, variables and loops then you are fine to go (check [Programming Basics tutorial](Programming-basics) if not).
 
 To understand **applied Math** in 3D using VEX in Houdini our mission here.
 
@@ -14,7 +14,7 @@ Article structure:
 - [VEX orientation](#vex-orientation)  
 [point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)  
 - [VEX first steps](#vex-first-steps)  
-[sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)
+[sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)
 - [VEX basics](#vex-basics)
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc)
@@ -412,7 +412,9 @@ How can we use noise function in production? For example, you can scatter points
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
 ## Examine more functions
-Now create a Line SOP, orient it along with X-axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, play with arguments (add, subtract, multiply, divide arguments on arbitrary numbers), use other functions as arguments instead of constants.
+This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
+
+Create a Line SOP, orient it along with X-axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, play with arguments (add, subtract, multiply, divide arguments on arbitrary numbers), use other functions as arguments instead of constants.
 
 [![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
 
@@ -512,7 +514,9 @@ Noise of fraction:
 // Function y = noise(fraction(x))
 @P.y = noise(frac(@P.x)); 
 ```
-Checker  
+
+## Checker  
+Here we will combine the floor and the fraction functions to build a checker.
 
 We can create a "saw" pattern with a fraction:  
 ```c
