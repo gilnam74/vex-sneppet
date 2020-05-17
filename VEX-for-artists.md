@@ -505,11 +505,11 @@ In the examples above, we used `position x` to modify `position y`. The first po
 
 Another example of growing value is a `time` in frames, which you can apply to modify object `Y position`. The graph of object motion would be the same 45-degree rotated straight line. Same idea, another implementation.
 
-If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
+If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
 The modulus `%` operation can also produce repetitive patterns from constantly growing input.
 
-Below we make a pattern from parabola and noise lines.
+Below we make a pattern from parabola and noise graphs.
 
 Power of fraction:
 
@@ -566,7 +566,7 @@ Now replace the line with a grid (plug Grid SOP into Attribute Wrangle). If inst
 @Cd = floor(@P.x % 2);
 ```
 
-If we combine X and Z stripes we will get checker:  
+If we combine X and Z stripes we will get checker:   
 ```c
 // Checker with fraction
 @Cd= floor((frac(@P.x+floor(@P.z*2)*0.5))*2);
@@ -574,7 +574,6 @@ If we combine X and Z stripes we will get checker:
 // Checker with modulus
 @Cd= floor((@P.x + floor(@P.z)) % 2);
 ```
-
 
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
