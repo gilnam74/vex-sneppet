@@ -517,6 +517,7 @@ Power of fraction:
 // Function y = fraction(x)*fraction(x)
 @P.y = pow(frac(@P.x), 2); 
 ```
+[![](https://live.staticflickr.com/65535/49907006196_11b92df43b_o.png)](https://live.staticflickr.com/65535/49907006196_11b92df43b_o.png)
 
 Noise of fraction:
 
@@ -524,6 +525,8 @@ Noise of fraction:
 // Function y = noise(fraction(x))
 @P.y = noise(frac(@P.x)); 
 ```
+[![](https://live.staticflickr.com/65535/49907004661_7847c0221f_o.png)](https://live.staticflickr.com/65535/49907004661_7847c0221f_o.png)
+
 
 ## Checker  
 Here we will combine the `floor` and the `fraction` functions to procedurally build a checker.
