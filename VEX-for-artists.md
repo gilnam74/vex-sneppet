@@ -20,7 +20,7 @@ Article structure:
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
 
 # VEX orientation
-The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
+The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase the complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
 
 ## Attribute Wrangle
 Imagine **Attribute Wrangle** as a [loop](Programming-basics#loops) node, for example Attribute Wrangle run over Points:
@@ -571,7 +571,7 @@ Floor converts float numbers to integers. Applied to any shape it will flatten a
 Any point position in the range `[0-0.99(9)]` becomes `0`, in range `[1-1.99(9)]` becomes `1`, etc.  
 Because our initial saw was in range 0-1 (the lowest and highest value of `@P.y`) we have to scale it up twice to get one repetitive step. Try `@P.x % 3` you will get 2 steps and so on.
 
-This shape applied as color gives us stripes! Let`s take a look at it, plug a Grid SOP into Attribute Wrangle instead of a line. Modify color instead of a Y position and see our 0 and 1 values:
+This shape applied as color gives us stripes! Let`s take a look at it, plug a Grid SOP into Attribute Wrangle instead of a line. Set Grid `rows` and `columns` to 1000. Modify color instead of a Y position and see our 0 and 1 values:
 
 ```C
 // Stripe
