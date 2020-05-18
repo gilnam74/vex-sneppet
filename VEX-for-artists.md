@@ -17,7 +17,7 @@ Article structure:
 [sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)
 - [VEX basics](#vex-basics)
 
-All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc)
+All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
 
 # VEX orientation
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
@@ -546,7 +546,7 @@ Repetitive noise:
 
 The actual code for the image above is noise `@P.y = noise(frac((@P.x)*1.5)*5);`, but I keep the code snippets as clean as possible from redundant stuff for the better understanding. 
 
-Remember, all actual code you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc).
+Remember, all actual code you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc).
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). First, we need to get equal-sized black and white stripes, then we will periodically shift a part of each stripe.
