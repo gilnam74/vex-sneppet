@@ -521,20 +521,27 @@ After `input % 3` operation we will get: `1,2,3,1,2,3,1,2,3,1, ...`
 
 Below we make a pattern from parabola and noise graphs.
 
-Power of fraction:
+Repetitive parabola:
 
 ```C
-// Function y = fraction(x)*fraction(x)
+// Parabola pattern with fraction
 @P.y = pow(frac(@P.x), 2); 
+
+// Parabola pattern with modulus
+@P.y = pow(@P.x % 2, 2);  
 ```
 [![](https://live.staticflickr.com/65535/49907006196_11b92df43b_o.png)](https://live.staticflickr.com/65535/49907006196_11b92df43b_o.png)
 
-Noise of fraction:
+Repetitive noise:
 
 ```C
-// Function y = noise(fraction(x))
+// Noise pattern with fraction
 @P.y = noise(frac(@P.x)); 
+
+// Parabola pattern with modulus
+@P.y = noise(@P.x %1 ); 
 ```
+
 [![](https://live.staticflickr.com/65535/49907004661_7847c0221f_o.png)](https://live.staticflickr.com/65535/49907004661_7847c0221f_o.png)
 
 
