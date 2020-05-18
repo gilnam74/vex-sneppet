@@ -414,7 +414,7 @@ So now we have **two methods to visualize VEX functions**: you can deform geomet
 ## Examine more functions
 This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
-Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, e.g. `@P.y = sine(@P.x);`  
+Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, e.g. `@P.y=sine(@P.x);`  
 Play with values (add, subtract, multiply, divide arguments and functions with arbitrary numbers) and see how it affects the shape of a function.
 
 Modify **arguments**, e.g. `sin(@P.x*2)`, `sin(@P.x/10)`, `sin(@P.x+4)`, `sin(@P.x-3.14)`, ...  
