@@ -518,7 +518,7 @@ Below we make a pattern from parabola and noise graphs.
 
 Power of fraction:
 
-```c
+```C
 // Function y = fraction(x)*fraction(x)
 @P.y = pow(frac(@P.x), 2); 
 ```
@@ -526,7 +526,7 @@ Power of fraction:
 
 Noise of fraction:
 
-```c
+```C
 // Function y = noise(fraction(x))
 @P.y = noise(frac(@P.x)); 
 ```
@@ -538,7 +538,7 @@ Here we will procedurally build a checker using a combination of `floor` functio
 
 The diagonal line `@P.y = @P.x` is a good foundation. Let's make a periodic pattern from it with a modulus:
 
-```c
+```C
 // Saw pattern with modulus
 @P.y = @P.x % 1;
 ```
@@ -566,7 +566,7 @@ This shape applied as color gives us stripes! Let`s take a look at it, plug a Gr
 [![](https://live.staticflickr.com/65535/49908215222_90c7850c2f_o.png)](https://live.staticflickr.com/65535/49908215222_90c7850c2f_o.png)
 
 It was easy, right? Now the fan part. We can create stripes along `Z` coordinate and add them together getting pattern with 0, 1 and 2 values:  
-```c
+```C
 // H and V tripes
 @Cd = floor(@P.x % 2) + floor(@P.x % 2);
 ```
@@ -574,7 +574,7 @@ It was easy, right? Now the fan part. We can create stripes along `Z` coordinate
 [![](https://live.staticflickr.com/65535/49908215202_7a0b1a5c2a_o.png)](https://live.staticflickr.com/65535/49908215202_7a0b1a5c2a_o.png)
 
 And clump the result with modulus:  
-```c
+```C
 // Checker
 @Cd = (floor(@P.x % 2) + floor(@P.x % 2)) % 2;
 ```
@@ -587,8 +587,9 @@ After modulus `0` and `1` remains as is and `2` becomes `0`, so we get `0,1,0,1,
 
 Another, more tricky solution is to periodically shift a portion of the stripes.  
 Return to `@Cd = floor(@P.x % 2);` expression which is equals to `@Cd = floor(@P.x) % 2;`  
+
 Try to add a small numbers to an argument: `@Cd = floor(@P.x + 0.1) % 2;`, `@Cd = floor(@P.x + 0.2) % 2;` and notice how stripes are sliding left. What will happen if we add a parametric value instead of a constant? Lets try to add a `Z` position:  
-```c
+```C
 // Taper stripes
 @Cd = floor((@P.x + @P.z) %2);
 ```
@@ -596,7 +597,7 @@ Try to add a small numbers to an argument: `@Cd = floor(@P.x + 0.1) % 2;`, `@Cd 
 [![](https://live.staticflickr.com/65535/49908236242_d32e3af3a0_o.png)](https://live.staticflickr.com/65535/49908236242_d32e3af3a0_o.png)
 
 Obviously, now we need to make those diagonal lines stepped as well, as we did the first time. So we have to `floor` the `Z` position input:  
-```c
+```C
 // Checker
 @Cd= floor((@P.x + floor(@P.z))) % 2;
 ```
@@ -604,7 +605,7 @@ Obviously, now we need to make those diagonal lines stepped as well, as we did t
 
 And a couple of other checker options:
    
-```c
+```C
 // Checker with fraction
 @Cd= floor((frac(@P.x+floor(@P.z*2)*0.5))*2);
 
