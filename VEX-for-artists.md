@@ -515,7 +515,7 @@ Another example of growing value is a `time` in frames, which you can apply to m
 
 If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
-The modulus `%` operation can also produce repetitive patterns from constantly growing input.
+The modulus `%` operation can also produce repetitive patterns from constantly growing input.  
 Say, we have an input: `1,2,3,4,5,6,7,8,9,10, ...`.  
 After `input % 3` operation we will get: `1,2,3,1,2,3,1,2,3,1, ...`
 
