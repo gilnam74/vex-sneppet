@@ -546,7 +546,7 @@ The diagonal line `@P.y = @P.x` is a good foundation. Let's make a periodic patt
 [![](https://live.staticflickr.com/65535/49907358277_8813686658_o.png)](https://live.staticflickr.com/65535/49907358277_8813686658_o.png)
 
 Now, our diagonal line is repeated several times and looks like a saw, a simple repetitive pattern! Let`s modify the base pattern further. Scale it twice and pass through the `floor` function:  
-```c
+```C
 // Fraction of a saw pattern
 @P.y = floor(@P.x % 2);
 ```
@@ -558,14 +558,14 @@ Because our initial saw was in range 0-1 (the lowest and highest value of `@P.y`
 
 This shape applied as color gives us stripes! Let`s take a look at it, plug a Grid SOP into Attribute Wrangle instead of a line. Modify color instead of a Y position and see our 0 and 1 values:
 
-```c
+```C
 // Stripe
 @Cd = floor(@P.x % 2);
 ```
 
 [![](https://live.staticflickr.com/65535/49908215222_90c7850c2f_o.png)](https://live.staticflickr.com/65535/49908215222_90c7850c2f_o.png)
 
-It was easy, right? Now the tricky part. We can create stripes along `Z` coordinate and add them together getting pattern with 0, 1 and 2 values:  
+It was easy, right? Now the fan part. We can create stripes along `Z` coordinate and add them together getting pattern with 0, 1 and 2 values:  
 ```c
 // H and V tripes
 @Cd = floor(@P.x % 2) + floor(@P.x % 2);
