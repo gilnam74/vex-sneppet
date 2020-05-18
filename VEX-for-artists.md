@@ -583,7 +583,7 @@ This shape applied as color gives us stripes! Let`s take a look at it, plug a Gr
 It was easy, right? Now the fan part. We can create stripes along `Z` coordinate and add them together getting pattern with 0, 1 and 2 values:  
 ```C
 // H and V tripes
-@Cd = floor(@P.x % 2) + floor(@P.x % 2);
+@Cd = floor(@P.x % 2) + floor(@P.z % 2);
 ```
 
 [![](https://live.staticflickr.com/65535/49908215202_7a0b1a5c2a_o.png)](https://live.staticflickr.com/65535/49908215202_7a0b1a5c2a_o.png)
@@ -591,7 +591,7 @@ It was easy, right? Now the fan part. We can create stripes along `Z` coordinate
 And clump the result with modulus:  
 ```C
 // Checker
-@Cd = (floor(@P.x % 2) + floor(@P.x % 2)) % 2;
+@Cd = (floor(@P.x % 2) + floor(@P.z % 2)) % 2;
 ```
 
 [![](https://live.staticflickr.com/65535/49907916911_6d96ee5557_o.png)](https://live.staticflickr.com/65535/49907916911_6d96ee5557_o.png)
@@ -606,7 +606,7 @@ Return to `@Cd = floor(@P.x % 2);` expression which is equals to `@Cd = floor(@P
 Try to add a small numbers to an argument: `@Cd = floor(@P.x + 0.1) % 2;`, `@Cd = floor(@P.x + 0.2) % 2;` and notice how stripes are sliding left. What will happen if we add a parametric value instead of a constant? Lets try to add a `Z` position:  
 ```C
 // Taper stripes
-@Cd = floor((@P.x + @P.z) %2);
+@Cd = floor((@P.x + @P.z) % 2);
 ```
 
 [![](https://live.staticflickr.com/65535/49908236242_d32e3af3a0_o.png)](https://live.staticflickr.com/65535/49908236242_d32e3af3a0_o.png)
