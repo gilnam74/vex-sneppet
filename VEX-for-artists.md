@@ -414,11 +414,13 @@ So now we have **two methods to visualize VEX functions**: you can deform geomet
 ## Examine more functions
 This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
-Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work (`@P.y = sine(@P.x)`). Play with values (add, subtract, multiply, divide arguments and functions with arbitrary numbers) and see how it affects the shape of a function.
+Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, e.g. `@P.y = sine(@P.x)`. Play with values (add, subtract, multiply, divide arguments and functions with arbitrary numbers) and see how it affects the shape of a function.
 
-Modify **arguments**, e.g. `sin(@P.x*2)`, `sin(@P.x/10)`, `sin(@P.x+4)`, `sin(@P.x-3.14)`, ... Notice how addition/substraction affects **phase** and multiplication/division affects **period**.
+Modify **arguments**, e.g. `sin(@P.x*2)`, `sin(@P.x/10)`, `sin(@P.x+4)`, `sin(@P.x-3.14)`, ...  
+Notice how addition/substraction affects **phase** and multiplication/division affects **period**.
 
-Modify **functions** with constant values, e.g. `sin(@P.x)*2`, `sin(@P.x)-12`, ... Notice how it affects **amplitude** and **vertical shift**.
+Modify **functions** with constant values, e.g. `sin(@P.x)*2`, `sin(@P.x)-12`, ...  
+Notice how it affects **amplitude** and **vertical shift**.
 
 Use other functions as arguments instead of constants, e.g. `abs(sin(@P.x))`. This nesting gives an infinite amount of variations you can achieve, go as deep in this rabbit hole as you can.
 
