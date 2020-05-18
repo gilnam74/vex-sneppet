@@ -338,27 +338,27 @@ Let`s examine one more interesting function without going into the math backgrou
 
 According to a documentation, you can use point position as an argument and noise can return either float or vector data. There is no description of the output of the noise itself, but we can make an assumption based on the name: we will get some variations of output values depending on the position. In other words, depending on each point position noise function will return certain value for this point. Ok, but how this variation pattern looks like?
 
-Instead of a thousand words, let's just take a look at the noise beast in our scene! Rather than deform geometry (modify @P attribute) we will literally paint points with noise values with a help of @Cd attribute.
+Instead of a thousand words, let's just take a look at the noise beast in our scene! Rather than deform geometry (modify @P attribute) we will literally paint points with noise values with the help of `@Cd` attribute.
 
 `@Cd` is one of the built-in Houdini attributes and it`s responsible for the color values of points or primitives. You can see this values in the viewport on your geometry. This is an attribute of a vector data type: 
 
 `@Cd = {<valueRed>, <valueGreen>, <valueBlue>}`
 
-To **visualize the nose function with colors** create a grid with 200 rows and columns and drop Attribute Wrangle after the grid. Let's learn how we can use `@Cd` attribute, fill the grid with a black color:
+To **visualize the nose function with colors** create a grid with 200 rows and columns and drop Attribute Wrangle after the grid. Let's learn how we can use `@Cd` attribute, fill the grid with black color:
 
-```c
+```C
 // Make geometry black
 @Cd = {0, 0, 0};
 ```
-Note, your grid become black in the viewport! You can try to make it red (or green, or blue) as a simple exercise or yellow if you gonna become a real developer. 
+Note, your grid becomes black in the viewport! You can try to make it red (or green, or blue) as a simple exercise or yellow if you gonna become a real developer. 
 
 It is time to play with a noise function but what option should we choose from the variety of available in docs? Since color is a vector attribute, let's use a vector as a return data type, and vector position as an argument: `vector  noise(vector pos)` and link each point color with noise values:
 
-```c
+```C
 // Paint geometry with noise values
 @Cd = noise(@P);
 ```
-Nice! Here we visualize the noise function on our grid with a color. Curious minds may try to visualize nose with a geometry deformation (`@P = noise(@P);`) but the result would not be clear enough.
+Nice! Here we visualize the noise function on our grid with color. Curious minds may try to visualize the nose with a geometry deformation (`@P = noise(@P);`) but the result would not be clear enough.
 
 [![](https://c2.staticflickr.com/2/1785/42922412061_de666b1a24_o.gif)](https://c2.staticflickr.com/2/1785/42922412061_de666b1a24_o.gif)
 
@@ -370,7 +370,7 @@ Even now while you can see the noise pattern in the scene it is not obvious how 
 ```
 Not quite what we can expect? Check our VEX developer best friend — Geometry Spreadsheet, two other components of our @Cd attribute (@Cd.g and @Cd.b) are equal 1, so we need to make them 0 before:
 
-```c
+```C
 // Make geometry black
 @Cd = {0, 0, 0};
 // Paint geometry with noise values
@@ -414,7 +414,8 @@ So now we have **two methods to visualize VEX functions**: you can deform geomet
 ## Examine more functions
 This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
-Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, e.g. `@P.y = sine(@P.x)`. Play with values (add, subtract, multiply, divide arguments and functions with arbitrary numbers) and see how it affects the shape of a function.
+Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, e.g. `@P.y = sine(@P.x);`  
+Play with values (add, subtract, multiply, divide arguments and functions with arbitrary numbers) and see how it affects the shape of a function.
 
 Modify **arguments**, e.g. `sin(@P.x*2)`, `sin(@P.x/10)`, `sin(@P.x+4)`, `sin(@P.x-3.14)`, ...  
 Notice how addition/substraction affects **phase** and multiplication/division affects **period**.
