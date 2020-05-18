@@ -603,7 +603,12 @@ After modulus `0` and `1` remains as is and `2` becomes `0`, so we get `0,1,0,1,
 Another, more tricky solution is to periodically shift a portion of the stripes.  
 Return to `@Cd = floor(@P.x % 2);` expression which is equals to `@Cd = floor(@P.x) % 2;`  
 
-Try to add a small numbers to an argument: `@Cd = floor(@P.x + 0.1) % 2;`, `@Cd = floor(@P.x + 0.2) % 2;` and notice how stripes are sliding left. What will happen if we add a parametric value instead of a constant? Lets try to add a `Z` position:  
+Try to add a small numbers to an argument:  
+`@Cd = floor(@P.x + 0.1) % 2;`, `@Cd = floor(@P.x + 0.2) % 2;`, `@Cd = floor(@P.x + 0.3) % 2;`     
+Notice how stripes are sliding left. What will happen if we add a parametric value instead of a constant? 
+
+Lets add the `Z` position. Each point of a stripe will slide on its own value, wchich is defined by `@P.z` coordinate:  
+
 ```C
 // Taper stripes
 @Cd = floor((@P.x + @P.z) % 2);
