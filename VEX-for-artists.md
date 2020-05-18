@@ -544,6 +544,9 @@ Repetitive noise:
 
 [![](https://live.staticflickr.com/65535/49907004661_7847c0221f_o.png)](https://live.staticflickr.com/65535/49907004661_7847c0221f_o.png)
 
+The actual code for the image above is noise `@P.y = noise(frac((@P.x)*1.5)*5);`, but I keep the code snippets as clean as possible from redundant stuff for the better understanding. 
+
+Remember, all actual code you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc).
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). First, we need to get equal-sized black and white stripes, then we will periodically shift a part of each stripe.
