@@ -214,7 +214,11 @@ Drag and drop interface.ui on compile_ui.bat to get interface.py
 In Houdini run this code in Python Source Editor window:
 
 ```python
+import os
 import hou
+
+os.environ['PYTHONPATH']  = 'path to compiled interface.py'
+
 from PySide2 import QtCore, QtUiTools, QtWidgets
 import interface
 
