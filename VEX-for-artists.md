@@ -414,7 +414,13 @@ So now we have **two methods to visualize VEX functions**: you can deform geomet
 ## Examine more functions
 This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
-Create a Line SOP, orient it along with X-axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, play with arguments (add, subtract, multiply, divide arguments on arbitrary numbers), use other functions as arguments instead of constants.
+Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work (`@P.y = sine(@P.x)`). Play with values (add, subtract, multiply, divide arguments and functions with arbitrary numbers) and see how it affects the shape of a function.
+
+Modify **arguments**, e.g. `sin(@P.x*2)`, `sin(@P.x/10)`, `sin(@P.x+4)`, `sin(@P.x-3.14)`, ... Notice how addition/substraction affects **phase** and multiplication/division affects **period**.
+
+Modify **functions** with constant values, e.g. `sin(@P.x)*2`, `sin(@P.x)-12`, ... Notice how it affects **amplitude** and **vertical shift**.
+
+Use other functions as arguments instead of constants, e.g. `abs(sin(@P.x))`. This nesting gives an infinite amount of variations you can achieve, go as deep in this rabbit hole as you can.
 
 [![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
 
@@ -463,7 +469,6 @@ Fraction returns fractional component (numbers after the point) of a float.
 @P.y = frac(@P.x); 
 ```
 
-
 #### Y = absolute(X)
 Absolute function returns the same value, but positive (inverted) if it was negative.  
 `X=-1 >> Y=1, X=1 >> Y=1`
@@ -501,9 +506,9 @@ Clump sine output between 0 and 1:
 #### Repetitive patterns
 With `fraction()` we can create procedural repetitive patterns (textures). The gist of such a design is a **constantly growing input** value used to **modify another value**. By modifying input value we can design a pattern.
 
-In the examples above, we used `position x` to modify `position y`. The first point of the line has `position x = 0`, every next point has a slightly bigger x coordinate, so we can say `position x` is a constantly growing value for points in the line. Obviously, `@P.y = @P.x` gives us a 45-degree rotated straight line.
+In the examples above, we used `position x` to modify `position y`. The first point of the line has `position x = 0`, every next point has a slightly bigger x coordinate, so we can say `position x` is a constantly growing value for points in the line. Obviously, `@P.y = @P.x` gives us a diagonal straight line.
 
-Another example of growing value is a `time` in frames, which you can apply to modify object `Y position`. The graph of object motion would be the same 45-degree rotated straight line. Same idea, another implementation.
+Another example of growing value is a `time` in frames, which you can apply to modify object `Y position`. The graph of object motion would be the same diagonal line. Same idea, another implementation.
 
 If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
@@ -529,54 +534,83 @@ Noise of fraction:
 
 
 ## Checker  
-Here we will combine the `floor` and the `fraction` functions to procedurally build a checker.
+Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). First, we need to get equal-sized black and white stripes, then we will periodically shift a part of each stripe.
 
-We can create a "saw" pattern with a fraction:  
+The diagonal line `@P.y = @P.x` is a good foundation. Let's make a periodic pattern from it with a modulus:
+
 ```c
-@P.y = frac(@P.x);
+// Saw pattern with modulus
+@P.y = @P.x % 1;
 ```
 
-Or use the modulus operator `%` to achieve the same goal:  
+[![](https://live.staticflickr.com/65535/49907358277_8813686658_o.png)](https://live.staticflickr.com/65535/49907358277_8813686658_o.png)
+
+Now, our diagonal line is repeated several times and looks like a saw, a simple repetitive pattern! Let`s modify the base pattern further. Scale it twice and pass through the `floor` function:  
 ```c
-@P.y = @P.x % 1
-```
-
-If we want to "pixelate" our saw, we can use the `floor` function. But to see the results we need to scale it twice before using floor function, otherwise, our line will remain flat:   
-```c
-// Option A: Scale fraction saw pattern
-@P.y = frac(@P.x/2)*2;
-
-// Option B: Scale modulus saw pattern
-@P.y = @P.x % 2;
-```
-
-Now the floor function will give us stepped sine:
-```c
-// Option A
-@P.y = floor(frac(@P.x/2)*2);
-
-// Option B
+// Fraction of a saw pattern
 @P.y = floor(@P.x % 2);
 ```
+[![](https://live.staticflickr.com/65535/49907192983_ffb3bdb25f_o.png)](https://live.staticflickr.com/65535/49907192983_ffb3bdb25f_o.png)
 
-Now replace the line with a grid (plug Grid SOP into Attribute Wrangle). If instead of modifying position Y, we will change the color, we will get black and white stripes:
+Floor converts float numbers to integers. Applied to any shape it will flatten all diagonal lines to the value of the smallest integer. Any point position in the range `[0-0.99(9)]` becomes `0`, in range `[1-1.99(9)]` becomes `1`, etc. Because our initial saw was in range 0-1 (the lowest and highest value of `@P.y`) we have to scale it up twice to get one repetitive step. Try `@P.x % 3` you will get 2 steps and so on.
+
+This shape applied as color gives us stripes! Let`s take a look at it, plug a Grid SOP into Attribute Wrangle instead of a line. Modify color instead of a Y position and see our 0 and 1 values:
 
 ```c
-// Option A
-@Cd = floor(frac(@P.x/2)*2);
-
-// Option B
+// Stripe
 @Cd = floor(@P.x % 2);
 ```
 
-If we combine X and Z stripes we will get checker:   
+[![](https://live.staticflickr.com/65535/49908215222_90c7850c2f_o.png)](https://live.staticflickr.com/65535/49908215222_90c7850c2f_o.png)
+
+It was easy, right? Now the tricky part. We can create stripes along `Z` coordinate and add them together getting pattern with 0, 1 and 2 values:  
+```c
+// H and V tripes
+@Cd = floor(@P.x % 2) + floor(@P.x % 2);
+```
+
+[![](https://live.staticflickr.com/65535/49908215202_7a0b1a5c2a_o.png)](https://live.staticflickr.com/65535/49908215202_7a0b1a5c2a_o.png)
+
+And clump the result with modulus:  
+```c
+// Checker
+@Cd = (floor(@P.x % 2) + floor(@P.x % 2)) % 2;
+```
+
+[![](https://live.staticflickr.com/65535/49907916911_6d96ee5557_o.png)](https://live.staticflickr.com/65535/49907916911_6d96ee5557_o.png)
+
+Before `% 2`we have a repetition of `0`, `1`, `2` values: `0,1,2,0,1,2,0,1,2, ...`  
+After modulus `0` and `1` remains as is and `2` becomes `0`, so we get `0,1,0,1,0,1,0,1, ...`
+
+
+Another, more tricky solution is to periodically shift a portion of the stripes.  
+Return to `@Cd = floor(@P.x % 2);` expression which is equals to `@Cd = floor(@P.x) % 2;`  
+Try to add a small numbers to an argument: `@Cd = floor(@P.x + 0.1) % 2;`, `@Cd = floor(@P.x + 0.2) % 2;` and notice how stripes are sliding left. What will happen if we add a parametric value instead of a constant? Lets try to add a `Z` position:  
+```c
+// Taper stripes
+@Cd = floor((@P.x + @P.z) %2);
+```
+
+[![](https://live.staticflickr.com/65535/49908236242_d32e3af3a0_o.png)](https://live.staticflickr.com/65535/49908236242_d32e3af3a0_o.png)
+
+Obviously, now we need to make those diagonal lines stepped as well, as we did the first time. So we have to `floor` the `Z` position input:  
+```c
+// Checker
+@Cd= floor((@P.x + floor(@P.z))) % 2;
+```
+[![](https://live.staticflickr.com/65535/49907916911_6d96ee5557_o.png)](https://live.staticflickr.com/65535/49907916911_6d96ee5557_o.png)
+
+And a couple of other checker options:
+   
 ```c
 // Checker with fraction
 @Cd= floor((frac(@P.x+floor(@P.z*2)*0.5))*2);
 
-// Checker with modulus
-@Cd= floor((@P.x + floor(@P.z)) % 2);
+// Checker with a sine
+@Cd = floor(cos(@P.z + floor(cos(@P.x)) *3.1416 ) +1); 
 ```
+[![]()]()
+
 
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
