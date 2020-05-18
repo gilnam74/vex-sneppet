@@ -552,7 +552,9 @@ Now, our diagonal line is repeated several times and looks like a saw, a simple 
 ```
 [![](https://live.staticflickr.com/65535/49907192983_ffb3bdb25f_o.png)](https://live.staticflickr.com/65535/49907192983_ffb3bdb25f_o.png)
 
-Floor converts float numbers to integers. Applied to any shape it will flatten all diagonal lines to the value of the smallest integer. Any point position in the range `[0-0.99(9)]` becomes `0`, in range `[1-1.99(9)]` becomes `1`, etc. Because our initial saw was in range 0-1 (the lowest and highest value of `@P.y`) we have to scale it up twice to get one repetitive step. Try `@P.x % 3` you will get 2 steps and so on.
+Floor converts float numbers to integers. Applied to any shape it will flatten all diagonal lines to the value of the smallest integer.  
+Any point position in the range `[0-0.99(9)]` becomes `0`, in range `[1-1.99(9)]` becomes `1`, etc.  
+Because our initial saw was in range 0-1 (the lowest and highest value of `@P.y`) we have to scale it up twice to get one repetitive step. Try `@P.x % 3` you will get 2 steps and so on.
 
 This shape applied as color gives us stripes! Let`s take a look at it, plug a Grid SOP into Attribute Wrangle instead of a line. Modify color instead of a Y position and see our 0 and 1 values:
 
