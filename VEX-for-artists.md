@@ -610,7 +610,7 @@ And a couple of other checker options:
 @Cd= floor((frac(@P.x+floor(@P.z*2)*0.5))*2);
 
 // Checker with a sine
-@Cd = floor(cos(@P.z + floor(cos(@P.x)) *3.1416 ) +1); 
+@Cd = floor(sin(@P.z + floor(sin(@P.x)) *3.1416 ) +1); 
 ```
 [![]()]()
 
