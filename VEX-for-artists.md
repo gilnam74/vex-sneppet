@@ -562,7 +562,7 @@ The diagonal line `@P.y = @P.x` is a good foundation. Let's make a periodic patt
 
 Now, our diagonal line is repeated several times and looks like a saw, a simple repetitive pattern! Let`s modify the base pattern further. Scale it twice and pass through the `floor` function:  
 ```C
-// Fraction of a saw pattern
+// Floor a saw pattern
 @P.y = floor(@P.x % 2);
 ```
 [![](https://live.staticflickr.com/65535/49907192983_ffb3bdb25f_o.png)](https://live.staticflickr.com/65535/49907192983_ffb3bdb25f_o.png)
