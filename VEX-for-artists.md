@@ -529,7 +529,7 @@ If you divide 5 by 4 the remainder would be 1: `5 = 4 + 1`.
 The 6/4 reminder would be 2: `6 = 4 + 2`
 The 9/4 reminder would be also 1: `9 = 4*2 + 1`
 
-If `A < B` the reminder is `A`
+If `A < B` the reminder is `A`.  
 If `A = B` or `A*n = B` the remainder is `0`. Here `n` is an integer number.  
 if `A > B` until `A = B*n` the reminder what is left after division without a fraction.
 
