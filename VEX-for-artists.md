@@ -14,7 +14,7 @@ Article structure:
 - [VEX orientation](#vex-orientation)  
 [point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
-[sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)  |  [Polar coords](#polar-coordinates)
+[sine](#sine)  |  [noise](#noise)  |  [More functions](#examine-more-functions)  | [Checker](#checker)  |  [Polar coords](#polar-coordinates)  |  [Repetitive patterns](#repetitive-patterns)
 - [VEX basics](#vex-basics)
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
@@ -506,7 +506,7 @@ Clump sine output between 0 and 1:
 @P.y = clamp(sin(@P.x), 0, 1);
 ```
 
-#### Repetitive patterns
+## Repetitive patterns
 With `fraction()` we can create procedural repetitive patterns (textures). The gist of such a design is a **constantly growing input** value used to **modify another value**. By modifying input value we can design a pattern.
 
 In the examples above, we used `position x` to modify `position y`. The first point of the line has `position x = 0`, every next point has a slightly bigger x coordinate, so we can say `position x` is a constantly growing value for points in the line. Obviously, `@P.y = @P.x` gives us a diagonal straight line.
@@ -670,6 +670,8 @@ vector polar_position = set(v,u,radius);
 ```
 [![](https://live.staticflickr.com/65535/49913741232_43a434baf6_o.png)](https://live.staticflickr.com/65535/49913741232_43a434baf6_o.png)
 
+The code to convert cartesian coordinates to polar was found in the documentation for the "to_Polar" VOP node.
+
 ```C
 // Convert cartesian coords for P to polar
 float radius = sqrt(@P.x*@P.x + @P.y*@P.y + @P.z*@P.z);
@@ -686,7 +688,7 @@ float num = 12;
 And combining those two we can get radial checker:
 
 ```C
-@Cd = (floor(polar_position.z % 2) + floor(polar_position.x*12 % 2)) %2;
+@Cd = (floor(polar_position.z % 2) + floor(polar_position.x*12 % 2)) % 2;
 ```
 [![](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)
 
