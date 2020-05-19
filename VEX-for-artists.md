@@ -513,29 +513,31 @@ In the examples above, we used `position x` to modify `position y`. The first po
 
 Another example of growing value is a `time` in frames, which you can apply to modify object `Y position`. The graph of object motion would be the same diagonal line. Same idea, another implementation.
 
-If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
+If we modify this input value (by feeding it in a function, for example) we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
 The modulus `%` operation can also produce repetitive patterns from constantly growing input.  
 Say, we have a sequence of numbers as input:  `1,2,3,4,5,6,7,8,9,10, ...`  
 The `sequence % 3` operation we will produce: `1,2,0,1,2,0,1,2,0,1, ...` 
 
 So, the infinitely growing sequence becomes a cycle of growing sequences with size limited by the modulus number:
-
+[![](https://live.staticflickr.com/65535/49913386401_9d63f71170_o.png)](https://live.staticflickr.com/65535/49913386401_9d63f71170_o.png)
 
 How does modulus work?  
-Modulus is a **reminder** after dividing one number by another, e.g. `A/B`.  
+Modulus is a **reminder** after dividing one number by another (`A/B`), e.g. what is left after division without a fraction.  
+ 
 If you divide 5 by 4 the remainder would be 1: `5 = 4 + 1`.  
 The 6/4 reminder would be 2: `6 = 4 + 2`
 The 9/4 reminder would be also 1: `9 = 4*2 + 1`
 
 If `A < B` the reminder is `A`
 If `A = B` or `A*n = B` the remainder is `0`. Here `n` is an integer number.  
-if `A > B` the reminder what is left after division without a fraction.
+if `A > B` until `A = B*n` the reminder what is left after division without a fraction.
 
-| IN | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-| -- | - | - | - | - | - | - | - | - | - | -  |
-| %3 | 1 | 2 | 0 | 1 | 2 | 0 | 1 | 2 | 0 | 1  |
-
+| IN | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| -- | - | - | - | - | - | - | - | - | - | - |
+| %2 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |
+| %3 | 0 | 1 | 2 | 0 | 1 | 2 | 0 | 1 | 2 | 0 |
+| %4 | 0 | 1 | 2 | 3 | 0 | 1 | 2 | 3 | 0 | 1 |
 
 Below we make a pattern from parabola and noise graphs.
 
