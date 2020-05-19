@@ -656,8 +656,32 @@ And a couple of other checker options:
 ## Polar coordinates
 In the [Sine](#sine) section we met with polar coordinates, another way to define the position of a point in space.
 
+We can convert one coordinate system to another. Let's take our stripes `@Cd = floor(@P.x % 2);` and convert point position coordinates from default cartesian to polar before feeding them to the `floor` function:
 
-[![]()]()
+```C
+// Convert cartesian coords for P to polar
+float radius = sqrt(@P.x*@P.x + @P.y*@P.y + @P.z*@P.z);
+float u = atan2(@P.y, @P.x) + M_PI;
+float v = acos(@P.z/radius)/M_PI;
+vector polar_position = set(v,u,radius);
+
+// Polar stripes Z
+@Cd = floor(polar_position.z % 2);
+```
+[![](https://live.staticflickr.com/65535/49913741232_43a434baf6_o.png)](https://live.staticflickr.com/65535/49913741232_43a434baf6_o.png)
+
+```C
+// Convert cartesian coords for P to polar
+float radius = sqrt(@P.x*@P.x + @P.y*@P.y + @P.z*@P.z);
+float u = atan2(@P.y, @P.x) + M_PI;
+float v = acos(@P.z/radius)/M_PI;
+vector polar_position = set(v,u,radius);
+
+// Polar stripes X
+float num = 12;
+@Cd = floor(num*polar_position.x % 2);
+```
+[![](https://live.staticflickr.com/65535/49913443921_f85a34ec25_o.png)](https://live.staticflickr.com/65535/49913443921_f85a34ec25_o.png)
 
 
 # VEX basics
