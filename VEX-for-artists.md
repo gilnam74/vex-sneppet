@@ -12,9 +12,9 @@ If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** par
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
-[point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)  |  [Polar coords](#polar_coordinates)
+[point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
-[sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)
+[sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)  |  [Polar coords](#polar_coordinates)
 - [VEX basics](#vex-basics)
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
