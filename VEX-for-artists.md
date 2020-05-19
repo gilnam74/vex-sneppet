@@ -516,8 +516,8 @@ Another example of growing value is a `time` in frames, which you can apply to m
 If we modify this input value (by feeding it in a function, for example) we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
 The modulus `%` operation can also produce repetitive patterns from constantly growing input.  
-Say, we have a sequence of numbers as input:  `1,2,3,4,5,6,7,8,9,10, ...`  
-The `sequence % 3` operation we will produce: `1,2,0,1,2,0,1,2,0,1, ...` 
+Say, we have a sequence of numbers as input:  `1,2,3,4,5,6,7,8,9, ...`  
+The `sequence % 3` operation we will produce: `1,2,0,1,2,0,1,2,0, ...` 
 
 So, the infinitely growing sequence becomes a cycle of growing sequences with size limited by the modulus number:
 [![](https://live.staticflickr.com/65535/49913386401_9d63f71170_o.png)](https://live.staticflickr.com/65535/49913386401_9d63f71170_o.png)
@@ -539,7 +539,7 @@ if `A > B` until `A = B*n` the reminder what is left after division without a fr
 | %3 | 0 | 1 | 2 | 0 | 1 | 2 | 0 | 1 | 2 | 0 |
 | %4 | 0 | 1 | 2 | 3 | 0 | 1 | 2 | 3 | 0 | 1 |
 
-Below we make a pattern from parabola and noise graphs.
+The input could be not only a linear growing sequence, but you can also feed any set of numbers (a result of formula or function). Below we make a pattern from parabola and noise graphs.
 
 Repetitive parabola:
 
