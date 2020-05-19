@@ -12,7 +12,7 @@ If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** par
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
-[Point](#create-a-point) | [Line](#create-a-line) | [circle](#create-a-circle)
+[Point](#create-a-point) | [Line](#create-a-line) | [Circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
 [Sine](#sine)  |  [Noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  |  [Checker](#checker)  |  [Polar coordinates](#polar-coordinates)  
 
