@@ -516,8 +516,23 @@ Another example of growing value is a `time` in frames, which you can apply to m
 If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
 The modulus `%` operation can also produce repetitive patterns from constantly growing input.  
-Say, we have an input: `1,2,3,4,5,6,7,8,9,10, ...`.  
-After `input % 3` operation we will get: `1,2,3,1,2,3,1,2,3,1, ...`
+Say, we have a sequence of numbers: `1,2,3,4,5,6,7,8,9,10, ...`  
+The `sequence % 3` operation we will produce: `1,2,0,1,2,0,1,2,0,1, ...`
+
+How it's happening?  
+Modulus is a **reminder** after dividing one number by another, e.g. `A/B`.  
+If you divide 5 by 4 the remainder would be 1: `5 = 4 + 1`.  
+The 6/4 reminder would be 2: `6 = 4 + 2`
+The 9/4 reminder would be also 1: `9 = 4*2 + 1`
+
+If `A < B` the reminder is `A`
+If `A = B` or `A*n = B` the remainder is `0`. Here `n` is an integer number.  
+if `A > B` the reminder what is left after division without a fraction.
+
+| IN | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| -- | - | - | - | - | - | - | - | - | - |
+| %3 | 1 | 2 | 0 | 1 | 2 | 0 | 1 | 2 | 0 |
+
 
 Below we make a pattern from parabola and noise graphs.
 
@@ -560,7 +575,7 @@ The diagonal line `@P.y = @P.x` is a good foundation. Let's make a periodic patt
 
 [![](https://live.staticflickr.com/65535/49907358277_8813686658_o.png)](https://live.staticflickr.com/65535/49907358277_8813686658_o.png)
 
-Now, our diagonal line is repeated several times and looks like a saw, a simple repetitive pattern! Let`s modify the base pattern further. Scale it twice and pass through the `floor` function:  
+Now, our diagonal line is repeated several times and looks like a saw, a simple repetitive pattern! Let's modify the base pattern further. Scale it twice and pass through the `floor` function:  
 ```C
 // Floor a saw pattern
 @P.y = floor(@P.x % 2);
@@ -632,6 +647,11 @@ And a couple of other checker options:
 // Checker with a sine
 @Cd = floor(sin(@P.z + floor(sin(@P.x)) *3.1416 ) +1); 
 ```
+
+## Polar coordinates
+In the [Sine](#sine) section we met with polar coordinates, another way to define the position of a point in space.
+
+
 [![]()]()
 
 
