@@ -14,8 +14,7 @@ Article structure:
 - [VEX orientation](#vex-orientation)  
 [point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
-[sine](#sine)  |  [noise](#noise)  |  [More functions](#examine-more-functions)  | [Checker](#checker)  |  [Polar coords](#polar-coordinates)  |  [Repetitive patterns](#repetitive-patterns)
-- [VEX basics](#vex-basics)
+[sine](#sine)  |  [noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  |  [Checker](#checker)  |  [Polar coords](#polar-coordinates)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
 
