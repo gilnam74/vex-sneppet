@@ -516,10 +516,13 @@ Another example of growing value is a `time` in frames, which you can apply to m
 If we modify this input value (by feeding it in a function, for example) surely we will get a modified output. If we use `fraction` as a control function to modify a rotated line we will get the pattern: a sequence of rotated lines that looks like a saw. 
 
 The modulus `%` operation can also produce repetitive patterns from constantly growing input.  
-Say, we have a sequence of numbers: `1,2,3,4,5,6,7,8,9,10, ...`  
-The `sequence % 3` operation we will produce: `1,2,0,1,2,0,1,2,0,1, ...`
+Say, we have a sequence of numbers as input:  `1,2,3,4,5,6,7,8,9,10, ...`  
+The `sequence % 3` operation we will produce: `1,2,0,1,2,0,1,2,0,1, ...` 
 
-How it's happening?  
+So, the infinitely growing sequence becomes a cycle of growing sequences with size limited by the modulus number:
+
+
+How does modulus work?  
 Modulus is a **reminder** after dividing one number by another, e.g. `A/B`.  
 If you divide 5 by 4 the remainder would be 1: `5 = 4 + 1`.  
 The 6/4 reminder would be 2: `6 = 4 + 2`
@@ -529,9 +532,9 @@ If `A < B` the reminder is `A`
 If `A = B` or `A*n = B` the remainder is `0`. Here `n` is an integer number.  
 if `A > B` the reminder what is left after division without a fraction.
 
-| IN | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-| -- | - | - | - | - | - | - | - | - | - |
-| %3 | 1 | 2 | 0 | 1 | 2 | 0 | 1 | 2 | 0 |
+| IN | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| -- | - | - | - | - | - | - | - | - | - | -  |
+| %3 | 1 | 2 | 0 | 1 | 2 | 0 | 1 | 2 | 0 | 1  |
 
 
 Below we make a pattern from parabola and noise graphs.
