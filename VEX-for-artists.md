@@ -12,7 +12,7 @@ If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** par
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
-[point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)  
+[point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)  |  [Polar coords](#polar_coordinates)
 - [VEX first steps](#vex-first-steps)  
 [sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)
 - [VEX basics](#vex-basics)
@@ -336,11 +336,11 @@ Let`s examine one more interesting function without going into the math backgrou
 
 [![](https://c2.staticflickr.com/2/1826/42878139242_b03dccb888_o.gif)](https://c2.staticflickr.com/2/1826/42878139242_b03dccb888_o.gif)
 
-According to a documentation, you can use point position as an argument and noise can return either float or vector data. There is no description of the output of the noise itself, but we can make an assumption based on the name: we will get some variations of output values depending on the position. In other words, depending on each point position noise function will return certain value for this point. Ok, but how this variation pattern looks like?
+According to documentation, you can use point position as an argument and noise can return either float or vector data. There is no description of the output of the noise itself, but we can make an assumption based on the name: we will get some variations of output values depending on the position. In other words, depending on each point position noise function will return certain value for this point. Ok, but how this variation pattern looks like?
 
 Instead of a thousand words, let's just take a look at the noise beast in our scene! Rather than deform geometry (modify @P attribute) we will literally paint points with noise values with the help of `@Cd` attribute.
 
-`@Cd` is one of the built-in Houdini attributes and it`s responsible for the color values of points or primitives. You can see this values in the viewport on your geometry. This is an attribute of a vector data type: 
+`@Cd` is one of the built-in Houdini attributes and it`s responsible for the color values of points or primitives. You can see these values in the viewport on your geometry. This is an attribute of a vector data type: 
 
 `@Cd = {<valueRed>, <valueGreen>, <valueBlue>}`
 
