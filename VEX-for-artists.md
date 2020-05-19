@@ -506,7 +506,7 @@ Clump sine output between 0 and 1:
 ```
 
 ## Repetitive patterns
-With `fraction()` we can create procedural repetitive patterns (textures). The gist of such a design is a **constantly growing input** value used to **modify another value**. By modifying input value we can design a pattern.
+With `fraction` function or modulus operator we can create procedural repetitive patterns (textures). The gist of such a design is a **constantly growing input** value used to **modify another value**. By modifying input value we can design a pattern.
 
 In the examples above, we used `position x` to modify `position y`. The first point of the line has `position x = 0`, every next point has a slightly bigger x coordinate, so we can say `position x` is a constantly growing value for points in the line. Obviously, `@P.y = @P.x` gives us a diagonal straight line.
 
