@@ -14,7 +14,7 @@ Article structure:
 - [VEX orientation](#vex-orientation)  
 [point](#create-a-point) | [line](#create-a-line) | [circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
-[sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)  |  [Polar coords](#polar_coordinates)
+[sine](#sine)  |  [noise](#noise)  |  [Examine more functions](#examine-more-functions)  | [Checker](#checker)  |  [Polar coords](#polar-coordinates)
 - [VEX basics](#vex-basics)
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
@@ -656,7 +656,7 @@ And a couple of other checker options:
 ## Polar coordinates
 In the [Sine](#sine) section we met with polar coordinates, another way to define the position of a point in space.
 
-We can convert one coordinate system to another. Let's take our stripes `@Cd = floor(@P.x % 2);` and convert point position coordinates from default cartesian to polar before feeding them to the `floor` function:
+We can modify our input value more to achieve more complex patterns. Let's take our stripes `@Cd = floor(@P.x % 2);` and convert point position coordinates from default cartesian to polar before feeding them to the `floor` function:
 
 ```C
 // Convert cartesian coords for P to polar
@@ -683,6 +683,12 @@ float num = 12;
 ```
 [![](https://live.staticflickr.com/65535/49913443921_f85a34ec25_o.png)](https://live.staticflickr.com/65535/49913443921_f85a34ec25_o.png)
 
+And combining those two we can get radial checker:
+
+```C
+@Cd = (floor(polar_position.z % 2) + floor(polar_position.x*12 % 2)) %2;
+```
+[![](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)
 
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
