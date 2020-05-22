@@ -523,7 +523,7 @@ Clump sine output between 0 and 1:
 ```
 
 #### Deform position space
-Here we will twist a noise. 
+Here we will twist a noise: `@Cd = float(noise(distance(0, 10*@P)));` 
 
 [![](https://live.staticflickr.com/65535/49922975518_1b084e311c_o.png)](https://live.staticflickr.com/65535/49922975518_1b084e311c_o.png)
 
