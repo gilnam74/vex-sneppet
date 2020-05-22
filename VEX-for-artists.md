@@ -436,11 +436,15 @@ You can combine functions in a different way but most obvious is nesting:
 `function_C(function_B(function_A()))`
 
 In VOP network it will look like a chain:
-[![](https://live.staticflickr.com/65535/49923619657_fd3b923684_o.png)](https://live.staticflickr.com/65535/49923619657_fd3b923684_o.png)
+[![](https://live.staticflickr.com/65535/49923517071_9752e2ac66_o.png)](https://live.staticflickr.com/65535/49923517071_9752e2ac66_o.png)
 
 In a case with a position, when `function A` serves as an input of `function B`, this means that `function A` deforming the cartesian space for `function B`, so `function B` becomes wrapped.
 
+Let's twist some noise:
 [![](https://live.staticflickr.com/65535/49922975518_1b084e311c_o.png)](https://live.staticflickr.com/65535/49922975518_1b084e311c_o.png)
+
+If we plug `@P.x` to a color on the Grid SOP we will get a ramp (pic 1). Distance between point and origin will give us a radial ramp (pic 2). We can create a big spot with noise (pic 3). If we modify position which comes to noise with the distance we will get a spot twisted with radial ramp.
+
 
 Let's go through several simple examples and then build something more meaningful.
 
