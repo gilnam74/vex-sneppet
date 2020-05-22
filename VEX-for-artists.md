@@ -440,6 +440,8 @@ In VOP network it will look like a chain:
 
 In a case with a position, when `function A` serves as an input of `function B`, this means that `function A` deforming the cartesian space for `function B`, so `function B` becomes wrapped.
 
+[![](https://live.staticflickr.com/65535/49922975518_1b084e311c_o.png)](https://live.staticflickr.com/65535/49922975518_1b084e311c_o.png)
+
 Let's go through several simple examples and then build something more meaningful.
 
 #### Y = X
