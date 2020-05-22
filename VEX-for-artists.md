@@ -411,20 +411,36 @@ How can we use noise function in production? For example, you can scatter points
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
 ## Examine more functions
-This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
-
-Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. Place basic functions in a wrangle and see how they work, e.g. `@P.y=sine(@P.x);`  
-Play with values (add, subtract, multiply, divide arguments and functions with arbitrary numbers) and see how it affects the shape of a function.
-
-Modify **arguments**, e.g. `sin(@P.x*2)`, `sin(@P.x/10)`, `sin(@P.x+4)`, `sin(@P.x-3.14)`, ...  
-Notice how addition/substraction affects **phase** and multiplication/division affects **period**.
-
-Modify **functions** with constant values, e.g. `sin(@P.x)*2`, `sin(@P.x)-12`, ...  
-Notice how it affects **amplitude** and **vertical shift**.
-
-Use other functions as arguments instead of constants, e.g. `abs(sin(@P.x))`. This nesting gives an infinite amount of variations you can achieve, go as deep in this rabbit hole as you can.
+Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. 
 
 [![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
+
+Explore miscellaneous functions, e.g. `@P.y=sine(@P.x);` and notice how they affect geometry. Some results would be more descriptive in 2D space (modifying the Line SOP), another in 3D space (modifying the Grid SOP), and some in color (modifying point color of the Grid SOP).
+
+Modify functions in 3 ways and notice the outcome:
+
+#### Modify arguments
+Add, subtract, multiply, divide  **arguments** of the function by constant numbers.  
+E.g. `sin(@P.x*2)`, `sin(@P.x/10)`, `sin(@P.x+4)`, `sin(@P.x-3.14)`, ...  
+See how addition/substraction affects **phase** and multiplication/division affects **period**.
+
+#### Modify functions
+Add, subtract, multiply, divide **functions** by constant numbers.  
+E.g. `sin(@P.x)*2`, `sin(@P.x)-12`, ...  
+Notice how it affects **amplitude** and **vertical shift**.
+
+#### Combine functions
+The most exciting and sophisticated way to affect the outcome which gives an infinite amount of variations you can achieve. Go as deep in this rabbit hole as you can.
+
+You can combine functions in a different way but most obvious is nesting:  
+`function_C(function_B(function_A()))`
+
+In VOP network it will look like a chain:
+[![](https://live.staticflickr.com/65535/49923619657_fd3b923684_o.png)](https://live.staticflickr.com/65535/49923619657_fd3b923684_o.png)
+
+In a case with a position, when `function A` serves as an input of `function B`, this means that `function A` deforming the cartesian space for `function B`, so `function B` becomes wrapped.
+
+Let's go through several simple examples and then build something more meaningful.
 
 #### Y = X
 Probably the most basic function you can imagine (aside from `y = constant number`, e.g. `y = 256`). Each value of Y corresponds to the same number of X. Using points position of a line we can visualize it in 2D space. For each point of the Line SOP, we change Y coordinate of a line, according to its X coordinate. `X=1 >> Y=1, X=2 >> Y=2, ...`
@@ -690,6 +706,8 @@ And combining those two we can get radial checker:
 @Cd = (floor(polar_position.z % 2) + floor(polar_position.x*12 % 2)) % 2;
 ```
 [![](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)
+
+This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
 # VEX basics
 Check [VEX snippets](vex-snippets) for more VEX examples.
