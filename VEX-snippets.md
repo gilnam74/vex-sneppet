@@ -17,6 +17,7 @@ string myStiring = 'C:/cache/animation.abc';
 s@myString = 'C:/cache/animation.abc';
 // Arrays
 string variations[] = {'A','B','C'};
+string variables[] = array(variable_A, variable_B, variable_C);
 s[]@variations = {'A','B','C'};
 
 ```
