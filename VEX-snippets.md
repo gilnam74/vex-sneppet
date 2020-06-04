@@ -96,28 +96,31 @@ printf('%s', reverse(sort(int_numbers)));
 // Result: {6, 5, 4, 3, 2, 1}
 ```
 
-#### Get and set attributes
+#### Get and set attribute values
 ```C
 // Get attribute value from first Wrangle input:  
-vector pointPos = v@opinput0_P;
-vector pointPos = point(0, "P", @ptnum);
+vector point_pos = v@opinput0_P;
+vector point_pos = point(0, "P", @ptnum);
+
 // Get attribute value from scene geometry:  
-vector pointPos = point("op:../geometryName", "P", @ptnum); 
+vector point_pos = point("op:../geometry_name", "P", @ptnum); 
+
 // Get primitive attribute in point mode
-primattrib(0, "attributeName", @ptnum, 0);
+primattrib(0, "attribute_name", @ptnum, 0);
 
 // Create color attribute and set it`s value to red
 addpointattrib(0, "Cd", {1,0,0});
 
 // Create point attribute and set value
-// Could be used to create and set point attributes in detail mode!
-setpointattrib(0, "<attributeName>", <pointNumber>, <valutToSet>, "set");  
+// Could be used to create and set point attributes in detail mode
+setpointattrib(0, "<attribute_name>", <point_number>, <value>, "set");  
 
 // Set attribute value:
 f@pi = 3.1415;
-v@vectorAttribute = {1, 2, 3};  
-v@vectorAttribute = set(1, 2, @P.z);  
+v@vector_a = {1, 2, 3};  
+v@vector_b = set(1, 2, @P.z);  
 ```
+
 #### Modify input values
 ```c
 float input;
