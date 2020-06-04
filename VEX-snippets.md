@@ -3,7 +3,8 @@ Here you will find isolated blocks of VEX code, each of them performs one certai
 [Snippets](#snippets) | [VEX expressions](#vex-expressions) | [Tools](#tools) | [Algorithms](#algorithms)
 
 ## Snippets
-Basement for VEX development.
+This is the reference for VEX development basics. Here you can find the most low-level solution blocks, if you have a general understanding of how VEX works and can be used. Walkthrough the [VEX for artists](vex-for-artists) tutorial if not.
+
 #### Datatypes
 ```C
 // Integers
@@ -175,7 +176,7 @@ for (int n=0; n<numberOfPoints; n++){
     }
 ```
 
-```c
+```C
 // Create CLOSED shape
 
 // Create POLYGON primitive
@@ -196,7 +197,7 @@ if ((@ptnum == 0) || (@ptnum == (@numpt-1))) f@pscale = 10;
 else f@pscale = 1;
 ```
 
-```c
+```C
 // Scale 10 times first and last points, short form    
 f@pscale = (@ptnum == 0) || @ptnum ==(@numpt-1) ? 10 : 1;
 ```
@@ -227,7 +228,7 @@ matrix matrx = optransform('obj/geometry_01');
 
 
 ## VEX expressions
-Using VEX in parameter interface of Houdini nodes. See [documentation](http://www.sidefx.com/docs/houdini/expressions/index.html)
+Using VEX in the parameter interface of Houdini nodes. See [documentation](http://www.sidefx.com/docs/houdini/expressions/index.html)
 
 #### Get Attributes
 ```c
@@ -247,7 +248,7 @@ neighbourcount(0, @ptnum) == 2
 ```
 
 ## Tools
-Complete solutions for basic tasks
+In this section, there are a bit more sophisticated VEX solutions. Each solves some particular task and can be considered as a custom tool.
 
 ### Flatten mesh by UVs
 ```c
