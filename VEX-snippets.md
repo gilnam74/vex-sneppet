@@ -212,17 +212,17 @@ f@pscale = (@ptnum == 0) || @ptnum ==(@numpt-1) ? 10 : 1;
 #### Vectors
 ```c
 // Find a vector between two points A and B (coords B - coords A)
-v@A = normalize(point(0, "P", <ptnum_B>));
-v@B = normalize(point(0, "P", <ptnum_A>));
-@AB = @A-@B;
+vector vector_A = normalize(point(0, "P", <ptnum_B>));
+vector vector_B = normalize(point(0, "P", <ptnum_A>));
+vector vector_AB = vector_A-vector_B;
 
 // Build tangent normals
-v@A = normalize(point(0, "P", @ptnum));
-v@B = normalize(point(0, "P", @ptnum + 1));
-@N = @A-@B; 
+vector vector_A = normalize(point(0, "P", @ptnum));
+vector vector_B = normalize(point(0, "P", @ptnum + 1));
+@N = vector_A-vector_B; 
 
 // Get angle between 2 vectors in radians
-f@angle = acos(dot(normalize(v@vector1), normalize(v@vector2)));
+float angle = acos(dot(normalize(vector_A), normalize(vector_B)));
 ```
 
 ### Transformation matrix
