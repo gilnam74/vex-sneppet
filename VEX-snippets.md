@@ -9,12 +9,15 @@ Basement for VEX development.
 // Integers
 int myInteger = 1;
 i@myInteger = 1;
+
 // Floats
 float myFloat = 4.14;
 f@myFloat = 3.14;
-// String
+
+// Strings
 string myStiring = 'C:/cache/animation.abc';
 s@myString = 'C:/cache/animation.abc';
+
 // Arrays
 string variations[] = {'A','B','C'};
 string variables[] = array(variable_A, variable_B, variable_C);
