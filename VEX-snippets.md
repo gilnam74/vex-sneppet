@@ -120,11 +120,11 @@ v@vectorAttribute = set(1, 2, @P.z);
 ```
 #### Modify input values
 ```c
-f@attribute;
+float input;
 // Modify with fit range
-@attribute = fit(@attribute, <currentMinValue>,<currentMaxValue>, <outMin>, <outMax>);
+input = fit(input, <currentMinValue>,<currentMaxValue>, <outMin>, <outMax>);
 // Modify with a ramp
-@attribute = chramp('Modify_Value',@attribute);
+input = chramp('Modify_Value', input);
 ```
 
 #### Get points and primitives
