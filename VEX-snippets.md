@@ -24,6 +24,17 @@ string variables[] = array(variable_A, variable_B, variable_C);
 s[]@variations = {'A','B','C'};
 ```
 
+#### Data type convertion
+```C
+// interger >> string
+int number = 123;
+string text = itoa(number);
+
+// string >> integer
+string text = '123';
+int number = atoi(text);
+```
+
 #### Strings
 ```C
 // Print strings
