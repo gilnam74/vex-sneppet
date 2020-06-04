@@ -33,7 +33,6 @@ printf('The text is: %s \n', text);
 
 // Slice strings
 // string[start:stop]  >> Use <start> through <stop>-1
-
 string text = '123456';
 text[:];     // Result: '123456'
 text[:-1];   // Result: '12345'
