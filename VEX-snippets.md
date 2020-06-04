@@ -1,6 +1,4 @@
-This is the reference for VEX development basics. 
-
-Here you can find VEX code snippets that could be a good foundation to build your own tools.
+This is the reference for VEX development. Here you can find VEX code snippets that could be a good foundation to build your own tools.
 
 If you don`t have a general understanding of how VEX works and can be used, walkthrough the [VEX for artists](vex-for-artists) tutorial. 
 
