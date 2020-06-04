@@ -29,26 +29,29 @@ s[]@variations = {'A','B','C'};
 // Print strings
 string text = 'Hello, World!';
 printf('The text is: %s \n', text);
-// 'The text is: Hello, World!'
+// Result: 'The text is: Hello, World!'
 
 // Slice strings
 // string[start:stop]  >> Use <start> through <stop>-1
 
 string text = '123456';
-text[:];     // '123456'
-text[:-1];   // '12345'
-text[1:];    // '23456'
-text[1:-1];  // '2345'
+text[:];     // Result: '123456'
+text[:-1];   // Result: '12345'
+text[1:];    // Result: '23456'
+text[1:-1];  // Result: '2345'
+text[-1];    // Result: '6'
+text[0];     // Result: '1'
 
 // Concatenate (join) strings
 string node = 'SOP';
 string value = '256';
 string output = sprintf('%s%s%s', node, ' = ', value);
-// 'SOP = 256'
+// Result: 'SOP = 256'
 
 // Reverse
 string text = 'ABCD''
-reverse(text); // 'DCBA'
+reverse(text);
+// Result: 'DCBA'
 ```
 
 
