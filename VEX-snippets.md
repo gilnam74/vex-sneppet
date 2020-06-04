@@ -1,6 +1,6 @@
 Here you will find isolated blocks of VEX code, each of them performs one certain small task. These and other examples you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc). 
 
-[Snippets](#snippets) | [VEX expressions](#vex-expressions) | [Tools](#tools)
+[Snippets](#snippets) | [VEX expressions](#vex-expressions) | [Tools](#tools) | [Algorithms](#algorithms)
 
 ## Snippets
 Basement for VEX development.
@@ -88,21 +88,6 @@ printf('%s', int_numbers);
 printf('%s', sort(int_numbers));
 // Result: {1, 2, 3, 4, 5, 6}
 printf('%s', reverse(sort(int_numbers)));
-// Result: {6, 5, 4, 3, 2, 1}
-
-// Reverse array under the hood (one of possible algorithms) 
-int int_numbers[] = {1,2,3,4,5,6};
-int rversed[];
-
-for(int i=0; i<len(int_numbers); i++){
-
-    int number_from_start = int_numbers[i];
-    int index_from_end = len(int_numbers)-i-1;
-
-    rversed[i] = int_numbers[index_from_end];
-    rversed[index_from_end] = number_from_start;
-    }
-
 // Result: {6, 5, 4, 3, 2, 1}
 ```
 
@@ -657,4 +642,23 @@ foreach (int pnt;  nearpnts){
         addvertex(0, line, pnt );
         }
     } 
+```
+
+## Algorithms
+
+```C
+// Reverse array
+int int_numbers[] = {1,2,3,4,5,6};
+int rversed[];
+
+for(int i=0; i<len(int_numbers); i++){
+
+    int number_from_start = int_numbers[i];
+    int index_from_end = len(int_numbers)-i-1;
+
+    rversed[i] = int_numbers[index_from_end];
+    rversed[index_from_end] = number_from_start;
+    }
+
+// Result: {6, 5, 4, 3, 2, 1}
 ```
