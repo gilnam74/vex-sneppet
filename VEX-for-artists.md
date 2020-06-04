@@ -5,13 +5,6 @@ Here you will learn VEX (and hence applied math) starting from the basics with a
 
 Check [Programming Basics tutorial](Programming-basics) if you are totally 146% fresh noob in developing.
 
-##### Create a wrangle in a fresh Houdini scene
-- Press TAB in Node View, type `geometry`, hit ENTER
-- Dive inside "Geometry" node, delete "File" node
-- Press TAB, type `aw`, hit ENTER to create "Attribute Wrangle" node
-
-If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** parameter to **"Detail"**. If you will feed some data to Attribute Wrangle (connect any node to input) leave Run Over parameter at default Point state.
-
 Article structure:  
 - [VEX orientation](#vex-orientation)  
 [Point](#create-a-point) | [Line](#create-a-line) | [Circle](#create-a-circle)
@@ -22,6 +15,13 @@ All exercises from this chapter you can find in [VEX snippets hip file](../blob/
 
 # VEX orientation
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase the complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
+
+##### Create a wrangle in a fresh Houdini scene
+- Press TAB in Node View, type `geometry`, hit ENTER
+- Dive inside "Geometry" node, delete "File" node
+- Press TAB, type `aw`, hit ENTER to create "Attribute Wrangle" node
+
+If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** parameter to **"Detail"**. If you will feed some data to Attribute Wrangle (connect any node to input) leave Run Over parameter at default Point state.
 
 ## Attribute Wrangle
 Imagine **Attribute Wrangle** as a [loop](Programming-basics#loops) node, for example Attribute Wrangle run over Points:
