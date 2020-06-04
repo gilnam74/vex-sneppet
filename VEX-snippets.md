@@ -78,17 +78,16 @@ int int_number = 312654;
 string string_number = itoa(int_number);
 int int_numbers[];
 
-
 for(int n=0; n<len(string_number); n++){  
         //int_numbers[n] = atof(string_numbers[n]);
         int_numbers[n] = atoi(string_number[n]);
         }
 
-printf('%s ', int_numbers);
+printf('%s', int_numbers);
 // Result: {3, 1, 2, 6, 5, 4}
-printf('%s ', sort(int_numbers));
+printf('%s', sort(int_numbers));
 // Result: {1, 2, 3, 4, 5, 6}
-printf('%s ', reverse(sort(int_numbers)));
+printf('%s', reverse(sort(int_numbers)));
 // Result: {6, 5, 4, 3, 2, 1}
 ```
 
