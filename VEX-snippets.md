@@ -46,6 +46,7 @@ text[0];     // Result: '1'
 string node = 'SOP';
 string value = '256';
 string output = sprintf('%s%s%s', node, ' = ', value);
+printf('%s', output);
 // Result: 'SOP = 256'
 
 // Reverse
@@ -54,7 +55,32 @@ reverse(text);
 // Result: 'DCBA'
 ```
 
+#### Arrays
+```C
+// Split string with a space to array of strings
+string numbres = '1 2 3 4 5 6';
+string array[] = split(numbres, ' ');
+printf('%s', array);
+// Result: {1, 2, 3, 4, 5, 6}
 
+// Split integer into array of integers via strings
+int int_number = 312654;
+string string_number = itoa(int_number);
+int int_numbers[];
+
+
+for(int n=0; n<len(string_number); n++){  
+        //int_numbers[n] = atof(string_numbers[n]);
+        int_numbers[n] = atoi(string_number[n]);
+        }
+
+printf('%s ', int_numbers);
+// Result: {3, 1, 2, 6, 5, 4}
+printf('%s ', sort(int_numbers));
+// Result: {1, 2, 3, 4, 5, 6}
+printf('%s ', reverse(sort(int_numbers)));
+// Result: {6, 5, 4, 3, 2, 1}
+```
 
 #### Get and set attributes
 ```C
