@@ -1,6 +1,6 @@
 This is the reference for VEX development. Here you can find VEX code snippets that could be a good foundation to build your own tools.
 
-If you don`t have a general understanding of how VEX works and can be used, walkthrough the [VEX for artists](vex-for-artists) tutorial. 
+Walkthrough the [VEX for artists](vex-for-artists) tutorial if you don`t have a general understanding of how VEX works and how it can be used to make your life easier (or, optionally, turn it into complete disaster after stepping into this rabbit hole).
 
 These and other examples you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc). 
 
