@@ -1,9 +1,15 @@
-Here you will find isolated blocks of VEX code, each of them performs one certain small task. These and other examples you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc). 
+This is the reference for VEX development basics. 
+
+Here you can find VEX code snippets that could be a good foundation to build your own tools.
+
+If you don`t have a general understanding of how VEX works and can be used, walkthrough the [VEX for artists](vex-for-artists) tutorial. 
+
+These and other examples you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc). 
 
 [Snippets](#snippets) | [VEX expressions](#vex-expressions) | [Tools](#tools) | [Algorithms](#algorithms)
 
 ## Snippets
-This is the reference for VEX development basics. Here you can find the most low-level solution blocks, if you have a general understanding of how VEX works and can be used. Walkthrough the [VEX for artists](vex-for-artists) tutorial if not.
+The VEX 101 and the most low-level solution blocks.
 
 #### Datatypes
 ```C
