@@ -22,8 +22,37 @@ s@myString = 'C:/cache/animation.abc';
 string variations[] = {'A','B','C'};
 string variables[] = array(variable_A, variable_B, variable_C);
 s[]@variations = {'A','B','C'};
-
 ```
+
+#### Strings
+```C
+// Print strings
+string text = 'Hello, World!';
+printf('The text is: %s \n', text);
+// 'The text is: Hello, World!'
+
+// Slice strings
+// string[start:stop]  >> Use <start> through <stop>-1
+
+string text = '123456';
+text[:];     // '123456'
+text[:-1];   // '12345'
+text[1:];    // '23456'
+text[1:-1];  // '2345'
+
+// Concatenate (join) strings
+string node = 'SOP';
+string value = '256';
+string output = sprintf('%s%s%s', node, ' = ', value);
+// 'SOP = 256'
+
+// Reverse
+string text = 'ABCD''
+reverse(text); // 'DCBA'
+```
+
+
+
 #### Get and set attributes
 ```C
 // Get attribute value from first Wrangle input:  
