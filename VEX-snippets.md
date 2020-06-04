@@ -651,7 +651,7 @@ foreach (int pnt;  nearpnts){
 int int_numbers[] = {1,2,3,4,5,6};
 int rversed[];
 
-for(int i=0; i<len(int_numbers); i++){
+for(int i=0; i<len(int_numbers)/2; i++){
 
     int number_from_start = int_numbers[i];
     int index_from_end = len(int_numbers)-i-1;
@@ -660,5 +660,6 @@ for(int i=0; i<len(int_numbers); i++){
     rversed[index_from_end] = number_from_start;
     }
 
+printf('%s', rversed);
 // Result: {6, 5, 4, 3, 2, 1}
 ```
