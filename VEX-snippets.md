@@ -43,9 +43,13 @@ int number = atoi(text);
 #### Strings
 ```C
 // Print strings
-printf('Hello, World!');  // Result: Hello, World!
+printf('Hello, World!');  
+// Result: Hello, World!
+
+// Print string variable
 string text = 'Hello, World!';
-printf('The text is: %s \n', text); // Result: The text is: Hello, World!
+printf('The text is: %s \n', text); 
+// Result: The text is: Hello, World!
 
 // Slice strings
 // string[start:stop]  >> Use <start> through <stop>-1
