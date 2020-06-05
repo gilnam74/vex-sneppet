@@ -146,6 +146,15 @@ setpointattrib(0, 'myAttribute', 0, 'attributrValue', "set");
 ```
 #### Debug VEX with print
 ```c
+// Basic print
+printf('Hello, World');
+
+// Print data
+printf('The string is %s', 'Eve');         // Result: The string is Eve
+printf('The integer is %d', 256);          // Result: The integer is 256
+printf('The float is %f', 3.14156);        // Result: The float is 3.14156
+printf('The the float is %.2f', 3.14156);  // Result: The float is 3.14
+
 // Get all primitives
 int primitives[] = expandprimgroup(0, "*");
 
