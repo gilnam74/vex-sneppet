@@ -79,8 +79,8 @@ reverse(text);
 // Accessing, sorting, reversing elements
 int numbers[] = {5, 4, 3, 2, 1};
 printf(' %d\n', numbers[0]);                // Result: 5
+printf(' %d\n', numbers[-1]);               // Result: 1
 printf(' %d\n', numbers[2:]);               // Result: {3, 2, 1}
-printf(' %d\n', numbers[len(numbers)-1:]);  // Result: 1
 printf(' %d\n', sort(numbers));             // Result: {1, 2, 3, 4, 5}
 printf(' %d\n', reverse(sort(numbers)));    // Result: {5, 4, 3, 2, 1}
 
