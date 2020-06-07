@@ -10,7 +10,8 @@ Article structure:
 [Point](#create-a-point) | [Line](#create-a-line) | [Circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
 [Sine](#sine)  |  [Noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  |  [Checker](#checker)  |  [Polar coordinates](#polar-coordinates)  
-- [Vectors](#vectors)
+- [Vectors](#vectors)  
+- [VEX next steps](#vex-next-steps)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
 
@@ -721,5 +722,7 @@ And combining those two we can get radial checker:
 
 This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
-# VEX basics
+# Vectors
+
+# VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
