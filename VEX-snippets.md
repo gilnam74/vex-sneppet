@@ -675,8 +675,8 @@ foreach (int pnt;  nearpnts){
 
 ## Algorithms
 
+#### Reverse array
 ```C
-// Reverse array
 int int_numbers[] = {1,2,3,4,5,6};
 int rversed[];
 
@@ -691,4 +691,41 @@ for(int i=0; i<len(int_numbers)/2; i++){
 
 printf('%s', rversed);
 // Result: {6, 5, 4, 3, 2, 1}
+```
+
+#### Choise sorting
+```C
+int numbers[] = array(0,4,3,2,1);
+
+for(int i=0; i<len(numbers)-1; i++){        
+    for(int n=i+1; n<len(numbers); n++){        
+        if(numbers[i]>numbers[n]){
+
+            int swap = numbers[i];
+            numbers[i] = numbers[n];
+            numbers[n] = swap;            
+            }
+        }   
+    }
+    
+printf('Array = %s\n', numbers);
+// Result: Array  = {0, 1, 2, 3, 4}
+```
+
+#### Buble sorting
+```C
+int numbers[] = array(0,4,3,2,1);
+
+for(int i=1; i<len(numbers); i++){        
+    for(int n=0; n<len(numbers)-i; n++){          
+        if(numbers[n]>numbers[n+1]){
+            int swap = numbers[n];
+            numbers[n] = numbers[n+1];
+            numbers[n+1] = swap;
+            }  
+        }   
+    }
+    
+printf('Array = %s\n', numbers);
+// Result: Array  = {0, 1, 2, 3, 4}
 ```
