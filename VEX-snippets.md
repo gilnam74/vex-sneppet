@@ -675,6 +675,18 @@ foreach (int pnt;  nearpnts){
 
 ## Algorithms
 
+#### Swap variables
+```C
+int varable_a = 256;
+int varable_b = 512;
+
+int swap = variable_a;
+variable_a = variable_b;
+variable_b = swap;
+printf('variable_a = %s, variable_b = %s', variable_a, variable_b);
+// Result: variable_a = 512, variable_b = 256
+```
+
 #### Reverse array
 ```C
 int int_numbers[] = {1,2,3,4,5,6};
