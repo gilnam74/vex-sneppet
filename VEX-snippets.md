@@ -683,6 +683,7 @@ int varable_b = 512;
 int swap = variable_a;
 variable_a = variable_b;
 variable_b = swap;
+
 printf('variable_a = %s, variable_b = %s', variable_a, variable_b);
 // Result: variable_a = 512, variable_b = 256
 ```
