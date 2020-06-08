@@ -317,13 +317,13 @@ Another widely used example of variation condition is a **point number** which y
 
 In our case, we need to find another variation condition related to points and it could be a point position. Since sine function required a float argument and point position is a vector we can use only one axis of position:
 
-```c
+```C
 @P.y = sin(@P.x);
 ```
 
 And here we are! Our magic sine field visualized in the scene with a help of grid deformation. Curious minds may already have an idea how we can modify position and shape of this field, by modifying argument and sine output values:
 
-```c
+```C
 @P.y = sin(@P.x*chf('Period'))*chf('Amplitude');
 ```
 [![](https://c2.staticflickr.com/2/1754/41855185615_93a6665981_o.gif)](https://c2.staticflickr.com/2/1754/41855185615_93a6665981_o.gif)
@@ -367,7 +367,7 @@ Nice! Here we visualize the noise function on our grid with color. Curious minds
 
 Even now while you can see the noise pattern in the scene it is not obvious how it's designed and how we can use it. So we will simplify our color vector visualization and use black and white float data to discover the red channel of noise:
 
-```c
+```C
 // Paint geometry with noise values
 @Cd.r = noise(@P);
 ```
@@ -396,7 +396,7 @@ if(noseValues > 0.5){
 ```
 Now we can see a clear noise pattern! Switch to Primitives and add UI elements to examine the noise function parameters interactively:
 
-```c
+```C
 // Make geometry black
 @Cd = {0, 0, 0};
 // Assign noise values to variable 
@@ -415,6 +415,8 @@ How can we use noise function in production? For example, you can scatter points
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
 ## Examine more functions
+This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA) 
+
 Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. 
 
 [![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
@@ -493,7 +495,7 @@ Fraction returns fractional component (numbers after the point) of a float.
 ```
 
 #### Y = absolute(X)
-Absolute function returns the same value, but positive (inverted) if it was negative.  
+The absolute function returns the same value, but positive (inverted) if it was negative.  
 `X=-1 >> Y=1, X=1 >> Y=1`
 
 ```c
@@ -651,7 +653,7 @@ After modulus `0` and `1` remains as is and `2` becomes `0`, so we get `0,1,0,1,
 Another, more tricky solution is to periodically shift a portion of the stripes.  
 Return to `@Cd = floor(@P.x % 2);` expression which is equals to `@Cd = floor(@P.x) % 2;`  
 
-Try to add a small numbers to an argument:  
+Try to add a small number to an argument:  
 `@Cd = floor(@P.x + 0.1) % 2;`, `@Cd = floor(@P.x + 0.2) % 2;`, `@Cd = floor(@P.x + 0.3) % 2;`     
 Notice how stripes are sliding left. What will happen if we add a parametric value instead of a constant? 
 
@@ -720,7 +722,25 @@ And combining those two we can get radial checker:
 ```
 [![](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)
 
-This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
+## Blur
+If you don`t like the pattern you get, you can blur it a bit. Drop another wrangle after your checker:
+
+```C
+// Get point numbers (closest to current point) in a certain radius to array
+int colsest_points[] = pcfind(0, 'P', @P, chf('radius'), 100);
+
+// Add color valuers for the closest points togather
+vector added_color;
+foreach(int point; colsest_points){
+    added_color+= point(0, "Cd", point);
+    }
+
+// Divide by number of points to get avarage color
+vector avarage_color = added_color/len(colsest_points);
+
+@Cd = avarage_color;
+
+```
 
 # Vectors
 
