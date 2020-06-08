@@ -706,7 +706,7 @@ printf('%s', rversed);
 // Result: {6, 5, 4, 3, 2, 1}
 ```
 
-#### Choise sorting
+#### Choise sort
 ```C
 int numbers[] = array(0,4,3,2,1);
 
@@ -725,7 +725,7 @@ printf('Array = %s\n', numbers);
 // Result: Array  = {0, 1, 2, 3, 4}
 ```
 
-#### Buble sorting
+#### Bubble sort
 ```C
 int numbers[] = array(0,4,3,2,1);
 
