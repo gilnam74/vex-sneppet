@@ -732,6 +732,7 @@ int numbers[] = array(0,4,3,2,1);
 for(int i=1; i<len(numbers); i++){        
     for(int n=0; n<len(numbers)-i; n++){          
         if(numbers[n]>numbers[n+1]){
+
             int swap = numbers[n];
             numbers[n] = numbers[n+1];
             numbers[n+1] = swap;
