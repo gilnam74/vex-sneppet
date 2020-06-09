@@ -743,3 +743,25 @@ for(int i=1; i<len(numbers); i++){
 printf('Array = %s\n', numbers);
 // Result: Array  = {0, 1, 2, 3, 4}
 ```
+
+#### Longest common prefix
+```C
+// Leetcode #14:  Longest Common Prefix
+
+string names[] = array('floor', 'flower', 'flight');
+string prefix;
+
+for(int i=1; i<len(names); i++){
+    for(int n=0; n<len(names[i]) ;n++){
+    
+        if(names[i][n] != names[0][n]){
+            break;
+            }
+            
+        prefix = names[i][0:n+1];
+        
+        }
+    }
+
+printf('The common prefix is: %s\n', prefix);
+```
