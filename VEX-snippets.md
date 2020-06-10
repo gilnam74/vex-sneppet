@@ -84,6 +84,15 @@ printf(' %d\n', numbers[2:]);               // Result: {3, 2, 1}
 printf(' %d\n', sort(numbers));             // Result: {1, 2, 3, 4, 5}
 printf(' %d\n', reverse(sort(numbers)));    // Result: {5, 4, 3, 2, 1}
 
+// Add element to array
+int numbers[] = {1, 2, 3, 4, 5, 6};
+numbers[1] = 7;
+// Result: {1, 7, 3, 4, 5, 6}
+numbers[6] = 7;
+// Result: {1, 2, 3, 4, 5, 6, 7}
+append(numbers, 7);
+// Result: {1, 2, 3, 4, 5, 6, 7}
+
 // Find element in array
 int numbers[] = {5, 4, 3, 2, 1};
 int index_of_4 = find(numbers, 4);
@@ -102,7 +111,6 @@ string string_number = itoa(int_number);
 int int_numbers[];
 
 for(int n=0; n<len(string_number); n++){  
-        //int_numbers[n] = atof(string_numbers[n]);
         int_numbers[n] = atoi(string_number[n]);
         }
 
