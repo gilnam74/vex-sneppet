@@ -84,6 +84,12 @@ printf(' %d\n', numbers[2:]);               // Result: {3, 2, 1}
 printf(' %d\n', sort(numbers));             // Result: {1, 2, 3, 4, 5}
 printf(' %d\n', reverse(sort(numbers)));    // Result: {5, 4, 3, 2, 1}
 
+// Find element in array
+int numbers[] = {5, 4, 3, 2, 1};
+int index_of_4 = find(numbers, 4);
+printf('%d', index_of_4 );
+// Result: 1
+
 // Split string with a space to array of strings
 string numbres = '1 2 3 4 5 6';
 string array[] = split(numbres, ' ');
