@@ -122,22 +122,6 @@ printf('%s', reverse(sort(int_numbers)));
 // Result: {6, 5, 4, 3, 2, 1}
 ```
 
-#### VEX functions
-```C
-// Create array from point positions (Detail mode)
-function vector[] get_points(){
-    vector points[];
-    for(int i=0; i<npoints(0); i++){
-        append(points, vector(point(0, 'P', i)));
-    }
-    return points;
-}
-
-printf('Array: %s\n',  get_points());
-```
-
-
-
 #### Get and set attribute values
 ```C
 // Get attribute value from first Wrangle input:  
@@ -243,7 +227,7 @@ int primitive = addprim(0, 'poly');
 int allPoints[] =  expandpointgroup(0, "!*");
 
 // Create a vertex for each point in primitive
-foreach (int currentPoint; allPoints){     
+foreach(int currentPoint; allPoints){     
         addvertex(0, primitive, currentPoint);
         }
 ```
@@ -284,6 +268,20 @@ matrix matrx = optransform('obj/geometry_01');
 @P *= matrx;
 ```
 
+#### VEX functions
+```C
+// Create array from point positions (Detail mode)
+function vector[] get_point_positions(){
+    vector points[];
+    for(int i=0; i<npoints(0); i++){
+        append(points, vector(point(0, 'P', i)));
+    }
+    return points;
+}
+
+printf('Array = %s\n',  get_point_positions());
+// Result: Array = {{0,0,0}, {0,0.12,0}, {0,0.23,0}, {0,0.34,0}}
+```
 
 ## VEX expressions
 Using VEX in the parameter interface of Houdini nodes. See [documentation](http://www.sidefx.com/docs/houdini/expressions/index.html)
