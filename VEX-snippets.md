@@ -274,7 +274,8 @@ matrix matrx = optransform('obj/geometry_01');
 function vector[] get_point_positions(){
     vector points[];
     for(int i=0; i<npoints(0); i++){
-        append(points, vector(point(0, 'P', i)));
+        vector point_position = point(0, 'P', i);
+        append(points, point_position);
     }
     return points;
 }
@@ -745,9 +746,9 @@ for(int i=0; i<len(numbers)-1; i++){
             int swap = numbers[i];
             numbers[i] = numbers[n];
             numbers[n] = swap;            
-            }
-        }   
-    }
+        }
+    }   
+}
     
 printf('Array = %s\n', numbers);
 // Result: Array  = {0, 1, 2, 3, 4}
@@ -764,9 +765,9 @@ for(int i=1; i<len(numbers); i++){
             int swap = numbers[n];
             numbers[n] = numbers[n+1];
             numbers[n+1] = swap;
-            }  
-        }   
-    }
+        }  
+    }   
+}
     
 printf('Array = %s\n', numbers);
 // Result: Array  = {0, 1, 2, 3, 4}
@@ -784,12 +785,12 @@ for(int i=1; i<len(names); i++){
     
         if(names[i][n] != names[0][n]){
             break;
-            }
+        }
             
         prefix = names[i][0:n+1];
         
-        }
     }
+}
 
 printf('The common prefix is: %s\n', prefix);
 ```
