@@ -122,6 +122,22 @@ printf('%s', reverse(sort(int_numbers)));
 // Result: {6, 5, 4, 3, 2, 1}
 ```
 
+#### VEX functions
+```C
+// Create array from point positions (Detail mode)
+function vector[] get_points(){
+    vector points[];
+    for(int i=0; i<npoints(0); i++){
+        append(points, vector(point(0, 'P', i)));
+    }
+    return points;
+}
+
+printf('Array: %s\n',  get_points());
+```
+
+
+
 #### Get and set attribute values
 ```C
 // Get attribute value from first Wrangle input:  
