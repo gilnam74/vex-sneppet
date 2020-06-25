@@ -28,7 +28,9 @@ The goal here is to start with the very simple and basic tasks keeping the amoun
 If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** parameter to **"Detail"**. If you will feed some data to Attribute Wrangle (connect any node to input) leave Run Over parameter at default Point state.
 
 ## Attribute Wrangle
-Imagine **Attribute Wrangle** as a [loop](Programming-basics#loops) node, which runs VEX code from the `VEXpression` window on every point from input geometry. For example, Attribute Wrangle run over Points:
+Imagine **Attribute Wrangle** as a [loop](Programming-basics#loops) node, which runs VEX code from the `VEXpression` window on every point from input geometry.
+
+For example, Attribute Wrangle run over Points:
 
 ```C
 for (every input point){
@@ -36,6 +38,8 @@ for (every input point){
     }
 ``` 
 [![](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)
+
+Indeed, the code does not run on points one by one like it happened in loops, it is executed in parallel on all points at the same time, but we can still imagine the process like loop for simplicity.
 
 In `Detail` mode vex code will be executed only once.
 
