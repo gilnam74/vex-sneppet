@@ -37,7 +37,7 @@ for (every input point){
     do everything from VEX expression window;
     }
 ``` 
-[![](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)
+[![](https://live.staticflickr.com/65535/50043855783_23d9464339_o.png)](https://live.staticflickr.com/65535/50043855783_23d9464339_o.png)
 
 Indeed, the code does not run on points one by one like it happened in loops, it is executed in `parallel mode` on all points at the same time, but we can still imagine the process like a loop for simplicity.
 
