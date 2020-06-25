@@ -39,9 +39,9 @@ for (every input point){
 ``` 
 [![](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)](https://c2.staticflickr.com/2/1734/42744305102_f3e25b516f_o.gif)
 
-Indeed, the code does not run on points one by one like it happened in loops, it is executed in parallel on all points at the same time, but we can still imagine the process like loop for simplicity.
+Indeed, the code does not run on points one by one like it happened in loops, it is executed in `parallel mode` on all points at the same time, but we can still imagine the process like a loop for simplicity.
 
-In `Detail` mode vex code will be executed only once.
+In `Detail` mode vex code will be executed only once (`serial mode`).
 
 
 ## Points
