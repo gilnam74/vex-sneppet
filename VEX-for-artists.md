@@ -751,6 +751,7 @@ vector avarage_color = added_color/len(colsest_points);
 ```
 
 # Vectors
+The first thing we need to be aware of is the difference between vector as a data type and vector as a math gist.
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
