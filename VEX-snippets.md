@@ -204,7 +204,15 @@ if (@P.x > 1){
 ```
 
 #### Loops
-```c
+```C
+for(first; last; increment){ // Do something }
+
+foreach(element; array){ // Do something }
+
+foreach(index; element; array){ // Do something }
+```
+
+```C
 // Create OPEN shape 
 
 // Create LINE primitive
