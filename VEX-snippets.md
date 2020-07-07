@@ -333,11 +333,11 @@ for(int i=1; i<number_of_points+1; i++){
     vector position = anchor_a + i*segment_len; // Distribute points evenly between anchors
     float point_num = i+1;   
     float curv_value = chf('curvature');
-    float curvature; // Adjust center point coord Y (will work if i+1 = array_center)
+    float curvature; 
     
     // Adjust point positions to shape parabola
     if(point_num < array_center) curvature = curv_value*1/point_num; // Left side
-    if(point_num == array_center) curvature = curv_value*1.16/point_num; // Cendter point
+    if(point_num == array_center) curvature = curv_value*1.16/point_num; // Center point
     if(point_num > array_center) curvature = curv_value*1/(point_num-2*(point_num - array_center)); // Right side
 
     
