@@ -323,7 +323,7 @@ Build a hanging wire between 2 anchor points
 Feed 2 points into detail wrangle
 Ranges: shift = [-1:1], number_of_points = [1:10], curvature = [0:5]
 Define wire shape with all 3 parameters (shift, number_of_points, curvature), 
-increase resolution with a smooth node after. The number_of_points also affects shape!
+increase resolution with a suubdivide node after. The number_of_points also affects shape!
 */
 
 // Define initial variables
