@@ -350,12 +350,9 @@ for(int i=1; i<number_of_points+1; i++){
     int point = addpoint(0, point_position);
     
     // Build polygons
-    // Add first segment
-    if(i==1) addprim(0, 'polyline', 0, 2); 
-    // Add inner segments
-    if(i!=0 && i!=number_of_points) addprim(0, 'polyline', i+1, i+2);  
-    // Add last segment
-    if(i==number_of_points) addprim(0, 'polyline', number_of_points+1, 1); 
+    if(i==1) addprim(0, 'polyline', 0, 2);  // Add first segment
+    if(i!=0 && i!=number_of_points) addprim(0, 'polyline', i+1, i+2);  // Add inner segments
+    if(i==number_of_points) addprim(0, 'polyline', number_of_points+1, 1);  // Add last segment 
 }
 ```
 
