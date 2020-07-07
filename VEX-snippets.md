@@ -337,9 +337,9 @@ for(int i=1; i<number_of_points+1; i++){
     float curvature; 
     
     // Adjust point positions to shape parabola
-    if(point_num < array_center) curvature = curv_value*1/point_num; // Left side
+    if(point_num < array_center) curvature = curv_value/point_num; // Left side
     if(point_num == array_center) curvature = curv_value*1.16/point_num; // Center point
-    if(point_num > array_center) curvature = curv_value*1/(point_num-2*(point_num - array_center)); // Right side
+    if(point_num > array_center) curvature = curv_value/(point_num-2*(point_num - array_center)); // Right side
 
     
     // Aplyy adjustments
