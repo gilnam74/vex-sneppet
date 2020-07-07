@@ -315,6 +315,49 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 In this section, there are a bit more sophisticated VEX solutions. Each solves some particular task and can be considered as a custom tool.
 
+### Hanging wire between two points
+```C
+// Make a hanging wire between 2 anchor points
+
+// Define initial variables
+float shift = chf('shift');
+int number_of_points = chi('number_of_points');
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+float array_center = (number_of_points-1)/2.0+2;  // Created points array center
+
+// Build arc
+for(int i=1; i<number_of_points+1; i++){
+    
+    vector segment_len = (anchor_b-anchor_a)/(number_of_points+1);
+    vector position = anchor_a + i*segment_len; // Distribute points evenly between anchors
+    float point_num = i+1;   
+    float curv_value = chf('curvature');
+    float curvature; // Adjust center point coord Y (will work if i+1 = array_center)
+    
+    // Adjust point positions to shape parabola
+    if(point_num < array_center) curvature = curv_value*1/point_num; // Left side
+    if(point_num == array_center) curvature = curv_value*1.16/point_num; // Cendter point
+    if(point_num > array_center) curvature = curv_value*1/(point_num-2*(point_num - array_center)); // Right side
+
+    
+    // Aplyy adjustments
+    position.y += curvature + shift - chf('curvature'); 
+    vector point_position = set(position.x, position.y, position.z);
+    
+    // Create point
+    int point = addpoint(0, point_position);
+    
+    // Build polygons
+    // Add first segment
+    if(i==1) addprim(0, 'polyline', 0, 2); 
+    // Add inner segments
+    if(i!=0 && i!=number_of_points) addprim(0, 'polyline', i+1, i+2);  
+    // Add last segment
+    if(i==number_of_points) addprim(0, 'polyline', number_of_points+1, 1); 
+}
+```
+
 ### Flatten mesh by UVs
 ```c
 // Plave points as UVs in 3d
