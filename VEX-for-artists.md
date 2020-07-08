@@ -13,6 +13,7 @@ Article structure:
 - [VEX first steps](#vex-first-steps)  
 [Sine](#sine)  |  [Noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  |  [Checker](#checker)  |  [Polar coordinates](#polar-coordinates)  
 - [Vectors](#vectors)  
+- [Solving problems with VEX](#solving-problems-with-vex)  
 - [VEX next steps](#vex-next-steps)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
@@ -752,6 +753,12 @@ vector avarage_color = added_color/len(colsest_points);
 
 # Vectors
 The first thing we need to be aware of is the difference between vector as a data type and vector as a math gist.
+
+# Solving problems with VEX
+A collection of tutorials on solving miscellaneous production tasks with VEX.
+
+### Hanging wire
+The task: having two points in 3D space build a hanging curve between them.
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
