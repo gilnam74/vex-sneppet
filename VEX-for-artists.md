@@ -9,7 +9,7 @@ Check [Programming Basics tutorial](Programming-basics) if you are totally 146% 
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
-[Point concept](#point-concept) |  [Create point](#create-a-point) | [Create line](#create-a-line)  
+[Attribute Wrangle](#attribute-wrangle)  |  [Point concept](#point-concept)  |  [Create point](#create-a-point) | [Create line](#create-a-line)  
 - [VEX first steps](#vex-first-steps)  
 [Circle](#create-a-circle)  | [Sine](#sine)  |  [Noise](#noise)  |  [Examine functions](#examine-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
@@ -58,7 +58,7 @@ vector point_position = point(0, 'P', 2);
 printf('position X = %s\n', point_position.x);
 ```
 
-In order to get a positions for all input points, you need to create an array of all those points, iterate through that array and get position for each point during each step of the iteration.
+In order to get a positions for all input points, you need to create an array of all those points, [iterate](Programming-basics#loops) through that array and get position for each point during each step of the iteration.
 
 ```C
 printf('%s\n', 'Hello, World!');
