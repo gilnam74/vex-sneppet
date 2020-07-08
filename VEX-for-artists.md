@@ -9,9 +9,9 @@ Check [Programming Basics tutorial](Programming-basics) if you are totally 146% 
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
-[Point](#create-a-point) | [Line](#create-a-line) | [Circle](#create-a-circle)
+[Point](#create-a-point) | [Line](#create-a-line)  
 - [VEX first steps](#vex-first-steps)  
-[Sine](#sine)  |  [Noise](#noise)  |  [Examine functions](#examine-functions)  | [Repetitive patterns](#repetitive-patterns)  
+[Circle](#create-a-circle)  | [Sine](#sine)  |  [Noise](#noise)  |  [Examine functions](#examine-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
 [Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  [Hanging wire](#hanging-wire)  
