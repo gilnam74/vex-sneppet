@@ -14,6 +14,7 @@ Article structure:
 [Sine](#sine)  |  [Noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  |  [Checker](#checker)  |  [Polar coordinates](#polar-coordinates)  
 - [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
+[Hanging wire](#hanging-wire)  |
 - [VEX next steps](#vex-next-steps)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
