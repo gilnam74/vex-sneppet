@@ -11,10 +11,10 @@ Article structure:
 - [VEX orientation](#vex-orientation)  
 [Point](#create-a-point) | [Line](#create-a-line) | [Circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
-[Sine](#sine)  |  [Noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  |  [Checker](#checker)  |  [Polar coordinates](#polar-coordinates)  
+[Sine](#sine)  |  [Noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
-[Hanging wire](#hanging-wire)  |
+[Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  [Hanging wire](#hanging-wire)  
 - [VEX next steps](#vex-next-steps)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
@@ -608,6 +608,12 @@ The actual code for the image above is noise `@P.y = noise(frac((@P.x)*1.5)*5);`
 
 Remember, all actual code you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc).
 
+# Vectors
+The first thing we need to be aware of is the difference between vector as a data type and vector as a math gist.
+
+# Solving problems with VEX
+A collection of tutorials on solving miscellaneous production tasks with VEX.
+
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). First, we need to get equal-sized black and white stripes, then we will periodically shift a part of each stripe.
 
@@ -693,7 +699,7 @@ And a couple of other checker options:
 @Cd = floor(sin(@P.z + floor(sin(@P.x)) *3.1416 ) +1); 
 ```
 
-## Polar coordinates
+## Polar checker
 In the [Sine](#sine) section we met with polar coordinates, another way to define the position of a point in space.
 
 We can modify our input value more to achieve more complex patterns. Let's take our stripes `@Cd = floor(@P.x % 2);` and convert point position coordinates from default cartesian to polar before feeding them to the `floor` function:
@@ -751,13 +757,6 @@ vector avarage_color = added_color/len(colsest_points);
 @Cd = avarage_color;
 
 ```
-
-# Vectors
-The first thing we need to be aware of is the difference between vector as a data type and vector as a math gist.
-
-# Solving problems with VEX
-A collection of tutorials on solving miscellaneous production tasks with VEX.
-
 ### Hanging wire
 The task: having two points in 3D space build a hanging curve between them.
 
