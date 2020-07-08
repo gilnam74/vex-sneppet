@@ -5,7 +5,7 @@ Here you will learn VEX (and hence applied math) starting from the basics with a
 
 If you can render the metal sphere and able to distinguish a `loop` form `variable`, then you are fine to go.
 
-Check [Programming Basics tutorial](Programming-basics) if you are totally 146% fresh noob in developing.
+Check [Programming Basics tutorial](Programming-basics) if you are a total noob in developing.
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
@@ -14,7 +14,7 @@ Article structure:
 [Explore functions](#explore-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
-[Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  [Hanging wire](#hanging-wire)  
+[Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  [Hanging a wire](#hanging-a-wire)  
 - [VEX next steps](#vex-next-steps)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
@@ -824,7 +824,7 @@ vector avarage_color = added_color/len(colsest_points);
 @Cd = avarage_color;
 
 ```
-### Hanging wire
+### Hanging a wire
 The task: having two points in 3D space build a hanging curve between them.
 
 # VEX next steps
