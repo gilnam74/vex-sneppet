@@ -615,7 +615,9 @@ The first thing we need to be aware of is the difference between vector as a dat
 A collection of tutorials on solving miscellaneous production tasks with VEX.
 
 ## Checker  
-Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). First, we need to get equal-sized black and white stripes, then we will periodically shift a part of each stripe.
+Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#examine-more-functions) to be able to follow this tutorial.
+
+First, we need to get equal-sized black and white stripes, then we will periodically shift a part of each stripe.
 
 The diagonal line `@P.y = @P.x` is a good foundation. Let's make a periodic pattern from it with a modulus:
 
