@@ -315,6 +315,44 @@ neighbourcount(0, @ptnum) == 2
 ## Tools
 In this section, there are a bit more sophisticated VEX solutions. Each solves some particular task and can be considered as a custom tool.
 
+### Hanging wire between two points controlled by ramp
+
+```C
+/*Shape
+Build a hanging wire between 2 anchor points
+
+Feed 2 points into detail wrangle
+Define wire shape with a "Shape" ramp.
+*/
+
+// Define initial variables
+int number_of_points = chi('number_of_points');
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+
+// Build arc
+for(int i=1; i<number_of_points+1; i++){
+    
+    // Distribute points evenly between anchors
+    vector segment_len = (anchor_b-anchor_a)/(number_of_points+1);
+    vector position = anchor_a + i*segment_len; 
+    
+    // Modify Y position with ramp via remapped iteration numbers
+    float range = fit(i, 1, number_of_points, 0, 1);
+    position.y -= chramp('Shape', range); 
+    vector point_position = set(position.x, position.y, position.z);
+    
+    // Create point
+    int point = addpoint(0, point_position);
+    
+    // Build polygons
+    if(i==1) addprim(0, 'polyline', 0, 2);  // Add first segment
+    if(i!=0 && i!=number_of_points) addprim(0, 'polyline', i+1, i+2);  // Add inner segments
+    if(i==number_of_points) addprim(0, 'polyline', number_of_points+1, 1);  // Add last segment
+}
+
+```
+
 ### Hanging wire between two points
 ```C
 /*
@@ -323,7 +361,7 @@ Build a hanging wire between 2 anchor points
 Feed 2 points into detail wrangle
 Ranges: shift = [-1:1], number_of_points = [1:10], curvature = [0:5]
 Define wire shape with all 3 parameters (shift, number_of_points, curvature), 
-increase resolution with a suubdivide node after. The number_of_points also affects shape!
+increase resolution with a subdivide node after. The number_of_points also affects shape!
 */
 
 // Define initial variables
