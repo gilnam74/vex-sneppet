@@ -22,27 +22,43 @@ All exercises from this chapter you can find in [VEX snippets hip file](../blob/
 # VEX orientation
 The goal here is to start with the very simple and basic tasks keeping the amount of code minimal and gradually, step by step increase the complexity of exercises. If you will really understand the basics it would be easy to develop extra functionality for the staring code.
 
-##### Create a wrangle in a fresh Houdini scene
-- Press TAB in Node View, type `geometry`, hit ENTER
-- Dive inside "Geometry" node, delete "File" node
-- Press TAB, type `aw`, hit ENTER to create "Attribute Wrangle" node
-
-If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** parameter to **"Detail"**. If you will feed some data to Attribute Wrangle (connect any node to input) leave Run Over parameter at default Point state.
-
-## Attribute Wrangle
+### Attribute Wrangle
 The Attribute Wrangle node creates or modifies existing geometry with a code written in VEX language.
 
+#### Create a wrangle in a fresh Houdini scene
+- Press TAB in Node View, type `geometry`, hit ENTER
+- Dive inside "Geometry" node, delete "File" node
+- Press TAB, type `aw`, hit ENTER to create the "Attribute Wrangle" node.
+
 The Attribute Wrangle node can execute a VEX code in two different ways: `serial` and `parallel`.
+
+#### Serial mode
+Attribute Wrangle working in `serial` mode if you set the "Run Over" parameter to Detail.
+
+[![](https://live.staticflickr.com/65535/50090347908_068b0a8b44_o.png)](https://live.staticflickr.com/65535/50090347908_068b0a8b44_o.png)
+
+In serial mode, the VEX code written in `VEXpression` window will be executed once. This is the usual workflow of programming, the code executed line by line and produces some result at the end. 
+
+You don`t need to connect geometry in order to work with a Wrangle in this mode, although you can if you need it. You will be able to access your geometry attributes for every point (vertex or primitive) by their indexes.
+
+Create Attribute Wrangle, set Run Over Detail, enter code:
+
+```C
+printf('%s\n', 'Hello, World!');
+```
+
+You should have a "Hello, World!" message in the Houdini Console window.
 
 #### Paralel mode
 Attribute Wrangle working in `parallel` mode when you set the "Run Over" parameter to Primitives, Points, Vertices, or Number.
 
 [![](https://live.staticflickr.com/65535/50043855783_23d9464339_o.png)](https://live.staticflickr.com/65535/50043855783_23d9464339_o.png)
 
-#### Serial mode
-Attribute Wrangle working in `serial` mode if you set the "Run Over" parameter to Detail.
+You need to have at least one point as input to be able to work in parallel mode, e.g. connect any geometry to your Attribute Wrangle. The VEX code written in `VEXpression` window will be executed on every point at the same time (that's why it called parallel).
 
-[![](https://live.staticflickr.com/65535/50090347908_068b0a8b44_o.png)](https://live.staticflickr.com/65535/50090347908_068b0a8b44_o.png)
+It does not mean that VEX code will be executed as many times as many points you have in input, but in cases when you accessing input geometry (e.g. reading a point position) it will be done for every point at the same time.
+
+You will be able to access your geometry attributes using build-in attributes like `@ptnum`, `@numpt` etc.
 
 
 ## Points
