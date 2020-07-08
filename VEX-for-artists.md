@@ -676,7 +676,7 @@ Remember, all actual code you can find in [VEX snippets hip file](../blob/master
 Ok, at this point we might need a bit of theory before we will dig into a new topic. TBD!
 
 # Solving problems with VEX
-A collection of tutorials on solving miscellaneous production tasks with VEX.
+Time to use our theoretical knowledge in practice! A collection of tutorials on solving miscellaneous production tasks with VEX.
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#examine-more-functions) to be able to follow this tutorial.
