@@ -11,7 +11,7 @@ Article structure:
 - [VEX orientation](#vex-orientation)  
 [Point](#create-a-point) | [Line](#create-a-line) | [Circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
-[Sine](#sine)  |  [Noise](#noise)  |  [More functions](#examine-more-functions)  | [Repetitive patterns](#repetitive-patterns)  
+[Sine](#sine)  |  [Noise](#noise)  |  [Examine functions](#examine-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
 [Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  [Hanging wire](#hanging-wire)  
@@ -424,8 +424,9 @@ How can we use noise function in production? For example, you can scatter points
 
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
-## Examine more functions
-This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA) 
+## Examine functions
+Here we will improve our understanding of mathematical functions and how they work in 3D space.  
+This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
 Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. 
 
@@ -609,7 +610,7 @@ The actual code for the image above is noise `@P.y = noise(frac((@P.x)*1.5)*5);`
 Remember, all actual code you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc).
 
 # Vectors
-The first thing we need to be aware of is the difference between vector as a data type and vector as a math gist.
+Ok, at this point we might need a bit of theory before we will dig into a new topic. TBD!
 
 # Solving problems with VEX
 A collection of tutorials on solving miscellaneous production tasks with VEX.
