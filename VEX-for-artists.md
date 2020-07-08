@@ -9,7 +9,7 @@ Check [Programming Basics tutorial](Programming-basics) if you are totally 146% 
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
-[Point](#create-a-point) | [Line](#create-a-line)  
+[Point concept](#point-concept) |  [Create point](#create-a-point) | [Create line](#create-a-line)  
 - [VEX first steps](#vex-first-steps)  
 [Circle](#create-a-circle)  | [Sine](#sine)  |  [Noise](#noise)  |  [Examine functions](#examine-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
@@ -108,9 +108,7 @@ Some parts of the code work once ("Hello, World!"), another was executed on ever
 For now, just imagine your Attribute Wrangle as a node that runs the VEX code from the VEXpression window and doing required stuff with your points.
 
 
-
-## Points
-#### Point concept
+### Point concept
 Point is a basement of 3 Dimensional data representation and its a core entity in Houdini. Understanding points allow understanding a huge part of SOP context (an area where you are creating models) in Houdini. To make things simple you can consider the single point as a complete geometry of any complexity.
 
 **Point** in Houdini is a basic container in 3D space with a number of **attributes** associated with it.  
@@ -131,7 +129,7 @@ You don't need to define the data type of built-in attributes:
 
 All modeling and bunch of other operations in Houdini are just around creating and managing points and their attributes.
 
-#### Create a point
+### Create a point
 Create an [Attribute Wrangle](#create-a-wrangle-in-a-fresh-houdini-scene), set Run Over parameter to Detail.  
 Now to create a point we need to know a [command](Programming-basics#commands) for that. Let`s use [Google Development Technique](https://github.com/kiryha/AnimationDNA/wiki/06-Tutorials#developing-with-google)!  
 
@@ -184,7 +182,7 @@ You can use variables (`vector <variableName>`) instead of attributes (`@attrNam
 
 If you don't need to access attribute outside the wrangle — use variables instead to keep the scene clean. 
 
-#### Create a line
+### Create a line
 Learning such small and easy but fundamental thing as **point creation** we can do a lot of powerful things! Let's do the next step and **create 10 points along X-axis** to build a line! 
 
 To create 10 points we need to repeat 10 times what we already learned — one point creation. Remember what programming concept we need to use in order to perform [repeating](Programming-basics#loops)? Our loop will run 10 times. Inside the loop, we will place a command to create a point:
