@@ -52,6 +52,8 @@ You should have a "Hello, World!" message in the Houdini Console window. Never m
 Now connect any geometry to the first wrangle input. Let`s print the X position of the third point (index of the third point is 2):
 
 ```C
+printf('%s\n', 'Hello, World!');
+
 vector point_position = point(0, 'P', 2);
 printf('position X = %s\n', point_position.x);
 ```
@@ -59,6 +61,8 @@ printf('position X = %s\n', point_position.x);
 In order to get a positions for all input points, you need to create an array of all those points, iterate through that array and get position for each point during each step of the iteration.
 
 ```C
+printf('%s\n', 'Hello, World!');
+
 for(int i=0; i<npoints(0); i++){
     vector point_position = point(0, 'P', i);
     printf('ptnum %s\n', point_position.x);
@@ -85,17 +89,21 @@ You should have the same "Hello, World!" message in the Houdini Console window. 
 
 Let's print the X position of the third point:
 ```C
+printf('%s\n', 'Hello, World!');
+
 vector point_position = point(0, 'P', 2);
 printf('position X = %s\n', point_position.x);
 ```
 
 So far so good. What about all points positions? Here we go:
 ```C
+printf('%s\n', 'Hello, World!');
+
 vector point_position = point(0, 'P', @ptnum);
 printf('position X = %s\n', point_position.x);
 ```
 
-Those modes might be confusing even for experienced users, you need to practice a lot and you will get it!
+Some parts of the code work once ("Hello, World!"), another was executed on every point. The parallel mode might be confusing even for experienced users,  You need to practice a lot and you will get it, or at least use to it!
 
 ## Points
 #### Point concept
