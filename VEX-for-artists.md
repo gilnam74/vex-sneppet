@@ -30,20 +30,19 @@ The goal here is to start with the very simple and basic tasks keeping the amoun
 If you need to **CREATE** data with Attribute Wrangle: switch **"Run Over"** parameter to **"Detail"**. If you will feed some data to Attribute Wrangle (connect any node to input) leave Run Over parameter at default Point state.
 
 ## Attribute Wrangle
-Imagine **Attribute Wrangle** as a [loop](Programming-basics#loops) node, which runs VEX code from the `VEXpression` window on every point from input geometry.
+The Attribute Wrangle node creates or modifies existing geometry with a code written in VEX language.
 
-For example, Attribute Wrangle run over Points:
+The Attribute Wrangle node can execute a VEX code in two different ways: `serial` and `parallel`.
 
-```C
-for (every input point){
-    do everything from VEX expression window;
-    }
-``` 
+#### Paralel mode
+Attribute Wrangle working in `parallel` mode when you set the "Run Over" parameter to Primitives, Points, Vertices, or Number.
+
 [![](https://live.staticflickr.com/65535/50043855783_23d9464339_o.png)](https://live.staticflickr.com/65535/50043855783_23d9464339_o.png)
 
-Indeed, the code does not run on points one by one like it happened in loops, it is executed in `parallel mode` on all points at the same time, but we can still imagine the process like a loop for simplicity.
+#### Serial mode
+Attribute Wrangle working in `serial` mode if you set the "Run Over" parameter to Detail.
 
-In `Detail` mode vex code will be executed only once (`serial mode`).
+[![](https://live.staticflickr.com/65535/50090347908_068b0a8b44_o.png)](https://live.staticflickr.com/65535/50090347908_068b0a8b44_o.png)
 
 
 ## Points
