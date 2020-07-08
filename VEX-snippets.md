@@ -318,7 +318,7 @@ In this section, there are a bit more sophisticated VEX solutions. Each solves s
 ### Hanging wire between two points controlled by ramp
 
 ```C
-/*Shape
+/*
 Build a hanging wire between 2 anchor points
 
 Feed 2 points into detail wrangle
