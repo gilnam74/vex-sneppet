@@ -9,9 +9,9 @@ Check [Programming Basics tutorial](Programming-basics) if you are totally 146% 
 
 Article structure:  
 - [VEX orientation](#vex-orientation)  
-[Attribute Wrangle](#attribute-wrangle)  |  [Point concept](#point-concept)  |  [Create point](#create-a-point) | [Create line](#create-a-line)  
+[Attribute Wrangle](#attribute-wrangle)  |  [Point concept](#point-concept)  |  [Create point](#create-a-point) | [Create line](#create-a-line)  |   [Create circle](#create-a-circle)  | [Sine](#sine)  |  [Noise](#noise)   
 - [VEX first steps](#vex-first-steps)  
-[Circle](#create-a-circle)  | [Sine](#sine)  |  [Noise](#noise)  |  [Examine functions](#examine-functions)  | [Repetitive patterns](#repetitive-patterns)  
+[Explore functions](#explore-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
 [Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  [Hanging wire](#hanging-wire)  
@@ -275,8 +275,8 @@ for (int n=0; n<numberOfPoints; n++){
 
 Here we create a primitive: `addprim()` and get a number of points we created in the first Wrangle node: `numberOfPoints = @numpt`, the `@numpt` is a built-in attribute which returns the total number of points from the first input. Then in the loop for each point we create vertex and add this ertex to a primitive: `addvertex()`.
 
-# VEX first steps
-#### Create a circle
+
+### Create a circle
 Here we come to a more fancy stuff! At this point, we will start using trigonometry to draw a circle.
 
 In the [line example](#create-a-line) we define the position of each point in 3D space using the [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) by setting X, Y and Z values. This is the most intuitive and accustomed coordinate system, however not the only one. When it comes to a circle the [Polar coordinate system](https://en.wikipedia.org/wiki/Polar_coordinate_system) may work better.
@@ -354,7 +354,7 @@ for (int n=0; n<numberOfPoints; n++){
 ```
 [![](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)
 
-#### Sine 
+### Sine 
 In the example above we used **sine** and **cosine** to build a circle. Let's take a closer look at a sine magic function. How can we imagine (visualize) this function in our scene?
 
 First, we need to understand how math function works. Same as [functions](Programming-basics#functions) in programming math function produce some results (return values) based on input data (arguments). Check [wiki sine article](https://en.wikipedia.org/wiki/Sine):
@@ -405,7 +405,7 @@ This sine investigation should clear for us how to work with math function:
 - You can use variable value to get a variable result
 - Common variation conditions are: time `@Time` and point number `@ptnum`
 
-#### Noise
+### Noise
 Let`s examine one more interesting function without going into the math background: [noise](http://www.sidefx.com/docs/houdini/vex/functions/noise.html). What this function produces (returns) and what it requires as an argument to work? 
 
 [![](https://c2.staticflickr.com/2/1826/42878139242_b03dccb888_o.gif)](https://c2.staticflickr.com/2/1826/42878139242_b03dccb888_o.gif)
@@ -485,7 +485,10 @@ How can we use noise function in production? For example, you can scatter points
 
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
-## Examine functions
+# VEX first steps
+Now, when we have practiced in basic stuff, let's go a bit further.
+
+## Explore functions
 Here we will improve our understanding of mathematical functions and how they work in 3D space.  
 This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
 
