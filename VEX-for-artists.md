@@ -681,7 +681,7 @@ Time to use our theoretical knowledge in practice! A collection of tutorials on 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#examine-more-functions) to be able to follow this tutorial.
 
-At a very high level, the solution would be: build equal-sized black and white stripes (valoes of 0 and 1), then we will periodically shift a part of each stripe, pally to geometry color.
+At a very high level, the solution would be: build equal-sized black and white stripes (values of 0 and 1), then we will periodically shift a part of each stripe, pally to geometry color.
 
 The diagonal line `@P.y = @P.x` is a good foundation. Let's make a periodic pattern from it with a modulus:
 
