@@ -103,7 +103,11 @@ vector point_position = point(0, 'P', @ptnum);
 printf('position X = %s\n', point_position.x);
 ```
 
-Some parts of the code work once ("Hello, World!"), another was executed on every point. The parallel mode might be confusing even for experienced users,  You need to practice a lot and you will get it, or at least use to it!
+Some parts of the code work once ("Hello, World!"), another was executed on every point. The parallel mode might be confusing even for experienced users.  You need to practice a lot and you will get it. 
+
+For now, just imagine your Attribute Wrangle as a node that runs the VEX code from the VEXpression window and doing required stuff with your points.
+
+
 
 ## Points
 #### Point concept
