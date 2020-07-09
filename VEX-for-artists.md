@@ -766,12 +766,14 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
-Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? In other words, if we adding only one point, what should be the X-coordinate of a new point `C`?
+Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? 
 
-Having one new point `C`, we would have points `A-C-B` and the origin `0`:
+Adding one new point `C`, we would have points `A-C-B` and the origin `0`:
 [![](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)
 
-`section 0C = section 0A + section AC`  
+What is the X-coordinate of a new point `C`? The X-coordinate of a point `C` equals the length of the `section 0C`.
+
+And `section 0C = section 0A + section AC`!  
 
 If we want point `C` be located at the same distance from `A` and `B`, `section AC` should be equal `section CB`. E.g.: 
 
