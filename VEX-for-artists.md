@@ -703,7 +703,7 @@ From general to specific, keeping things extremely simple, with a detailed expla
 The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them (`pic 1`).
 
 The high-level solution overview:  
- - First, we will create a certain number of points (3 points added on pic) between points `A` and `B`.  
+ - First, we will create a certain number of points (3 points were added on illustration) between points `A` and `B`.  
 Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, and 4 indexes (`pic 2`).  
  - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
  - And finally, we will connect points with polygons to create geometry (`pic 4`).
@@ -749,20 +749,26 @@ Inside the loop body (between `{ ... }`), we will place the code for one point c
 
 Change the "Number Of Points" in a Wrangle UI and notice print results in Houdini Console to see how this basic construction works.
 
-Shift the loop range on 2 units:
-
- ```C 
-for(int iteration=2; iteration<number_of_points+2; iteration++){
-    printf('iteration number = %s\n', iteration);
-}
-```
-
-So, the iteration number will match the index of the newly created point. We already have 2 anchor points, that's why the first new point will get an index of 2.
-
-[![](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)
+[![](https://live.staticflickr.com/65535/50094568228_e03e4aafcf_o.png)](https://live.staticflickr.com/65535/50094568228_e03e4aafcf_o.png)
 
 [Creating a point](#create-a-point) with VEX is simple, we need to provide `0` as a first argument and point position (vector value) as a second argument to the [`addpoint()`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function.
 
+To create new points we can define their position as a vector variable set to `{0, 0, 0}`:
+
+ ```C 
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+
+for(int iteration=2; iteration<number_of_points+2; iteration++){
+    vector point_position = {0, 0, 0};
+    addpoint(0,point_position);
+}
+
+Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? In other words, if we adding only one point, what should be the X-coordinate of a new point `C`?
+
+Obviously, `C.x = section 0A + section AC`
+Since
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
