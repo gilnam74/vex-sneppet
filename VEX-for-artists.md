@@ -850,15 +850,14 @@ The `point(input, attribute, point number)` VEX function returns the value of a 
 
 Let's start from the simplest case and create only one new point: set "Number Of Points" attribute to 1. 
 
-How we can create required number of points? When we need to repeat an action (create a point and set it position) a certain number of times, we need to use [loop statement](Programming-basics#loops). This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console:
-
+How we can create the required number of points? When we need to repeat an action (create a point and set it position) a certain number of times, we need to use [loop statement](Programming-basics#loops): 
 ```C 
-for(int iteration=0; iteration<number_of_points; iteration++){
-    printf('iteration number = %s\n', iteration);
+for(start from; stop at; increment){
+   action;
 }
 ```
 
-Change the number of points in a Wrangle UI to see how this basic construction works. 
+In our case:
 
 ```C 
 vector anchor_a = point(0, "P", 0);
@@ -869,6 +868,8 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     printf('iteration number = %s\n', iteration);
 }
 ```
+This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. Change the number of points in a Wrangle UI to see how this basic construction works. 
+
 
 certain amount We need to iterate 
 
