@@ -825,11 +825,22 @@ vector avarage_color = added_color/len(colsest_points);
 
 ```
 ### Hanging a wire
-The task: having two points A and B in 3D space build a hanging curve between them.
+The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them.
 
 [![](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)
 
-The high-level solution overview: first we will create a certain number of points between points A and B, then we will move each point down on its own value to shape the parabola curve, and finally we will connect points with a polygons to create geometry.
+The high-level solution overview: first we will create a certain number of points between points `A` and `B`, then we will move each point down on its own value to shape the parabola curve, and finally we will connect points with polygons to create geometry.
+
+Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, and create Attribute Wrangle in detail mode after. We will have our points A and B with indexes 0 and 1 correspondingly. 
+
+#### Creating inbetween points
+First, let`s store our source anchor point position values in variables and define the number of points we will create between `A` and `B` with a UI slider:
+
+```C
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+```
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
