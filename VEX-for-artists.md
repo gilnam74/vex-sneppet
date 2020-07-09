@@ -825,6 +825,8 @@ vector avarage_color = added_color/len(colsest_points);
 
 ```
 ### Hanging a wire
+[![](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)
+
 The task: having two points in 3D space build a hanging curve between them.
 
 # VEX next steps
