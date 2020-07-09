@@ -829,12 +829,11 @@ The task: having two anchor points `A` and `B` in 3D space build a hanging curve
 
 The high-level solution overview:  
  - First, we will create a certain number of points (let it be 3 points for now) between points `A` and `B`.  
-Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3 and 4 indexes (`pic 2`).  
+Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, and 4 indexes (`pic 2`).  
  - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
  - And finally, we will connect points with polygons to create geometry (`pic 4`).
 
 [![](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)
-
 
 Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, and create Attribute Wrangle in detail mode after. We will have our points A and B with indexes 0 and 1 correspondingly. 
 
@@ -848,6 +847,32 @@ int number_of_points = chi('number_of_points');
 ```
 
 The `point(input, attribute, point number)` VEX function returns the value of a point position attribute (`P`) for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node. Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `anchor_a` and `anchor_b`. 
+
+Let's start from the simplest case and create only one new point: set "Number Of Points" attribute to 1. 
+
+How we can create required number of points? When we need to repeat an action (create a point and set it position) a certain number of times, we need to use [loop statement](Programming-basics#loops). This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console:
+
+```C 
+for(int iteration=0; iteration<number_of_points; iteration++){
+    printf('iteration number = %s\n', iteration);
+}
+```
+
+Change the number of points in a Wrangle UI to see how this basic construction works. 
+
+```C 
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    printf('iteration number = %s\n', iteration);
+}
+```
+
+certain amount We need to iterate 
+
+We know, that we ca
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
