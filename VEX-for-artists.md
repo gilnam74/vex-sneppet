@@ -826,45 +826,10 @@ vector avarage_color = added_color/len(colsest_points);
 ```
 ### Hanging a wire
 The task: having two points in 3D space build a hanging curve between them.
+
 [![](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)
 
-Final solution:
-```C
-// Define initial variables
-float shift = chf('shift');
-int number_of_points = chi('number_of_points');
-vector anchor_a = point(0, "P", 0);
-vector anchor_b = point(0, "P", 1);
-float array_center = (number_of_points-1)/2.0+2;  // Created points array center
 
-// Build arc
-for(int i=1; i<number_of_points+1; i++){
-    
-    vector segment_len = (anchor_b-anchor_a)/(number_of_points+1);
-    vector position = anchor_a + i*segment_len; // Distribute points evenly between anchors
-    float point_num = i+1;   
-    float curv_value = chf('curvature');
-    float curvature; 
-    
-    // Adjust point positions to shape parabola
-    if(point_num < array_center) curvature = curv_value/point_num; // Left side
-    if(point_num == array_center) curvature = curv_value*1.16/point_num; // Center point
-    if(point_num > array_center) curvature = curv_value/(point_num-2*(point_num - array_center)); // Right side
-
-    
-    // Aplyy adjustments
-    position.y += curvature + shift - chf('curvature'); 
-    vector point_position = set(position.x, position.y, position.z);
-    
-    // Create point
-    int point = addpoint(0, point_position);
-    
-    // Build polygons
-    if(i==1) addprim(0, 'polyline', 0, 2);  // Add first segment
-    if(i!=0 && i!=number_of_points) addprim(0, 'polyline', i+1, i+2);  // Add inner segments
-    if(i==number_of_points) addprim(0, 'polyline', number_of_points+1, 1);  // Add last segment 
-}
-```
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
