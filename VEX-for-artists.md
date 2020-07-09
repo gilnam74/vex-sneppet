@@ -683,7 +683,11 @@ Let's try to learn math, vectors in particular, from the opposite side we use to
 ### Numbers
 People use to collect different items back in time when we barely can call them humans, it was necessary for survival. 
 
-Several apples were just an overall bunch until the moment we start counting the content of a bunch. So we start to recognize the distinction between the different amounts of items: one from two, two from three, three from fore, etc. Then we name those amounts like one, two, three, etc. Next, we assign a symbol to each number.
+Several apples were just an overall bunch until the moment we start counting the content of a bunch. So we start to recognize the distinction between the different amounts of items: one from two, two from three, three from fore, etc. Then we name those amounts like one, two, three, etc. 
+
+[![](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)
+
+Next, we assign a symbol to each number.
 
 TBD!
 
