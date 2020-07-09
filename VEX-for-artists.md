@@ -674,7 +674,16 @@ The actual code for the image above is noise `@P.y = noise(frac((@P.x)*1.5)*5);`
 Remember, all actual code you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc).
 
 # Vectors
-Ok, at this point we might need a bit of theory before we will dig into a new topic. TBD!
+Ok, at this point for the better understanding we might need to look back on the history of math. 
+
+We are familiar with math from a very early age and we use to know it as a complete and complex field. We miss the point of how it was born and developed and hence we rarely deeply understanding the miscellaneous math concepts aside from basic arithmetic operation like addition or multiplication. 
+
+Let's try to learn math, vectors in particular, from the opposite side we use to: recall the tasks that humanity needed to solve, how those tasks evolved and how this evolution force to develop more advanced mathematical tools.
+
+### Numbers
+People use to collect different items back in time when we barely can call them humans, it was necessary for survival. Several apples were just a bunch until we start counting them.
+
+TBD!
 
 # Solving problems with VEX
 Time to use our theoretical knowledge in practice! A collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
