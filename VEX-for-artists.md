@@ -683,11 +683,14 @@ Let's try to learn math, vectors in particular, from the opposite side we use to
 ### Numbers
 People use to collect different items back in time when we barely can call them humans, it was necessary for survival. 
 
-Several apples were just an overall bunch until the moment we start counting the content of a bunch. So we start to recognize the distinction between the different amounts of items: one from two, two from three, three from fore, etc. Then we name those amounts like one, two, three, etc. 
+Several apples were just an overall bunch until the moment we start counting the content of a bunch. So we start to recognize the distinction between the different amounts of items: one from two, two from three, three from fore, etc. Then we name those amounts like one, two, three, etc. Next, we assign a symbol to each number.
 
 [![](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)
 
-Next, we assign a symbol to each number.
+But at some point, this system becomes hardly manageable:
+[![](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)
+
+The new way of representing an infinite amount of items with a limited amount of symbols was invented: positional notation.
 
 TBD!
 
