@@ -782,15 +782,27 @@ If we want point `C` be located at the same distance from `A` and `B`, `section 
 If we would have 2 new points (A-C-D-B): `section AC = section CD = section DB = scetion AB / 3`.  
 If we would have 3 new points (A-C-D-E-B): `section AC = section CD = section DE = section EB = scetion AB / 4`.
 
-I can see the pattern here:  `section S = (B-A)/(number of points + 1)`
+I can see the pattern for `section S` here:  `S = (B-A)/(number of points + 1)`
 
-And the X coord of a point `C = A + S = A + (B-A)/(number of points + 1)`  
+And the X coord of a point `C` would be: `coordinate X = A + S = A + (B-A)/(number of points + 1)`
+  
 Having 2 new points: `C = A + S`, `D = A + S + S`  
 Having 3 new points: `C = A + S`, `D = A + S + S`, `E = A + S + S + S`
 
 I can see the another pattern here:  `coordinate X = A + S*(number of points + 1)`
 
+Now it is easy to implement it in VEX:
+```C
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
 
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector section = (anchor_b-anchor_a)/(number_of_points+1);
+    vector point_position = anchor_a + section*(iteration+1); 
+    addpoint(0,point_position);
+}
+```
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
