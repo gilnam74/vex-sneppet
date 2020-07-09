@@ -829,7 +829,7 @@ The task: having two points A and B in 3D space build a hanging curve between th
 
 [![](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)](https://live.staticflickr.com/65535/50092934847_f1f88d09d5_o.png)
 
-The high-level solution overview: first we will create a certain number of points between points A and B, then we will move each point down on its own value.
+The high-level solution overview: first we will create a certain number of points between points A and B, then we will move each point down on its own value to shape the parabola curve, and finally we will connect points with a polygons to create geometry.
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
