@@ -677,7 +677,74 @@ Remember, all actual code you can find in [VEX snippets hip file](../blob/master
 Ok, at this point we might need a bit of theory before we will dig into a new topic. TBD!
 
 # Solving problems with VEX
-Time to use our theoretical knowledge in practice! A collection of tutorials on solving miscellaneous production tasks with VEX.
+Time to use our theoretical knowledge in practice! A collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
+
+From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process with different examples.
+
+### Hanging a wire
+The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them (`pic 1`).
+
+The high-level solution overview:  
+ - First, we will create a certain number of points (3 points added on pic) between points `A` and `B`.  
+Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, and 4 indexes (`pic 2`).  
+ - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
+ - And finally, we will connect points with polygons to create geometry (`pic 4`).
+
+[![](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)
+
+Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, and create Attribute Wrangle in detail mode after. We will have our points A and B with indexes 0 and 1 correspondingly. 
+
+#### Creating inbetween points
+First, let's store our source anchor point position values in variables and define the number of points we will create between `A` and `B` with a UI slider:
+
+```C
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+```
+
+The `point(input, attribute, point number)` VEX function returns the value of a point position attribute (`P`) for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node. Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `anchor_a` and `anchor_b`. 
+
+Let's start from the simplest case and create only one new point: set "Number Of Points" attribute to 1. 
+
+How we can create the required number of points? When we need to repeat an action (create a point and set it position) a certain number of times, we need to use [loop statement](Programming-basics#loops): 
+```C 
+for(start from; stop at; increment){
+   action;
+}
+```
+
+In our case:
+
+```C 
+vector anchor_a = point(0, "P", 0);
+vector anchor_b = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    printf('iteration number = %s\n', iteration);
+}
+```
+This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. The `iteration++` is a "syntaxis sugar" for `iteration = iteration + 1` statement and means the step of iterations is equal to 1. 
+
+Inside the loop body (between `{ ... }`), we will place the code for one point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
+
+Change the "Number Of Points" in a Wrangle UI and notice print results in Houdini Console to see how this basic construction works.
+
+Shift the loop range on 2 units:
+
+ ```C 
+for(int iteration=2; iteration<number_of_points+2; iteration++){
+    printf('iteration number = %s\n', iteration);
+}
+```
+
+So, the iteration number will match the index of the newly created point. We already have 2 anchor points, that's why the first new point will get an index of 2.
+
+[![](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)
+
+[Creating a point](#create-a-point) with VEX is simple, we need to provide `0` as a first argument and point position (vector value) as a second argument to the [`addpoint()`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function.
+
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
@@ -806,7 +873,7 @@ And combining those two we can get radial checker:
 [![](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)](https://live.staticflickr.com/65535/49912982793_08ba6b08da_o.png)
 
 ## Blur
-If you don`t like the pattern you get, you can blur it a bit. Drop another wrangle after your checker:
+If you don`t like the pattern you get above, you can blur it a bit. Drop another wrangle after your checker:
 
 ```C
 // Get point numbers (closest to current point) in a certain radius to array
@@ -824,69 +891,6 @@ vector avarage_color = added_color/len(colsest_points);
 @Cd = avarage_color;
 
 ```
-### Hanging a wire
-The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them (`pic 1`).
-
-The high-level solution overview:  
- - First, we will create a certain number of points (3 points added on pic) between points `A` and `B`.  
-Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, and 4 indexes (`pic 2`).  
- - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
- - And finally, we will connect points with polygons to create geometry (`pic 4`).
-
-[![](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)
-
-Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, and create Attribute Wrangle in detail mode after. We will have our points A and B with indexes 0 and 1 correspondingly. 
-
-#### Creating inbetween points
-First, let's store our source anchor point position values in variables and define the number of points we will create between `A` and `B` with a UI slider:
-
-```C
-vector anchor_a = point(0, "P", 0);
-vector anchor_b = point(0, "P", 1);
-int number_of_points = chi('number_of_points');
-```
-
-The `point(input, attribute, point number)` VEX function returns the value of a point position attribute (`P`) for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node. Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `anchor_a` and `anchor_b`. 
-
-Let's start from the simplest case and create only one new point: set "Number Of Points" attribute to 1. 
-
-How we can create the required number of points? When we need to repeat an action (create a point and set it position) a certain number of times, we need to use [loop statement](Programming-basics#loops): 
-```C 
-for(start from; stop at; increment){
-   action;
-}
-```
-
-In our case:
-
-```C 
-vector anchor_a = point(0, "P", 0);
-vector anchor_b = point(0, "P", 1);
-int number_of_points = chi('number_of_points');
-
-for(int iteration=0; iteration<number_of_points; iteration++){
-    printf('iteration number = %s\n', iteration);
-}
-```
-This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. The `iteration++` is a "syntaxis sugar" for `iteration = iteration + 1` statement and means the step of iterations is equal to 1. 
-
-Inside the loop body (between `{ ... }`), we will place the code for one point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
-
-Change the "Number Of Points" in a Wrangle UI and notice print results in Houdini Console to see how this basic construction works.
-
-Shift the loop range on 2 units:
-
- ```C 
-for(int iteration=2; iteration<number_of_points+2; iteration++){
-    printf('iteration number = %s\n', iteration);
-}
-```
-
-So, the iteration number will match the index of the newly created point. We already have 2 anchor points, that's why the first new point will get an index of 2.
-
-[![](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)
-
-[Creating a point](#create-a-point) with VEX is simple, we need to provide `0` as a first argument and point position (vector value) as a second argument to the [`addpoint()`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function.
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
