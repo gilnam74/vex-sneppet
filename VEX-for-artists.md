@@ -764,6 +764,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     vector point_position = {0, 0, 0};
     addpoint(0,point_position);
 }
+```
 
 Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? In other words, if we adding only one point, what should be the X-coordinate of a new point `C`?
 
