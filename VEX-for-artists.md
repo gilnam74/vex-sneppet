@@ -791,7 +791,7 @@ Having 3 new points: `C = A + S`, `D = A + S + S`, `E = A + S + S + S`
 
 I can see the another pattern here:  `coordinate X = A + S*(number of points + 1)`
 
-Now it is easy to implement it in VEX:
+Now it is easy to implement this formula of a new point pisition in VEX:
 ```C
 vector anchor_a = point(0, "P", 0);
 vector anchor_b = point(0, "P", 1);
@@ -803,6 +803,9 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     addpoint(0,point_position);
 }
 ```
+
+#### Moving points down along Y-axis.
+
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
