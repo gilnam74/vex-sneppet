@@ -828,7 +828,8 @@ vector avarage_color = added_color/len(colsest_points);
 The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them (`pic 1`).
 
 The high-level solution overview:  
- - First, we will create a certain number of points (let it be 3 points for now) between points `A` and `B`. Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3 and 4 indexes (`pic 2`).  
+ - First, we will create a certain number of points (let it be 3 points for now) between points `A` and `B`.  
+Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3 and 4 indexes (`pic 2`).  
  - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
  - And finally, we will connect points with polygons to create geometry (`pic 4`).
 
