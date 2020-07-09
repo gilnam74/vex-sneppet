@@ -773,16 +773,23 @@ Adding one new point `C`, we would have points `A-C-B` and the origin `0`:
 
 What is the X-coordinate of a new point `C`? The X-coordinate of a point `C` equals the length of the `section 0C`.
 
-And `section 0C = section 0A + section AC`!  
+And `section 0C = section 0A + section AC`  
 
 If we want point `C` be located at the same distance from `A` and `B`, `section AC` should be equal `section CB`. E.g.: 
 
 `section AC = scetion CB = section AB / 2`.
 
-If we would have 2 new points (A-C-D-B): `section AC = section CD = section DB = scetio AB / 3`.  
-If we would have 3 new points (A-C-D-E-B): `section AC = section CD = section DE = section EB = scetio AB / 4`.
+If we would have 2 new points (A-C-D-B): `section AC = section CD = section DB = scetion AB / 3`.  
+If we would have 3 new points (A-C-D-E-B): `section AC = section CD = section DE = section EB = scetion AB / 4`.
 
 I can see the pattern here:  `section S = (B-A)/(number of points + 1)`
+
+And the X coord of a point `C = A + S = A + (B-A)/(number of points + 1)`  
+Having 2 new points: `C = A + S`, `D = A + S + S`  
+Having 3 new points: `C = A + S`, `D = A + S + S`, `E = A + S + S + S`
+
+I can see the another pattern here:  `coordinate X = A + S*(number of points + 1)`
+
 
 
 ## Checker  
