@@ -825,11 +825,15 @@ vector avarage_color = added_color/len(colsest_points);
 
 ```
 ### Hanging a wire
-The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them.
+The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them (`pic 1`).
+
+The high-level solution overview:  
+ - First, we will create a certain number of points (let it be 3 points for now) between points `A` and `B`. Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3 and 4 indexes (`pic 2`).  
+ - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
+ - And finally, we will connect points with polygons to create geometry (`pic 4`).
 
 [![](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)
 
-The high-level solution overview: first we will create a certain number of points between points `A` and `B`, then we will move each new point down on its own value to shape the parabola curve, and finally we will connect points with polygons to create geometry.
 
 Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, and create Attribute Wrangle in detail mode after. We will have our points A and B with indexes 0 and 1 correspondingly. 
 
