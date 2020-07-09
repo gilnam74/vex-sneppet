@@ -747,9 +747,9 @@ This code will iterate from 0 to 1 (the number of points we set in UI) and outpu
 
 Inside the loop body (between `{ ... }`), we will place the code for one point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
 
-Change the "Number Of Points" in a Wrangle UI and notice print results in Houdini Console to see how this basic construction works.
+Change the "Number Of Points" in a Wrangle UI and examine printed results in Houdini Console to see how this basic construction works. Clear console before each value change to isolate each loop execution.
 
-[![](https://live.staticflickr.com/65535/50094568228_e03e4aafcf_o.png)](https://live.staticflickr.com/65535/50094568228_e03e4aafcf_o.png)
+[![](https://live.staticflickr.com/65535/50095220646_4b4aefbf2e_o.png)](https://live.staticflickr.com/65535/50095220646_4b4aefbf2e_o.png)
 
 [Creating a point](#create-a-point) with VEX is simple, we need to provide `0` as a first argument and point position (vector value) as a second argument to the [`addpoint()`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function.
 
@@ -760,15 +760,23 @@ vector anchor_a = point(0, "P", 0);
 vector anchor_b = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
-for(int iteration=2; iteration<number_of_points+2; iteration++){
+for(int iteration=0; iteration<number_of_points; iteration++){
     vector point_position = {0, 0, 0};
     addpoint(0,point_position);
 }
 
 Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? In other words, if we adding only one point, what should be the X-coordinate of a new point `C`?
 
-Obviously, `C.x = section 0A + section AC`
-Since
+Having one new point `C`, we would have points `A-C-B` and the origin `0`:
+
+`section 0C = section 0A + section AC`  
+
+If we want point `C` be located at the same distance from `A` and `B`, `section AC` should be equal `section CB`.  
+E.g. `section AC = scetion CB = section AB / 2`.
+
+If we would have 2 new points (A-C-D-B): `section AC = section CD = section DB = scetio AB / 3`.  
+If we would have 3 new points (A-C-D-E-B): `section AC = section CD = section DE = section EB = scetio AB / 4`.
+
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
