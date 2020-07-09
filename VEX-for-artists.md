@@ -868,12 +868,21 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     printf('iteration number = %s\n', iteration);
 }
 ```
-This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. Change the number of points in a Wrangle UI to see how this basic construction works. 
+This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. The `iteration++` means the step of iterations is equal to 1. 
 
+Inside the loop body (between `{ ... }`), we will write the code for one point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
 
-certain amount We need to iterate 
+Change the "Number Of Points" in a Wrangle UI to see how this basic construction works.
 
-We know, that we ca
+Shift the loop range on 2, so the iteration number will match the index of the newly created point (we already have 2 anchor points in place).
+
+ ```C 
+for(int iteration=2; iteration<number_of_points+2; iteration++){
+    printf('iteration number = %s\n', iteration);
+}
+```
+
+We can create a point with [`addpoint(geohandle, pos)`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function by providing 0 as a `geohandle` and point position as `pos` arguments.
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
