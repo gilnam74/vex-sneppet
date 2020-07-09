@@ -680,7 +680,7 @@ Ok, at this point we might need a bit of theory before we will dig into a new to
 Time to use our theoretical knowledge in practice! A collection of tutorials on solving miscellaneous production tasks with VEX.
 
 ## Checker  
-Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#examine-more-functions) to be able to follow this tutorial.
+Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
 
 At a very high level, the solution would be: build equal-sized black and white stripes (values of 0 and 1), then we will periodically shift a part of each stripe, pally to geometry color.
 
@@ -828,7 +828,7 @@ vector avarage_color = added_color/len(colsest_points);
 The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them (`pic 1`).
 
 The high-level solution overview:  
- - First, we will create a certain number of points (let it be 3 points for now) between points `A` and `B`.  
+ - First, we will create a certain number of points (3 points added on pic) between points `A` and `B`.  
 Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, and 4 indexes (`pic 2`).  
  - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
  - And finally, we will connect points with polygons to create geometry (`pic 4`).
@@ -868,13 +868,13 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     printf('iteration number = %s\n', iteration);
 }
 ```
-This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. The `iteration++` means the step of iterations is equal to 1. 
+This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. The `iteration++` is a "syntaxis sugar" for `iteration = iteration + 1` statement and means the step of iterations is equal to 1. 
 
-Inside the loop body (between `{ ... }`), we will write the code for one point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
+Inside the loop body (between `{ ... }`), we will place the code for one point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
 
-Change the "Number Of Points" in a Wrangle UI to see how this basic construction works.
+Change the "Number Of Points" in a Wrangle UI and notice print results in Houdini Console to see how this basic construction works.
 
-Shift the loop range on 2, so the iteration number will match the index of the newly created point (we already have 2 anchor points in place).
+Shift the loop range on 2 units:
 
  ```C 
 for(int iteration=2; iteration<number_of_points+2; iteration++){
@@ -882,7 +882,9 @@ for(int iteration=2; iteration<number_of_points+2; iteration++){
 }
 ```
 
-We can create a point with [`addpoint(geohandle, pos)`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function by providing 0 as a `geohandle` and point position as `pos` arguments.
+So, the iteration number will match the index of the newly created point. We already have 2 anchor points, that's why the first new point will get an index of 2.
+
+[Creating a point](#create-a-point) with VEX is simple, we need to provide `0` as a first argument and point position (vector value) as a second argument to the [`addpoint()`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function.
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
