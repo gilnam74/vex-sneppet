@@ -681,7 +681,9 @@ We are familiar with math from a very early age and we use to know it as a compl
 Let's try to learn math, vectors in particular, from the opposite side we use to: recall the tasks that humanity needed to solve, how those tasks evolved and how this evolution force to develop more advanced mathematical tools.
 
 ### Numbers
-People use to collect different items back in time when we barely can call them humans, it was necessary for survival. Several apples were just a bunch until we start counting them.
+People use to collect different items back in time when we barely can call them humans, it was necessary for survival. 
+
+Several apples were just an overall bunch until the moment we start counting the content of a bunch. So we start to recognize the distinction between the different amounts of items: one from two, two from three, three from fore, etc. Then we name those amounts like one, two, three, etc. Next, we assign a symbol to each number.
 
 TBD!
 
