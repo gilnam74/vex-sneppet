@@ -884,6 +884,8 @@ for(int iteration=2; iteration<number_of_points+2; iteration++){
 
 So, the iteration number will match the index of the newly created point. We already have 2 anchor points, that's why the first new point will get an index of 2.
 
+[![](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)](https://live.staticflickr.com/65535/50094758471_01f7cbba16_o.png)
+
 [Creating a point](#create-a-point) with VEX is simple, we need to provide `0` as a first argument and point position (vector value) as a second argument to the [`addpoint()`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function.
 
 # VEX next steps
