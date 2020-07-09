@@ -14,7 +14,7 @@ Article structure:
 [Explore functions](#explore-functions)  | [Repetitive patterns](#repetitive-patterns)  
 - [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
-[Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  [Hanging a wire](#hanging-a-wire)  
+[Hanging a wire](#hanging-a-wire)  |  [Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  
 - [VEX next steps](#vex-next-steps)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
