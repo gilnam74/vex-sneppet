@@ -809,7 +809,7 @@ Point `C` located away from the origin on a distance of `segment 0A + segment AC
 Having 2 new points: `position  C = position  A + S`, `position  D = position  A + S + S`  
 Having 3 new points: `position  C = position  A + S`, `position  D = position  A + S + S`, `position  E = position A + S + S + S`  
 
-**I can see another pattern here: `new point position = position  A + segment S*(iteration number + 1)`**
+**I can see another pattern here: `new point position = position  A + segment S * (iteration number + 1)`**
 
 Now, when we have a formula to calculate the new points coordinates, it is easy to implement it in VEX:
 ```C
