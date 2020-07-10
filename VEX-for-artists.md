@@ -716,8 +716,8 @@ Prepare the scene: create a line SOP in geometry context, orient it along with X
 First, let's store our source anchor point position values in variables and define the number of points we will create between `A` and `B` with a UI slider:
 
 ```C
-vector anchor_a = point(0, "P", 0);
-vector anchor_b = point(0, "P", 1);
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 ```
 
@@ -735,8 +735,8 @@ for(start from; stop at; increment){
 In our case:
 
 ```C 
-vector anchor_a = point(0, "P", 0);
-vector anchor_b = point(0, "P", 1);
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
@@ -749,15 +749,15 @@ Inside the loop body (between `{ ... }`), we will place the code for one point c
 
 Change the "Number Of Points" in a Wrangle UI and examine printed results in Houdini Console to see how this basic construction works. Clear console before each value change to isolate each loop execution.
 
-[![](https://live.staticflickr.com/65535/50095220646_4b4aefbf2e_o.png)](https://live.staticflickr.com/65535/50095220646_4b4aefbf2e_o.png)
+[![](https://live.staticflickr.com/65535/50097753796_ffc533dde0_o.png)](https://live.staticflickr.com/65535/50097753796_ffc533dde0_o.png)
 
 [Creating a point](#create-a-point) with VEX is simple, we need to provide `0` as a first argument and point position (vector value) as a second argument to the [`addpoint()`](https://www.sidefx.com/docs/houdini/vex/functions/addpoint.html) VEX function.
 
 To create new points we can define their position as a vector variable set to `{0, 0, 0}`:
 
  ```C 
-vector anchor_a = point(0, "P", 0);
-vector anchor_b = point(0, "P", 1);
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
@@ -813,13 +813,13 @@ Having 3 new points: `position  C = position  A + S`, `position  D = position  A
 
 Now, when we have a formula to calculate the new points coordinates, it is easy to implement it in VEX:
 ```C
-vector anchor_a = point(0, "P", 0);
-vector anchor_b = point(0, "P", 1);
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (anchor_b-anchor_a)/(number_of_points+1);
-    vector point_position = anchor_a + segment*(iteration+1); 
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration+1); 
     addpoint(0,point_position);
 }
 ```
