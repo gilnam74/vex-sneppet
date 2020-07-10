@@ -702,7 +702,7 @@ From general to specific, keeping things extremely simple, with a detailed expla
 ### Hanging a wire
 The task: having two source points `A` and `B` build a hanging curve between them.
 
-The problem-solving algorithm would be always based on a core concept: split the over task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later.
+The problem-solving algorithm would be always based on a core concept: split the overal task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later.
 
 The high-level solution overview:  
  - First, we will create a certain number of points between points `A` and `B`.  
