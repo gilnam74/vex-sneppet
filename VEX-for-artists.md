@@ -780,32 +780,34 @@ Points define segments:
  - segment `AC` 
  - segment `CB`
 
-Let's name all segments between the new points as 'S', they should have the same length by definition.
+Let's mark all segments between the new points as `S`.
 
 [![](https://live.staticflickr.com/65535/50097070778_7264225338_o.png)](https://live.staticflickr.com/65535/50097070778_7264225338_o.png)
-https://live.staticflickr.com/65535/50097890512_076bf01920_o.png
 
 We know the `A` and `B` point positions (we can get them with `point()` vex function by point indexes). We need to calculate the point `C` position to create it in a proper location using known values. 
 
-If we want point `C` to be located at the same distance from `A` and `B`, we should divide segment `AB` into two equal parts: `S = segment AB / 2`.
+If we want point `C` to be located at the same distance from `A` and `B`, we should divide segment `AB` into two equal parts:  
+`S = segment AB / 2`.
 
 See what will happen when we will raise the number of new points:
 
-Having 1 new point:  `S = segment AB / 2`.  
 Having 2 new points: `S = segment AB / 3`.   
-Having 3 new points: `S = segment AB / 4`.   
+Having 3 new points: `S = segment AB / 4`.  
+Having 4 new points: `S = segment AB / 5`.   
 
 This is an obvious pattern which can be expressed as: the length of `segment S`  is equal `segment AB/(number of points + 1)`
 
 We know, that `segment AB = segment 0B - segment 0A`, so:  `segment S = (segment 0B - segment 0A)/(number of points + 1)` 
 
-In a short form, `S = (B.pos - A.pos)/(number of points + 1)`, where `A.pos` and `B.pos` are the coordinates of points `A` and `B`, and `S` is a length of a segment between neighbor new points.
+Which is the same as:  `segment S = (position B - position  A)/(number of points + 1)`,  
 
 So, now we know how to calculate the length of segments between each new point. Next, let's take a look at how we can get coordinates of new points (C, D, E, etc.) through the segment length:
+[![](https://live.staticflickr.com/65535/50097890512_076bf01920_o.png)](https://live.staticflickr.com/65535/50097890512_076bf01920_o.png)
 
-Having 1 new point: `C.pos = A.pos + S`  
-Having 2 new points: `C.pos = A.pos + S`, `D.pos = A.pos + S + S`  
-Having 3 new points: `C.pos = A.pos + S`, `D.pos = A.pos + S + S`, `E.pos = A.pos + S + S + S`  
+Point `C` located away from the origin on a distance of `segment 0A + segment AC`, and hence `position C = position  A + segment S`.  
+
+Having 2 new points: `position  C = position  A + S`, `position  D = position  A + S + S`  
+Having 3 new points: `position  C = position  A + S`, `position  D = position  A + S + S`, `position  E = position A + S + S + S`  
 
 I can see another pattern here: `new point position = A.pos + S*(iteration number + 1)`
 
