@@ -799,7 +799,7 @@ This is an obvious pattern which can be expressed as: the length of `segment S` 
 
 We know, that `segment AB = segment 0B - segment 0A`, so:  `segment S = (segment 0B - segment 0A)/(number of points + 1)` 
 
-Which is the same as:  `segment S = (position B - position  A)/(number of points + 1)`,  
+**Which is the same as:  `segment S = (position B - position  A)/(number of points + 1)`**,  
 
 So, now we know how to calculate the length of segments between each new point. Next, let's take a look at how we can get coordinates of new points (C, D, E, etc.) through the segment length:
 [![](https://live.staticflickr.com/65535/50097890512_076bf01920_o.png)](https://live.staticflickr.com/65535/50097890512_076bf01920_o.png)
@@ -809,9 +809,9 @@ Point `C` located away from the origin on a distance of `segment 0A + segment AC
 Having 2 new points: `position  C = position  A + S`, `position  D = position  A + S + S`  
 Having 3 new points: `position  C = position  A + S`, `position  D = position  A + S + S`, `position  E = position A + S + S + S`  
 
-I can see another pattern here: `new point position = A.pos + S*(iteration number + 1)`
+**I can see another pattern here: `new point position = position  A + S*(iteration number + 1)`**
 
-Now, knowing all dependencies it is easy to implement this formula of a new point pisition in VEX:
+Now, when we have a formula to calculate the new points coordinates, it is easy to implement it in VEX:
 ```C
 vector anchor_a = point(0, "P", 0);
 vector anchor_b = point(0, "P", 1);
