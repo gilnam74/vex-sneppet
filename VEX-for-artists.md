@@ -700,10 +700,12 @@ Time to use our theoretical knowledge in practice! A collection of tutorials on 
 From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process with different examples.
 
 ### Hanging a wire
-The task: having two anchor points `A` and `B` in 3D space build a hanging curve between them (`pic 1`).
+The task: having two source points `A` and `B` build a hanging curve between them (`pic 1`).
+
+The problem-solving algorithm would be always based on a core concept: split the over task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later. 
 
 The high-level solution overview:  
- - First, we will create a certain number of points (3 points were added on illustration) between points `A` and `B`.  
+ - First, we will create a certain number of points (3 points were added on the illustration) between points `A` and `B`.  
 Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, and 4 indexes (`pic 2`).  
  - Next, we will move each new point down on its own value to shape the arc curve (`pic 3`).  
  - And finally, we will connect points with polygons to create geometry (`pic 4`).
@@ -824,8 +826,10 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
-#### Moving points down along Y-axis.
+Here, with the help of basic math, we have calculated position values for each newly created point using known data: source point positions, amount of new points, and iteration number inside the loop function.
 
+#### Moving points down along Y-axis.
+Let's solve the next sub-task and
 
 
 
