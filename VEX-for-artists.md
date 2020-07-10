@@ -702,12 +702,13 @@ From general to specific, keeping things extremely simple, with a detailed expla
 ### Hanging a wire
 The task: having two source points `A` and `B` build a hanging curve between them.
 
-The problem-solving algorithm would be always based on a core concept: split the over task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later. 
+The problem-solving algorithm would be always based on a core concept: split the over task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later.
 
 The high-level solution overview:  
- - First, we will create a certain number of points (3 points were added on the illustration) between points `A` and `B`.  
-Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, and 4 indexes.  
+ - First, we will create a certain number of points between points `A` and `B`.  
+We would need to place those new points on the equal distance one from another and from the source points. Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, 4, etc. indexes.  
  - Next, we will move each new point down on its own value to shape the arc curve.  
+The value should rise from the first new point until we reach the middle point, then the value should decrease in the same way until we reach the last new point.
  - And finally, we will connect points with polygons to create geometry.
 
 [![](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)
