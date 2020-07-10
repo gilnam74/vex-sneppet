@@ -787,21 +787,13 @@ In a short form, `S = (B.pos - A.pos)/(number of points + 1)`, where `A.pos` and
 
 So, now we know how to calculate the length of segments between each new point. Next, let's take a look at how we can get coordinates of new points (C, D, E, etc.) through the segment length:
 
-Having 1 new point: `C.pos = A.pos + S`
+Having 1 new point: `C.pos = A.pos + S`  
 Having 2 new points: `C.pos = A.pos + S`, `D.pos = A.pos + S + S`  
-Having 3 new points: `C.pos = A.pos + S`, `D.pos = A.pos + S + S`, `E.pos = A.pos + S + S + S`
+Having 3 new points: `C.pos = A.pos + S`, `D.pos = A.pos + S + S`, `E.pos = A.pos + S + S + S`  
 
 I can see another pattern here: `new point position = A.pos + S*(iteration number + 1)`
 
-What is the X-coordinate of a new point `C`? The X-coordinate of a point `C` equals the length of the `segment 0C`.
-
-And `segment 0C = segment 0A + segment AC`  
-
-And the X coord of a point `C` would be: `coordinate X = A + S = A + (B-A)/(number of points + 1)`
-
-
-
-Now it is easy to implement this formula of a new point pisition in VEX:
+Now, knowing all dependencies it is easy to implement this formula of a new point pisition in VEX:
 ```C
 vector anchor_a = point(0, "P", 0);
 vector anchor_b = point(0, "P", 1);
@@ -815,6 +807,8 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 ```
 
 #### Moving points down along Y-axis.
+
+
 
 
 ## Checker  
