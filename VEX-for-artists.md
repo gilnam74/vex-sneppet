@@ -868,7 +868,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     vector segment = (B - A)/(number_of_points+1);
     vector point_position = A + segment*(iteration + 1); 
     
-    **point_position.y -= 0.1;**
+    point_position.y -= 0.1;
     
     addpoint(0, point_position);
     
@@ -885,14 +885,29 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     vector segment = (B - A)/(number_of_points+1);
     vector point_position = A + segment*(iteration + 1); 
     
-    **point_position.y -= 0.1 * iteration;**
+    point_position.y -= 0.1 * iteration;
     
     addpoint(0, point_position);
     
 }
 ```
  
-And pick up the first new point
+The first new point does not moves because the first iteration is 0, let's pick up the first point:
+```C
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+    point_position.y -= 0.1 * (iteration+1);
+    
+    addpoint(0, point_position);
+    
+}
+```
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
