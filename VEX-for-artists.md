@@ -771,7 +771,7 @@ Now we have a new point created at the origin. If we raise the "Number Of Points
 After adding one new point `C`, we would have 4 points to operate: origin point `0`, source point `A`, new point `C`, and another source point 'B'. Points define segments, e.g. `segment AB`, our source points section, or `segment AC` and `segment CB`, sections that we obtain after dividing `segment AB` with point `C.
 [![](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)
 
-We know the `A` and `B` point positions (we can get them with `point()` vex function by point indexes). We need to know the point `C` position to create it in a proper location. We don`t know it, but we can calculate this value using numbers we already have. If we want point `C` be located at the same distance from `A` and `B`, `segment AC` should be equal `segment CB`, e.g. `segment AC = segment CB = segment AB / 2`.
+We know the `A` and `B` point positions (we can get them with `point()` vex function by point indexes). We need to know the point `C` position to create it in a proper location. We don't know it, but we can calculate this value using numbers we already have. If we want point `C` be located at the same distance from `A` and `B`, `segment AC` should be equal `segment CB`, e.g. `segment AC = segment CB = segment AB / 2`.
 
 Let's mark segments between new points as `S` and see what will happen when we will raise the number of new points:
 
