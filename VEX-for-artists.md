@@ -769,10 +769,10 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? Let's think about adding one point `C` for now.
 
 After point `C` were created, we would have 4 points to operate: 
- - origin point `0`,  
- - source point `A`,  
- - new point `C`,  
- - source point 'B'
+ - origin point `0`  
+ - source point `A`  
+ - created point `C`  
+ - source point `B`
 
 Points define segments: 
  - segment `0A`, 
@@ -809,7 +809,7 @@ Point `C` located away from the origin on a distance of `segment 0A + segment AC
 Having 2 new points: `position  C = position  A + S`, `position  D = position  A + S + S`  
 Having 3 new points: `position  C = position  A + S`, `position  D = position  A + S + S`, `position  E = position A + S + S + S`  
 
-**I can see another pattern here: `new point position = position  A + S*(iteration number + 1)`**
+**I can see another pattern here: `new point position = position  A + segment S*(iteration number + 1)`**
 
 Now, when we have a formula to calculate the new points coordinates, it is easy to implement it in VEX:
 ```C
