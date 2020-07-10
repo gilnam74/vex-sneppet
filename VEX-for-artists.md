@@ -877,37 +877,19 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 
 Nice, all new points jump down on `0.1` units. Now let them jump on individual value related to iteration number:
 ```C
-vector A = point(0, "P", 0);
-vector B = point(0, "P", 1);
-int number_of_points = chi('number_of_points');
-
-for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
-    vector point_position = A + segment*(iteration + 1); 
-    
-    point_position.y -= 0.1 * iteration;
-    
-    addpoint(0, point_position);
-    
+point_position.y -= 0.1 * iteration;
 }
 ```
  
 The first new point does not moves because the first iteration is 0, let's pick up the first point:
 ```C
-vector A = point(0, "P", 0);
-vector B = point(0, "P", 1);
-int number_of_points = chi('number_of_points');
-
-for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
-    vector point_position = A + segment*(iteration + 1); 
-    
-    point_position.y -= 0.1 * (iteration+1);
-    
-    addpoint(0, point_position);
-    
+point_position.y -= 0.1 * (iteration + 1);
 }
 ```
+
+Ok, this not the result we are looking for, but it's a good foundation. Our points are going down linearly because the shift value increases each iteration. Next, we need to change the behavior so, that the shift value will increase after the middle point. 
+
+Let's find the center of an array of new points. float array_center = (number_of_points-1)/2.0+2; 
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
