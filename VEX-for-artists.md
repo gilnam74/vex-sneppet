@@ -830,7 +830,36 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 Here, with the help of basic math, we have calculated position values for each newly created point using known data: source point positions, amount of new points, and iteration number inside the loop function.
 
 #### Moving points down along Y-axis.
-Let's solve the next sub-task and
+Let's solve the next sub-task and move new points down individually.
+
+We need to develop another formula to create a required arc shape. And developing formula means that we will calculate unknown values from established data. Same as we just did with positioning new points, we calculate a new position based on iteration number of a loop, quantity of points, and source point positions. Art of building necessary dependencies.
+
+As we learn from [the sine example](#sine), we can use point X position and half of the period of a sine function to shift Y positions to create an arc:
+```C
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+    point_position.y -= sin(point_position.x*3.1416);
+    
+    addpoint(0, point_position);
+    
+}
+```
+[![](https://live.staticflickr.com/65535/50098430242_b2a6920ed4_o.png)](https://live.staticflickr.com/65535/50098430242_b2a6920ed4_o.png)
+
+
+
+if we feed a changing value (it could be a time or X position, for example) to a mathematical function, we can get this function graph as output. 
+
+ we can use a point X position
+build-in mathematical function to align points with a 
+
+
 
 
 
