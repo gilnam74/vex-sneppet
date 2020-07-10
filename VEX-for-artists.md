@@ -801,7 +801,7 @@ We know, that `segment AB = segment 0B - segment 0A`, so:  `segment S = (segment
 
 **Which is the same as:  `segment S = (position B - position  A)/(number of points + 1)`**,  
 
-So, now we know how to calculate the length of segments between each new point. Next, let's take a look at how we can get coordinates of new points (C, D, E, etc.) through the segment length:
+Awesome, now we know how to calculate the length of segments between each new point. Next, let's take a look at how we can get coordinates of new points (C, D, E, etc.) through the segment length:
 [![](https://live.staticflickr.com/65535/50097890512_076bf01920_o.png)](https://live.staticflickr.com/65535/50097890512_076bf01920_o.png)
 
 Point `C` located away from the origin on a distance of `segment 0A + segment AC`, and hence `position C = position  A + segment S`.  
