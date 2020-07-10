@@ -766,14 +766,27 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
-Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? 
+Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? Let's think about adding one point `C` for now.
 
-After adding one new point `C`, we would have 4 points to operate: origin point `0`, source point `A`, new point `C`, and another source point 'B'. Points define segments, e.g. `segment AB`, our source points section, or `segment AC` and `segment CB`, sections that we obtain after dividing `segment AB` with point `C.
-[![](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)
+After point `C` were created, we would have 4 points to operate: 
+ - origin point `0`,  
+ - source point `A`,  
+ - new point `C`,  
+ - source point 'B'
+
+Points define segments: 
+ - segment `0A`, 
+ - segment `AB`, 
+ - segment `AC` 
+ - segment `CB`
+
+Let's name all segments between the new points as 'S', they should have the same length by definition.
+
+[![](https://live.staticflickr.com/65535/50097070778_7264225338_o.png)](https://live.staticflickr.com/65535/50097070778_7264225338_o.png)
 
 We know the `A` and `B` point positions (we can get them with `point()` vex function by point indexes). We need to know the point `C` position to create it in a proper location. We don't know it, but we can calculate this value using numbers we already have. If we want point `C` be located at the same distance from `A` and `B`, `segment AC` should be equal `segment CB`, e.g. `segment AC = segment CB = segment AB / 2`.
 
-Let's mark segments between new points as `S` and see what will happen when we will raise the number of new points:
+See what will happen when we will raise the number of new points:
 
 Having 1 new point:  `S = segment AB / 2`.  
 Having 2 new points: `S = segment AB / 3`.   
