@@ -783,8 +783,11 @@ Points define segments:
 Let's name all segments between the new points as 'S', they should have the same length by definition.
 
 [![](https://live.staticflickr.com/65535/50097070778_7264225338_o.png)](https://live.staticflickr.com/65535/50097070778_7264225338_o.png)
+https://live.staticflickr.com/65535/50097890512_076bf01920_o.png
 
-We know the `A` and `B` point positions (we can get them with `point()` vex function by point indexes). We need to know the point `C` position to create it in a proper location. We don't know it, but we can calculate this value using numbers we already have. If we want point `C` be located at the same distance from `A` and `B`, `segment AC` should be equal `segment CB`, e.g. `segment AC = segment CB = segment AB / 2`.
+We know the `A` and `B` point positions (we can get them with `point()` vex function by point indexes). We need to calculate the point `C` position to create it in a proper location using known values. 
+
+If we want point `C` to be located at the same distance from `A` and `B`, we should divide segment `AB` into two equal parts: `S = segment AB / 2`.
 
 See what will happen when we will raise the number of new points:
 
