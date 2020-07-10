@@ -887,9 +887,31 @@ point_position.y -= 0.1 * (iteration + 1);
 }
 ```
 
-Ok, this not the result we are looking for, but it's a good foundation. Our points are going down linearly because the shift value increases each iteration. Next, we need to change the behavior so, that the shift value will increase after the middle point. 
+Ok, this not the result we are looking for, but it's a good foundation. Our points are going down linearly because the shift value increases each iteration. Next, we need to change the behavior so, that the shift value will start to decrease after we reach the central point. 
 
-Let's find the center of an array of new points. float array_center = (number_of_points-1)/2.0+2; 
+Since we are using iterations to build points we can say that we need to find the center of iterations, so we just need to divide the number of iterations on 2. If we have an even number of new points, the center would not be a whole number, so we will use float data type to store result:
+
+`float iteration_center = number_of_points/2.0;`
+
+To check if it's working, let's shift our points only if they are created before the middle iteration:
+```C
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+float iteration_center = (number_of_points)/2.0;
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+    if(iteration < iteration_center)
+        point_position.y -= 0.1 * (iteration + 1);
+
+    
+    addpoint(0, point_position);
+}
+```
+
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
