@@ -773,9 +773,9 @@ Adding one new point `C`, we would have the origin point `0` and points `A-C-B`:
 
 If we want point `C` be located at the same distance from `A` and `B`, `section AC` should be equal `section CB`.
 
-If we would have 1 new point (A-C-B): `section AC = scetion CB = section AB / 2`.
-If we would have 2 new points (A-C-D-B): `section AC = section CD = section DB = scetion AB / 3`.  
-If we would have 3 new points (A-C-D-E-B): `section AC = section CD = section DE = section EB = scetion AB / 4`.
+If we would have 1 new point  (A-C-B):     `section AC = scetion CB = section AB / 2`.  
+If we would have 2 new points (A-C-D-B):   `section AC = section CD = section DB = scetion AB / 3`.   
+If we would have 3 new points (A-C-D-E-B): `section AC = section CD = section DE = section EB = scetion AB / 4`.  
 
 I can see the pattern here, we can calculate the length of `section S` as:  
 `section S = section AB/(number of points + 1)`
