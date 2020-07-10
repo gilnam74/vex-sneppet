@@ -768,36 +768,38 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 
 Now we have a new point created at the origin. If we raise the "Number Of Points" value more points will be added to the same location. How we can evenly distribute all new points between original points A and B? 
 
-Adding one new point `C`, we would have the origin point `0` and points `A-C-B`:
+After adding one new point `C`, we would have 4 points to operate: origin point `0`, source point `A`, new point `C`, and another source point 'B'. Points define segments, e.g. `segment AB`, our source points section, or `segment AC` and `segment CB`, sections that we obtain after dividing `segment AB` with point `C.
 [![](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)](https://live.staticflickr.com/65535/50095549402_8030a615f8_o.png)
 
-If we want point `C` be located at the same distance from `A` and `B`, `section AC` should be equal `section CB`.
+We know the `A` and `B` point positions (we can get them with `point()` vex function by point indexes). We need to know the point `C` position to create it in a proper location. We don`t know it, but we can calculate this value using numbers we already have. If we want point `C` be located at the same distance from `A` and `B`, `segment AC` should be equal `segment CB`, e.g. `segment AC = segment CB = segment AB / 2`.
 
-If we would have 1 new point  (A-C-B):     `section AC = scetion CB = section AB / 2`.  
-If we would have 2 new points (A-C-D-B):   `section AC = section CD = section DB = scetion AB / 3`.   
-If we would have 3 new points (A-C-D-E-B): `section AC = section CD = section DE = section EB = scetion AB / 4`.  
+Let's mark segments between new points as `S` and see what will happen when we will raise the number of new points:
 
-I can see the pattern here, we can calculate the length of `section S` as:  
-`section S = section AB/(number of points + 1)`
+Having 1 new point:  `S = segment AB / 2`.  
+Having 2 new points: `S = segment AB / 3`.   
+Having 3 new points: `S = segment AB / 4`.   
 
-We know, that `section AB = section 0B - section 0A`, so:  `section S = (section 0B - section 0A)/(number of points + 1)` 
+This is an obvious pattern which can be expressed as: the length of `segment S`  is equal `segment AB/(number of points + 1)`
 
-In a short form, `S = (B-A)/(number of points + 1)`, where `A` and `B` are the coordinates of points `A` and `B`
+We know, that `segment AB = segment 0B - segment 0A`, so:  `segment S = (segment 0B - segment 0A)/(number of points + 1)` 
 
-So, now we know how to calculate the length of segments between each new point.
+In a short form, `S = (B.pos - A.pos)/(number of points + 1)`, where `A.pos` and `B.pos` are the coordinates of points `A` and `B`, and `S` is a length of a segment between neighbor new points.
 
+So, now we know how to calculate the length of segments between each new point. Next, let's take a look at how we can get coordinates of new points (C, D, E, etc.) through the segment length:
 
+Having 1 new point: `C.pos = A.pos + S`
+Having 2 new points: `C.pos = A.pos + S`, `D.pos = A.pos + S + S`  
+Having 3 new points: `C.pos = A.pos + S`, `D.pos = A.pos + S + S`, `E.pos = A.pos + S + S + S`
 
-What is the X-coordinate of a new point `C`? The X-coordinate of a point `C` equals the length of the `section 0C`.
+I can see another pattern here: `new point position = A.pos + S*(iteration number + 1)`
 
-And `section 0C = section 0A + section AC`  
+What is the X-coordinate of a new point `C`? The X-coordinate of a point `C` equals the length of the `segment 0C`.
+
+And `segment 0C = segment 0A + segment AC`  
 
 And the X coord of a point `C` would be: `coordinate X = A + S = A + (B-A)/(number of points + 1)`
-  
-Having 2 new points: `C = A + S`, `D = A + S + S`  
-Having 3 new points: `C = A + S`, `D = A + S + S`, `E = A + S + S + S`
 
-I can see the another pattern here:  `coordinate X = A + S*(number of points + 1)`
+
 
 Now it is easy to implement this formula of a new point pisition in VEX:
 ```C
@@ -806,8 +808,8 @@ vector anchor_b = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector section = (anchor_b-anchor_a)/(number_of_points+1);
-    vector point_position = anchor_a + section*(iteration+1); 
+    vector segment = (anchor_b-anchor_a)/(number_of_points+1);
+    vector point_position = anchor_a + segment*(iteration+1); 
     addpoint(0,point_position);
 }
 ```
