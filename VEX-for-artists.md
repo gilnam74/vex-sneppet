@@ -912,6 +912,57 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
+To decrease the shift on Y axis, we will add the value instead of substraction:
+```C
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+float iteration_center = (number_of_points)/2.0;
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+    if(iteration < iteration_center )
+        point_position.y -= 0.1 * (iteration + 1);
+    else
+        point_position.y += 0.1 * (iteration + 1);
+
+    
+    addpoint(0, point_position);
+}
+
+Points started to go up after reaching the center point but looks like the shift value is higher than we need. 
+[![](https://live.staticflickr.com/65535/50107966503_2ce896595d_o.png)](https://live.staticflickr.com/65535/50107966503_2ce896595d_o.png)
+
+This is happening because after reaching the center point we starting a new set of calculations to reverse the shift direction, but the iteration number continues from the previous steps. So we need to compensate this jump and refresh iteration flow after the center: 
+```C
+point_position.y += 0.1 * (iteration - number_of_points);
+```
+
+Let's also replace hardcoded increment value with a new float variable "distance":
+```C
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
+int number_of_points = chi('number_of_points');
+float iteration_center = (number_of_points)/2.0;
+float distance = chf('distance');
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+    if(iteration < iteration_center )
+        point_position.y -= distance * (iteration + 1);
+    else
+        point_position.y += distance * (iteration - number_of_points);
+    
+    addpoint(0, point_position);
+}
+```
+
+[![](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )
+
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
