@@ -696,18 +696,17 @@ The core idea of positional notation is that to represent any number you have a 
 
 In order to implement a positional notation, humans have to invent a zero first. It might look like an obvious solution today but indeed, back in time, it was not a trivial invention and a huge step forward.
 
-
-TBD!
+TBD...
 
 # Solving problems with VEX
 Time to use our theoretical knowledge in practice! A collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
 
 From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process with different examples.
 
+The problem-solving algorithm would be always based on a core concept: split the overall task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later.
+
 ### Hanging a wire
 The task: having two source points `A` and `B` build a hanging curve between them.
-
-The problem-solving algorithm would be always based on a core concept: split the overall task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later.
 
 The high-level solution overview:  
  - First, we will create a certain number of points between points `A` and `B`.  
