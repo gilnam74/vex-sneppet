@@ -690,7 +690,12 @@ Several apples were just an overall bunch until the moment we start counting the
 But at some point, this system becomes hardly manageable:
 [![](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)
 
-The new way of representing an infinite amount of items with a limited amount of symbols was invented: positional notation.
+The new way of representing an infinite amount of items with a limited amount of symbols was invented: the **positional notation**. Say, we have ten symbols to represent our numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Why ten? Probably because we have ten fingers. It is called a decimal system, but we could use any other amount of symbols. For example, using only two symbols we would have a binary system and it is also a very powerful tool for computation, probably you know that all computer logic built on top of the binary system.
+
+The core idea of positional notation is that to represent any number you have a bucket of certain capacity (10 for decimal and 2 for the binary system). If the number, that you are trying to represent is bigger then a bucket side, the bucket will be completely filled, bucket capacity (e.g. 10 or 2) would be subtracted from the original number, the new bucket with extended capacity (it would be 10 or 2 times bigger for decimal or binary) on the left side from the first bucket would be created, and everything that is left from the original number after subtraction would be placed to this new bucket. If the leftovers are still exceeding the capacity of a new bucket we will create one more bucket which is again 10 (or 2) times bigger then a previous and so on. We are using this system now and I hope everyone is more or less understanding how it is working.
+
+In order to implement a positional notation, humans have to invent a zero first. It might look like an obvious solution today but indeed, back in time, it was not a trivial invention and a huge step forward.
+
 
 TBD!
 
