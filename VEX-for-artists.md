@@ -1011,18 +1011,102 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
-That's an arc we wanted to get, awesome! Finally, let`s connect our point with polygon lines. The `addprim()` function will do the job. 
+That's an arc we wanted to get, awesome! Finally, let's connect our point with polygon lines. The `addprim()` function will do the job. 
 
-One of the possible usage of `addprim()` is `addprim(<geohandle>, <polygon_type>, <point_number_1>, <point_number_2>)` which will build a polygon between to points. We would need a `polyline` polygon type since the resulting shape is open. We would build all lines in three steps, for the first pair of points, for the last pair of points, and for the rest of remaining points.
+#### Connect points with polygons 
+One of the possible usage of `addprim()` is `addprim(<geohandle>, <polygon_type>, <point_number_1>, <point_number_2>)` which will build a polygon between to points. We would need a `polyline` polygon type since the resulting shape is open. We would build all lines in three steps, for the first pair of points, for the last pair of points, and for the rest of the remaining points.
 
 First is the most obvious and easy, we need a line between point A (number 0) and first new point (number 1):  
 `addprim(0, 'polyline', 0, 2); `
   
-The last pair of points would be between the last of new points and the point B (which has index of 1):  
+The last pair of points would be created between the last of new points and the point B (which has an index of 1):  
 `addprim(0, 'polyline', number_of_points + 1, 1);` 
 
 All new points could be connected:  
 `addprim(0, 'polyline', iteration+1, iteration+2); `
+
+Also, to avoid redundant polygons creation we need to run `addprim()` function for each of three steps only in the part of the loop it needs to be executed. E.g. the first and the last lines should be created only once, and the first and the last iterations is a proper place for execution:
+```C
+if(iteration==0) 
+    addprim(0, 'polyline', 0, 2); 
+if(iteration==number_of_points-1)
+    addprim(0, 'polyline', number_of_points+1, 1);  
+``` 
+
+The new points could be created between the first and the last iterations:
+```C
+if(iteration!=0 && iteration!=number_of_points)
+    addprim(0, 'polyline', iteration+1, iteration+2); 
+```
+
+And the final solution:
+```C
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
+
+int number_of_points = chi('number_of_points');
+float iteration_center = (number_of_points)/2.0;
+float distance = chf('distance');
+float curvature = chf('curvature');
+    
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+    if(iteration < iteration_center ){
+        point_position.y -= distance * (iteration + 1);
+        point_position.y *= curvature * (number_of_points - iteration);
+    }else{
+        point_position.y += distance * (iteration - number_of_points);
+        point_position.y *= curvature * (iteration + 1);
+        }
+    
+    addpoint(0, point_position);
+    
+    if(iteration==0) 
+        addprim(0, 'polyline', 0, 2); 
+    if(iteration!=0 && iteration!=number_of_points)
+        addprim(0, 'polyline', iteration+1, iteration+2); 
+    if(iteration==number_of_points-1)
+            addprim(0, 'polyline', number_of_points+1, 1);  
+}
+```
+
+[![]()]()
+
+Another option for defining the shape of the curve is using the ramp control. In our setup above we rely on the foor-loop execution by making dependency between the iteration step and other parameters. So we shift point on Y axis depending on iteration number. The higher iteration number leads to the higher shift value. Then we modify the iteration flow to get desired result, we found the center of itaerations and change behaviour after we reach this point. 
+
+We can modify iteration flow in another way — with `chramp()` function feeding iteration number as input to the ramp. The ramp is working in the range of 0 to 1, so we need to fit our iteration range to required before using it as a ramp input:
+```C
+vector A = point(0, "P", 0);
+vector B = point(0, "P", 1);
+
+int number_of_points = chi('number_of_points');
+float iteration_center = (number_of_points)/2.0;
+float distance = chf('distance');
+float curvature = chf('curvature');
+    
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points + 1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+    float range = fit(iteration, -1, number_of_points, 0, 1);
+    point_position.y -= chramp('Shape', range); 
+    
+    addpoint(0, point_position);
+    
+    if(iteration==0) 
+        addprim(0, 'polyline', 0, 2); 
+    if(iteration!=0 && iteration!=number_of_points)
+        addprim(0, 'polyline', iteration+1, iteration+2); 
+    if(iteration==number_of_points-1)
+            addprim(0, 'polyline', number_of_points+1, 1);  
+}
+```
+
+With this setup you will be able to control shape of the wire with a ramp curve which is more pleasant then sliders but tricky to use if you will need tons of wires with a different settings.
+
+[![]()]()
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You may need to read [about functions](#explore-functions) to be able to follow this tutorial.
