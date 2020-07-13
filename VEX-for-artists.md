@@ -934,9 +934,9 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 ```
 
 Points started to go up after reaching the center point but looks like the shift value is higher than we need. 
-[![](https://live.staticflickr.com/65535/50107966503_2ce896595d_o.png)](https://live.staticflickr.com/65535/50107966503_2ce896595d_o.png)
+[![](https://live.staticflickr.com/65535/50107966503_36b0cb7452_o.png)](https://live.staticflickr.com/65535/50107966503_36b0cb7452_o.png)
 
-This is happening because after reaching the center point we starting a new set of calculations to reverse the shift direction, but the iteration number continues from the previous steps. So we need to compensate this jump and refresh iteration flow after the center: 
+This is happening because after reaching the center point we starting a new set of calculations to reverse the shift direction, but the iteration number continues from the previous steps. So we need to compensate this jump and shift iteration flow after the center. The value of shift would be the number of points we create: 
 ```C
 point_position.y += 0.1 * (iteration - number_of_points);
 ```
@@ -961,7 +961,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     addpoint(0, point_position);
 }
 ```
-
+We are almost there!
 [![](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )
 
 
