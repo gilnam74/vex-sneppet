@@ -1072,7 +1072,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
-[![]()]()
+[![](https://live.staticflickr.com/65535/50109405446_3a8a16540f_o.png)](https://live.staticflickr.com/65535/50109405446_3a8a16540f_o.png)
 
 Another option for defining the shape of the curve is using the ramp control. In our setup above we rely on the foor-loop execution by making dependency between the iteration step and other parameters. So we shift point on Y axis depending on iteration number. The higher iteration number leads to the higher shift value. Then we modify the iteration flow to get desired result, we found the center of itaerations and change behaviour after we reach this point. 
 
@@ -1106,7 +1106,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 
 With this setup you will be able to control shape of the wire with a ramp curve which is more pleasant then sliders but tricky to use if you will need tons of wires with a different settings.
 
-[![]()]()
+[![](https://live.staticflickr.com/65535/50109406316_1a08b02409_o.png)](https://live.staticflickr.com/65535/50109406316_1a08b02409_o.png)
 
 ## Checker  
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You may need to read [about functions](#explore-functions) to be able to follow this tutorial.
