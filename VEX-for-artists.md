@@ -878,14 +878,13 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 Nice, all new points jump down on `0.1` units. Now let them jump on individual value related to iteration number:
 ```C
 point_position.y -= 0.1 * iteration;
-}
 ```
  
 The first new point does not moves because the first iteration is 0, let's pick up the first point:
 ```C
 point_position.y -= 0.1 * (iteration + 1);
-}
 ```
+[![](https://live.staticflickr.com/65535/50109453541_52d7914bbb_o.png)](https://live.staticflickr.com/65535/50109453541_52d7914bbb_o.png)
 
 Ok, this not the result we are looking for, but it's a good foundation. Our points are going down linearly because the shift value increases each iteration. Next, we need to change the behavior so, that the shift value will start to decrease after we reach the central point. 
 
