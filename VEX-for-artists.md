@@ -933,7 +933,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
-Points started to go up after reaching the center point but looks like the shift value is higher than we need. 
+Points started to go up after reaching the center point but it looks like the shift values are higher than we need. 
 [![](https://live.staticflickr.com/65535/50107966503_36b0cb7452_o.png)](https://live.staticflickr.com/65535/50107966503_36b0cb7452_o.png)
 
 This is happening because after reaching the center point we starting a new set of calculations to reverse the shift direction, but the iteration number continues from the previous steps. So we need to compensate this jump and shift iteration flow after the center. The value of shift would be the number of points we create: 
@@ -961,12 +961,71 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     addpoint(0, point_position);
 }
 ```
-We are almost there!
-[![](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )
+We are almost there:
+[![](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png)
 
+The only thing we need to adjust is a linear behavior of the setup. Currently, each new point is shifted on the same value as a rest of all new points. To get a smoothed curve we need another formula to modify the shift value individually for each point. This value should be dependent on the distance from the center of new points (the closest point to the center should have less shift, e.g. adjusted on a higher value), hence the iteration number could be used here as well. To adjust the shift value we will **multiply** the Y position by an arbitrary float number (let's name it "curvature"), dependent on an iteration number. Let's just try the same formula:
+
+```C
+int number_of_points = chi('number_of_points');
+float iteration_center = (number_of_points)/2.0;
+float distance = chf('distance');
+float curvature = chf('curvature');
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+        if(iteration < iteration_center ){
+            point_position.y -= distance * (iteration + 1);
+            point_position.y *= curvature * (iteration + 1);
+        }else{
+            point_position.y += distance * (iteration - number_of_points);
+            point_position.y *= curvature * (iteration - number_of_points);
+            }
+    
+    addpoint(0, point_position); 
+}
+```
+
+The direction is correct, the correlation between point distance to the center and Y position is not linear any more, although we need some modifications:
+```C
+int number_of_points = chi('number_of_points');
+float iteration_center = (number_of_points)/2.0;
+float distance = chf('distance');
+float curvature = chf('curvature');
+
+for(int iteration=0; iteration<number_of_points; iteration++){
+    vector segment = (B - A)/(number_of_points+1);
+    vector point_position = A + segment*(iteration + 1); 
+    
+        if(iteration < iteration_center ){
+            point_position.y -= distance * (iteration + 1);
+            point_position.y *= curvature * (number_of_points - iteration);
+        }else{
+            point_position.y += distance * (iteration - number_of_points);
+            point_position.y *= curvature * (iteration + 1);
+            }
+    
+    addpoint(0, point_position); 
+}
+```
+
+That's an arc we wanted to get, awesome! Finally, let`s connect our point with polygon lines. The `addprim()` function will do the job. 
+
+One of the possible usage of `addprim()` is `addprim(<geohandle>, <polygon_type>, <point_number_1>, <point_number_2>)` which will build a polygon between to points. We would need a `polyline` polygon type since the resulting shape is open. We would build all lines in three steps, for the first pair of points, for the last pair of points, and for the rest of remaining points.
+
+First is the most obvious and easy, we need a line between point A (number 0) and first new point (number 1):  
+`addprim(0, 'polyline', 0, 2); `
+  
+The last pair of points would be between the last of new points and the point B (which has index of 1):  
+`addprim(0, 'polyline', number_of_points + 1, 1);` 
+
+All new points could be connected:  
+`addprim(0, 'polyline', iteration+1, iteration+2); `
 
 ## Checker  
-Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You need to read [about functions](#explore-functions) to be able to follow this tutorial.
+Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You may need to read [about functions](#explore-functions) to be able to follow this tutorial.
 
 At a very high level, the solution would be: build equal-sized black and white stripes (values of 0 and 1), then we will periodically shift a part of each stripe, pally to geometry color.
 
