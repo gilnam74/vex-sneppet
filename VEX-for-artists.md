@@ -931,6 +931,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
     
     addpoint(0, point_position);
 }
+```
 
 Points started to go up after reaching the center point but looks like the shift value is higher than we need. 
 [![](https://live.staticflickr.com/65535/50107966503_2ce896595d_o.png)](https://live.staticflickr.com/65535/50107966503_2ce896595d_o.png)
