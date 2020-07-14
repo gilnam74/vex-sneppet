@@ -714,12 +714,16 @@ The problem-solving algorithm would be always based on a core concept: split the
 ### Hanging a wire
 The task: having two source points `A` and `B` build a hanging curve between them.
 
-The high-level solution overview:  
+#### The high-level solution overview:  
+We would assume that source points are located on the X-axis, at some distance from the origin. We would use Y-axis to move new points down and we would skip the Z-axis for simplicity. 
+
+If we think a bit of how the final goal could be achieved step by step, we can note some obvious statements first. We can retrieve the source points position values. We would need to create a certain amount of new points to represent the arc curve and build polygon on top of them. We would need to move those points to a proper position in XY space.
+
+Let's organize our thoughts into the algorithm: 
+  
  - First, we will create a certain number of points between points `A` and `B`.   
-We would assume that source points located on the X-axis, at some distance from the origin. We would use Y-axis to move new points and we would skip the Z-axis for simplicity.   
-We would need to place new points on the equal distance one from another and from the source points.  
-Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, 4, etc. indexes.  
- - Next, we will move each new point down on its own value to shape the arc curve. Down means along Y-axis.  
+We would need to place new points on the equal distance one from another and from the source points. Since our initial anchor points have numbers 0 and 1, our new points will get 2, 3, 4, etc. indexes.  
+ - Next, we will move each new point down on its own value to shape the arc curve.    
 The value should rise from the first new point until we reach the middle point, then the value should decrease in the same way until we reach the last new point.
  - And finally, we will connect points with polygons to create geometry.
 
