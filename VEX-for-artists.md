@@ -742,7 +742,7 @@ int number_of_points = chi('number_of_points');
 
 The `point(<input>, <attribute_name>, <point_number>)` VEX function returns the value of a point position attribute (`P`) for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node.  
 
-Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `anchor_a` and `anchor_b`. 
+Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `A` and `B`. 
 
 Let's start from the simplest case and **create only one new point**: set "Number Of Points" attribute to 1. 
 
