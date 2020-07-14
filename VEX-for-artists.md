@@ -836,6 +836,8 @@ Here, with the help of basic math, we have calculated position values for each n
 #### Moving points down along Y-axis.
 Let's solve the next sub-task and move new points down individually.
 
+Without going deep into vectors (and our points are vectors) we should realize that in order **to move point we need to add or substaract a number** from this vector.
+
 We need to develop another formula to create a required arc shape. And developing formula means that we will calculate unknown values from established data. Same as we just did with positioning new points, we calculate a new position based on iteration number of a loop, quantity of points, and source point positions. The art of building necessary dependencies.
 
 As we learn from [the sine example](#sine), we can use **point X position** as input to a sine function to **shift Y positions** to create an arc:
@@ -967,7 +969,11 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 We are almost there:
 [![](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png )](https://live.staticflickr.com/65535/50108868002_168cbcd89f_o.png)
 
-The only thing we need to adjust is a linear behavior of the setup. Currently, each new point is shifted on the same value as a rest of all new points. To get a smoothed curve we need another formula to modify the shift value individually for each point. This value should be dependent on the distance from the center of new points (the closest point to the center should have less shift, e.g. adjusted on a higher value), hence the iteration number could be used here as well. To adjust the shift value we will **multiply** the Y position by an arbitrary float number (let's name it "curvature"), dependent on an iteration number. Let's just try the same formula:
+The only thing we need to adjust is a linear behavior of the setup. Currently, each new point is shifted on the same value as the rest of all new points. To get a smoothed curve we need another formula to modify the shift value individually for each point. This value should be dependent on the distance from the center of new points (the closest point to the center should have less shift, e.g. adjusted on a higher value), hence the iteration number could be used here as well. 
+
+In other words, we need to scale our points (which are vectors) down closer to center, and **to scale vector we need to multiply or divide it by a certain number**.
+
+So, to adjust the shift value we will **multiply** the Y position by an arbitrary float number (let's name it "curvature"), dependent on an iteration number. Let's just try the same formula:
 
 ```C
 int number_of_points = chi('number_of_points');
