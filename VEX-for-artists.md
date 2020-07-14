@@ -740,7 +740,7 @@ vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 ```
 
-The `point(<input>, <attribute_name>, <point_number>)` VEX function returns the value of a point position attribute (`P`) for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node.  
+The `point(<input>, <attribute_name>, <point_number>)` VEX function returns the value of a point position attribute `"P"` for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node.  
 
 Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `A` and `B`. 
 
