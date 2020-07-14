@@ -221,9 +221,12 @@ _For example_: `colors = {'RED': [1,0,0], 'GREEN':[0,1,0], 'BLUE':[0,0,1]}`
 This will give you a palette of necessary colors and you can use colors in your code:  
 `pointColor = colors('RED') // Returns [1, 0, 0]`
 
-VEX do not support dictionaries directly.
+VEX does not support dictionaries directly.
 
 ## Abstraction
+Abstraction is the opposite of a specific. 
+
+If we speak about the `apple`, could we be more specific? Yes, we could say "Galla" apple. Can we be more abstract? Sure, we could say "fruit" instead of "apple".
 
 # Algorithms
 An algorithm is a common language to understand nature.
