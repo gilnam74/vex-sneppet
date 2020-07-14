@@ -729,7 +729,7 @@ The value should rise from the first new point until we reach the middle point, 
 
 [![](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)
 
-Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, create Attribute Wrangle node after, set [Run Over: Detail](#serial-mode). We will have our points A and B with indexes 0 and 1 correspondingly. 
+Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, create Attribute Wrangle node after, set the "Run Over" parameter to [Detail](#serial-mode). We will have our points A and B with indexes 0 and 1 correspondingly. 
 
 #### Creating inbetween points
 First, let's store our source anchor point position values in variables and define the number of points we will create between `A` and `B` with a UI slider:
@@ -740,19 +740,21 @@ vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 ```
 
-The `point(input, attribute, point number)` VEX function returns the value of a point position attribute (`P`) for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node. Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `anchor_a` and `anchor_b`. 
+The `point(<input>, <attribute_name>, <point_number>)` VEX function returns the value of a point position attribute (`P`) for point number `0` or `1` for the geometry connected to the first (`0`) input of a Wrangle node.  
 
-Let's start from the simplest case and create only one new point: set "Number Of Points" attribute to 1. 
+Point position is a vector data type `{position X, position Y, position Z}` so we keep it in a vector variables `anchor_a` and `anchor_b`. 
 
-How we can create the required number of points? When we need to repeat an action (create a point and set it position) a certain number of times, we need to use [loop statement](Programming-basics#loops): 
+Let's start from the simplest case and **create only one new point**: set "Number Of Points" attribute to 1. 
+
+How we can create the required number of points? When we need to repeat an action (or set of actions, like create a point and define its position) a certain number of times (which is the number of points we want to create), we need to use [loop statement](Programming-basics#loops): 
 ```C 
 for(start from; stop at; increment){
-   action;
+   action A;
+   action B;
 }
 ```
 
-In our case:
-
+For a better understanding of loops, let our first action would be a print statement, which will output the number of iteration to the Houdini Console: 
 ```C 
 vector A = point(0, "P", 0);
 vector B = point(0, "P", 1);
@@ -764,7 +766,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 ```
 This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. The `iteration++` is a "syntaxis sugar" for `iteration = iteration + 1` statement and means the step of iterations is equal to 1. 
 
-Inside the loop body (between `{ ... }`), we will place the code for one point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
+Inside the loop body, between `{ ... }` where we are currently have the print statement, we will place the code for the new point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
 
 Change the "Number Of Points" in a Wrangle UI and examine printed results in Houdini Console to see how this basic construction works. Clear console before each value change to isolate each loop execution.
 
