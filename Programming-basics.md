@@ -208,10 +208,10 @@ Now you are hopefully ready to complete [VEX tutorials](VEX-Quick-start). If you
 This is not a necessary section for starting VEX experiments but it could be useful for curious minds. Here we can go further from the basics and learn about [pseudocode](#pseudocode), [dictionaries](#dictionaries), algorithms and abstraction.
 
 ## Pseudocode
-Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as a pseudocode and then "convert" this code to a computer program with a desirable computer language.
+Pseudocode — is a form of a computer program for human reading. It's a computer program brief written in usual sentences. Usually its a first stage of program creation, you formalize all tasks as pseudocode and then "convert" this code to a computer program with a desirable computer language.
 
-## Dictionaries
-Dictionary is a special [data type](#data-types) which can store information in form `KEY : VALUE`.  
+## Hash table
+Hash table is a special [data type](#data-types) which can store information in form `KEY : VALUE`.  
 The `KEY` should only be a **string** and the `VALUE` could hold any data type (even dictionary and such nested dictionary able to hold quite complex data structures).  
 
 Dictionary is a very powerful way to store complex data sets, you can imagine them as a shelf with containers (which could store any items — any data types). You can find a container (and get its content) by the name (KEY). 
