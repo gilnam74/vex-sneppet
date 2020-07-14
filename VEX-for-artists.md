@@ -839,8 +839,8 @@ vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
-    vector point_position = A + segment*(iteration+1); 
+    vector segment = (B - A)/(number_of_points + 1);
+    vector point_position = A + segment*(iteration + 1); 
     addpoint(0,point_position);
 }
 ```
@@ -861,7 +861,7 @@ vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
     point_position.y -= sin(point_position.x*3.1416);
@@ -885,7 +885,7 @@ vector B = point(0, "P", 1);
 int number_of_points = chi('number_of_points');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
     point_position.y -= 0.1;
@@ -920,7 +920,7 @@ int number_of_points = chi('number_of_points');
 float iteration_center = (number_of_points)/2.0;
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
     if(iteration < iteration_center)
@@ -939,7 +939,7 @@ int number_of_points = chi('number_of_points');
 float iteration_center = (number_of_points)/2.0;
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
     if(iteration < iteration_center )
@@ -969,7 +969,7 @@ float iteration_center = (number_of_points)/2.0;
 float distance = chf('distance');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
     if(iteration < iteration_center )
@@ -996,7 +996,7 @@ float distance = chf('distance');
 float curvature = chf('curvature');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
         if(iteration < iteration_center ){
@@ -1019,7 +1019,7 @@ float distance = chf('distance');
 float curvature = chf('curvature');
 
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
         if(iteration < iteration_center ){
@@ -1073,7 +1073,7 @@ float distance = chf('distance');
 float curvature = chf('curvature');
     
 for(int iteration=0; iteration<number_of_points; iteration++){
-    vector segment = (B - A)/(number_of_points+1);
+    vector segment = (B - A)/(number_of_points + 1);
     vector point_position = A + segment*(iteration + 1); 
     
     if(iteration < iteration_center ){
@@ -1215,7 +1215,7 @@ And a couple of other checker options:
 @Cd= floor((frac(@P.x+floor(@P.z*2)*0.5))*2);
 
 // Checker with a sine
-@Cd = floor(sin(@P.z + floor(sin(@P.x)) *3.1416 ) +1); 
+@Cd = floor(sin(@P.z + floor(sin(@P.x)) *3.1416 ) + 1); 
 ```
 
 ## Polar checker
