@@ -1,7 +1,7 @@
 # Introduction
 For those who tried or even afraid to begin to learn VEX but fail and stop because it was too hard. 
 
-Here you will **learn VEX** and applied math **starting from the basics** with a clear and detailed explanation. From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process with different examples.
+Here you will **learn VEX** and applied math **starting from the basics**. From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process.
 
 In order to follow you need elementary knowledge of Houdini UI and an essential understanding of core programming concepts. If you can render the metal sphere and able to distinguish a `loop` form `variable`, then you are fine to go. If not, that is also fine. Check [Programming Basics tutorial](Programming-basics) if you are a total noob in developing.
 
