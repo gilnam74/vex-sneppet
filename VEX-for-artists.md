@@ -27,7 +27,7 @@ The Attribute Wrangle node creates or modifies existing geometry with a code wri
 
 Any written in any programming language needs to be compiled (converted from human-readable form to machine code) and executed. Some languages like Python do code compilation behind the scene, so you just run the code and get results. Usually, any program take something as input, produce some computations, and output some results. 
 
-E.g. `print 2 + 2` program in Python will produce the addition `+` of two input values `2` and '2', and output the result of `4`.
+E.g. `print 2 + 2` program in Python will produce the addition `+` of two input values `2` and `2`, and output the result of `4`.
 
 The Attribute Wrangle node is a container for the VEX code which allows making desired computation on input geometry and so you can get results from the node output. 
 
