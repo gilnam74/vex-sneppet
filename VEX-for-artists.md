@@ -985,7 +985,7 @@ The only thing we need to adjust is a linear behavior of the setup. Currently, e
 
 In other words, we need to scale our points (which are vectors) down closer to center, and **to scale vector we need to multiply or divide it by a certain number**.
 
-So, to adjust the shift value we will **multiply** the Y position by an arbitrary float number (let's name it "curvature"), dependent on an iteration number. Let's just try the same formula:
+To adjust the shift value we will **multiply** the Y position by an arbitrary float number (let's name it "curvature"), dependent on an iteration number. Let's just try the same formula:
 
 ```C
 int number_of_points = chi('number_of_points');
