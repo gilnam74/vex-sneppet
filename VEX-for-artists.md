@@ -816,7 +816,7 @@ Point `C` located away from the origin on a distance of `segment 0A + segment AC
 Having 2 new points: `position  C = position  A + S`, `position  D = position  A + S + S`  
 Having 3 new points: `position  C = position  A + S`, `position  D = position  A + S + S`, `position  E = position A + S + S + S`  
 
-**I can see another pattern here: `new point position = position  A + segment S * (iteration number + 1)`**
+We can identify **another pattern here: `new point position = position  A + segment S * (iteration number + 1)`**
 
 Now, when we have a formula to calculate the new points coordinates, it is easy to implement it in VEX:
 ```C
@@ -892,7 +892,7 @@ point_position.y -= 0.1 * (iteration + 1);
 ```
 [![](https://live.staticflickr.com/65535/50109453541_52d7914bbb_o.png)](https://live.staticflickr.com/65535/50109453541_52d7914bbb_o.png)
 
-Ok, this not the result we are looking for, but it's a good foundation. Our points are going down linearly because the shift value increases each iteration. Next, we need to change the behavior so, that the shift value will start to decrease after we reach the central point. 
+Ok, this not the final result we are looking for, but it's a good foundation. Our points are going down because the shift value increases each iteration. Next, we need to change the behavior so, that the shift value will start to decrease after we reach the central point. 
 
 Since we are using iterations to build points we can say that we need to find the center of iterations, so we just need to divide the number of iterations on 2. If we have an even number of new points, the center would not be a whole number, so we will use float data type to store result:
 
