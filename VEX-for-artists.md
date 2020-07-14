@@ -699,7 +699,7 @@ In order to implement a positional notation, humans have to invent a zero first.
 TBD...
 
 # Solving problems with VEX
-Time to use our theoretical knowledge in practice! A collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
+This chapter contains a collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
 
 From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process with different examples.
 
