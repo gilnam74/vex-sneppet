@@ -729,7 +729,7 @@ The value should rise from the first new point until we reach the middle point, 
 
 [![](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)](https://live.staticflickr.com/65535/50094728617_35c1dcc526_o.png)
 
-Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, and create Attribute Wrangle in detail mode after. We will have our points A and B with indexes 0 and 1 correspondingly. 
+Prepare the scene: create a line SOP in geometry context, orient it along with X-axis, set the number of points to 0, create Attribute Wrangle node after, set [Run Over: Detail](#serial-mode). We will have our points A and B with indexes 0 and 1 correspondingly. 
 
 #### Creating inbetween points
 First, let's store our source anchor point position values in variables and define the number of points we will create between `A` and `B` with a UI slider:
