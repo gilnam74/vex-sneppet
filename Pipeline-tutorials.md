@@ -4,19 +4,19 @@ This section contains `Eve pipeline` related tutorials.
 ## Installation
 Currently `Eve` designed to be run on Windows OS. Here is the list of things you need to have before pipeline will works.
 
-Before running Houdini Pipeline Toolkit you need to install:
+Before running Eve pipeline you need to install:
 - Houdini 
 - Python 2.7.5 x 64 (or later version) 
 - pip  
-- PySide
-- GitHub Desktop
+- PySide 2
+- GitHub Desktop (optionally)
 
 #### Install Houdini
 Go to [SESI site](https://www.sidefx.com/products/compare/), choose, download and install your Houdini version. Eve assumes Houdini would be located in:
 
 `C:/Program Files/Side Effects Software/Houdini <buildNumber>/bin/houdinifx.exe`,  
 
-otherwise you will need to tweak this path in `Eve/tools/core/settings.py` before creating any projects. 
+otherwise, you will need to tweak this path in `Eve/tools/core/settings.py` before creating any projects. 
 
 #### Install Python
 Get your [X64 Python 2.7.5](https://www.python.org/downloads/release/python-275/)
