@@ -681,31 +681,6 @@ The actual code for the image above is noise `@P.y = noise(frac((@P.x)*1.5)*5);`
 
 Remember, all actual code you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc).
 
-# Vectors
-Ok, at this point for the better understanding we might need to look back on the history of math. 
-
-We are familiar with math from a very early age and we use to know it as a complete and complex field. We miss the point of how it was born and developed and hence we rarely deeply understanding the miscellaneous math concepts aside from basic arithmetic operation like addition or multiplication. 
-
-Let's try to learn math, vectors in particular, from the opposite side we use to: recall the tasks that humanity needed to solve, how those tasks evolved and how this evolution force to develop more advanced mathematical tools.
-
-### Numbers
-People use to collect different items back in time when we barely can call them humans, it was necessary for survival. 
-
-Several apples were just an overall bunch until the moment we start counting the content of a bunch. So we start to recognize the distinction between the different amounts of items: one from two, two from three, three from fore, etc. Then we name those amounts like one, two, three, etc. Next, we gave a name to each number.
-
-[![](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)
-
-Later each number got its own symbol. But at some point, this system becomes hardly manageable:
-[![](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)
-
-The new way of representing an infinite amount of items with a limited amount of symbols was invented: the **positional notation**. Say, we have ten symbols to represent our numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Why ten? Probably because we have ten fingers. It is called a decimal system, but we could use any other amount of symbols. For example, using only two symbols we would have a binary system and it is also a very powerful tool for computation, probably you know that all computer logic built on top of the binary system.
-
-The core idea of positional notation is that to represent any number you have a bucket of certain capacity (10 for decimal and 2 for the binary system). If the number, that you are trying to represent is bigger then a bucket side, the bucket will be completely filled, bucket capacity (e.g. 10 or 2) would be subtracted from the original number, the new bucket with extended capacity (it would be 10 or 2 times bigger for decimal or binary) on the left side from the first bucket would be created, and everything that is left from the original number after subtraction would be placed to this new bucket. If the leftovers are still exceeding the capacity of a new bucket we will create one more bucket which is again 10 (or 2) times bigger then a previous and so on. We are using this system now and I hope everyone is more or less understanding how it is working.
-
-In order to implement a positional notation, humans have to invent a zero first. It might look like an obvious solution today but indeed, back in time, it was not a trivial invention and a huge step forward.
-
-TBD...
-
 # Solving problems with VEX
 This chapter contains a collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
 
@@ -1278,6 +1253,32 @@ vector avarage_color = added_color/len(colsest_points);
 @Cd = avarage_color;
 
 ```
+
+# Vectors
+Ok, at this point for the better understanding we might need to look back on the history of math. 
+
+We are familiar with math from a very early age and we use to know it as a complete and complex field. We miss the point of how it was born and developed and hence we rarely deeply understanding the miscellaneous math concepts aside from basic arithmetic operation like addition or multiplication. 
+
+Let's try to learn math, vectors in particular, from the opposite side we use to: recall the tasks that humanity needed to solve, how those tasks evolved and how this evolution force to develop more advanced mathematical tools.
+
+### Numbers
+People use to collect different items back in time when we barely can call them humans, it was necessary for survival. 
+
+Several apples were just an overall bunch until the moment we start counting the content of a bunch. So we start to recognize the distinction between the different amounts of items: one from two, two from three, three from fore, etc. Then we name those amounts like one, two, three, etc. Next, we gave a name to each number.
+
+[![](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)](https://live.staticflickr.com/65535/50094958276_73e5fb3134_o.png)
+
+Later each number got its own symbol. But at some point, this system becomes hardly manageable:
+[![](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)](https://live.staticflickr.com/65535/50095209432_5d1d6afdba_o.png)
+
+The new way of representing an infinite amount of items with a limited amount of symbols was invented: the **positional notation**. Say, we have ten symbols to represent our numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Why ten? Probably because we have ten fingers. It is called a decimal system, but we could use any other amount of symbols. For example, using only two symbols we would have a binary system and it is also a very powerful tool for computation, probably you know that all computer logic built on top of the binary system.
+
+The core idea of positional notation is that to represent any number you have a bucket of certain capacity (10 for decimal and 2 for the binary system). If the number, that you are trying to represent is bigger then a bucket side, the bucket will be completely filled, bucket capacity (e.g. 10 or 2) would be subtracted from the original number, the new bucket with extended capacity (it would be 10 or 2 times bigger for decimal or binary) on the left side from the first bucket would be created, and everything that is left from the original number after subtraction would be placed to this new bucket. If the leftovers are still exceeding the capacity of a new bucket we will create one more bucket which is again 10 (or 2) times bigger then a previous and so on. We are using this system now and I hope everyone is more or less understanding how it is working.
+
+In order to implement a positional notation, humans have to invent a zero first. It might look like an obvious solution today but indeed, back in time, it was not a trivial invention and a huge step forward.
+
+TBD...
+
 
 # VEX next steps
 Check [VEX snippets](vex-snippets) for more VEX examples.
