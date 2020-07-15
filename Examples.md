@@ -1,3 +1,5 @@
+Due to the pipeline restructure all files temporarily washed out from the repo. You can [download all hips as one zip file](https://drive.google.com/file/d/1CqflUnuuTBjo1iGdxLn7otfR-XX4Nv-d/view?usp=sharing) thought.
+
 # SOP
 #### Grooming: nested clamping
 Clump hairs around allready clumped hairs.
@@ -61,5 +63,5 @@ Download [Recursive Split](../blob/master/src/hips/recursiveSplit_001.hipnc)
 
 #### Animate along the path
 Alows to move objects along input paths. There are 2 solutions in the file. 
-[![](https://live.staticflickr.com/65535/48103249366_471c0a9dc7_o.jpg)](https://live.staticflickr.com/65535/48103249366_471c0a9dc7_o.jpg) 
+[![](https://live.staticflickr.com/65535/48103249366_471c0a9dc7_o.jpg)](https://live.staticflickr.com/65535/48103249366_471c0a9dc7_o.jpg)  
 Download [Path Animation](../blob/master/src/hips/pathAnimation.hiplc)
