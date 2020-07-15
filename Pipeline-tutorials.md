@@ -12,7 +12,11 @@ Before running Houdini Pipeline Toolkit you need to install:
 - GitHub Desktop
 
 #### Install Houdini
-Go to [SESI site](https://www.sidefx.com/products/compare/), choose, download and install your Houdini version. Eve assumes Houdini would be located in `C:/Program Files/Side Effects Software/Houdini <buildNumber>/bin/houdinifx.exe`, otherwise you will need to tweak this path in `Eve/src/runHoudini.py` before creating any projects. 
+Go to [SESI site](https://www.sidefx.com/products/compare/), choose, download and install your Houdini version. Eve assumes Houdini would be located in:
+
+`C:/Program Files/Side Effects Software/Houdini <buildNumber>/bin/houdinifx.exe`,  
+
+otherwise you will need to tweak this path in `Eve/src/runHoudini.py` before creating any projects. 
 
 #### Install Python
 Get your [X64 Python 2.7.5](https://www.python.org/downloads/release/python-275/)
