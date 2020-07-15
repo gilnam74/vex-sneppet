@@ -23,8 +23,10 @@ To install PIP do the folowing:
 * Run cmd in `C:/Python27` folder and execute: `python get-pip.py`  
 * Add pip path to a system environment variables: `PATH = c:/Python27/scripts`  
 
-#### Install Pyside
-Run cmd and exequte: `pip install PySide`
+#### Install Pyside 2 for Python 27
+Tricky part. If you don't know how to do this you can just [download Pytho27 archive](https://drive.google.com/file/d/1jC4x2-Dcf5saixe9Z5aBu-kIMMaGEmtJ/view?usp=sharing) with all necessary libraries and place it on  `C:/` drive. 
+
+Here is the [Pyside 2 for Python 27 wheel file]().
 
 #### Install GitHub Desktop and clone pipeline
 Install [Github Desktop](https://electronjs.org/apps/github-desktop) and clone this repo to the hard drive where you suppose to keep Eve pipeline, for example, `D:/Eve`. 
