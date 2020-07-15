@@ -41,6 +41,8 @@ Alternatively, you can just download this repo as a zip file and extract to the 
 
  
 ## The first Eve project
+The information below is out of date since Eve was restructured in July 2020.
+
 Here we will step by step create an example project to understand the basics of Eve workflow. 
 [![](https://live.staticflickr.com/65535/48087767582_928942e9c1_o.jpg)](https://live.staticflickr.com/65535/48087767582_928942e9c1_o.jpg)
 
