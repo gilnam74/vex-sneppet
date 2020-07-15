@@ -679,7 +679,7 @@ Repetitive noise:
 
 The actual code for the image above is noise `@P.y = noise(frac((@P.x)*1.5)*5);`, but I keep the code snippets as clean as possible from redundant stuff for the better understanding. 
 
-Remember, all actual code you can find in [VEX snippets hip file]../blob/master/Eve/lib/hips/vex_snippets.hipnc).
+Remember, all actual code you can find in [VEX snippets hip file](../blob/master/Eve/lib/hips/vex_snippets.hipnc).
 
 # Solving problems with VEX
 This chapter contains a collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
