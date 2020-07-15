@@ -2,7 +2,7 @@ This is the reference for VEX development. Here you can find VEX code snippets t
 
 Walkthrough the [VEX for artists](vex-for-artists) tutorial if you don`t have a general understanding of how VEX works and how it can be used to make your life easier (or, optionally, turn it into complete disaster after stepping into this rabbit hole).
 
-These and other examples you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets_001.hiplc). 
+These and other examples you can find in [VEX snippets hip file](../blob/master/Eve/lib/hips/vex_snippets.hipnc). 
 
 [Snippets](#snippets) | [VEX expressions](#vex-expressions) | [Tools](#tools) | [Algorithms](#algorithms)
 
