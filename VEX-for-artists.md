@@ -1,20 +1,22 @@
 # Introduction
 For those who tried or even afraid to begin to learn VEX but fail and stop because it was too hard. 
 
-Here you will **learn VEX** and applied math **starting from the basics**. From general to specific, keeping things extremely simple, with a detailed explanation we will go through the process of solving problems with a help of programming.
+Here you will **learn VEX** and applied math **starting from the basics**. From general to specific, keeping things extremely simple, with a detailed explanation we will go through the process of solving problems with the help of programming.
 
 In order to follow you need elementary knowledge of Houdini UI and an essential understanding of core programming concepts. If you can render the metal sphere and able to distinguish a `loop` form `variable`, then you are fine to go. If not, that is also fine. Check [Programming Basics tutorial](Programming-basics) if you are a total noob in developing.
 
 The **only important thing you really need to start is a strong desire** to finally kick off the VEX code by yourself, not just copying symbols from arbitrary tutorials.
 
-Article structure:  
+This article is structured in a way that the beginner information locate on top and the more you go down, the more advanced it becomes.
+
+Article content:  
 - [VEX orientation](#vex-orientation)  
 [Attribute Wrangle](#attribute-wrangle)  |  [Point concept](#point-concept)  |  [Create point](#create-a-point) | [Create line](#create-a-line)  |   [Create circle](#create-a-circle)  | [Sine](#sine)  |  [Noise](#noise)   
 - [VEX first steps](#vex-first-steps)  
 [Explore functions](#explore-functions)  | [Repetitive patterns](#repetitive-patterns)  
-- [Vectors](#vectors)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
 [Hanging a wire](#hanging-a-wire)  |  [Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  
+- [Vectors](#vectors)  
 - [VEX next steps](#vex-next-steps)  
 
 All exercises from this chapter you can find in [VEX snippets hip file](../blob/master/src/hips/VEX_snippets.hipnc)
