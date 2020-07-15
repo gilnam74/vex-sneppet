@@ -16,7 +16,7 @@ Go to [SESI site](https://www.sidefx.com/products/compare/), choose, download an
 
 `C:/Program Files/Side Effects Software/Houdini <buildNumber>/bin/houdinifx.exe`,  
 
-otherwise you will need to tweak this path in `Eve/src/runHoudini.py` before creating any projects. 
+otherwise you will need to tweak this path in `Eve/tools/core/settings.py` before creating any projects. 
 
 #### Install Python
 Get your [X64 Python 2.7.5](https://www.python.org/downloads/release/python-275/)
