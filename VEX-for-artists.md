@@ -1,7 +1,7 @@
 # Introduction
 For those who tried or even afraid to begin to learn VEX but fail and stop because it was too hard. 
 
-Here you will **learn VEX** and applied math **starting from the basics**. From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process.
+Here you will **learn VEX** and applied math **starting from the basics**. From general to specific, keeping things extremely simple, with a detailed explanation we will go through the process of solving problems with a help of programming.
 
 In order to follow you need elementary knowledge of Houdini UI and an essential understanding of core programming concepts. If you can render the metal sphere and able to distinguish a `loop` form `variable`, then you are fine to go. If not, that is also fine. Check [Programming Basics tutorial](Programming-basics) if you are a total noob in developing.
 
@@ -707,7 +707,7 @@ TBD...
 # Solving problems with VEX
 This chapter contains a collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
 
-From general to specific, keeping things extremely simple, with a detailed explanation we will go through the problem-solving process with different examples.
+From general to specific, keeping things extremely simple, with a detailed explanation we will go through the process of solving problems with the help of programming.
 
 The problem-solving algorithm would be always based on a core concept: split the overall task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later.
 
