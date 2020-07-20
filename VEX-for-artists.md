@@ -504,7 +504,7 @@ How can we use noise function in production? For example, you can scatter points
 
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
-
+### Examine more functions
 Explore miscellaneous functions, e.g. `@P.y=sine(@P.x);` and notice how they affect geometry. Some results would be more descriptive in 2D space (modifying the Line SOP), another in 3D space (modifying the Grid SOP), and some in color (modifying point color of the Grid SOP).
 
 Modify functions in 3 ways and notice the outcome:
