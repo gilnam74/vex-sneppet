@@ -684,7 +684,7 @@ Remember, all actual code you can find in [VEX snippets hip file](../blob/master
 # Solving problems with VEX
 This chapter contains a collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
 
-The problem-solving algorithm would be always based on a core concept: split the overall task into smaller pieces which would be easy to implement. Also, for simplicity, we would often develop a solution for two dimensions only and will extend it to handle the third dimension later.
+The problem-solving algorithm would be always based on a core concept: split the overall task into smaller pieces which would be easy to implement. Start with the easiest task. Move from general to specific, from high level to low. Reduce amount of dimensions to take into account, for simplicity, develop a solution for two dimensions only, or even one, if possible.
 
 ### Hanging a wire
 The task: having two source points `A` and `B` build a hanging curve between them.
