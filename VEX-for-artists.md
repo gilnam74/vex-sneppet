@@ -684,7 +684,7 @@ Remember, all actual code you can find in [VEX snippets hip file](../blob/master
 # Solving problems with VEX
 This chapter contains a collection of tutorials on solving miscellaneous production tasks with VEX. The goal here is to understand how to develop and implement algorithms to create your own unique tools and setups.
 
-The problem-solving algorithm would be always based on a core concept: split the overall task into smaller pieces which would be easy to implement. Start with the easiest task. Move from general to specific, from high level to low. Reduce amount of dimensions to take into account, for simplicity, develop a solution for two dimensions only, or even one, if possible.
+The problem-solving algorithm would be always based on a core concept: split the overall task into smaller pieces which would be easy to implement. Start with the easiest task. Move from general to specific, from high level to low. Reduce the amount of dimensions to take into account, for simplicity, develop a solution for two dimensions only, or even one, if possible.
 
 ### Hanging a wire
 The task: having two source points `A` and `B` build a hanging curve between them.
@@ -741,7 +741,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 ```
 This code will iterate from 0 to 1 (the number of points we set in UI) and output the iteration index to console. The `iteration++` is a "syntaxis sugar" for `iteration = iteration + 1` statement and means the step of iterations is equal to 1. 
 
-Inside the loop body, between `{ ... }` where we are currently have the print statement, we will place the code for the new point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
+Inside the loop body, between `{ ... }` where we currently have the print statement, we will place the code for the new point creation, which will be repeated as many times as many new points we set in the "Number Of Points" parameter. 
 
 Change the "Number Of Points" in a Wrangle UI and examine printed results in Houdini Console to see how this basic construction works. Clear console before each value change to isolate each loop execution.
 
@@ -1072,7 +1072,8 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 
 [![](https://live.staticflickr.com/65535/50109405446_3a8a16540f_o.png)](https://live.staticflickr.com/65535/50109405446_3a8a16540f_o.png)
 
-Another option for defining the shape of the curve is using the ramp control. In our setup above we rely on the foor-loop execution by making dependency between the iteration step and other parameters. So we shift point on Y axis depending on iteration number. The higher iteration number leads to the higher shift value. Then we modify the iteration flow to get desired result, we found the center of itaerations and change behaviour after we reach this point. 
+#### Ramp control alternative
+Another option for defining the shape of the curve is using ramp control. In our setup above we rely on the for-loop execution by making dependency between the iteration step and other parameters. So we shift point on Y-axis depending on the iteration number. The higher iteration number leads to higher shift value. Then we modify the iteration flow to get the desired result, we found the center of iterations and change behavior after we reach this point. 
 
 We can modify iteration flow in another way — with `chramp()` function feeding iteration number as input to the ramp. The ramp is working in the range of 0 to 1, so we need to fit our iteration range to required before using it as a ramp input:
 ```C
@@ -1102,7 +1103,7 @@ for(int iteration=0; iteration<number_of_points; iteration++){
 }
 ```
 
-With this setup you will be able to control shape of the wire with a ramp curve which is more pleasant then sliders but tricky to use if you will need tons of wires with a different settings.
+With this setup you will be able to control the shape of the wire with a ramp curve which is more pleasant then sliders but tricky to use if you will need tons of wires with different settings.
 
 [![](https://live.staticflickr.com/65535/50109406316_1a08b02409_o.png)](https://live.staticflickr.com/65535/50109406316_1a08b02409_o.png)
 
