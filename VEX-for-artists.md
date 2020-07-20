@@ -362,6 +362,17 @@ for (int n=0; n<numberOfPoints; n++){
 ```
 [![](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)](https://c1.staticflickr.com/1/869/26230204217_e2312e5fb3_o.gif)
 
+
+# VEX first steps
+Now, when we have practiced in basic stuff, let's go a bit further.
+
+## Explore functions
+[![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
+
+Here we will improve our understanding of mathematical functions and how they work in 3D space.  
+This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
+
+Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. 
 ### Sine 
 In the example above we used **sine** and **cosine** to build a circle. Let's take a closer look at a sine magic function. How can we imagine (visualize) this function in our scene?
 
@@ -493,16 +504,6 @@ How can we use noise function in production? For example, you can scatter points
 
 So now we have **two methods to visualize VEX functions**: you can deform geometry as we did with a [sine](#sine) or paint geometry as in the current example.
 
-# VEX first steps
-Now, when we have practiced in basic stuff, let's go a bit further.
-
-## Explore functions
-Here we will improve our understanding of mathematical functions and how they work in 3D space.  
-This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
-
-Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. 
-
-[![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
 
 Explore miscellaneous functions, e.g. `@P.y=sine(@P.x);` and notice how they affect geometry. Some results would be more descriptive in 2D space (modifying the Line SOP), another in 3D space (modifying the Grid SOP), and some in color (modifying point color of the Grid SOP).
 
