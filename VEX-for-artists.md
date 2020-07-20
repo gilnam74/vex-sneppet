@@ -369,10 +369,10 @@ Now, when we have practiced in basic stuff, let's go a bit further.
 ## Explore functions
 [![](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)](https://live.staticflickr.com/65535/49898530167_e45e9978e6_o.png)
 
-Here we will improve our understanding of mathematical functions and how they work in 3D space.  
-This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)  
+Here we will improve our understanding of mathematical functions and how they work in 3D space.    
 
 Create a Line SOP, orient it along with X axes, increase the number of points to 1000 and add Attribute Wrangle node after. 
+
 ### Sine 
 In the example above we used **sine** and **cosine** to build a circle. Let's take a closer look at a sine magic function. How can we imagine (visualize) this function in our scene?
 
@@ -1109,6 +1109,8 @@ With this setup you will be able to control the shape of the wire with a ramp cu
 [![](https://live.staticflickr.com/65535/50109406316_1a08b02409_o.png)](https://live.staticflickr.com/65535/50109406316_1a08b02409_o.png)
 
 ## Checker  
+This section inspired by [Main Road lookdev classes](https://www.youtube.com/watch?v=rzjXRvgo7YA)
+
 Here we will procedurally build a checker using a combination of `floor` function and a modulus operator (which is an equivalent of the `fraction` function). You may need to read [about functions](#explore-functions) to be able to follow this tutorial.
 
 At a very high level, the solution would be: build equal-sized black and white stripes (values of 0 and 1), then we will periodically shift a part of each stripe, pally to geometry color.
