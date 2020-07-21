@@ -11,9 +11,9 @@ This article is structured in a way that the beginner information locate on top 
 
 Article content:  
 - [VEX orientation](#vex-orientation)  
-[Attribute Wrangle](#attribute-wrangle)  |  [Point concept](#point-concept)  |  [Create point](#create-a-point) | [Create line](#create-a-line)  |   [Create circle](#create-a-circle)  | [Sine](#sine)  |  [Noise](#noise)   
+[Attribute Wrangle](#attribute-wrangle)  |  [Point concept](#point-concept)  |  [Create point](#create-a-point) | [Create line](#create-a-line)  |   [Create circle](#create-a-circle)
 - [VEX first steps](#vex-first-steps)  
-[Explore functions](#explore-functions)  | [Repetitive patterns](#repetitive-patterns)  
+[Explore functions](#explore-functions)  | [Sine](#sine)  |  [Noise](#noise)  | [Repetitive patterns](#repetitive-patterns)  
 - [Solving problems with VEX](#solving-problems-with-vex)  
 [Hanging a wire](#hanging-a-wire)  |  [Checker](#checker)  |  [Polar checker](#polar-checker)  |  [Blur](#blur)  |  
 - [Vectors](#vectors)  
