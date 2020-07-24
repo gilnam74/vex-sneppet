@@ -292,9 +292,9 @@ printf('Array = %s\n',  get_point_positions());
 // Result: Array = {{0,0,0}, {0,0.12,0}, {0,0.23,0}, {0,0.34,0}}
 ```
 ### Using custom VEX modules
-It is possible to create custom VEX functions, save them in `*.h` files, and import them into the Attribute Wrangle.  
+It is possible to create custom VEX functions, save them in `*.h` files, and import them into the Attribute Wrangle. Importing is possible via `#include` statement, followed by the file name.
 
-Import variants:
+Import options:
  - Direct import with a full path:  
    `#include "D:/Eve/tools/houdini/vex/library.h"`  
  - The path to `library.h` file set via environment variable (os.environ['HOUDINI_VEX_PATH'] = "D:/Eve/tools/houdini/vex/"):  
