@@ -291,6 +291,29 @@ function vector[] get_point_positions(){
 printf('Array = %s\n',  get_point_positions());
 // Result: Array = {{0,0,0}, {0,0.12,0}, {0,0.23,0}, {0,0.34,0}}
 ```
+### Include
+It is possible to create custom VEX functions, save them in `*.h` files, and import them into the Attribute Wrangle.  
+The `library.h` file, located in `D:/Eve/tools/houdini/vex/library.h`:
+
+```C
+void hello(){
+    printf('Hello, Eve!\n');
+}
+
+```
+The code in Attribute Wrangle:
+```C
+// Import options:
+// #include "D:/Eve/tools/houdini/vex/library.h"
+// #include <library.h> (path to library.h set via os.environ['HOUDINI_VEX_PATH'])
+// #include "`chs('path')`/tools/houdini/vex/library.h" (the "path" parameter = $EVE_ROOT, $EVE_ROOT is env variable = D:/Eve)
+
+#include <library.h>
+
+hello();
+
+// Result: Hello, Eve!
+```
 
 ## VEX expressions
 Using VEX in the parameter interface of Houdini nodes. See [documentation](http://www.sidefx.com/docs/houdini/expressions/index.html)
