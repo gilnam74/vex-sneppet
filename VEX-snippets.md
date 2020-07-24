@@ -301,14 +301,15 @@ void hello(){
 }
 
 ```
+
+Import options:
+ - #include "D:/Eve/tools/houdini/vex/library.h"  
+ - #include <library.h> (path to library.h set via os.environ['HOUDINI_VEX_PATH'])  
+ - #include "`chs('path')`/tools/houdini/vex/library.h" (the "path" parameter = $EVE_ROOT, $EVE_ROOT is env variable = D:/Eve)  
+
 The code in Attribute Wrangle:
 ```C
-// Import options:
-// #include "D:/Eve/tools/houdini/vex/library.h"
-// #include <library.h> (path to library.h set via os.environ['HOUDINI_VEX_PATH'])
-// #include "`chs('path')`/tools/houdini/vex/library.h" (the "path" parameter = $EVE_ROOT, $EVE_ROOT is env variable = D:/Eve)
-
-#include <library.h>
+#include "D:/Eve/tools/houdini/vex/library.h"
 
 hello();
 
