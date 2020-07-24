@@ -4,7 +4,7 @@ Walkthrough the [VEX for artists](vex-for-artists) tutorial if you don`t have a 
 
 These and other examples you can find in [VEX snippets hip file](../blob/master/Eve/lib/hips/vex_snippets.hipnc). 
 
-[Snippets](#snippets) | [VEX expressions](#vex-expressions) | [Tools](#tools) | [Algorithms](#algorithms)
+[Snippets](#snippets) |  [Using custom VEX modules](#using-custom-vex-modules)  | [VEX expressions](#vex-expressions) | [Tools](#tools) | [Algorithms](#algorithms)
 
 ## Snippets
 The VEX 101 and the most low-level solution blocks.
@@ -291,7 +291,7 @@ function vector[] get_point_positions(){
 printf('Array = %s\n',  get_point_positions());
 // Result: Array = {{0,0,0}, {0,0.12,0}, {0,0.23,0}, {0,0.34,0}}
 ```
-### Include
+### Using custom VEX modules
 It is possible to create custom VEX functions, save them in `*.h` files, and import them into the Attribute Wrangle.  
 
 Import variants:
