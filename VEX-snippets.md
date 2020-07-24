@@ -293,6 +293,13 @@ printf('Array = %s\n',  get_point_positions());
 ```
 ### Include
 It is possible to create custom VEX functions, save them in `*.h` files, and import them into the Attribute Wrangle.  
+
+Import variants:
+ - Direct import with a full path:  
+   `#include "D:/Eve/tools/houdini/vex/library.h"`  
+ - #include <library.h> (path to library.h set via os.environ['HOUDINI_VEX_PATH'])  
+ - #include "`chs('path')`/tools/houdini/vex/library.h" (the "path" parameter = $EVE_ROOT, $EVE_ROOT is env variable = D:/Eve)  
+
 The `library.h` file, located in `D:/Eve/tools/houdini/vex/library.h`:
 
 ```C
@@ -301,11 +308,6 @@ void hello(){
 }
 
 ```
-
-Import options:
- - #include "D:/Eve/tools/houdini/vex/library.h"  
- - #include <library.h> (path to library.h set via os.environ['HOUDINI_VEX_PATH'])  
- - #include "`chs('path')`/tools/houdini/vex/library.h" (the "path" parameter = $EVE_ROOT, $EVE_ROOT is env variable = D:/Eve)  
 
 The code in Attribute Wrangle:
 ```C
