@@ -297,8 +297,10 @@ It is possible to create custom VEX functions, save them in `*.h` files, and imp
 Import variants:
  - Direct import with a full path:  
    `#include "D:/Eve/tools/houdini/vex/library.h"`  
- - #include <library.h> (path to library.h set via os.environ['HOUDINI_VEX_PATH'])  
- - #include "`chs('path')`/tools/houdini/vex/library.h" (the "path" parameter = $EVE_ROOT, $EVE_ROOT is env variable = D:/Eve)  
+ - The path to `library.h` file set via environment variable (os.environ['HOUDINI_VEX_PATH'] = "D:/Eve/tools/houdini/vex/"):  
+  `#include <library.h> `  
+ - The path set via UI parameter. lib_path = `$EVE_ROOT`, where $EVE_ROOT is "EVE_ROOT" env variable set to "D:/Eve"):  
+   `#include "`chs('lib_path')`/tools/houdini/vex/library.h"`
 
 The `library.h` file, located in `D:/Eve/tools/houdini/vex/library.h`:
 
