@@ -1,9 +1,11 @@
 # Introduction
-**EVE** — out of the box Houdini Pipeline Toolkit under control of Shotgun management system. 
+**EVE** — out of the box Houdini Pipeline Toolkit under control of custom project management system. 
 
-This section is on the early stage of developing, it does not intend to have valuable public content. I mean, **skip it**!
+This section is in the early stage of developing, it does not intend to have valuable public content. I mean, **skip it**!
 
 Despite the Houdini data management part is not developed yet, the whole VFX pipeline structure is based on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) ideas, so we have a concept for the project folder structure, assets structure etc.
+
+[![](https://live.staticflickr.com/65535/48955180237_03113a7f30_o.jpg)](https://live.staticflickr.com/65535/48955180237_03113a7f30_o.jpg)
 
 # Documentation
 ## Project setup
