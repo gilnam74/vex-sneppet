@@ -8,6 +8,19 @@ You can explore the node parameters with Python Shel:
 - Type `print node.asCode()`
 
 ## Snippets
+##### Install pip in Houdini
+```python
+# Download and save get-pip.py 
+import os
+os.popen('python get-pip.py').read()
+```
+
+##### Install package with pip in Houdini
+```python
+import pip
+pip._internal.main(['install', 'package_name'])
+```
+
 ##### Get Houdini environment variable
 ```python
 import hou
