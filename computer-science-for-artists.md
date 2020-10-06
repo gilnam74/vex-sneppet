@@ -11,7 +11,7 @@ But if you would like to have better control over the computer with a code you w
 ## Data Structures
 
 #### Hash Tables
-The **hash function** generates a value of fixed length for each input. The resulting value, random pattern, will be always the same for the same input.
+The **hash function** generates a value of fixed length for each input. The resulting value, random pattern, will be always the same for the same input. Such operations, when you apply it several times without changing the result, are called **idempotent operations**.
 
 ```c
 // Pseudocode
