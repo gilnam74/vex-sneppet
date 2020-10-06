@@ -8,3 +8,13 @@ But if you would like to have better control over the computer with a code you w
 # How a computer works
 
 # Data structures and algorithms
+## Data Structures
+
+#### Hash Tables
+The **hash function** generates a value of fixed length for each input. The resulting value, random pattern, will be always the same for the same input.
+
+```c
+// Pseudocode
+hash_function("Hello, World!") = 0A0A9F2A6772942557AB5355D76AF442F8F65E01
+```
+## Algorithms
