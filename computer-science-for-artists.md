@@ -17,4 +17,6 @@ The **hash function** generates a value of fixed length for each input. The resu
 // Pseudocode
 hash_function("Hello, World!") = 0A0A9F2A6772942557AB5355D76AF442F8F65E01
 ```
+It's practically impossible to get the source value from the result.
+
 ## Algorithms
