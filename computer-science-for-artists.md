@@ -15,8 +15,8 @@ Is a way to store a number of items.
 ```c
 // Pseudocode of array
 integer_array = [0, 1, 2, 3, 3, 4]
-string_array = ["apple", "banana", "strawberry"]
-mixed_array = ["beef", 147.5, [1, 2, 3], 256]
+string_array =  ["apple", "banana", "strawberry"]
+mixed_array =   ["beef", 147.5, [1, 2, 3], True]
 ```
 
 #### Hash Tables
