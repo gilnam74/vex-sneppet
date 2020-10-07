@@ -365,9 +365,10 @@ The Attribute Wrangle (detail mode) code:
 ```c
 #include <library.h>
 
-// Initialize hash map
+// Initialize hash table
 float data[];
-hash_table fruits_number = hash_table(10, data);
+int table_size = 10;
+hash_table fruits_number = hash_table(table_size, data);
 
 // Add elements to hash map
 fruits_number->add_item('apple', 256);
