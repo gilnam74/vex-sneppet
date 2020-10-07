@@ -320,6 +320,64 @@ hello();
 // Result: Hello, Eve!
 ```
 
+### Custom data types in VEX
+It is possible to implement custom data types in VEX using [struct](https://www.sidefx.com/docs/houdini/vex/lang#structs).  
+
+The **struct** works only if defined in a [custom module](#using-custom-vex-modules) or in the "Outer Code" parameter of the "snippet1" node. You can find the "snippet1" inside the Attribute Wrangle asset (need to unlock Attribute Wrangle to have access):  
+attribwrangle1 > attribvop1 > snippet1
+
+#### VEX Hash Table
+In this example, we would build a Hash Table.
+
+```c
+// The library.h content
+// VEX Hash Table implementation for {string:float} pairs
+struct hash_table{
+    int array_len;  // Limit array length
+    float data[];  // Init data
+
+    int build_index(string key){
+        // Build and return index for array from string
+        int index = random_shash(key) % this.array_len*10;
+
+        return index;
+    }
+
+    void add_item(string key; float value){
+        // Place item value in array at index position
+        int index = this -> build_index(key);
+        this.data[index] = value;
+    }
+
+    float get_item(string key){
+        // Get item from array by position
+        int index = this -> build_index(key);
+        float value = this.data[index];
+
+        return value;
+    }
+}
+```
+The Attribute Wrangle (detail mode) code:
+```c
+#include <library.h>
+
+// Initialize hash map
+float data[];
+hash_table fruits_number = hash_table(10, data);
+
+// Add elements to hash map
+fruits_number->add_item('apple', 256);
+fruits_number->add_item('banana', 1024);
+fruits_number->add_item('strawberry', 512);
+
+// Get element
+float number = fruits_number->get_item('apple');
+printf('Amount = %s \n', number); 
+
+// Result: Amount = 256 
+```
+
 ## VEX expressions
 Using VEX in the parameter interface of Houdini nodes. See [documentation](http://www.sidefx.com/docs/houdini/expressions/index.html)
 
