@@ -323,11 +323,11 @@ hello();
 ### Custom data types in VEX
 It is possible to implement custom data types in VEX using [struct](https://www.sidefx.com/docs/houdini/vex/lang#structs).  
 
-The **struct** works only if defined in a [custom module](#using-custom-vex-modules) or in the "Outer Code" parameter of the "snippet1" node. You can find the "snippet1" inside the Attribute Wrangle asset (need to unlock Attribute Wrangle to have access):  
-attribwrangle1 > attribvop1 > snippet1
+The **struct** works only if defined in a [custom module](#using-custom-vex-modules) or in the "Outer Code" parameter of the "snippet1" node. You can find it inside the Attribute Wrangle asset (need to unlock Attribute Wrangle to have access):  
+`attribwrangle1 > attribvop1 > snippet1`
 
 #### VEX Hash Table
-In this example, we would build a Hash Table.
+In this example, we would implement a Hash Table data structure in vex. The Hash Table data structure allows storing key/value pairs. It is well known as a **dictionary** in Python or **objects** in Javascript.
 
 ```c
 // The library.h content
@@ -358,7 +358,10 @@ struct hash_table{
     }
 }
 ```
+
+Now if we would need to store integer values for several items, e.g. amount of fruits we need to bye, we can use our `hash_table` structure.  
 The Attribute Wrangle (detail mode) code:
+
 ```c
 #include <library.h>
 
@@ -372,8 +375,8 @@ fruits_number->add_item('banana', 1024);
 fruits_number->add_item('strawberry', 512);
 
 // Get element
-float number = fruits_number->get_item('apple');
-printf('Amount = %s \n', number); 
+float number_of_apples = fruits_number->get_item('apple');
+printf('Amount = %s \n', number_of_apples); 
 
 // Result: Amount = 256 
 ```
