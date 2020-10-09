@@ -198,5 +198,5 @@ If we have 2 points, A and B, the representation of vector AB between this point
 Multiply Vectors:
 A) By scalar (float, int): multiply each component by scalar --> multiply the length
 B) By vector: 
-  B1) Scalar (DOT): Projection one vector onto another
+  B1) Scalar (DOT): Projection one vector onto another. result = scalar
   B2) Vector (CROSS): Find 3rt vector, perpendicular to the source vectors
