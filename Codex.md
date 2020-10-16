@@ -196,7 +196,7 @@ Before we deal with **scalar** numbers, which give us a certain **value** (like 
 If we have 2 points, A and B, the representation of vector AB between this points would be the difference in coordinates of points B and A. v@AB = [B.x, B.y, B.z] - [A.x, A.y., A.z]. [SRC](http://tutorial.math.lamar.edu/Classes/CalcII/Vectors_Basics.aspx)
 
 Multiply Vectors:
-A) By scalar (float, int): multiply each component by scalar --> multiply the length
-B) By vector: 
-  B1) Scalar (DOT): Projection one vector onto another. result = scalar
-  B2) Vector (CROSS): Find 3rt vector, perpendicular to the source vectors
+A) By scalar (float, int): multiply each component by scalar --> multiply the length  
+B) By vector:  
+  B1) Scalar (DOT): Projection one vector onto another. result = scalar  
+  B2) Vector (CROSS): Find 3rt vector, perpendicular to the source vectors  
