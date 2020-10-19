@@ -47,6 +47,9 @@ hash_function("Hello, World!") = 0A0A9F2A6772942557AB5355D76AF442F8F65E01
 ```
 It's practically impossible to get the source value from the result.
 
+#### Stacks and Queues
+The linear data structures which allow traversing data sequentially, one by one. Only one element can be directly reached.
+
 
 
 ## Algorithms
