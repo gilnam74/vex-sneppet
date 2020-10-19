@@ -50,9 +50,9 @@ It's practically impossible to get the source value from the result.
 #### Stacks and Queues
 The linear data structures which allow traversing data sequentially, one by one. Only one element can be directly reached. The only difference is how data can be removed. You can access only the first or the last element.
 
-You can think of stacks as plates when each new piece of data is added on top of another, and if you need to retrieve the data you can only access the top one (latest added).
+You can think of stacks as plates when each new piece of data is added on top of another, and if you need to retrieve the data you can only access the top one (latest added). It is called LIFO — Last In First Out. Example of usage: undo operations.
 
-
+Queues can be imagined as a line to the entrance. The first person arrived will enter the first. It is called FIFO — First In First Out. Example of usage: a printer will process the tasks in order of receiving from users. 
 
 ## Algorithms
 The algorithm is a step by step instruction for solving a problem. The algorithm manipulates Data Structure.
