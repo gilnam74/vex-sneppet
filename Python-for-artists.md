@@ -377,8 +377,11 @@ Run the code, press "Create Geometry" button and you will get "Hello, World!" pr
 
 We link `buttonClicked()` function to our button widget with this line:  
 `self.ui.btn_create.clicked.connect(self.buttonClicked)`,  
+
 where `self.ui` is a UI object we created in QT Designer and imported into the code (window with button and text field),  
-`btn_create` is a button widget which launches `buttonClicked()` function (`connect(self.buttonClicked)`)  
+
+`btn_create` is a button widget which launches `buttonClicked()` function (`connect(self.buttonClicked)`),  
+
 and the event which will run this function is a button click (`clicked`).
 
 Now let's grab the text from the text filed (QLineEdit widget named lin_name) and print it instead of "Hello, World!". You can do it in `__init__()` function via variable and send this variable value to `buttonClicked()` function:
@@ -452,7 +455,7 @@ class GeoCreator(QtWidgets.QWidget):
 win = GeoCreator()
 win.show()
 ```
-So now you have several examples of how to deal with data using classes so you can build your own stuff without understanding classes concepts (but I would recommend studying this topic anyway!). This should be enough to build a lot of tools: you know how to take string data from the user with a QlineEdit widget and setup buttons to execute your functions with a QPushButton widget. I build a [complete pipeline toolset](https://github.com/kiryha/AnimationDNA/wiki/03-Tools) using only this two widgets.
+So now you have several examples of how to deal with data using classes so you can build your own stuff without understanding classes concepts (but I would recommend studying this topic anyway!). This should be enough to build a lot of tools: you know how to take string data from the user with a QlineEdit widget and set up buttons to execute your functions with a QPushButton widget. I build a [complete pipeline toolset](https://github.com/kiryha/AnimationDNA/wiki/03-Tools) using only these two widgets.
 
 It's time to bring a functional part of the code we develop before to our tool:
 
@@ -485,22 +488,21 @@ class GeoCreator(QtWidgets.QWidget):
         ui_file = 'C:/temp/uiGeoCreator.ui'
         self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
-        
-        # Define geometry node name
-        self.customName = self.ui.lin_name.text()
+         
         # Setup "Create Geometry" button
         self.ui.btn_create.clicked.connect(self.buttonClicked)
         
     def buttonClicked(self):
+        customName = self.ui.lin_name.text()
         # Execute node creation 
-        if checkExisting(self.customName) != True:
-            createGeoNode(self.customName)
+        if checkExisting(customName) != True:
+            createGeoNode(customName)
     
 
 win = GeoCreator()
 win.show()
 ```
-I just copy-paste code which creates geometry node we develop before into existing code with UI, change `name` variable we had with a hardcoded value "MY_GEO" to `self.customName` so it gets the geometry name from UI and place it inside `__init__()` function and place code which runs checking and node creation into `buttonClicked()` function.
+I just copy-paste code which creates geometry node we develop before into existing code with UI, change a hardcoded `name` variable with a name from UI (`customName = self.ui.lin_name.text()`), and place code which runs checking and node creation into `buttonClicked()` function.
 
 You can place all your functions inside the `GeoCreator()` class:
 
@@ -515,15 +517,14 @@ class GeoCreator(QtWidgets.QWidget):
         self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
         
-        # Define geometry node name
-        self.customName = self.ui.lin_name.text()
         # Setup "Create Geometry" button
         self.ui.btn_create.clicked.connect(self.buttonClicked)
         
     def buttonClicked(self):
+        customName = self.ui.lin_name.text()
         # Execute node creation 
-        if self.checkExisting(self.customName) != True:
-            self.createGeoNode(self.customName)
+        if checkExisting(customName) != True:
+            createGeoNode(customName)
     
     def checkExisting(self, geometryName):
         # Check if "MY_GEO" exists
@@ -562,15 +563,14 @@ class GeoCreator(QtWidgets.QWidget):
         self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
         
-        # Define geometry node name
-        self.customName = self.ui.lin_name.text()
         # Setup "Create Geometry" button
         self.ui.btn_create.clicked.connect(self.buttonClicked)
         
     def buttonClicked(self):
+        customName = self.ui.lin_name.text()
         # Execute node creation 
-        if self.checkExisting(self.customName) != True:
-            self.createGeoNode(self.customName)
+        if checkExisting(customName) != True:
+            createGeoNode(customName)
     
     def checkExisting(self, geometryName):
         # Check if "MY_GEO" exists
@@ -595,7 +595,7 @@ def run():
 ```
 
 Save this code somewhere as a python file, for example in `C:/temp/GeoCreator.py`
-Right click on empty space in "Create" shelf and select "New Tool...", change the label to "Geo Creator", switch to "Script" tab, paste the code and hit "Apply":
+Right-click on empty space in "Create" shelf and select "New Tool...", change the label to "Geo Creator", switch to "Script" tab, paste the code and hit "Apply":
 
 ```python
 import sys
@@ -609,20 +609,20 @@ GeoCreator.run()
 
 The "Geo Creator" tool will appear on the "Create" shelf which will run our GeoCreator tool. Congratulations, you just finish building a first custom tool for Houdini!
 
-One thing we need to notice is that we used hardcoded path to our UI and Python file `C:/temp` which is working fine but it's not the best way to deal with such things. If you create your custom tools you probably would like to make flexible, reliable and easy to use in all the projects you might have. So next, and it would be a first step for building your own pipeline, you can create a [Houdini Wrapper](#wrapper).  
+One thing we need to notice is that we used a hardcoded path to our UI and Python file `C:/temp` which is working fine but it's not the best way to deal with such things. If you create your custom tools you probably would like to make them flexible, reliable, and easy to use in all the projects you might have. So next, and it would be a first step for building your own pipeline, you can create a [Houdini Wrapper](#wrapper).  
 
 ## Wrapper
-The **wrapper** is a Python file which defines the software environment and launch Houdini within this environment. It allows controlling a lot of things related to Houdini such as setting up $JOB variable (Houdini project root), defining paths to custom python scripts and HDAs, modifying native Houdini UIs etc.
+The **wrapper** is a Python file that defines the software environment and launch Houdini within this environment. It allows controlling a lot of things related to Houdini such as setting up $JOB variable (Houdini project root), defining paths to custom python scripts and HDAs, modifying native Houdini UIs, etc.
 
 Before we can move forward we should define our project folder structure. It's a tricky task and a lot of options could be considered (here is a [folder structure](https://github.com/kiryha/AnimationDNA/wiki/02-Codex-DNA#folder-structure) example I used to build a pipeline for Maya) but we will keep things simple here. 
 
 Say we have all our projects in a "PROJECTS" folder somewhere on HDD: `C:/temp/PROJECTS`, each in a separate folder "projectName_A", "projectName_B" etc. Lets each project folder contain two folders: `3D` and `PIPELINE`. 
 
-The `3D` folder is a root of the Houdini project, where we will store all Houdini data. You can use the default Houdini project structure which may be created with `File > New Project` tool:
+The `3D` folder is a root of the Houdini project, where we will store all Houdini data. You can use the default Houdini project structure which may be created with the `File > New Project` tool:
 
 [![](https://c2.staticflickr.com/2/1979/44359655044_12d01390f5_o.gif)](https://c2.staticflickr.com/2/1979/44359655044_12d01390f5_o.gif) 
 
-You don't need to set up each Houdini project with `New Project` tool, just save this empty folder structure and copy-paste it in all next projects (or write a [script to build a project](https://github.com/kiryha/Houdini/blob/master/createProject.py)).
+You don't need to set up each Houdini project with the `New Project` tool, just save this empty folder structure and copy-paste it in all next projects (or write a [script to build a project](https://github.com/kiryha/Houdini/blob/master/createProject.py)).
 
 The `PIPELINE` folder will contain our wrapper and all our custom tools.
 
@@ -686,15 +686,14 @@ class GeoCreator(QtWidgets.QWidget):
         self.ui = QtUiTools.QUiLoader().load(ui_file, parentWidget=self)
         self.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
         
-        # Define geometry node name
-        self.customName = self.ui.lin_name.text()
         # Setup "Create Geometry" button
         self.ui.btn_create.clicked.connect(self.buttonClicked)
         
     def buttonClicked(self):
+        customName = self.ui.lin_name.text()
         # Execute node creation 
-        if self.checkExisting(self.customName) != True:
-            self.createGeoNode(self.customName)
+        if checkExisting(customName) != True:
+            createGeoNode(customName)
     
     def checkExisting(self, geometryName):
         # Check if "MY_GEO" exists
@@ -723,6 +722,6 @@ import GeoCreator
 reload(GeoCreator)
 GeoCreator.run()
 ```
-Hit "Accept" and launch our GeoCreator tool. Now we don't have any hardcoded path in our scripts, so if you will clone the `projectName_A` folder with content as `projectName_B` (or even place it to another location) everything will work as expected.
+Hit "Accept" and launch our GeoCreator tool. Now we don't have any hardcoded path in our scripts, so if you will clone the `projectName_A` folder with content as `projectName_B` (or even place it in another location) everything will work as expected.
 
-Congratulations, you made a first step to building your own pipeline!
+Congratulations, you made the first step to building your own pipeline!
