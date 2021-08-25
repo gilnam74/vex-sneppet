@@ -290,7 +290,7 @@ To build our UI:
     * Line Edit (Input Widgets section), change "ObjectName" parameter to `lin_name`, "text" to `MY_GEO`, 
     * Push Button (Buttons section), change "ObjectName" parameter to `btn_create`, "text" to `Create Geometry`, "minimumSize > height" = 35
 - Select Window widget (either click on empty space in the window widget or click on GeoCreator in object inspector) and press "Lay Out Vertically" button on the toolbar.
-- Save the file somewhere, for example `'C:/temp/uiGeoCreator.ui'`. Here you can download [uiGeoCreator.ui](../blob/master/hips/uiGeoCreator.ui)
+- Save the file somewhere, for example `'C:/temp/uiGeoCreator.ui'`. Here you can download [uiGeoCreator.ui](../blob/master/Eve/lib/hips/uiGeoCreator.ui)
 
 [![](https://c2.staticflickr.com/2/1962/44356680464_2a3ba7d302_o.gif)](https://c2.staticflickr.com/2/1962/44356680464_2a3ba7d302_o.gif)
 
