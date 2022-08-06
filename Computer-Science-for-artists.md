@@ -66,7 +66,7 @@ An algorithm is a step by step instruction for solving a problem. Those steps co
 Here I will record all patterns recognized while learning algorithms.
 
 #### Manipulating numbers
-Say we have an integer 121, how we can disassemble it to perform necessary operations? For example, to check if it is a palindrome number, we need to compare the first and last digits, how we can get those? If it was a string we can just take the first and the last items of the string: 
+Say we have an integer 121, how we can manipulate it? For example, to check if it is a palindrome number, we need to compare the first and last digits, and if it was a string we can just take the first and the last items of the string: 
 
 ```Python
 string = `123`
@@ -75,15 +75,14 @@ first_digit = string[0],
 last_digit = string[-1]
 ```
 
-But how you can get the first or last digits from the number? Sure with math, modulo and division will do the trick:
+But how can you get the first or last digits from the number? Sure with math, modulo and division will do the trick:
  
-`first_digit = integer/number_of_tens`, `last_digit = integer % 10`
+`first_digit = integer/number_of_digits`, `last_digit = integer % 10`
 
 E.g. `1234 % 10 = 4, 1234 % 100 = 34, 1234 % 1000 = 234, 1234 % 10000 = 1234 `
 
-
 #### Walkthrough each element in the array.
-One of the simplest pattern I can imagine. Do something with each element of the array.
+One of the simplest patterns I can imagine. Do something with each element of the array.
 
 ```Python
 list = [1, 2, 3, 4]
@@ -121,4 +120,4 @@ for element_1 in range(len(list)):
 # Result: 12:4
 ```
 
-In the second loop, with the help of the first value of the `range()` function, we skipping elements, that we already check in the first loop. But its still O(n^2). Can we do better?
+In the second loop, with the help of the first value of the `range()` function, we skip elements, that we already check in the first loop. But its still O(n^2). Can we do better?
