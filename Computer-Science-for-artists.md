@@ -58,12 +58,29 @@ Queues can be imagined as a line to the entrance. The first person arrived will 
 The algorithm is a step by step instruction for solving a problem. The algorithm manipulates Data Structure.
 
 ### Time and space complexity: Big O notation
-The relationship of input size to the number of steps the algorithm takes to run characterizes the algorithm time complexity.
+The relationship of input size to the number of steps the algorithm takes to run characterizes the algorithm's time complexity.
 
 ### Basic solution patterns
-An algorithm is a step by step instruction for solving a problem. Those steps could be organized into the patterns, basic blocks of a problem solution. Pattern, like a programming function, does a simple and obvious action. For example, traveling through each element of the list is a pattern, which could be implemented in Python with a `for loop`.
+An algorithm is a step by step instruction for solving a problem. Those steps could be organized into the patterns, and basic blocks of a problem solution. Pattern, like a programming function, does a simple and obvious action. For example, traveling through each element of the list is a pattern, which could be implemented in Python with a `for loop`.
 
 Here I will record all patterns recognized while learning algorithms.
+
+#### Manipulating numbers
+Say we have an integer 121, how we can disassemble it to perform necessary operations? For example, to check if it is a palindrome number, we need to compare the first and last digits, how we can get those? If it was a string we can just take the first and the last items of the string: 
+
+```Python
+string = `123`
+
+first_digit = string[0], 
+last_digit = string[-1]
+```
+
+But how you can get the first or last digits from the number? Sure with math, modulo and division will do the trick:
+ 
+`first_digit = integer/number_of_tens`, `last_digit = integer % 10`
+
+E.g. `1234 % 10 = 4, 1234 % 100 = 34, 1234 % 1000 = 234, 1234 % 10000 = 1234 `
+
 
 #### Walkthrough each element in the array.
 One of the simplest pattern I can imagine. Do something with each element of the array.
