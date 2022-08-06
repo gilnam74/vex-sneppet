@@ -66,20 +66,36 @@ An algorithm is a step by step instruction for solving a problem. Those steps co
 Here I will record all patterns recognized while learning algorithms.
 
 #### Manipulating numbers
-Say we have an integer 121, how we can manipulate it? For example, to check if it is a palindrome number, we need to compare the first and last digits, and if it was a string we can just take the first and the last items of the string: 
+Say we have an integer 123, how we can manipulate it? For example, to check if it is a palindrome number, we need to compare the first and last digits, and if it was a string we can just take the first and the last items of the string: 
 
 ```Python
 string = `123`
 
-first_digit = string[0], 
+first_digit = string[0]
 last_digit = string[-1]
+
+print first_digit, last_digit
+
+# result: 1, 3
 ```
 
-But how can you get the first or last digits from the number? Sure with math, modulo and division will do the trick:
+Ok, strings are easy, but how can you get the first or last digits from the integer? Sure with math, modulo and division will do the trick:
  
 `first_digit = integer/number_of_digits`, `last_digit = integer % 10`
 
 E.g. `1234 % 10 = 4, 1234 % 100 = 34, 1234 % 1000 = 234, 1234 % 10000 = 1234 `
+
+We can get the number of digits in any number by checking how many times you can multiply 1 by 10 before it becomes greater than original number:
+
+```Python
+def get_number_length(integer):
+    
+    length = 1
+    while integer > length * 10:
+        length *= 10
+    
+    return length
+```
 
 #### Walkthrough each element in the array.
 One of the simplest patterns I can imagine. Do something with each element of the array.
