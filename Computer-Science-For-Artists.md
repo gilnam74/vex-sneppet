@@ -109,6 +109,41 @@ for element in list:
 # Result: 1, 2, 3, 4
 ```
 
+#### Iterate array in reversed order
+
+```Python
+data = ["apple", "banana", "strawberry"]
+
+for index in range(len(data)-1, -1, -1):
+    print data[index]
+
+# Result: strawberry, banana, apple
+```
+
+```Python
+data = ["apple", "banana", "strawberry"]
+
+for element in data[::-1]:
+    print element
+
+# Result: strawberry, banana, apple
+```
+
+```Python
+data = ["apple", "banana", "strawberry"]
+
+for index, element in reversed(list(enumerate(data))):
+    print index, element
+
+# Result: 2 strawberry, 1 banana, 0 apple
+
+print list(enumerate(data))
+print list(reversed(list(enumerate(data))))
+
+# Result: [(0, 'apple'), (1, 'banana'), (2, 'strawberry')]
+# Result: [(2, 'strawberry'), (1, 'banana'), (0, 'apple')]
+```
+
 #### Compare each element of the array.
 Let's imagine we have an array of numbers and we need to compare each number with the rest. To find the biggest one, for example.
 
